@@ -21,5 +21,20 @@ public class Prueba {
         acceso.atender();
         acceso.atender();
         System.out.print("tiempo medio atendidos " + acceso.getTiempoMedioAtentidos() + " segundos \n");
+
+        /*
+            Escribir una clase para controlar el acceso de clientes a un servicio.
+
+            Se guardará una cola de espera de clientes y otra cola de clientes ya atendidos.
+                Cada cliente tiene un nombre, un número de móvil.
+                Junto al cliente se guarda su fecha y hora de llegada, y su fecha y hora de atención.
+
+            Operaciones
+                añadir un cliente
+                atender a un cliente
+                obtener el tiempo medio de espera de los clientes que aún no han sido atendidos
+                obtener el tiempo medio de espera de los clientes ya atendidos
+                mostrar el estado de las colas
+        */
     }
 }
