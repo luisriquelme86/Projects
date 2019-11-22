@@ -1,0 +1,66 @@
+- Guia aprender a programar
+
+- Seccion
+
+. Cuan facil es ordenar los siguientes numeros de menor a mayor ? -> 10, 8, 5. Es demasiado facil. Un caso concreto
+. Y ahora una serie de PASOS para ordenar un grupo de numeros de menor a mayor, sin conocer cuales son y cuantos hay? No es facil, hay que pensar de forma abstracta
+. Programacion es justamente eso -> Tomar un problema concreto y crear una solucion que se pueda generalizar
+. Forma posible de ordenar una lista de numeros ? En palabras simples?
+  Buscar el menor de la lista
+  Tacharlo
+  Escribirlo debajo
+  Repetir el proceso en todos los numeros de la lista original hasta que todos esten tachados
+  La lista esta ordenada
+. Lo de arriba esta escrito en PSEUDOCODIGO, codigo escrito en lenguaje humano. 
+. A su vez, es un ALGORITMO, una serie de pasos repetibles para solucionar un problema especifico
+. Todo esto involucra PENSAR DE FORMA ABSTRACTA. Pero esto no basta. Hay que decirle a la maquina que son cada uno de estos pasos
+. Es la parte mas sencilla, saber definir variables, ciclos, condicionales, etc
+. La parte mas dificil, UNIR EL PENSAMIENTO ABSTRACTO CON LOS PASOS QUE ENTIENDE LA MAQUINA
+. Todo esto requiere cientos de horas de aprendizaje
+
+- Seccion
+
+. Hay que ejercitar y comprender la logica, con ejercicios muy simples
+. La mayor brecha no es conocimientos, sino destreza. Aplicar la teoria para solucionar problemas
+
+
+- Seccion: Divide y venceras
+
+. Hay que dividir las tareas en partes pequeñas. En tareas aisladas
+. Ejemplo: Una tarea como "Implementar la pagina de login" es demasiado grande
+. Una tarea no deberia ocupar mas de 20 lineas de codigo para quedar resuelta
+. Una tarea no deberia implicar el uso de muchos conocimientos teoricos a la vez
+. Hacer de una tarea a la vez y no pasar a la siguiente hasta tener terminada una
+. No apurar las tareas
+
+- Seccion: Que preguntas pensar y hacerse
+
+. Cual es el mejor caso posible y el peor caso posible
+. Hay casos excepcionales que deban tratarse aparte ?
+. Importa el orden de los factores ? Y la escritura ?
+
+- Seccion: Pasos
+
+. Entender bien el problema
+. Escribir pseudocodigo
+. Diseñar un metodo
+. Pensar en la entrada, el proceso de los datos y la salida. Si es necesario, hacer un diagrama de flujo
+. Cuando sos muy bueno, pareciera que se saltean pasos, pero no es cierto, solo estan automatizados esos pasos
+. La programacion no es prueba y error, es entender y diseñar
+. Es necesario estar consciente en todo momento de la serie de pasos a seguir para armar el algoritmo
+. Practicar el psuedocodigo y los algoritmos
+
+- Seccion: Diagrama de flujo
+
+. Es la representacion de como fluira todo el programa. Por ejemplo, como funciona una programa que calcula un promedio final
+. Se puede pensar el caso concreto para el diagrama de flujo, luego se generalizara
+
+- Seccion: Aprender a programar y aprender un lenguaje
+
+. Por ejemplo, es muy comun algo como "Obtene los numeros primos de una lista de numeros" y no poder hacerlo, a pesar de conocer el lenguaje
+. Hay que aprender los fundamentos de la programacion
+
+- Seccion: Soluciones
+
+. Hay problemas basicos pero generales, cuya solucion es con ciertos algoritmos y estructuras de datos
+. Otros complejos pero especificos, cuya solucion son las librerias y frameworks
