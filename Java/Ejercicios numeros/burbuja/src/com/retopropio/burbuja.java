@@ -59,6 +59,10 @@ public class burbuja {
  * el superior realiza n-1 pasadas (porq quiero setear n-1 veces ese valor ultimo del ciclo interior). La clave e spreguntarse cuantas veces le paso ese 'ultimo' valor o posicion
  * para que el array interior conozca hasta donde hacer swap?
  *
- * Ayudarse con dibujos, por ejemplo, de un array donde el mas chico de todos ya quedo al final en la primera pasada, y debo reordenar solo un subgrupo que no incluya a ese
+ * Ayudarse con dibujos, por ejemplo, de un array donde el mas chico de todos ya quedo al final en la primera pasada, y debo reordenar solo un subgrupo que no incluya a ese. Y el diagrama de flujo
+ * y primero el pseudocodigo
+ *
+ * Pensar el ciclo interior con un dibujo a la inversa, donde los subgrupos cada vez se acotan mas porq hay cada vez mas numeros menores al subgrupo y ordenados al final
+ * e ir marcando los diferentes indices (indice burbuja)
  *
  */
