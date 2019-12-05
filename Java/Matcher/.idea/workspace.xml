@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48053dad-b09e-4aba-aeac-6aad09ad8a17" name="Default Changelist" comment="" />
+    <list default="true" id="ea1cd89b-5ad6-4db3-9554-13559bb94346" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +11,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -19,11 +18,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1SOIWVU5Jt8AnPe1qmdcRqidNvq" />
+  <component name="ProjectId" id="1StLZnmJBBcD5uPzsf32CFne9mM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cola1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,16 +38,22 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="ArranqueInterfaz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArranqueInterfaz" />
-      <module name="Interfaz1" />
+    <configuration name="MatcherExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jenkov.tutorials.MatcherExample" />
+      <module name="Matcher" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jenkov.tutorials.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ArranqueInterfaz" />
+        <item itemvalue="Application.MatcherExample" />
       </list>
     </recent_temporary>
   </component>
@@ -56,13 +62,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="48053dad-b09e-4aba-aeac-6aad09ad8a17" name="Default Changelist" comment="" />
-      <created>1571428246513</created>
+      <changelist id="ea1cd89b-5ad6-4db3-9554-13559bb94346" name="Default Changelist" comment="" />
+      <created>1572378002180</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571428246513</updated>
-      <workItem from="1571428249628" duration="1835000" />
-      <workItem from="1572377889916" duration="114000" />
+      <updated>1572378002180</updated>
+      <workItem from="1572378004940" duration="3430000" />
     </task>
     <servers />
   </component>
@@ -74,9 +79,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

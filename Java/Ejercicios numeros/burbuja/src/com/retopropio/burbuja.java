@@ -4,7 +4,7 @@ public class burbuja {
     public static void main(String[] args)
     {
 
-        int[] array_numeros = new int[6];
+        int[] array_numeros = new int[10];
         for (int i = 0; i < array_numeros.length; i++) {
             array_numeros[i] = i + 1;
         }
@@ -49,7 +49,7 @@ public class burbuja {
  * Si a un inicio leo A, leo B, donde A es un numero y B su siguiente, y al ser A<B lo intercambio. Si repito este ciclo mientras B no sea el ultimo numero, y actualizo A y B con a = a+1 y b= a+1
  * resulta que obtengo esto  3, 20, 50, 80, 2.
  * Ahora, este ciclo deberia repetirlo otra vez? Cuantas veces? La idea de N ciclos esta mal aunque se peude ocurrir. la clave para notarlo fue en el diagrama de flujo, al inicio
- * recordando que el primer ciclo se mantiene si B (o siguiente al numero que pruebo menor) es menor al ultimo numero del array
+ * recordando que el primer ciclo se mantiene si B (o siguiente al numero que pruebo menor) es menor al ultimo numero del array (porq compara un numero y su siguiente)
  * Entonces puedo dibujar otro ciclo que en verdad le pase el ultimo numero o posicion. Este ultimo numero va variando, debe ser cada vez mas chico porque cada vez mas numeros
  * quedan del otro del array ordenados.
  *
@@ -64,5 +64,7 @@ public class burbuja {
  *
  * Pensar el ciclo interior con un dibujo a la inversa, donde los subgrupos cada vez se acotan mas porq hay cada vez mas numeros menores al subgrupo y ordenados al final
  * e ir marcando los diferentes indices (indice burbuja)
+ *
+ * La programacion no es exacta ni la solucion es inmediata, para lograr soluciones se necesitan sucesivas iteraciones para corregir errores, etc
  *
  */
