@@ -1,0 +1,49 @@
+- Iteracion
+
+. El ejemplo mas simple, una cuenta regresiva, dado un numero que inicie la cuenta regresiva
+. Como se podria hacer con simple lenguaje humano? Algo asi
+
+  Leer numero
+  Muestro numero
+  Resto 1 a ese numero
+  Muestro numero
+  .
+  .
+  X veces hasta llegar a 0
+
+. Esto fue la parte mas abstracta. Conociendo los ciclos, esta iteracion seria algo tan simple como
+  
+  Leer numero
+  -
+  	Mostrar numero
+  	Restar 1 al numero
+  - Repetir hasta que numero sea 0
+
+  Leer numero
+  Repetir
+  	Mostrar numero
+  	numero <- numero - 1
+  hasta que numero sea 0 	
+
+. Se puede ver que un ciclo permite ejecutar una cantidad de instrucciones predefinidas. Tan simple como eso
+
+- Recursividad
+
+. La cuenta regresiva tambien puede hacerse por medio de la recursividad, pero la idea es totalmente diferente. La recursividad no es un ciclo
+  que ejecuta o repite el mismo codigo o el mismo bloque de instrucciones. 
+  La recursividad es especificar un proceso, basado en su propia definicion. Basicamente, deberia tener la siguiente estructura
+
+  function contar() {
+  	contar()
+  }
+
+. El proceso contiene su propia definicion. La recursividad consta de un caso recursivo, y de otro caso limite, donde la recursividad se 
+  detiene. Pero la base de todo es esta simple funcion de ejemplo
+
+. El caso mas conocido de recursividad es el factorial de un numero. El problema que tiene es que presupone que toda funcion recursiva
+  tiene que devolver valores, cuando puede no ser el caso. Ademas el factorial de un numero puede realizarse tambien en forma
+  iterativa. La unica razon por la cual la funcion recursiva de factorial devuelve valores es porque se requiere un valor anterior
+  para calcular el actual
+
+. La recursividad si puede entenderse como una reduccion, es decir, tratar de llegar a una forma minima en un calculo o pensamiento
+  para resolver los casos superiores a partir de los inferiores     
