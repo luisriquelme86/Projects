@@ -1,0 +1,10 @@
+Este es un archivo de ejemplo para el reto de ficheros numero 1
+El objetivo es
+Abrir un fichero
+Mostrar el nombre
+Contar las lineas
+Contar los caracteres
+Adicional: Contar solo las letras
+
+Nota: 
+El fichero que es este lo cree de antemano

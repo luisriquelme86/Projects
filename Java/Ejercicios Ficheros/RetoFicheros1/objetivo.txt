@@ -1,0 +1,3 @@
+- Objetivo: 
+. Abrir un fichero de texto para lectura, y leerlo linea a linea
+. Mostrar el nombre del fichero, el numero de lineas y el numero de caracteres

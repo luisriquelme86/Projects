@@ -1,0 +1,7 @@
+- Teoria de files
+
+. Llamados tambien ficheros
+. Con un lenguaje de programacion, se puede transformar ese archivo en algo "manejable" para poder leerlo y operarlo. En general
+  se convierte en algo abstracto llamado "file" en los lenguajes de programacion. Del disco duro pasan a la memoria ram
+. Ese file es un conjunto de bytes. En general asi no es operable. Hay que hacer algo mas
+. Hay que "convertirlos" en caracteres de alguna manera. Esto depende del lenguaje. Java lo hace con ayuda de la api de Scanner. El scanner convierte esos bytes en caracteres

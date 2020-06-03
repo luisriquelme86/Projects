@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f3bc16-aa21-4c8e-be25-4c132046b8dc" name="Default Changelist" comment="" />
+    <list default="true" id="76f2ed62-a6ce-4fd8-8563-6b0362fd3d99" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArbolesBinarios/src/com/propio/projecto/ArbolBinario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArbolesBinarios/src/com/propio/projecto/ArbolBinario.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1Ro8KBhvx1RDVTspWVNvKLpxXRd" />
+  <component name="ProjectId" id="1cgS0fDgcm7LIlLqQW3mC29I9J1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -38,30 +31,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="MyClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyClass" />
-      <module name="Java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MyClass" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1f3bc16-aa21-4c8e-be25-4c132046b8dc" name="Default Changelist" comment="" />
-      <created>1570322021273</created>
+      <changelist id="76f2ed62-a6ce-4fd8-8563-6b0362fd3d99" name="Default Changelist" comment="" />
+      <created>1590948521257</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570322021273</updated>
+      <updated>1590948521257</updated>
     </task>
     <servers />
   </component>

@@ -86,13 +86,14 @@ class Nodo {
  * */
 
 
-/*
+/*      Memoria                     Memoria
 *       |-----------|               |-----------|
 *       | nodo      |  ---------->  | new Nodo()|
 *       |           |               |           |
 *       |-----------|               |-----------|
+*
 * Cuando hago new Nodo(), lo que hago es reservar un espacio en la memoria y asignarselo a una variable llamada nodo, que tambien esta en memoria
-* En el caso de asignarle null, dicha variable no tendra asignada o apuntara a nada
+* En el caso de asignarle null, dicha variable no tendra asignada o apuntara a nada (linea 8)
 * Ahora bien, si le paso ese nodo a una funcion, le paso UNA COPIA de la direccion de memoria, no el puntero o direccion en si de la variable
 * Entonces, dentro del ambito de la funcion, esa copia de la direccion de variable apunta a el espacio que reserve con new dentro de la funcion insertar.
 * Cuando salgo de la funcion, la direccion fisica real, de Nodo, esta inmutable. Sigue valiendo null. Yo asigne una direccion de memoria en la funcion a una copia
@@ -123,4 +124,35 @@ class Nodo {
 
 /*
 *   Con respecto a la funcion de borrar arbol, originalmente la hice mal. Me falta comprender mejor recursividad. La verdadera version seria la siguiente
+*
+*   if (nodo != null) {
+ *      borrarArbol(nodo.nodoIzquierdo);
+ *      borrarArbol(nodo.nodoDerecho);
+ *      nodo = null;
+ *  }
+ *
+ *
+ *
+ * Suponer los siguientes
+ *
+ *                          100
+ *                    98          105
+ *                1       99    101   106
+ *
+ *   1 iteracion pila
+ *
+ *    ___________                   ___________
+ *   |           |                 |           |
+ * 3 |_____1_____|               3 |____99_____|
+ *   |           |          ->     |           |
+ * 2 |____98_____|               2 |____98_____|
+ *   |           |                 |           |
+ * 1 |   100     |               1 |   100     |
+ *
+ * 1 Iteracion. Al llegar al stack de la pila numero 3, el nodo vale 1. Mira a la izquierda, nada
+ * devuevle control a la funcion. Mira a la derecha, nada,, devuelve el control a la funcion
+ * Borra el 1 de la pila. La pila devuelve el control al 98 que ya habia mirado el lado izquierdo donde
+ * habia un 1 y lo borro. Mira a la derecha, hay un 99. El 99 mira a la izquierda y la derecha. Borra el 99.
+ * Devuelve el control al 98 y al haber borrado sus ramas, se borra y devuelve el control al 100
+*
 * */
