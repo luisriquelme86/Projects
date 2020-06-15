@@ -4,4 +4,14 @@
 . Con un lenguaje de programacion, se puede transformar ese archivo en algo "manejable" para poder leerlo y operarlo. En general
   se convierte en algo abstracto llamado "file" en los lenguajes de programacion. Del disco duro pasan a la memoria ram
 . Ese file es un conjunto de bytes. En general asi no es operable. Hay que hacer algo mas
-. Hay que "convertirlos" en caracteres de alguna manera. Esto depende del lenguaje. Java lo hace con ayuda de la api de Scanner. El scanner convierte esos bytes en caracteres
+
+- En Java: Los I/O Streams
+. No confundir con los Streams introducidos en Java 8
+. Un stream REPRENSENTA un canal de entrada o de salida. Mejor dicho, de entrada de recursos y salida de recursos
+. Es una abstraccion, que permite convertir un conjunto de datos en algo manipulable por el lenguaje. Por ejemplo, para leer datos
+  de un file se usa un stream, que seria un stream de entrada (input). Para escribir un archivo, se utiliza un stream de salida (output)
+
+- Escritura
+. Se puede hacercon un file writer
+- Lectura
+. Originalmente lo hice con un Scanner (que puede leer un source de file) pero tambien se puede hacer con un file reader

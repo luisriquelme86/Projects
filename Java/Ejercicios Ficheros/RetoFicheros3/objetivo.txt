@@ -1,0 +1,2 @@
+- Objetivo: 
+. Un programa que te pida nombres y los vaya volcando a un fichero de texto llamado "nombres2.txt", hasta que teclees "fin" (esa palabra no deberá volcarse a fichero)

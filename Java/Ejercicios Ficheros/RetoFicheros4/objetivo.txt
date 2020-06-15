@@ -1,0 +1,2 @@
+- Objetivo: 
+. Un programa que muestre en pantalla todo el contenido del fichero "nombres2.txt".

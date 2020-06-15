@@ -1,0 +1,2 @@
+- Objetivo:
+. Un programa que pida al usuario una letra (por ejemplo, "a") y vuelque las líneas del fichero "nombres2.txt" que comienzan por esa letra a otro fichero llamado "nombres3.txt".
