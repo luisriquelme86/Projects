@@ -1,0 +1,4 @@
+- Objetivo: 
+. Un programa que copie el contenido del archivo binario project.zip a otro fichero llamado project_copy.zip
+. En este caso, la idea no es copiar de a un byte, sino de a mas
+. Dicho de otra forma, copiar el archivo

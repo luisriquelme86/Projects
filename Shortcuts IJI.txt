@@ -1,0 +1,3 @@
+- Shortcuts para IJI
+
+. Seleccionar las ocurrencias -> Ctrl + G

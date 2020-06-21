@@ -1,17 +1,33 @@
 - Teoria de files
 
-. Llamados tambien ficheros
+. Llamados tambien ficheros. Es una estructura de datos que permite conservar los mismos despues de que finalize el programa, ya que 
+  este ultimo trabaja en memoria principal (RAM?)
 . Con un lenguaje de programacion, se puede transformar ese archivo en algo "manejable" para poder leerlo y operarlo. En general
   se convierte en algo abstracto llamado "file" en los lenguajes de programacion. Del disco duro pasan a la memoria ram
 . Ese file es un conjunto de bytes. En general asi no es operable. Hay que hacer algo mas
 
 - En Java: Los I/O Streams
 . No confundir con los Streams introducidos en Java 8
-. Un stream REPRENSENTA un canal de entrada o de salida. Mejor dicho, de entrada de recursos y salida de recursos
+. Un stream REPRESENTA un canal de entrada o de salida. Mejor dicho, de entrada de recursos y salida de recursos
 . Es una abstraccion, que permite convertir un conjunto de datos en algo manipulable por el lenguaje. Por ejemplo, para leer datos
   de un file se usa un stream, que seria un stream de entrada (input). Para escribir un archivo, se utiliza un stream de salida (output)
 
 - Escritura
 . Se puede hacercon un file writer
+
 - Lectura
 . Originalmente lo hice con un Scanner (que puede leer un source de file) pero tambien se puede hacer con un file reader
+
+- Ideas generales de archivos binarios
+. Si bien todos los archivos podrian ser binarios, en general se divide entre archivos de texto y binarios. Los primeros pueden
+  ser visto facilmente con el usuario con un editor de texto. Los otros, en cambio, no se pueden leer asi porque son un conjunto de 
+  bytes (igual que los de texto, pero los primeros con un editor esos bytes "se pueden ver" en cierta forma)
+
+. Hablando especificament de Java, si bien con implementaciones de archivos de texto se pueden operar los archivos binarios, es mejor usar 
+  los espeficios de texto para esa tarea
+
+. Al menos en Java, para operar con archivos binarios se usan implementacion de InputStream y OutputStream, q son basicamente canales de 
+  entrada y salida de lectura de datos (en este caso, bytes). Inicialmente comenze con casos sencillos para copiar un binario. El primer
+  caso es un copia byte a byte de un .zip que no tuvo mucho exito, pero sirve para introducirse. El segundo caso es basicamente
+  una copia de los bytes de un archivo y escritura en otro, donde si el archivo no es muy grande no es mala idea. No es una buena
+  implementacion pero sirve para aprender. Y la ultima es usando un Buffer

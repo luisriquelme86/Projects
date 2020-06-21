@@ -1,0 +1,3 @@
+- Objetivo: 
+. Un programa que copie el contenido del archivo binario project.zip a otro fichero llamado project_copy.zip usando buffers
+. Dicho de otra forma, copiar el archivo

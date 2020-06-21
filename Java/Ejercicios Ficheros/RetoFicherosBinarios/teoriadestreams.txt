@@ -1,0 +1,25 @@
+- Teoria de streams
+
+. Para poder entender el tema de los streams, hice 3 ejercicios muy didacticos: Copia byte a byte, copia de un bloque de bytes y finalmente 
+  usando un buffer
+
+. La idea del buffer usado aqui en java es la misma que en los videos de youtube. El video en lugar de obtenerlo directamente trozo a
+  trozo o segundo a segundo, se carga en un buffer (una bloque de memoria reservado), cuando se vacia se carga otro trozo de video y cuando se llena se muestra video
+
+. La idea del buffer es justamente esa, un lugar temporal. Imaginarlo como un carrito de compras. Sin el carro de compras, deberias 
+  llevar los productos a la caja 1 a 1, tomando mucho tiempo. Con el carrito te llevas todos los productos de una sola vez
+
+. Un stream, como se menciono, es una canal de transmision. Lleva datos de un lugar a otro. En cambio el buffer es un lugar de 
+  almacenamiento
+
+. En Java, con las implementaciones de InputStream y OutputStream, se leen o escriben datos a la maquina byte a byte, lo cual es 
+  lento e ineficiente. Con un buffer se pueden leer bloques de bytes directamente, haciendolo mucho mas eficiente
+
+. En el caso de un stream, un inputstream toma un byte desde un file, lo procesa y envia ese byte a escribirse con un outputstream.
+  Esto es muy lento. Con el un buffer para los stream, lo que sucede es que ese buffer es un wrapper (envoltura) que envuelve a un stream, y termina sucediendo que el stream se comunica con el file y con el buffer, donde almacena todos los datos en trozos. El stream, en lugar de pedir byte a byte, pide un chunk de datos que almacena en el buffer y cuando este ultimo se vacia, el buffer le comunica para que siga haciendo los pedidos
+
+. Entonces, si bien el buffer es un wrapper, se podria decir que es una capa por encima que termina usando el stream para hacer
+  las operaciones          
+
+. Algo de teoria
+  https://www.informit.com/articles/article.aspx?p=26067  

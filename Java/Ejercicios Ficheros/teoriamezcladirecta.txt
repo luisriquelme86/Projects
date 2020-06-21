@@ -1,0 +1,6 @@
+- Mezcla directa
+. Es un tipo de ordenamiento externo, no interno. En lugar de ordenar los datos en memoria dentro de un array, la idea es hacerlo con 
+  mas ficheros a parte del actual. Este tipo de ordenamiento es bueno aprenderlo por cuestiones mas "academicas" y es poco probable usarlo
+  ya que en general se usa porque la memoria se puede saturar si el archivo es muy grande (con las maquinas actuales es dificil que eso pase)
+. Aun asi, es bueno hacerlo para abrir la mente y entender ciertos procesos de ordenamientos, particiones, recursividad, movimiento de 
+  indices, hacer dibujos y diagramas para enteder y la tecnica dividir y conquistar  

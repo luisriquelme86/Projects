@@ -1,0 +1,2 @@
+- Objetivo:
+. Un programa que lea el contenido del fichero "nombres2.txt" (que puede estar desordenado) y lo vuelque, ordenado alfabéticamente, al fichero "nombres4.txt". En una primera aproximación, supón que todos los datos cabrán en memoria y se podrán ordenar en memoria.
