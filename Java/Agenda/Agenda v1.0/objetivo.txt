@@ -1,0 +1,14 @@
+- Objetivo:
+. Crear una primera version de una agenda. Una agenda basica
+
+. Una agenda basica, similar a una de la vida real, es sencilla. Numero y telefono
+. Para no complicar las cosas, los datos se pueden almacenar en un array fijo, por ejemplo de tamaño 100
+. Al principio tiene lo basico -> Añadir, mostrar todas las personas, buscar y salir. No hay mas
+
+Entonces 
+. Agenda de 100 personas. Solo se guardar el nombre y el telefono
+. Añadir, buscar, mostrar todos y salir
+. Usar un array
+
+
+

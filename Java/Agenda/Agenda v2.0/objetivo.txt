@@ -1,0 +1,24 @@
+- Objetivo:
+. Mejorar la version 1.0 de la agenda a la version 2.0
+. La mejora viene de mejorar el codigo de la aplicacion de agenda
+
+- Explicacion y objetivos
+
+1) La agenda y el array de personas
+. El array de personas estaba la clase main y se pasaba entre funciones. Incluso si se usa como variable estatica y no se pasa entre funciones
+  no es lo mejor. El codigo del main solo deberia servir para instanciar los objetos necesarios, no para hacer todas las operaciones ahi
+. La agenda tiene un array de personas. Lisa y llanamente
+
+2) La agenda y las operaciones
+. Las operaciones hay que moverlas desde el main a la agenda, al menos aquellas especificas de la agenda (como añadir, buscar, mostrar, etc)
+
+- Teoria
+1) Clase persona y agenda
+. Se podria pensar inicialmente que una persona posee una agenda, y esa agenda esta compuesta de mas personas. Lo que llevaria a pensar en cierta estructura
+  interesante de analizar. Una persona "usa" una agenda (se asocia) y esa agenda tiene otras personas. Pero no es el punto del ejercicio
+. Siguiendo con la teoria, hasta tendria sentido. Se pueden tener 10 mil personas, cada una con 10 mil agendas, que tengas mas personas. Pero una vez mas
+  no es el objetivo de este ejercicio en particular y requiere mas conocimientos, tiempo y consideraciones (problemas circulares de referencias quizas?)    
+
+2) La agenda como clase de utilidad
+. Se podria pensar que la agenda no deberia ser instanciable, pero no tiene mucho sentido. No se dedica solo a procesar datos y mostrar resultados, sino que 
+  realizar operaciones y "guarda" datos por asi decirlo

@@ -1,0 +1,5 @@
+- Objetivo:
+. Suponiendo un array de 10 posiciones con nombres, remover un nombre del array y al hacerlo, desplazar los restantes a la izquierda
+
+- Pistas
+. Rellenar un array de 10 posiciones con nombres (automatico, no interactivo)
