@@ -1,0 +1,32 @@
+- UML de interfaces
+
+. Hay dos opciones posibles
+	La primera es un triangulo cerrado vacio, en lineas punteadas. La direccion de la flecha indica quien usa a quien
+	La segunda es un circulo y una linea, donde se sobreentiende que una clase usa una interfaz
+
+. Como detalle, en uml, las interfaces son iguales a las clases, asi que se aclara que es una interfaz de la siguiente manera
+  <<interface>>
+
+
+  --------------------
+ |	 <<interface>>    |	 					           ---------------------
+ |--------------------|		 implementa		    |	 	  Canario         |	 
+ |      Cantante      | ◁...................|---------------------|							
+ |--------------------|						          |       +cantar 	    |	
+ |      +cantar 	    |						           ---------------------
+  --------------------								                ^	
+  		   △										                        |
+  		   . 						 				                        |
+  		   . 										                        | 	usa
+  		   .	implementa							                  |
+  		   .										                        |
+  		   . 										                        |	
+  -------------------- 						           ---------------------	
+ |	 	Persona         |	       usa 			    |	 	   Main           | 
+ |--------------------|<___________________ |					            |
+ |      +cantar 	    |	 					          | 					          | 
+  --------------------	 		   			         ---------------------
+
+
+. Usando un poco la imaginacion y las instrucciones, las lineas que dicen "implementa" son lineas punteada con triangulo vacio y cerrado
+  y las que dicen "usa" son triangulos vacios y con linea continua, de un solo trazo

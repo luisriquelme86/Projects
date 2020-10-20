@@ -1,0 +1,59 @@
+- Teoria de interfaces
+
+. Las interfaces son una lista de acciones que puede llevar a cabo un determinado objeto
+. Las interfaces definen comportamientos, y no parentescos
+. Las interfaces no permiten reutilizar codigo pero si extenderlo
+. Las interfaces manejan el concepto de "contrato". Las clases que usan una interfaz estan obligadas a implementar los metodos de la misma
+. Por lo dicho anteriormente, no tienen funcionalidad por si mismas, solo sirven para "moldear" las clases. No pueden implementar nada. Tampoco se puede hacer "new" de una interface
+
+0. Introduccion
+. Es facil implementar una interfaz. Lo dificil es entender para que sirve y como usarlo
+
+1. Diferencias con la herencia
+
+. Justamente la gran diferencia con la herencia es que si dos clases estan relacionadas por herencia se suponen enparentadas, es decir que comparten muchas cosas en 
+  comun, no solo una lista de acciones sino de atributos y negocio
+. En cambio en una interfaz si dos clases estan relacionadas por una interfaz tienen que ver en general poco y nada entre ellas, solo algunas acciones que pueden llevar a cabo
+  pero de forma totalmente diferentes
+. Por ejemplo, mas alla de las diferencias obvias, un canario y un aguila estan enparentados de alguna manera y comparten muchas cosas en comun ademas de volar. En cambio, 
+  entre un avion, un barrilete y un aguila no hay ni deberia haber ningun tipo de relacion mas que la capacidad de volar    
+. Por todo lo anteriormente mencionada, la interfaz no reutiliza codigo, solo lo extiende
+. Una interfaz es mucho mas flexible que una herencia, ya que los objetos no tienen que ser parte de una jerarquia sino de un comportamiento
+  pero pueden ser tratados de la misma forma
+
+2. Caracteristicas y aspectos
+. Todos los metodos de una interfaz son publicos y abstractos
+
+3. Relacion con las clases
+. Las clases, para cumplir con la interfaz, estan obligados a implementar el/los metodos de la interface, todos ellos. Esto es importantisimo y ademas
+  te orienta en caso de que una clase lo sea solo en papel pero no conceptualmente. Por ejemplo, si tengo 4 clases que implementan una sola interface y me veo
+  obligado a dejar implementaciones vacias o rebuscadas, la interfaz esta mal conceptualmente
+
+4. Su relacion con el polimorfismo
+. El polimorfismo es la capacidad que tiene la POO que permite enviar mensajes iguales a objetos de tipos distintos. En el caso del poliformismo con interfaces
+  (esta el polimorfismo de herencia, por ejemplo, hay diferentes formas de aplicarlos) esto es asi porque dos objetos que implementan la misma interfaz pueden ser tratados de forma identica, 
+  como si fueran el mismo tipo de objeto, incluso en tiempo de ejecucion
+
+5. Relacion con polimorfismo y delegacion
+. Es muy comun que con el poliformismo en interfaces se utilize la delegacion, es decir, que la clase que quiere utilizar elementos de una interfaz para sus propositos
+  en lugar de tener una referencia a la interfaz, tenga un metodo que recibe como parametros objetos DE ESE TIPO DE interfaz y asi opere. La aclaracion es muy importante,
+  porque NO EXISTEN OBJETOS DE INTERFAZ, porque las mismas no son instanciables. Lo que si existen son objetos que implementen la interfaz y sean tratados como el mismo tipo. Esos objetos
+  pertenecen a clases que implementan una interfaz y por lo tanto si son instanciables
+  Esta forma de operar polimorfismo se llama polimorfismo con metodos
+
+6. Cuando usar interfaces
+. El codigo da sus propias "señales" de cuando se deberia utilizar una interface. Estas señales no siempre indican que se deberia crear una interfaz, hay que saber
+  analizar bien, pero da una idea. Por ejemplo, un metodo que se torna muy grande porque cada vez se deben hacer mas excepciones a casos segun un tipo de parametro. Un case
+  con enums es un buen ejemplo de eso, pero no implica necesariamente que haya que crear una interfaz
+. Pero se puede decir, que si hay varios objetos distintos queriendo usar un mismo metodo y dicho metodo por cada objeto analiza y realiza operaciones, y si ademas con el tiempo 
+  se agregan nuevos objetos, el metodo crecera cada vez mas, haciendolo cada vez mas grande y dificil de entender. Es una excelente señal de que ese metodo debe ser refactorizado de alguna manera
+. O sea, diferentes objetos queriendo hacer lo mismo pero de forma diferente. Y hablando de esto, como dato, no siempre hace falta que sean objetos reales, se pueden "simular" objetos
+  dandole a un mismo objeto caracteristicas mutable como "tipo" que dependan de un enum o un string  
+
+7. Las interfaces y la extensibilidad
+. Las interfaces justamente permiten que las aplicaciones sean extensibles. Esto quiere decir que ante una nueva especificacion, ya sea un cambio o un agregado,
+  la aplicacion sea relativamente facil de adaptar. Se nota mucho cuando una aplicacion no es extensible porque ante cada nuevo cambio se fuerzan cosas. Por ejemplo,
+  se fuerzan a metodos de herencia o de interfaces a no hacer nada, o hacer algo rebuscado, o los metodos comienzan a recibir parametros para que puedan ser analizados en un 
+  if o cosas de ese estilo
+. Lo anteriormente mencionado en general sucede porque una clase, interface o servicio tiene demasiadas responsabilidades, entonces aquellos que la usan se ven obligados
+  a hacer cosas forzadas para continuar usandola    

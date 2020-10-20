@@ -1,0 +1,29 @@
+- Objetivo:
+. Mejorar la version 2.0 de la agenda a la version 3.0
+. La mejora viene de mejorar el codigo de la aplicacion de agenda
+
+- Mejoras
+. Permitir ordenar la agenda alfabeticamente. Luego guardar los cambios
+. Permitir modificar un contacto. Se debe modificar amigablemente, de la siguiente manera
+ 	Se muestra el valor anterior, se modifica si se teclea algo y no se modifica si se presiona intro, se guardan los cambios despues
+. Borrado de datos. Se borra del array un dato, se desplazan los siguientes a la izquierda y se guardan los cambios
+
+- Resultado
+. En total son 7 opciones
+  añadir un contacto
+  borrar un contacto
+  modificar un contacto
+  buscar un contacto
+  mostrar los contactos
+  ordenar alfabeticamente los contactos
+  salir
+
+- Hints o consejos
+. Don't close a Scanner that's tied to System.in (no cerrar un scanner que esta bindeado a un System.in, este lo levanta la JVM, una 
+  vez cerrado no se puede volver a abrir)
+. No cerrar el objeto scanner si el mismo levanto el System.im
+. Para lograr "detectar" la tecla enter hay que recurrir a un workaround, ya que estamos trabajando con una aplicacion de consola y no 
+  una aplicacion GUI. Usando el scanner, se puede pasar a la siguiente linea y detectar si la linea anterior es de largo 0 o vacia. No puede 
+  ser nunca null, asi que es la unica opcion  
+. Es una buena idea declarar el scanner como privado, estatico y final si se va a usar la entrada de teclado, al fin y al cabo se va a utilizar siempre
+  de la misma manera pero llamando a diferentes metodos

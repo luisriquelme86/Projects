@@ -1,0 +1,29 @@
+- Guia teorica
+
+) Algunas cosas que todo programador deberia saber como
+. Tiempo de vida de las variables
+. Diferencia entre una aplicacion GUI y de consola
+. Scope o ambito de funciones y variables. Creacion, destruccion, tiempo de vida
+. Espacio reservado por instancias, clases
+. La declaracion static en metodos, variables, etc y final
+. Manejo de memoria
+. Uso de la heap y de la memoria ram
+. Manejo de la memoria y los ficheros
+. Manejo de la memoria en la recursividad
+. Reservas de memoria al usar primitivos
+. Conocimientos del buffer de memoria, al menos con strings
+. Conocimientos de tiempos de vida
+. Cola, colas con prioridad
+. Hilos
+. Mixins (https://www.arquitecturajava.com/java-mixins-un-ejemplo-sencillo)
+
+) Tiempo de vida de las variables
+. Las mismas estan vivas solo mientras esten dentro de una funcion, al terminar una funcion las mismas se destruyen
+
+) Diferencia entre una aplicacion GUI y una aplicacion de consola
+. Una es una aplicacion de "ventana" por asi decirlo, y la otra es por una consola. Por ejemplo, la primera podria ser una app de visual basic, o swing o
+  incluso javascript que se puede ver en la ventana del browser. La otra es por ejemplo en una consola como el cmd de windows o la consola de mac
+. El manejo y ejecucion de ambas es distintas, y para el programador tambien hay diferencias. No es universal, pero por ejemplo en aplicacion GUI es muy 
+  comun el manejo de eventos y en las de consola no. Por ejemplo, detectar que tecla se toco, si hubo un resize o algo asi es muy comun en aplicaciones GUI y no tanto
+  en las de consola. Una particularidad que me encontre al hacer un app de consola en java es que no es tan sencillo detectar que se presione la tecla enter, por ejemplo, o que 
+  se presiono una tecla. Se deben hacer workarounds con la api de scanner

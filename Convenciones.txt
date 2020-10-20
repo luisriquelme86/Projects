@@ -1,0 +1,9 @@
+- Convenciones
+. El archivo donde se encuentra la funcion main se llamara siempre Main.java
+. El codigo se escribira siempre en ingles
+. Todos los packages son del tipo com.application.[nombre-del-proyecto]
+    El nombre del proyecto en general va en español para poder concordar con la carpeta raiz y poder identificar facilmente que se esta queriendo
+    reproducir
+. Los print o println en general van en español, lo mismo que los comentarios que ayuden a entender los ejercicios
+. Todos los proyectos deben indicar los objetivos en el main del mismo 
+. Todos los proyectos deben tener un archivo llamado objetivo.txt

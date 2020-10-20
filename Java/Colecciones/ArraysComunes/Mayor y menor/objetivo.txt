@@ -1,0 +1,2 @@
+- Objetivo:
+. Crear un array literal de 15 numeros y encontrar el mayor y el menor

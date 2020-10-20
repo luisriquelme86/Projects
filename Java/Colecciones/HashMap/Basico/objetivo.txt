@@ -1,0 +1,4 @@
+- Objetivo
+. Implementar un map con hashmap basico. Guardar los datos de una unica persona (nombre, telefono y direccion, sin interactivdad)
+. Notar que no hace falta que el telefono sea necesariamente un Integer
+. Mostrar el contenido de las dos formas basicas, con un ciclo for each y con un toString

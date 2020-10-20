@@ -1,0 +1,6 @@
+- Ejercicios propuestos
+
+. Maquina de cafe (concepto de delegacion)
+. Parking y estacionar -> https://desarrolloweb.com/articulos/polimorfismo-programacion-orientada-objetos-concepto.html3
+. Llamadas de telefono -> https://sekthdroid.wordpress.com/tag/ejemplos-java-polimorfismo-con-interfaces/
+. Cuentas bancarias y depositos -> https://unavdocs.files.wordpress.com/2011/07/polimorfismo-tema8.pdf

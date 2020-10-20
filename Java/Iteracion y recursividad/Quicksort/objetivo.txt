@@ -1,0 +1,2 @@
+- Objetivo
+. Dado el siguiente array de 9 valores {54, 26, 93, 17, 77, 31, 44, 55, 20}, ordenarlo con el metodo de ordenamiento quicksort

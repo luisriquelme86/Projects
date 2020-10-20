@@ -1,0 +1,3 @@
+- Objetivo
+. Recorrer recursivamente un array de 10 numeros
+. Implementar dos funciones, una que recorra el array descendentemente y otra ascendentemente

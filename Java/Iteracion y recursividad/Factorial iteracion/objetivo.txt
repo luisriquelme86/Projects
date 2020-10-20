@@ -1,0 +1,3 @@
+- Objetivo
+. Implementar una funcion que calcule el factorial de 6 (se usa 6 para no sobrecargar la memoria) pero iterativamente, no en forma recursiva como se acostumbra
+  a ejemplificar

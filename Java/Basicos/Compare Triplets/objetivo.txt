@@ -1,0 +1,3 @@
+- Objetivo:
+. No se de que iba este ejercicio, solo se que es algo relacionado a HackerRank CompareTriplets y que crea un archivo llamado filewriter en mi carpeta 
+  principal de luisriquelme

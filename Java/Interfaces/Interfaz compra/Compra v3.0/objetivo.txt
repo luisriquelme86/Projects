@@ -1,0 +1,32 @@
+- Objetivo
+. Partiendo de la version anterior de la aplicacion de compras, usar la delegacion por medio de metodos para las interfaces, evitando que la aplicacion este tan dependiente. La 
+  aplicacion debera deshacerse de las referencias que puedan ser reemplazadas con metodos y paremetros
+
+- Lecciones aprendidas
+. Hay que notar lo que realmente esta pasando. Es una sola factura o remito (compra) QUE APLICA diferentes descuentos. Asi
+			
+			         | - Descuento 1
+			         |
+  Compra       | - Descuento 2
+  			       |
+  			       | - Descuento 3
+
+  Esto se resolvio en codigo creando una interfaz, y creando instancias de clases que resolvian a su manera esos descuento. O sea,
+  se crearon entidades de descuento a partir de una interfaz y ellas se encargan de hacer el descuento, no la compra, la misma
+  es solo un "lugar de paso" para los parametros
+
+. Ahora bien, es importante notar esto, porque tambien se puede hacer mal. En este caso se creo una interfaz y se hizo que tres 
+  clases la implementen. La interfaz simplemente provee una accion o "comportamiento de descuento". Es decir, es el mismo comportamiento siempre. Pero
+  uno puede estar tentado a crear tres (3) interfaces y no tres (3) clases que implementen una sola, y como consecuencia, se tienen cada vez mas interfaces
+  en lugar de cada vez mas clases. Se tendria entonces una interfaz de descuento por internet, en tienda, por empleado y asi que usen el mismo metodo. Esto
+  es subsanable porque se puede ver que en realidad deberian estar en una sola interfaz (o no)
+  Sin embargo, programando peor aun (todo es posible) sucede que se puede crear tantas interfaces como comportamientos y que se llamen los metodos con el nombre
+  de la interfaz y el comportamiento
+
+. Dicho lo de antes, pareciera que no es buena idea crear mas de una interfaz. Sin embargo, no es cierto. En el ejercicio de los edificios si se crean mas de una
+  interfaz porque son comportamientos distintos entre si, que no tienen nada que ver
+
+. Razonando un poco mas aun, se puede notar que la compra puede tener tres (3) tipos de descuento, pero nunca a la vez, por ende no son acumulativos, dando
+  un razonamiento interesante respecto a otros ejercicios. Entonces, en si, la COMPRA NO IMPLEMENTA NADA, los que implementan algo son los descuentos  
+
+. Resumiendo, por eso se dice que la interfaz es util cuando el mismo comportamiento lo hacen diferentes objetos de maneras diferentes         			

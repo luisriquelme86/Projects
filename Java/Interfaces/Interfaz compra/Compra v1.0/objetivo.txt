@@ -1,0 +1,24 @@
+- Objetivo
+. Implementar un sistema de compra que permita indicar el tipo e importe de la misma, y que permita consultar por el precio con descuento segun la situacion
+  	Si la compra es en la tienda
+  		descuento del 10% si la compra es menor a 100
+  		descuento del 20% si la compra es mayor a 100
+  	Si la compra es de otro tipo (se supondra "internet")
+    	descuento del 20% si la compra es menor a 100
+    	descuento del 30% si la compra es mayor a 100
+
+. No hace falta en ningun momento crear un enum ni nada parecido con los tipos    	
+
+- Lecciones aprendidas
+. El metodo getImporteDescuento funciona bien. Sin embargo, es claro que si se quieren aplicar nuevos descuentos el metodo creceria cada vez mas,
+  haciendolo dificil de entender. Suponer que el tipo de compra acepta otros parametros que se analizan al momento de aplicar descuento a un importe, por ejemplo,
+  10 tipos mas, el metodo creceria muchisimo
+. De la mano de lo anterior, claramente se podrian crear 10 if distinto y que cada if llame a otro metodo con un nombre como 
+  getImporteDescuentoTienda
+  getImporteDescuentoInternet
+  getImporteDescuentoX
+  getImporteDescuentoXYZ
+. Pero lo anterior no es muy amistoso, y es propenso a errores, el nombre depende los tipos que podrian estar en un enum y encima si el enum cambia, 
+  los nombres de los metodos no serian concordantes, y demas. Seria algo muy acoplado y dependiente
+. Si bien todo lo anterior es posible y en casos pequeños, sin importancia y para salir del paso en cosas no importantes estan bien, hay casos que esto no es conveniente
+  y conviene refactorizar de otra manera    

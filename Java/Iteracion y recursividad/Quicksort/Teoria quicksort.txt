@@ -1,0 +1,55 @@
+- Teoria de quicksort
+. Ayudas importantes para recordar como implementar el quicksort
+  
+  El quicksort usa recursividad. Sabiendo esto, recordar que tiene que haber una condicion de corte. La mayoria de las funciones recursivas cumplen algo como
+
+  function cuentaAtrasRecursiva(parametros) {
+  	if (cumpleCondiciones) {
+  		cuentaRecursiva(parametros);
+  	}
+  }
+
+  y quicksort no es la excepcion. Es bueno remarcarlo porque el while no cumple esa funcion aqui
+
+  Usa dos indices, uno para el extremo izquierdo y otro para el derecho
+  Los indices se mueven por separado dentro del ciclo, nunca los dos a la vez en una misma iteracion
+  Hay que usar si o si la sentencia continue
+  Los indices son internos y se definen a partir de los parametros
+  El quicksort utiliza listas auxiliares para el ordenamiento. Sin embargo, esas listas auxiliares no son "reales",
+  es decir, no se crean en ningun momento mas listas para el ordenamiento, es la misma lista inicial pero definiendo los limites
+  de cada sublista o particion a partir de un indice. Si se hiciera lo anterior, se desperdiciaria mucho espacio
+  El ordenamiento quicksort se basa en particionar un lista "virtualmente" un cierto numero de veces
+  El ordenamiento quicksort necesita un pivote
+  Cuidado. Partir en dos mitades no quiere decir "partir en dos mitades iguales", la particion puede ser igual o desigual 
+  en sus partes
+
+0. El pivote
+. El pivote es esencial en el ordenamiento rapido. Es el que permite "dividir las aguas", y gracias a el es posible saber cuales
+  son las particiones de cada lista
+. El pivote nunca "cuenta" en cualquiera de las dos particiones que se hacen. El mismo en cada nueva particion queda "ordenado"
+  en el sentido que a su izquierda estan los menores y a su derecha los mayores  
+. La eleccion del pivote determinara en gran parte si el ordenamiento tendra una complejidad de mejor o peor caso
+. El pivote a elegir puede ser el primer elemento de la lista, el ultimo, el del medio o una mediana  
+
+1. Explicacion del logaritmo en base dos (o binario) y la complejidad del ordenamiento quicksort
+. La funcion es y = log (x) es la potencia a la que el numero 2 debe ser elevada para obtener x 
+  2 elevado a la y = x -> 2 elevado a 8 = 256
+. Si un numero mayor que 1 se divide por 2 repetidamente, el numero de iteraciones para obtener un valor de al menos de 1 es justamente
+  la parte entera de ese logaritmo. Por ejemplo, si un lista de 8 posiciones "lo parto" en 2 (o en dos mitades) repetidamente, necesito realizar ese proceso
+  3 veces para obtener un lista de posicion 1 (8/2->4, 4/2->2, 2/2->1)   
+
+2. Complejidad, mejor y peor
+. En general, las complejidades se dividen en el mejor caso y peor caso. Para quicksort, el mejor caso es O(n * log n)
+. El mejor caso es asi por lo siguiente. Dado un lista de N elementos, antes de partirlo, para saber donde hacer la particion, necesito 
+  recorrerlo completo (o sea, O(n)). Despues de cada recorrida, lo parto en mitades (para este caso, se suponen mas o menos iguales) y asi
+  hasta llegar a un lista de 1 elemento (por teoria, ya esta ordenado). Entonces, esto se puede expresar como n * log (n). Es una multiplicacion
+  porque es el NUMERO DE VECES que se realiza una particion por cada lista o sublista. La palabra clave aqui es NUMERO DE VECES
+
+3. Resumen
+. Se requiere un pivote. El mismo no es parte de las dos particiones que son las nuevas listas a ordenar
+. Se usa recursividad
+. Se usan dos indices
+. Las sublistas no son reales
+. Se usa la sentencia continue
+. El swap no hace avanzes de indice  
+. Se puede decir que el quicksort requiere de un metodo de particion (para mas orden)

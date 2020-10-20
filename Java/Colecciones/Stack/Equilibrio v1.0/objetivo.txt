@@ -1,0 +1,17 @@
+- Objetivo:
+. Comprobar si el numero de caracteres de apertura y cierre coinciden
+
+- Notas
+. Lamentablemente, este modelo hecho aqui es de los menos eficientes. Pero da valiosas lecciones como tener en cuenta la eficiencia. Una buena pregunta para darse cuenta de esto
+  es si es necesario "comparar/mover" toda una estructura, o si solo hace falta mover/comparar una parte de ella
+
+. Ejemplo de una mala cadena (la separacion de 3 espacios es solo para ver el punto)
+  (   ()   {}   []   [   )
+
+. Otro problema en este ejercicio es que solo comprobe si los tags de apertura y cierre coinciden, pero no el orden de los mismos. Eso es un error
+  y es algo que deberia analizar siempre en cualquier algoritmo  
+
+- Problemas de esta aplicacion
+. No tiene en cuenta la eficiencia
+. Copia todo a una estructura en lugar de analizar o mover a otra estructura solo lo necesario
+. No tiene en cuenta el orden   

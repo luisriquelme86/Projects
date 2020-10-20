@@ -1,0 +1,2 @@
+- Objetivo:
+. Leer lineas de texto por teclado y escribirlas en un fichero de texto hasta teclear la palabra "fin"

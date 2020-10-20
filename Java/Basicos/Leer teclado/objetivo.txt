@@ -1,0 +1,3 @@
+- Objetivo:
+. Leer la entrada de teclado
+. En este caso, hay que usar el InputStreamReader con el wrapper de BufferedReader, y no el scanner

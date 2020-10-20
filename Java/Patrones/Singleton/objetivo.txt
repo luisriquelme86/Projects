@@ -1,0 +1,2 @@
+- Objetivo:
+. Implementar un patron singleton lo mas simple y entendible posible para anclar el concepto

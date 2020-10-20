@@ -1,0 +1,2 @@
+- Objetivo
+. Desarrollar una version alternativa a las versiones anteriores donde cada telefono se "le adjunta" un objeto validador y comparar resultados

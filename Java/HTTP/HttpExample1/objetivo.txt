@@ -1,0 +1,4 @@
+- Objetivo:
+. La idea original era hacer una peticion http y mostrar el contenido. Sin embargo, al ser uno de los primeros ejercicios, no comprendi muy bien todo
+. Varios dramas. Aun no consultaba la api y trataba de hacerlo yo solo razonando, o lo razone solo en el momento. Necesito en este ejercicio escribir mas notas en español
+  y consultar la api de java y hacer mas dibujos. Pensar que la recursividad me costo pero cada vez la entiendo mas

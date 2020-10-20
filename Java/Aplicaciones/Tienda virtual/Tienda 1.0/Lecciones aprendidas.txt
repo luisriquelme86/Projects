@@ -1,0 +1,26 @@
+- Lecciones aprendidas
+
+1. Refuerzo del concepto de diferencia entre el numero de una entidad y su posicion (el numero - 1 en las busquedas) pudiendo separar bien
+   esos conceptos sin crear propiedades adicionales
+2. Que la propiedad "nombre" sea algo comun en las entidades
+3. Que en el caso de venta de articulos para un cliente, el mismo mantenga un historial con articulo y fecha de lo ya adquirido
+4. El uso de un carrito de compras para el cliente
+5. Refuerzo del conococimiento de los modicadores "private". En este caso, el main de prueba no tiene que jamas poder modificar las propiedades de numero de articulos
+   o clientes seteando un valor, los atributos deben ser privados y solo modificarse por otros metodos
+
+6. Separar la propiedad "stock" del articulo en si mismo. De esta manera el stock lo maneja la tienda, en esta aplicacion lo hace con un array aparte
+7. El manejo del historial de articulos comprados y su fecha en dos array separados es novedoso, quizas yo me hubiera complicado demasiado con una nueva entidad o algo asi
+   La idea fue sugerida en el ejercicio. Y en parte, pensandolo bien, que el articulo no tenga el stock hasta tiene algo de sentido, porque si el articulo se mete en un carrito 
+   o se usa el objeto articulo en otros lugares el stock se estaria trasladando constantemente y no esta bien, por ejemplo, poniendolo en el historial de articulos del cliente. En
+   el historial, que el articulo tenga el stock es estupido. Y ahora se entiende un poco mas porque es buena idea que el stock no este dentro del articulo. Probablemente este concepto
+   es usado para modelar tablas y bases SQL, esta separacion entre stock, articulo y fecha de venta
+
+7b. De la mano de lo anterior, en algunas aplicaciones he notado que esta la clase "Venta" que es basicamente el historial, donde se guarda el cliente, el producto y la fecha
+    Probablemente es un buen enfoque pero como siempre las primeras versiones son de prueba, prueba y error y conocimiento, al menos en los ejercicios. Hubiera sido 
+    complicarse demasiado. Esta es una solucion elegante sin complicarse tanto   
+
+8. El uso de una clase Tienda que se encargue del manejo de stock, de vender un producto a un cliente o vender el carrito del cliente directamente
+9. El uso de una clase Tienda que tenga un "inventario". El concepto es novedoso para mi
+10. Que un metodo se encargue de llenar el inventario de la tienda (como si fuera un inicializador)
+11. Que el main principal sirva como casos de prueba en lugar de un archivo de test (pero lo ideal aun asi es el archivo de test)
+

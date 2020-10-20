@@ -1,0 +1,2 @@
+- Objetivo
+. Implementar una cuenta atras en forma iterativa, partiendo del numero 10 y mostrar esta cuenta atras por pantalla

@@ -1,0 +1,16 @@
+- Basico de Hashmap
+
+. Tambien llamados en otros lenguajes "diccionarios"
+. Es una implementacion de la interfaz Map
+. Es un conjunto de clave-valor. Este implementacion no garantiza un orden
+. Se llama "Hashmap" porque utiliza una tecnica de organizacion de datos llamado justamente "hash" que usa unas tablas para recuperar los valores almacenados rapida y eficientemente. O sea, es 
+  un mapa que implementa tablas hash para la recuperacion de datos
+
+- Caracteristicas
+. Solo se pueden almacenar objetos. Entonces, por ejemplo, como no se puede almacenar primitivos hay que usar los wrappers, por ejemplo en lugar de int usar Integer
+. No se garantiza el orden. Entonces, al mostrar el mismo, puede venir en cualquier orden
+
+- Usos
+. Uno de los usos mas comunes es para guardar diferente informacion en un unico objeto. Por ejemplo, si en un solo objeto hay que guardar los datos de una persona
+  (nombre, direccion, telefono) la forma correcta de hacer esto es creando una clase Persona, pero quizas por una sola persona no vale la pena crear una clase aparte
+  entonces se crea un hashmap y listo

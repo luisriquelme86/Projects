@@ -1,0 +1,11 @@
+- Objetivo:
+. Crear una tienda virtual basica. La misma constara de al menos la clase tienda, cliente y articulo. La clase tienda manejara a las otras dos
+
+- A tener en cuenta:
+. Esta primera version es una aproximacion y solo debera trabajar con las clases del main y no ser interactiva con opciones
+. Como esta sacado de un archivo de internet, lo ideal es hacer la aplicacion en español, no en ingles, para poder corregir y aprender
+
+- Detalles:
+. Leer el archivo de informacion
+
+

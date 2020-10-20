@@ -1,0 +1,8 @@
+- Teoria de herencia
+. Los metodos pueden ser abstractos o no abstractos
+. Una clase abstracta no se puede instanciar, hay que crear una clase hija obligatoriamente para poder crear instancias
+
+0. Introduccion
+
+ . Su relacion con el polimorfismo
+. 

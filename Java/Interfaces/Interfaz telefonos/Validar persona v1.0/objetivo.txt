@@ -1,0 +1,13 @@
+- Objetivo
+. Crear una aplicacion que valide una persona contra un telefono. Inicialmente el telefono puede validarse contra un codigo numerico
+  o contra un patron
+
+- Pistas
+. La relacion entre las clases no tiene porque ser muy estrecha necesariamente. Basta con que una use la otra
+
+- Lecciones aprendidas
+. El gran problema que tiene esto es la extensibilidad. El metodo validar puede crecer infinitamente, suponiendo
+  que una persona se pueda validar usando los ojos, la voz, el rostro, la huella, aumentando el metodo
+  validar del telefono cada vez mas y mas, haciendolo cada vez mas largo y dificil de entender
+
+. El problema siempre es el mismo, dado un compartamiento este puede ir variando mas y mas, porque crece el negocio o cambian o se amplian las especificaciones

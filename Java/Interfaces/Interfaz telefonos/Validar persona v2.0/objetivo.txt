@@ -1,0 +1,49 @@
+- Objetivo
+. Siguiendo la anterior version de la validacion del telefono, crear una aplicacion que valide una persona contra un telefono. Con la diferencia que ahora validara por codigo,
+  patron, huella y rostro. Armar la aplicacion de modo que sea extensible a mas validaciones
+
+- Pistas
+. Hay unas cuantas preguntas que son pertinentes hacer. Teniendo en cuenta que se pide extensibilidad, es claro que hay que usar interfaces de alguna forma. Pero como?
+  Inicialmente, un telefono validaba en un metodo usando una seguidilla de "if". Es claro que hay que sacar esos "if" de la validacion y llevarlos a otra parte. Como
+  es la mejor forma?. Hay una serie de preguntas que ayudarian
+
+      Es el telefono el que valida? O el telefono recibe un objeto y valida a traves de el?
+      El telefono implementa algo? O son las "validaciones" las que implementan algo?
+      El telefono realiza una validacion, o recibe "instancias validadoras"?
+
+. Analizando las preguntas, un telefono puede implementar validaciones, o puede delegar las validaciones en un objeto validador. Esa es la verdadera cuestion. Por cuestiones
+  de logica del mundo real, un telefono puede implementar una, varias o todas las validaciones posibles, segun sea el modelo de telefono. Esta pregunta es importantisima para
+  poder avanzar y hacer una aplicacion robusta, entendible y logica y no armar cosas innecesarias o rebuscadas
+
+. Entonces, que sucede? Un telefono implementa las validaciones o las delega? Si las delega, como un mismo telefono puede tener varias validaciones al mismo tiempo (posibles)
+  estar pasando "objetos validadores" complica todo. Es mas sencillo y menos rebuscado que el telefono en si mismo implemente una validacion  
+
+. Entonces, suponiendo que hay que crear una o mas interfaces, como seran? Sera una interfaz que tenga metodos de validar por codigo, patron, huella y rostro?
+  Si una interfaz tiene todo junto, cada telefono estaria obligado a implementarlas todas, incluso aquellas que no puede un modelo obsoleto, y estaria mal forzar las cosas. Se podrian crear
+  4 interfaces, una para cada validacion. Pero "sacando comun multiplico" son validaciones. Asi que se puede crear una interfaz que valide y que cada telefono lo haga como mas quiera. El 
+  telefono sabra como validar        
+
+
+- Lecciones aprendidas
+. En el caso de que una entidad utilize otra y sea por medio de un metodo pasandole un parametro y usando interfaces es bueno recordar que
+  las interfaces no se instancian, por lo tanto, el metodo no recibe un objeto de tipo interfaz, sino un objeto que implementa una interfaz (que pueden ser muchos)
+
+. Si una entidad tiene un metodo con muchos "if" que pueden ir creciendo, lo mas sano es tratar de crear una interfaz, pero es solo el primer paso,
+  se deben crear clases que implementen esa interfaz tambien
+
+. Se pueden distinguir algunos casos comunes de uso de lo anterior
+  	Por ejemplo, en el caso de una entidad compra que aplique descuentos, para aplicarlos se crean instancias de objetos que implementen una interfaz
+  	Otra opcion es crear objetos que implementen una interfaz determinada y llamar a los metodos
+
+    Con lo anterior, puede suceder cosas como las siguientes, que si bien son similares conducen a otros resultados y logicas, y programacion
+    Una entidad telefono implementa una interfaz de validacion, tiene un metodo que reciba una persona y valida segun sus opciones
+    Una entidad telefono valida a traves de entidades que utilizan una interfaz de validacion, y dichos objetos se pasan por parametro a un metodo
+
+    En ambos casos, la logica queda separada, pero de diferente forma. En el primer caso, si tenemos 25 telefonos, los 25 puede implementar una interfaz
+    de validacion distinta y validar la persona. En el segundo caso, un unico telefono se le pueden "adjuntar" "modulos" por asi decirlo, donde cada uno
+    de esos "modulos" realiza la funcion de validar. Esta ultima parte da la impresion de que a una entidad se le adjuntan piezas y se le sacan, como si
+    fueran las ruedas de un auto, a diferencia del primer caso donde lo que seria diferente es cada telefono
+
+    Resumiendo seria algo asi como 
+    Dados 5 modelos de telefonos diferentes, que cada uno valide a su manera
+    Dado un solo modelo de telefono, que pueda ir validando segun el objeto que se le pase	

@@ -1,0 +1,3 @@
+- Objetivo:
+. El objetivo es copiar un archivo de texto en otro archivo de texto
+. Se disponen de dos archivos de texto creados de antemano, input.txt y output.txt. El primero tiene el contenido a copiar mientras que el segundo esta vacio

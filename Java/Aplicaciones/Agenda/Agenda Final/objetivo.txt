@@ -1,0 +1,15 @@
+- Objetivo:
+. Mejorar la version 3.0 a la version final
+
+- Mejoras
+. En realidad, la unica mejora existente es mantener la lista siempre ordenada. Hay varias maneras de hacer esto
+  Forma 1:
+  Un clasico. Cada vez que se añade, modifica, elimina un contacto, se llama a un metodo ordenar (ya hecho en la version 3.0) y listo
+
+  Forma 2:
+  Casi igual que la anterior. Sin embargo, el "añadir" podria ser totalmente diferente. Por ejemplo, que al añadir un nuevo contacto,
+  se busque la posicion en la cual deberia ir en la lista, se posiciona ahi y se desplaza los restantes a la derecha. Lo que tiene de bueno
+  es el ahorrado del metodo ordenar (aunque un ordenar burbuja mejorado no deberia tener problemas, porque en lugar de hacer todas las pasadas solo se hacen las necesarias
+  y sera asi porque siempre esta ordenado excepto si el agregado es en posiciones muy lejanas al orden alfabetico). En los metodos de modificar o remover se puede
+  llamar a ordernar. Es solo una idea, aunque el primero ayuda a mover la mente
+

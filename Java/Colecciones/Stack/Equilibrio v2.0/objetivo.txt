@@ -1,0 +1,6 @@
+- Objetivo:
+. Realizar la comparacion y coincidencia de caracteres de apertura y cierre lo mas eficientemente posible de un string
+
+- Hints o ayudas
+. No hace falta "mover/comprobar" toda una estructura, basta solo con comparar lo necesario y bajo ciertas condiciones logicas si no se cumplen directamente cortar el ciclo
+. Tener en cuenta si la condicion de que un array cierre bien sus tags no es solo cantidad de tags, sino tambien el orden

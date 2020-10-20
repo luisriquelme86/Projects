@@ -1,0 +1,4 @@
+- Objetivo:
+. El objetivo es la escritura de dos archivos diferentes
+. Se disponen de dos archivos de texto creados de antemano, file1.txt y file2.txt, sin contenido inicialmente
+. En el file1.txt hay que escribir un mensaje. En el file2.txt tambien hay que escribir un mensaje, pero siempre al final del archivo, con append

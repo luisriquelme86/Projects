@@ -1,0 +1,36 @@
+- Lecciones de los ejercicios de validar persona en el telefono
+
+. Ejemplo -> https://www.arquitecturajava.com/java-interfaces-y-simplicidad/
+
+. Se dieron dos casos diferentes
+  Dados 5 modelos de telefonos diferentes, que cada uno valide a su manera
+  Dado un solo modelo de telefono, que se le puedan adjuntar distintos modos de validacion
+
+. En el caso de que una entidad utilize otra y sea por medio de un metodo pasandole un parametro y usando interfaces es bueno recordar que
+  	Las interfaces no se instancian, por lo tanto, el metodo no recibe un objeto de tipo interfaz, sino un objeto que implementa una interfaz
+    (que pueden ser muchos)
+
+. Si una entidad tiene un metodo con muchos "if" que pueden ir creciendo, lo mas sano es tratar de crear una interfaz, pero es solo el primer paso,
+  se deben crear clases que implementen esa interfaz tambien
+
+. Se pueden distinguir algunos casos comunes de uso de lo anterior
+  	Por ejemplo, en el caso de una entidad compra que aplique descuentos, para aplicarlos se crean instancias de objetos que implementen una interfaz
+  	Otra opcion es crear objetos que implementen una interfaz determinada y llamar a los metodos
+
+    Con lo anterior, puede suceder cosas como las siguientes, que si bien son similares conducen a otros resultados y logicas, y programacion
+    Una entidad telefono implementa una interfaz de validacion, tiene un metodo que reciba una persona y valida segun sus opciones
+    Una entidad telefono valida a traves de entidades que utilizan una interfaz de validacion, y dichos objetos se pasan por parametro a un metodo
+
+    En ambos casos, la logica queda separada, pero de diferente forma. En el primer caso, si tenemos 25 telefonos, los 25 puede implementar una interfaz
+    de validacion distinta y validar la persona. En el segundo caso, un unico telefono se le pueden "adjuntar" "modulos" por asi decirlo, donde cada uno
+    de esos "modulos" realiza la funcion de validar. Esta ultima parte da la impresion de que a una entidad se le adjuntan piezas y se le sacan, como si
+    fueran las ruedas de un auto, a diferencia del primer caso donde lo que seria diferente es cada telefono
+
+    Resumiendo seria algo asi como 
+    Dados 5 modelos de telefonos diferentes, que cada uno valide a su manera
+    Dado un solo modelo de telefono, que pueda ir validando segun el objeto que se le pase	
+
+- Como cierre
+. Una cuestion que vale la pena aclarar es que las interfaces son muy utiles pero a veces son solo el primer paso para poder resolver otros problemas, y que 
+  por si solas no bastan en problemas mas complejos. Es mas, hasta puede sumar mas problemas al resolver otros. El ejercicio de los patos y pato de hule es uno 
+  de los mejores ejemplos donde hay que ir un paso mas alla, con el patron strategy por ejemplo    

@@ -1,0 +1,4 @@
+- Objetivo:
+. Es muy sencillo, solo implica manipular un poco la clase vector con algunos datos
+. Carga 15 personas con los datos idPersona, nombre, altura
+. Usar las funciones mas interesantes como asegurar capacidad, obtener capacidad y cortar

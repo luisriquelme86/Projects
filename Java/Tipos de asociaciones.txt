@@ -1,0 +1,17 @@
+- Tipos de asociaciones
+
+. Conocer bien como se relacionan o asociacian las clases permite construir mejores aplicaciones
+
+1. Delegacion
+. Es una de las asociaciones mas debiles, aun asi, puede llegar a ser problematica segun como se use. La delegacion o dependencia es una relacion debil
+  entre dos clases, cuando una clase usa a otra. Se presenta de dos maneras
+
+  Cuando una clase usa a otra, y tiene una referencia a esa clase que va a usar. Es muy comun este tipo de estructura
+  Cuando una clase usa a otra, pero mas como servicio. En general, lo que sucede es que la clase que usa a la otra tiene un metodo
+  y dicho metodo recibe como parametro a la otra clase
+
+. La delegacion a veces presenta problemas al "atar" una clase a otra, por esto surge la inversion de dependencias  
+. En eclise muchas operaciones asociadas a la delegacion se pueden lograr con "Generate Delegate Methods", mas informacion
+  https://www.arquitecturajava.com/eclipse-y-el-concepto-de-delegacion/
+
+2. 

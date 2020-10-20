@@ -1,0 +1,66 @@
+. Java pendientes
+
+. Agenda en Java, tomando un ejemplo de Java y otro de Pascal
+
+. Asi como puedo "crear" numeros aleatorios, probar crear algo con caratceres aleatorios (tener en cuenta todas las variantes)
+
+. Tomar por ejemplo el mejor proyecto de agenda y hacer una bateria de test para probar todo
+  hacer una mejora de la clase de utilidad para colores y hacerla una clase de log
+
+. Que es un diccionario? Existe en Java? Respuesta rapida: Los diccionarios existen en Java y se llaman Hashmap, y solo varian en ciertas implementaciones internas
+  En otros lenguajes como Phyton en lugar de hablar de hashmaps se habla de diccionarios
+
+. Directorios en java -> Como listarlos, con files, directorios
+  Parecido a los ejercicios de prueba -> Listar desde la carpeta hacia la raiz, desde la carpeta origen hasta la ultima
+  crear las carpetas pasadas por parametro, borrar las carpetas indicadas, etc
+
+. Crear clases de utilidad. Conceptos de static, final. Guardado en memoria. Puntero this, funcion main, porque existe o no el 
+  puntero this, porque la clase es void main y static, porque deberia ser final una variable
+  Porque la clase de utilidad no puede ser static pero si todos sus metodos y variables y porque muchas de estas serian final
+  y porque el constructor seria private
+  Razones, cosas que no cambian -> Mayoria de edad, Mayor edad para ingresar, solo procesan, etc  
+
+. Mapas en Java -> Implementaciones, como se usan
+
+. Estudio de declaraciones: Comparator es una interfaz, no puedo hacer new. Asi que si algo es una interfaz y no tengo implementaciones (como List)
+  necesito crear una clase a mano  
+
+. Clase anonima (sobre el comparator) -> 
+  https://www.codejava.net/java-core/collections/sorting-arrays-examples-with-comparable-and-comparator
+
+. Comparator y Comparable en java -> Ordenar objetos, no primitivos, a tener en cuenta eso
+  https://mkyong.com/java/java-object-sorting-example-comparable-and-comparator/. Mirar el ejercicio de burbuja mejorado o de agenda para ordenar string, pe
+
+. Manejo de dependencias -> Porque surge esta necesidad?  
+
+. Si escribimos TYPE AUTOEXEC.BAT desde el DOS, veremos que se nos muestra el contenido de este
+ fichero: una serie de líneas de texto que, al menos, se pueden leer (aunque comprender bien lo que hace cada 
+ una ya es más complicado)
+ En cambio, si hacemos TYPE COMMAND.COM, aparecerán caracteres raros, se oirá algún que otro pitido...
+ es porque es un fichero ejecutable, que no contiene texto
+
+- Al volver a arrancar a programar, hacer:
+. Agenda con modificar, ordenamiento burbuja mejorado, borrado. Modificar amigable
+. Agenda con java, que guarde ordenado
+. Ejercicios con clases, cuando y porque crearlas. Buscar material didactico. Clase de utilidades
+
+. Bajar varios archivos de un ftp a una carpeta local
+
+-----------------------------------------------------------------------------------------------
+. Modificar todos los archivos de java y poner mas comentarios y subir todo de a poco
+-----------------------------------------------------------------------------------------------
+. Archivos de maestro y de novedades
+. Java con csv. Algo debe haber
+-----------------------------------------------------------------------------------------------
+. Comenzar a hacer ejercicios de Java mas complejos, con dos o tres o mas clases interconectadas. Si bien aprender interfaces y usarlas bien no es mala idea,
+  la idea es comenzar con esto, aplicaciones sencillas con clases interconectadas para pasar a la siguiente fase, conectar con una base SQL y hacer peticiones a la misma
+. La idea de la agenda esta bien para empezar, pero hay que avanzar. Si no hay datos para rellenar las tablas no tiene sentido
+. Tratar de que haya muchas tablas (3 o mas con relacion entre ellas) para poder hacer los join con SQL
+. Probar con aplicaciones de tiendas, tiendas de abarrotes, supermercados, productos y precios, premios, concursos, etc que obliguen a simular programas de la vida real
+  donde probar cosas realmente buenas, para pasar a la etapa de MVC
+
+  Ideas
+    . Almacen, tienda de abarrotes, series, videoclub, biblioteca o libreria, agenda, concurso y premio, gestion de empleados
+
+  Preguntas
+    . Porque siempre que se habla de descuentos en una tienda es una interfaz? A que se debe?

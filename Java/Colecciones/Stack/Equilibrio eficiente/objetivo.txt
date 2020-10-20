@@ -1,0 +1,23 @@
+- Objetivo:
+. El objetivo es, dadas dos cadenas, una equilibrada y otra no, usando una pila o stack, demostrar el estado de cada una con un mensaje  
+. Este proyecto contiene la forma mas eficiente de realizar esta tarea
+
+- Notas
+. Este es, por lejos, uno de los mejores ejercicios de pilas y uno de los mas aplicables de como funciona un stack realmente. Por ejemplo, se usa un stack internamente en las funciones recursivas
+  y tambien en los compiladores para ver que cierren todos los parentesis (o cualquier otros simbolos de apertura y cierre). Es bueno analizarlo
+
+- Pistas
+. Un dato a tener en cuenta es el siguiente. Cuando una cadena tiene balanceados sus simbolos de apertura y cierre. En primer lugar, se puede decir que estan balanceados 
+  cuando hay un numero equivalente de tags de apertura y cierre. Sin embargo, esta sola condicion no es suficiente. El numero de tags no basta, es necesario saber si esos
+  tags estan en orden ademas. Este es un clasico ejemplo donde no solo importa el numero, sino el orden
+. Respecto a lo anterior, se podria pensar en aplicar pintura a una pared, primero se rasquetea, luego se lava, luego se pasa la pintura. Y el orden es importante, 
+  no se puede pintar primero y rasquetear despues. Aca es lo mismo. Los ejercicios donde el numero importa no son tan comunes pero existen y siempre debe tenerse en cuenta
+  en cualquier ejercicio si el orden es una condicion necesaria para que se cumpla un algoritmo
+
+- Mas pistas
+. Sugerencias de cadenas
+	
+	()[]{}		 	-> Bien
+  	()[]{}} 		-> Mal
+  	()[]{}}{ 		-> Mal
+  	(([{}}]))		-> Mal

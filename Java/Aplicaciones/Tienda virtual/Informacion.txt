@@ -1,0 +1,107 @@
+- Preguntas y respuestas sobre la tienda virtual
+
+. El siguiente documento consta de todas las preguntas que llevan a razonar el porque la tienda estara construida como lo estara
+. Consultar el siguiente link
+  http://ir.ii.uam.es/~alejandro/2010/poo/enunP1.html
+
+1) Tienda
+. Al ser una tienda virtual, la misma contendra como minimo dos clases del estilo
+    Articulos o productos
+    Clientes
+
+. La realidad es que quizas el cliente en si podria omitirse, ya que la tienda simplemente podria hacer una venta y listo
+
+. Es necesaria una clase para tienda? Simplemente el programa principal de Java podria reducir un stock llamando a un metodo llamado "venta" y mostrando un mensaje de venta
+  Pero como ya se vio en la aplicacion de la agenda, la funcion main del programa principal no es para operar (aunque se puede) sino solo para instanciar las clases que se usan
+  en el programa principal. Entonces, mas alla de que la aplicacion sea una tienda virtual, necesito gestionar los articulos de alguna manera, y eso es con una clase tienda
+
+1) Boceto inicial
+. Si tuviera que gestionar una tienda, como inicial tendria
+
+. Una clase Tienda
+. Una clase Articulo
+
+. Donde tienda es claro que tiene que tener un array de articulos (que son los que articulos posee la tienda) y el articulo debera tener al menos un codigo o ID, nombre, precio y stock
+. Donde la tienda es seguro que necesita metodos ABM, para dar de alta, borrar, modificar un articulo y otro para venderlo (y esto ultimo implica reducir el stock)
+
+1.a) Cliente
+. Que papel juega el cliente en todo esto? Como se interconectaria un cliente con las otras dos clases de una manera logica y no rebuscada, forzando meter la clase cliente?
+. La tienda deberia tener un array de clientes. Al vender, deberia hacer una venta al estilo tienda.vender(articulo, cliente). Si bien este metodo muestra sin estar programado que se pasa un articulo
+  y un cliente, no se deberia poder realizar la operacion si ese cliente no se "registro" o añadio previamente
+. El cliente tendria un nombre, como minimo. Tambien una lista de articulos. Estos articulos al ser asignados al cliente no se reducen en stock, puesto que si bien el cliente
+  "los tomo" aun no lo compro, asi que el stock no se debe reducir hasta comprarlos
+. El cliente tiene un saldo
+
+1.b) Metodos
+. Hasta ahora se hablo de propiedades y algunos metodos al aire, pero hay que unir toda la informacion. Si bien se puede ir programando sobre la marcha y armar los metodos
+  a medida que la logica lo requiera (porque las propiedades son privadas y ademas quizas los metodos son muchos) es bueno tener una idea de los metodos
+
+1.b) Caso tienda
+. La misma tiene un array de articulos y de clientes
+. Debe tener un AMB de articulos y clientes. En el ejemplo de internet, se posee un metodo de llenar almacen y mostrar inventario, pero a groso modo es lo mismo
+  de alguna manera con metodo o no hay que dar de alta los articulos. Como minimo, ademas de los getter y setter se requieren los siguientes metodos. No se muestra los datos que recibe
+  estos son de sentido comun o deberian serlo
+
+  añadirArticulo()   
+  borrarArticulo()
+  modificarArticulo()
+  añadirCliente()
+  borrarCliente()
+  modificarCliente()
+  vender(articulo, cliente)
+
+1.b) Caso articulo
+. El articulo en si mismo no deberia tener mas que los getter y setter y constructor, porque no realiza nada, solo lo llaman desde afuera. Id, nombre, precio y stock seria lo basico
+
+1.b) Cliente
+. El cliente debera tener lo basico. Un nombre y una lista de articulos "que agarro". No lo pense en un principio, pero tambien debe tener un saldo, y es logico, porque si algo se compra
+  y tiene un precio alguna otra entidad (en este caso, el articulo) tiene que tener un saldo para pagar ese precio
+
+  añadirArticulo()
+  removerArticulo()
+  getSaldo()
+  aumentarSaldo()
+  disminuirSaldo()
+
+2) Conclusiones del boceto
+. A groso modo, se pueden ver varias cosas. Tengo lo necesario para lo basico pero lo otro lleva tiempo
+
+3) Faltante con respecto al ejemplo de internet
+. Llenar almacen (que es basicamente en lugar de escribir todo en el main, por ejemplo, 10 productos, llamar a un metodo que llene el array de productos)
+. Mostrar inventario
+. El articulo no tiene un stock propiamente dicho, sino que la tienda tiene las cantidades en un array llamado "cantidades" que cada posicion coincide con la del articulo
+  del array de articulos
+. Ademas de la venta de articulo por persona, puede vender el carrito invocando al cliente, y meter articulos al cliente de un carrito el mismo
+. Tiene un añadir cliente (aunque ya lo habia pensado)
+
+. El cliente tiene un historial de fechas y de articulos y el array de articulos se llama carrito. El metodo de añadir al carrito (o meter en articulos) ya lo habia pensado  
+
+4) Diagrama de clases basico
+
+5) Dudas y temores iniciales
+. En general, la mayoria de las aplicaciones realizadas son a lo sumo de dos clases, como la agenda y los contactos, donde una clase se encarga de poder operar con la otra. Y en el caso de
+  haber otras clases fue de herencia, lo que hace lo anterior practicamente lo mismo. Pero tener 3 clases totalmente independientes es algo totalmente diferente. En este caso, una clase
+  de tienda, de articulo y de usuario. Como se interrelacionan entre ellas. Algunas dudas y miedos
+
+  . La tienda tiene productos y el cliente tiene productos. En si, tienen arrays de productos, aunque el primero se supone tiene todos los productos de la tienda y el cliente solo
+    algunos, los que agarra
+  . Cualquier cliente puede comprar? Puedo crear un cliente y que compre o deberia estar si o si en el array de clientes para ser valido?
+  . Y la venta? Se reduce el stock del articulo y el cliente... aqui entro el tema de un saldo para el cliente. Si solo fueran las clases tienda y articulo probablemente no tiene 
+    sentido porque nadie lo compra, solo se reduce el stock
+  . El manejo de las clases, mas bien, de los objetos, que pueden y no pueden hacer. Se ve que en realidad, la tienda maneja las ventas (cliente y articulo) y el cliente "toma"
+    los articulos, pero por lo demas, el articulo en si no hace nada, mas alla de que se invocan sus metodos    
+
+. Como manejar las otras dos clases
+
+6) Lecciones
+. El campo "nombre" en general deberian tenerlo todas las clases, porque hacen referencia a cosas que necesitan o tienen un nombre (una persona, un articulo, libro, producto, empleado, etc)
+. El hecho de interconectar 3 clases totalmente distintas
+. El de tener un inicializador con objetos ya precargados y llamarlos con un metodo (el llenar inventario)
+. El hecho de no manipular directamente un objeto sino con los getters y setter sino usando otros metodos con nombres apropiados. Por ejemplo, un buen metodo como el aumentar
+  o disminuir saldo y obviar o sacar el metodo de set saldo (que quizas tiene sentido, porque sino deberia enviar numeros negativos, y ademas el set es solo para un valor, no deberia
+  sumar ni restar)
+. Averiguar porque el cliente tiene una referencia a tienda  
+
+7) Cosas muy nuevas
+. Aprender a organizar un proyecto con la carpeta src
+. A crear un jar, el build xml y todo eso. Es un paso importantisimo que deberia tener siempre claro. Seguramente esto me lleve al mundo de tomcat y demas  

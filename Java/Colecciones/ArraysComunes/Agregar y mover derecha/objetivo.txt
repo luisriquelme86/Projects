@@ -1,0 +1,6 @@
+- Objetivo:
+. Suponiendo un array de 50 posiciones con nombres, añadir un nombre, pero ni al principio ni al final, y desplazar los restantes a la derecha
+. Esta es una prueba para la agenda, donde se debe mantener el array de nombres "siempre" ordenado. La idea es que al agregar un nuevo nombre, el array de nombres quede ordenado
+
+- Pistas
+. Rellenar un array de 50 posiciones con 10 nombres (automatico, no interactivo)

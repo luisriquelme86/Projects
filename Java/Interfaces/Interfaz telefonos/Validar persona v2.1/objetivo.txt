@@ -1,0 +1,2 @@
+- Objetivo
+. Siguiendo la anterior version de la validacion del telefono, aplicar una herencia para hacer mas facil las cosas

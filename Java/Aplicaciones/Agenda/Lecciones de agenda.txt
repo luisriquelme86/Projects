@@ -1,0 +1,7 @@
+- Leccion aprendida de la agenda
+. En la primera version de la agenda, la funcion main se encarga de todas las operaciones de una agenda propiamente dicho. Por medio de funciones estaticas
+  va realizando las operaciones con ayuda de un array y de un contador tambien estaticos. Esto no representa ningun problema en una aplicacion tan chica,
+  pero se puede ver (y por buenas practicas) que no es el proposito de la funcion main tener funciones y que operen (a menos que sean ejercicios muy chicos)
+  Lo ideal es tener una clase que maneje esas cuestiones (y no tiene porque ser una clase llamada XManager o XHandler) sino una entidad con metodos. En este
+  caso, el manejo de los contactos deberia realizarlo una agenda (o sea, crear una clase agenda). Lo ideal entonces es, que si quiero crear una aplicacion
+  de agenda de contactos, para hacer un ABM de contactos, necesito "algo" para realizar las acciones, en este caso la misma agenda

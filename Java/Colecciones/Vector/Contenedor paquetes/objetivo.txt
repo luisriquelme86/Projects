@@ -1,0 +1,20 @@
+- Objetivo:
+. La idea es crear un contenedor de paquetes. Por ejemplo, un paquete tiene un codigo o id de paquete y un peso estimado (entre 80 y 150 kilos). Ese paquete tiene que ir en un contenedor de paquetes
+  que ira creciendo a medida que se le envien cosas. Inicialmente puede contener 5 paquetes y a lo sumo 500 kilos (100 kilos por cada 'lugarcito' contenedor de paquetes)
+. A medida que el tonelaje se incremente por falta de aguantar el peso, la linea debera extenderse mas
+
+. Introducir 50 paquetes a la vez con cargas aleatorias y 
+	Mostrar la carga maxima del contenedor, la capacidad, la cantidad de paquetes y el peso total
+		Si por alguna razon el peso total de los paquetes supera al peso maximo que puede cargar el contenedor, hay que aumentar la capacidad del mismo en 
+		tantos elementos como fuera necesario para ese peso total, ya que el peso maximo que puede cargar el contenedor es limitado
+
+- Pistas
+. El contenedor de paquetes tiene una carga maxima dada por 100 kilos * capacidad y debera ir mutando en el tiempo este numero
+
+- Correccion 
+Primero que nada, segun la pagina lo hice mal, debo cargar 50 y mostrar lo solicitado. Solo si realmente no cumple tengo que añadir
+Podria quedar pendiente para otro ejercicio, por leer mal. Sin embargo este ejemplo es muy bueno tambien, ya que si por alguna razon el peso es superado no se pone
+hasta el momento de tener mas espacio
+
+
+
