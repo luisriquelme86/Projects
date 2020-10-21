@@ -1,0 +1,19 @@
+- Objetivo:
+. Partiendo de la version 1.0 de la tienda, agregar las clases Carrito y Almacen
+. Compilar el proyecto con ANT 
+
+- A tener en cuenta:
+
+- Detalles:
+. La idea es que partiendo de lo anterior, se haga un refactor. Los casos de prueba se mantienen intactos, pero con estas dos clases y manteniendo el compartamiento
+  anterior, la aplicacion esta mejor modularizada, haciendo que haya otras entidades "mas adecuadas" por asi decirlo que se encarguen de los comportamientos,
+  dejando las clases mas "limpias" ya que solo se ocupan de su funcion (tal cual lo dice el nombre de la entidad)
+. Por ejemplo, en el version 1.0, la tienda se encarga del manejo del stock, lo cual es logico. En este caso, se derivara ese manejo en la clase Almacen y la tienda
+  hara las llamadas correspondientes
+
+- Lecciones aprendidas
+. A delegar ciertas funciones de una clase en otra, haciendola mas "limpia" y mas "pura" ya que solo cumple su papel
+. Tambien aprender que el nombre de clase "Manager" es muy generico. Ponerle a esto "Manager/Handler" de la tienda es posible, pero le ponemos un nombre
+  mas adecuado a la vida real, como el almacen de la tienda, que maneja justamente los stock y articulos. La idea del carrito es similar para el cliente     
+
+

@@ -1,0 +1,80 @@
+- ANT parte 1
+
+0. Objetivos e informacion relevante
+1. Que es ANT
+2. Porque utilizar ANT
+3. Tareas mas comunes con ANT
+4. Que es el archivo build.xml
+5. Estructuras de directorios posibles para un proyecto ANT
+6. Creacion del build.xml
+7. Ejecucion de tareas con ANT a partir del build.xml
+8. Creacion del build.xml con IntellijIdea
+9. Pendientes
+
+0. Objetivos e informacion relevante
+. Objetivos   : Compilar un proyecto con ANT (un buen comienzo es la Tienda Virtual 2.0)
+. Informacion : ANT esta instalado en la mac y puedo ejecutarlo en la terminal
+
+1. Que es ANT
+. ANT es una herramienta de Apache para ejecutar tareas, como compilar y generar ejecutables a partir de codigos fuentes. Sirve para automatizar tareas y dichas
+  tareas se indican en un archivo llamado build.xml
+. Dicho lo anterior, es una herramienta para simplificar y automatizar procesos  
+. ANT es multiplataforma, esta escrito en XML y Java, por lo tanto no depende del sistema operativo 
+. Permite ejecutar un solo comando para cada tarea, independientemente de los modulos, dependencias y/o librerias. Sin esto, se deberia reajustar el build
+  cada vez que salga una nueva version de las anteriores
+. Permite compilar cualquier proyecto de la misma manera, con un solo comando   
+
+2. Porque utilizar ANT
+. Si bien es cierto que se pueden realizar tareas como compilar, empaquetar o ejecutar una aplicacion JAVA desde un IDE, ANT permite hacer lo mismo automaticamente con un solo comando
+  desde una terminal o consola, lo cual es mucho mas comodo. Si por alguna razon no se dispone de un IDE para hacer lo anterior, sin ANT todos esos procesos habria que hacerlos
+  manualmente uno a uno desde la consola, haciendo el proceso largo y tedioso. ANT permite unificar todos esos procesos bajo un nombre para asi automatizarlos
+
+3. Tareas mas comunes con ANT
+. Limpiar, compilar, ejecutar proyectos, crear un jar (empaquetar), crear javadocs, etc
+
+4. Que es el archivo build.xml
+. Build.xml es el nombre predeterminado del archivo de configuracion de ANT. Contiene la informacion necesaria para compilar, producir un JAR, etc
+. Build.xml es un script de construccion de ANT
+  . Este script NO se usa para importar proyectos entre IDEs como Eclipse o Netbeans
+  . En general, todos los IDEs permite construir el build.xml automaticamente. Intellij lo puede hacer con Build->Generate Ant Build. Aun asi, en mi caso
+    decidi hacerlo a mano
+. Como dato curioso, cada vez que se ejecuta una tarea, la misma lanza el mensaje de "Build Sucessful"
+
+5. Estructuras de directorios posibles para un proyecto ANT
+. Antes de crear el archivo build.xml para correr ANT es recomendable que el proyecto de Java tenga una cierta estructura de directorios. A continuacion
+  se muestran dos formas posibles de organizar un proyecto Java con ANT. Son solo formas diferentes de organizar un proyecto. Para los fines practicos de la guia,
+  se usara la primera
+
+  project
+    build
+      classes                       -> Clases de Java ya compiladas
+      jar                           -> Distribucion o aplicacion empaquetada en forma de jar autoejecutable
+    javadoc                         -> Documentacion del proyecto en formato javadoc
+    lib                             -> Bibliotecas externas que se hayan usado en el proyecto
+    src                             -> Codigo fuente
+    test
+
+  project
+    classes                         -> Clases de Java ya compiladas
+    dist                            -> Distribucion o aplicacion empaquetada en forma de jar autoejecutable
+    doc                             -> Documentacion del proyecto en formato javadoc
+    lib                             -> Bibliotecas externas que se hayan usado en el proyecto
+    src                             -> Codigo fuente
+    test    
+
+6. Creacion del build.xml
+. En la carpeta raiz del proyecto y usando la estructura arriba recomendada, crear un archivo y nombrarlo como build.xml
+. El objetivo de este archivo es rellenarlo con "targets" que son las tareas que debe realizar el script. Algunos targets comunes son limpiar, compilar, crear un jar, ejecutar y demas
+. Un ejemplo de build.xml se encuentra junto a esta misma guia, es muy intuitiva y con los comentarios correspondientes
+
+7.Ejecucion de tareas con ANT a partir del build.xml
+. Para ejecutar las tareas con ANT a partir del build.xml, basta con abrir una consola o terminal y escribir 
+  ant COMANDO_DESEADO
+  donde el comando deseado es uno de los tantos target definidos en el build.xml  
+
+8. Creacion del build.xml con IntellijIdea
+
+9. Pendientes
+. Investigar el tema de la carpeta test y de crear test unitarios y que con el build se puedan correr
+. Las librerias externas deben agregarse, seguro hay un problema en ese sentido porque creo recordar que al crear test unitarios se ponen cosas de apache y eso lo ponia en el proyecto
+  A una empresa no les gusto q no termine el ejercicio y que ademas no este con ANT o algo asi y que no se manejaran las depencias con una manejador de paquetes
