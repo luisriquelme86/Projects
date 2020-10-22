@@ -9,11 +9,16 @@ package com.application.cuentaatras;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Mostrando la cuenta atras, partiendo del numero 10: ");
-        for (int counter = 10; counter > 0; counter--) {
-            System.out.print(counter + ", ");
+        countDown(10);
+    }
+
+    static int countDown(int num) {
+        System.out.print(num + ", ");
+        for (; num > 0;) {
+            num--;
+            System.out.print(num + ", ");
         }
-        System.out.println("");
+        return num;
     }
 }
 

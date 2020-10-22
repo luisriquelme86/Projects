@@ -6,3 +6,7 @@
 . Cual es la desventaja de no usar ANT con las librerias de test?
 . Hacer una comparacion entre manejar las librerias con ANT (si es posible) y no hacerlo. El proyecto Pig Latin tiene una carpeta "lib" 
   donde se descargaron los archivos necesarios para trabajar con los test. Hay que revisarla y comparar para entender bien todo
+
+
+
+  https://www.youtube.com/watch?v=Bld3644bIAo&ab_channel=BrianFraser

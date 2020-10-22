@@ -1,11 +1,15 @@
 - Guia teorica
 
 ) Algunas cosas que todo programador deberia saber como
+
+. Que es el codigo fuente
 . Tiempo de vida de las variables
 . Diferencia entre una aplicacion GUI y de consola
 . Scope o ambito de funciones y variables. Creacion, destruccion, tiempo de vida
 . Espacio reservado por instancias, clases
 . La declaracion static en metodos, variables, etc y final
+. De que hablamos cuuando algo es "virtual"
+. Que es y cuando usar interfaces y herencias, y sus diferencias, cuando es mejor una u otra
 . Manejo de memoria
 . Uso de la heap y de la memoria ram
 . Manejo de la memoria y los ficheros
@@ -16,6 +20,13 @@
 . Cola, colas con prioridad
 . Hilos
 . Mixins (https://www.arquitecturajava.com/java-mixins-un-ejemplo-sencillo)
+. Inyeccion de dependencias
+. Inversion de control e inyeccion de dependencias
+. Herramientas para automatizar la compilacion de proyectos (ANT para Java, por ejemplo, o Maven) 
+
+) Que es el codigo fuente
+. El codigo fuente o fuente (source, en ingles) es el codigo escrito por un programador en lenguaje de alto nivel. Para que la maquina pueda leerlo, hay que pasarlo a codigo objeto y 
+  asi poder ejecutar el programa. Como detalle, en general los fuentes en la mayoria de los proyectos se almacenan en una carpeta llamada src (SouRCe)
 
 ) Tiempo de vida de las variables
 . Las mismas estan vivas solo mientras esten dentro de una funcion, al terminar una funcion las mismas se destruyen

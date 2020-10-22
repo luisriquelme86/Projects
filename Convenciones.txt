@@ -1,9 +1,43 @@
 - Convenciones
-. El archivo donde se encuentra la funcion main se llamara siempre Main.java
+
+  IDE        : IntelliJ IDEA 2019.2.3 Community Edition
+  Java       :
+  Build Tool : ANT
+  Test       : Junit 4.12
+
+- Convenciones basicas
+. El archivo donde se encuentra la funcion main se llamara siempre Main.java, con ciertas excepciones, por ejemplo, ejercicios de internet que tienen una estructura armada
+  y se respeta para hacerlo todo mas facil
+. Todos los packages se llamaran com.application.[NOMBRE-PROYECTO], pero puede haber excepciones tambien  
 . El codigo se escribira siempre en ingles
-. Todos los packages son del tipo com.application.[nombre-del-proyecto]
     El nombre del proyecto en general va en español para poder concordar con la carpeta raiz y poder identificar facilmente que se esta queriendo
-    reproducir
+    hacer
 . Los print o println en general van en español, lo mismo que los comentarios que ayuden a entender los ejercicios
 . Todos los proyectos deben indicar los objetivos en el main del mismo 
 . Todos los proyectos deben tener un archivo llamado objetivo.txt
+
+- Convenciones de carpetas
+. Por ahora, los proyectos van a usar la convencion de ANT que es un build tool, y la estructura del mismo se va a organizar asi
+  
+  project
+  	build
+  		classes
+  		jar
+  	doc
+  	lib
+  	src
+  	test
+  
+  y un archivo build.xml en la raiz
+
+. Ademas, la idea es que todos los proyectos tengan test, y que se manejen las bibliotecas y/o dependencias con ANT
+
+- Mas convenciones
+. Hay que configurar los proyectos para que los compilados de los fuentes vayan a la carpeta build/classes. Tambien hay que asignar que los test
+  van a la carpeta de test y los fuentes en la carpeta src, mencionadas anteriormente y que son la base de la estructura de los projectos
+
+. Hay que configurar los proyectos para que el IDE tome ANT, esto se hace seleccionando el build.xml (configurado correctamente de antemano para el proyecto)
+  y asignadolo al ANT del proyecto en el IDE
+
+- Sobre los test
+. Lo ideal es en cada proyecto cargar las librerias de junit que proporciona el mismo IntelliJ. Esto se hace por medio de la configuracion de proyectos  
