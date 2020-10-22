@@ -6,6 +6,7 @@
     <property name="classes" value="build/classes"/>
     <property name="jar" value="build/jar"/>
     <property name="javadoc" value="doc"/>
+    <property name="test" value="test"/>
 
     <!-- Limpiar siempre el directorio destinado a almacenar nuestras construcciones -->
     <target name="clean">               <!-- Objetivo -->

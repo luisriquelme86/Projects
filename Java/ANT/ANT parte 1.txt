@@ -72,8 +72,10 @@
 7.Ejecucion de tareas con ANT a partir del build.xml
 . Para ejecutar las tareas con ANT a partir del build.xml, basta con abrir una consola o terminal y escribir 
   ant COMANDO_DESEADO
-  donde el comando deseado es uno de los tantos target definidos en el build.xml  
+  donde el comando deseado es uno de los tantos target definidos en el build.xml, por ejemplo, ant clean
 
 8. Creacion del build.xml con IntellijIdea
+.  
+
 9. Integracion de ANT con un IDE como IntellijIdea 
 . Basta con seleccionar el build.xml ya configurado correctamente en la raiz del proyecto y agregarlo al ANT del IDE

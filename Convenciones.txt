@@ -3,7 +3,7 @@
   IDE        : IntelliJ IDEA 2019.2.3 Community Edition
   Java       :
   Build Tool : ANT
-  Test       : Junit 4.12
+  Test       : JUnit 4.12
 
 - Convenciones basicas
 . El archivo donde se encuentra la funcion main se llamara siempre Main.java, con ciertas excepciones, por ejemplo, ejercicios de internet que tienen una estructura armada
@@ -40,4 +40,10 @@
   y asignadolo al ANT del proyecto en el IDE
 
 - Sobre los test
-. Lo ideal es en cada proyecto cargar las librerias de junit que proporciona el mismo IntelliJ. Esto se hace por medio de la configuracion de proyectos  
+. Lo ideal es en cada proyecto cargar las bibliotecas de JUnit que proporciona el mismo IntelliJ. Esto se hace por medio de la configuracion de proyectos
+
+- Explicaciones
+. Al asignar un build.xml al ANT del IDE y al agregar las bibliotecas de Junit para los test en el IDE tambien, lo que termina sucediendo es que se 
+  modifica la carpeta .idea del proyecto donde se guardan las configuraciones del mismo. Asi, por ejemplo, en la carpeta donde esta instalado IntelliJ que contiene
+  las bibliotecas para JUnit, no es que se copian al proyecto ni a la carpeta lib las mismas, sino que en la carpeta .idea hay unos archivos que indican de donde obtenerla
+  

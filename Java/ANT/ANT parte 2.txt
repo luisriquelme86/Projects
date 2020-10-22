@@ -1,12 +1,21 @@
 - ANT parte 2
 
 - Preguntas
-. Como se relaciona ANT con el manejo de librerias?
-. Las librerias son dependencias que se manejan con ANT?  
-. Cual es la desventaja de no usar ANT con las librerias de test?
-. Hacer una comparacion entre manejar las librerias con ANT (si es posible) y no hacerlo. El proyecto Pig Latin tiene una carpeta "lib" 
-  donde se descargaron los archivos necesarios para trabajar con los test. Hay que revisarla y comparar para entender bien todo
+1. Como se relaciona ANT con el manejo de bibliotecas?
+2. Las librerias son dependencias que se manejan con ANT?  
+3. Cual es la desventaja de no usar ANT con las bibliotecas de test?
+4. Hacer una comparacion entre manejar las bibliotecas con ANT (si es posible) y no hacerlo. El proyecto Pig Latin tiene una carpeta "lib" 
+   donde se descargaron los archivos necesarios para trabajar con los test. Hay que revisarla y comparar para entender bien todo
 
+- Respuestas
+1. ANT en su build.xml puede hacer referencia a bibliotecas
+2. Si
+3. Las desventajas son las ya citadas al no usar ANT. Usar ANT permite manejar el proyecto por linea de comandos con pocas lineas, haciendo las tareas tediosas
+   sin necesidad de un IDE, con todo lo que eso implica
+4. Lo mencionado arriba justamente. Acerca del proyecto Pig Latin, en su momento no tenia tiempo ni los conocimientos necesarios, asi que busque la forma mas 
+   rapida de hacer test de la aplicacion en cuestion. Justamente lo que salio fue que en lugar de configurar el IDE IntelliJ para que trabaje con las bibliotecas
+   de JUnit apuntando a las mismas termino sucediendo que se copiaron a la carpeta lib
 
-
-  https://www.youtube.com/watch?v=Bld3644bIAo&ab_channel=BrianFraser
+- Mas cuestiones
+. Una vez que es posible creer y correr test sin la necesidad de estar copiando las bibliotecas de un lugar a otro, sino solo referenciandolas, es momento de 
+  configurar el build.xml de ANT para que trabaje con esas mismas bibliotecas y se puedan correr todos los test por linea de comandos   
