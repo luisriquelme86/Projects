@@ -18,4 +18,10 @@
 
 - Mas cuestiones
 . Una vez que es posible creer y correr test sin la necesidad de estar copiando las bibliotecas de un lugar a otro, sino solo referenciandolas, es momento de 
-  configurar el build.xml de ANT para que trabaje con esas mismas bibliotecas y se puedan correr todos los test por linea de comandos   
+  configurar el build.xml de ANT para que trabaje con esas mismas bibliotecas y se puedan correr todos los test por linea de comandos
+
+- Correciones a lo anterior
+. Como parte del proceso de aprendizaje, se deja lo anterior. Si bien es buena idea muchas veces agregar las bibliotecas de JUnit al proyecto
+  directamente y no a una carpeta del proyecto, para poder hacer la compilacion de los test y los test propiamente dichos con ANT, es necesario
+  que las bibliotecas esten en una carpeta en el proyecto y no solo referenciadas, en el caso mas comun, en la carpeta lib
+. En el caso de IntelliJ, hay que tomar las bibliotecas desde un repositorio Maven y se buscan con estas palabras "junit:junit:4.12"	     
