@@ -16,4 +16,13 @@
 . Tambien aprender que el nombre de clase "Manager" es muy generico. Ponerle a esto "Manager/Handler" de la tienda es posible, pero le ponemos un nombre
   mas adecuado a la vida real, como el almacen de la tienda, que maneja justamente los stock y articulos. La idea del carrito es similar para el cliente     
 
+. Este ejemplo es uno de los mejores de refactor. A partir de una aplicacion funcionando, la misma debe quedar igual que antes en funcionamiento pero
+  separando en mas modulos y dejando todo mas limpio. Y ademas muestra como una aplicacion no se construye en general "de una" sino que se arma tras
+  sucesivas aproximaciones. Esto es excelente, porque quizas en lugar de complicarse de un principio, es mejor "hacer todo junto" para que ande y luego
+  ir separando todo mejor. La clase Almacen y Carrito quizas no son lo primero que se piensa como clase, aunque si como concepto 
+  (el de cargar los productos al inicializar la tienda y de poner en un carrito las compras del cliente si, pero no las entidades separadas)
+
+. Se supone que el carrito siempre pertenece al cliente. Si no es obvio, es una buena practica, ya que el cliente "agarra un carrito". Es una entidad independiente
+  donde el cliente pone los articulos (en si, la que se encarga a nivel aplicacion de hacer eso es la tienda, pero esto es transparente para la persona de afuera de la aplicacion)    
+
 

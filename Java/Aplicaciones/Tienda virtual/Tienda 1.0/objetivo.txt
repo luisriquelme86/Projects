@@ -7,5 +7,3 @@
 
 - Detalles:
 . Leer el archivo de informacion
-
-

@@ -2,7 +2,7 @@
 
 . Agenda en Java, tomando un ejemplo de Java y otro de Pascal
 
-. Asi como puedo "crear" numeros aleatorios, probar crear algo con caratceres aleatorios (tener en cuenta todas las variantes)
+. Asi como puedo "crear" numeros aleatorios, probar crear algo con caracteres aleatorios (tener en cuenta todas las variantes)
 
 . Tomar por ejemplo el mejor proyecto de agenda y hacer una bateria de test para probar todo
   hacer una mejora de la clase de utilidad para colores y hacerla una clase de log
@@ -34,24 +34,23 @@
 . Manejo de dependencias -> Porque surge esta necesidad?  
 
 . Si escribimos TYPE AUTOEXEC.BAT desde el DOS, veremos que se nos muestra el contenido de este
- fichero: una serie de líneas de texto que, al menos, se pueden leer (aunque comprender bien lo que hace cada 
- una ya es más complicado)
- En cambio, si hacemos TYPE COMMAND.COM, aparecerán caracteres raros, se oirá algún que otro pitido...
- es porque es un fichero ejecutable, que no contiene texto
+  fichero: una serie de líneas de texto que, al menos, se pueden leer (aunque comprender bien lo que hace cada 
+  una ya es más complicado)
+  En cambio, si hacemos TYPE COMMAND.COM, aparecerán caracteres raros, se oirá algún que otro pitido...
+  es porque es un fichero ejecutable, que no contiene texto
 
 - Al volver a arrancar a programar, hacer:
 . Agenda con modificar, ordenamiento burbuja mejorado, borrado. Modificar amigable
 . Agenda con java, que guarde ordenado
 . Ejercicios con clases, cuando y porque crearlas. Buscar material didactico. Clase de utilidades
-
 . Bajar varios archivos de un ftp a una carpeta local
+
+- Que todos los proyectos tengan test. Acostumbrarse a hacer test de los ejercicios al menos con JUnit
 
 -----------------------------------------------------------------------------------------------
 . Modificar todos los archivos de java y poner mas comentarios y subir todo de a poco
 -----------------------------------------------------------------------------------------------
-. Archivos de maestro y de novedades
-. Java con csv. Algo debe haber
------------------------------------------------------------------------------------------------
+
 . Comenzar a hacer ejercicios de Java mas complejos, con dos o tres o mas clases interconectadas. Si bien aprender interfaces y usarlas bien no es mala idea,
   la idea es comenzar con esto, aplicaciones sencillas con clases interconectadas para pasar a la siguiente fase, conectar con una base SQL y hacer peticiones a la misma
 . La idea de la agenda esta bien para empezar, pero hay que avanzar. Si no hay datos para rellenar las tablas no tiene sentido
