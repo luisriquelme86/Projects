@@ -73,7 +73,6 @@
 
 . La forma de obtenerlo varia segun el lenguaje, pero en general es asi, entre (0,1]. Redondear y en caso de java castear, o sea, convertir un primitivo en otro primitivo    
 
-
 7. Comprobar si un numero entero es capicua
 
 . Invertir el numero y comprobar si el original y ese son el mismo. 
@@ -83,21 +82,3 @@
   Dibujos comparativos
   Suponer el array de arrays conocido y simple, como A={'A1', ['ASub1', 'ASub2', 'ASub3']} o sea, que contenga una cadena y a lo sumo un array de cadenas
   Mostrar claramente como y porque mesclar la recursividad con el ciclo anidado, su relacion entre ellos y diferencia
-
-- Factorial iterativo
-- A todos los ejercicios ponerle comentarios sobrecual es el objetivo de los ejercicios
-- Suma de elementos array recursiva
-- Cola con prioridad, el ejemplo de los mensajes a una chica con 200 chicos
-- Manejo de fechas genericamente
-- Levantar maquina virtual xp para pascal asi puedo hacer los merge
-- Ejercicios de ficheros, guardar. Hay muuchos del estilo de abrir, modificar, guardar, guardar con otro nombre
-- Ejercicios de abrir conexiones
-- Ejercicios de abrir conexiones con https y copiar cosas a un archivo o guardar imagen
-- Conectar a una base de datos de alguna manera
-- Manipular una base de datos
-- Hacer merge de archivos y cosas asi
-- Ejercicios de interfaces
-- Algunos de patrones pero no tomarlo tan enserio
-- Consumir servicios rest
-- Buscar mas desafios
-- Averiguar como pasar cosas entre la maquina virtual y la mac comun (entrar al correo y mandar archivos ?)

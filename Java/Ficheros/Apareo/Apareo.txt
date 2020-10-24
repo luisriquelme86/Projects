@@ -1,0 +1,33 @@
+- Apareo
+. El apareo permite asociar/relacionar datos que se encuentran en distintos archivos
+. Hay diferentes casos de apareo, no uno solo. Sin embargo el mas conocido caso de apareo es la mezcla o merge
+. En todos los casos de apareo se dispone de dos archivos distintos (generalmente llamados principal y secundario, aunque pueden no llamarse asi) que tienen una clave que los relaciona
+. Se parte siempre del supuesto que los dos archivos estan ordenados por la misma clave (ascendente o descendentemente en ambos archivos)
+
+- Apareo por mezcla
+. Es el caso mas conocido. La idea es: A partir de dos archivos distintos generar un tercer archivo (o salida por pantalla) que sea una mezcla de los dos
+
+- Usos del apareo
+. Gran parte de las bases de datos relacionales se basan en el apareo de datos
+
+- Operaciones comunes
+. En general en el apareo se hacen los siguientes
+	
+	agregar datos nuevos
+	borrar datos
+	modificar datos
+	combinar datos
+	actualizar datos
+
+- Ejemplos de apareos
+1. Se dispone de un listado de alumnos (padron, apellido, nombre, carrera) y otro archivo que contiene las notas de esos alumnos (padron, materia, nota) y se quieren
+   listas todas las notas que corresponden a cada uno de los alumnos
+2. Se dispone de un listado de alumnos (padron, nombre, nota) de una materia y otro listado igual para otra materia y se quieren tener en un solo archivo los alumnos
+   y saber que materia rindio, si la del primer archivo, la del segundo o ambos
+
+- Situaciones comunes
+  Actualizacion de un archivo maestro a traves de un archivo de novedades (movimiento/detalles), donde las novedades son altas, bajas o modificaciones o alguna de ellas solamente,
+  donde el resulado es un archivo maestro nuevo y muchas veces un listado de errores
+  Actualizar saldos de cuentas corrientes
+  Actualizacion de movimientos de articulos de un almacen
+  Liquidacion de haberes de los empleados      

@@ -1,0 +1,28 @@
+- Objetivo: 
+. Dados dos archivos llamados fisica.csv y analisis.cvs que contienen el numero de legajo, nombre y nota obtenida en el examen de la materia en cuestion de cada alumno,
+  volcar en el archivo nuevo.csv los legajos ordenados de menor a mayor y una de las siguientes leyendas "Rindio Fisica", "Rindio Analisis" o 
+  "Rindio Fisica y Analisis"
+. El caso de apareo es del tipo mezcla
+. Todos los archivos estan ordenados por numeros de legajo de menor a mayor
+
+. Para no complicar las cosas, se supondran archivos de texto en formato csv
+
+- A tener en cuenta
+. Se suponen archivos CSV sencillos y simples. O sea, los valores separados por coma no contienen otras comas o comillas
+. Ejemplo
+  
+  CSV Sencillo
+
+  Legajo, Nombre, Edad
+  1 		, Luis  ,	33
+  2 		, Pedro ,	35
+  3 		, Belen ,	19
+
+  CSV Complejo
+
+  Legajo, Nombre, Lenguajes
+  1 		,	Luis 	, "CSV, Java"
+  2 		, Pedro , ""PHP 5.0""
+  3 		, Belen , "Java, Javascript, PHP"
+
+. En el segundo caso se puede usar una libreria, como OpenCSV. Se puede descargar el jar desde un repositorio Maven o de otro lugar   

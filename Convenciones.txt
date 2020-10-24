@@ -46,4 +46,7 @@
 . Al asignar un build.xml al ANT del IDE y al agregar las bibliotecas de Junit para los test en el IDE tambien, lo que termina sucediendo es que se 
   modifica la carpeta .idea del proyecto donde se guardan las configuraciones del mismo. Asi, por ejemplo, en la carpeta donde esta instalado IntelliJ que contiene
   las bibliotecas para JUnit, no es que se copian al proyecto ni a la carpeta lib las mismas, sino que en la carpeta .idea hay unos archivos que indican de donde obtenerla
-  
+
+. Sin embargo, la forma mencionada antes no es la unica. Tambien se pueden agregar las bibliotecas obtenidas de un repositorio Maven y que se descarguen en una carpeta
+  llamada "lib" para su posterior uso. Lamentablemente la forma mencionada arriba (asignar las bibliotecas al proyecto, tomadas desde la carpeta de IntelliJ) no permite
+  hacer un uso desde el build.xml, es necesario que las bibliotecas esten en una carpeta lib

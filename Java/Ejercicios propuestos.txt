@@ -1,49 +1,59 @@
 - Ejercicios propuestos
 
 0.
-. Archivos de maestro y de novedades. Hacer merge de archivos y cosas asi. Buscar los ejemplos viejos de pascal
+. Archivos de maestro y de novedades. Hacer merge de archivos y cosas asi. Buscar los ejemplos viejos de pascal que hacen esats cosas
 . Java con csv
 
 1.
 . Factorial iterativo
 . Suma de elementos array recursiva
-. Ejercicios de ficheros, guardar. Hay muuchos del estilo de abrir, modificar, guardar, guardar con otro nombre
+. Ejercicios de ficheros, guardar. Hay muchos del estilo de abrir, modificar, guardar, guardar con otro nombre
 
 2.
 . Manejo de fechas genericamente
 . Cola con prioridad, el ejemplo de los mensajes a una chica con 200 chicos
 . Ejercicios con colas y pilas
+. Serializaciones y deserializaciones para objetos y archivos
 
-3.
+3. 
+. Instalar librerias de terceros
+. Aplicacion que lee un CSV mas complejo o un archivo excel
+
+6.
 . Ejercicios de abrir conexiones
 . Ejercicios de abrir conexiones con https y copiar cosas a un archivo o guardar imagen
 
-4. 
+7. 
 . Ejercicios de interfaces
 . Maquina de cafe (concepto de delegacion)
 . Parking y estacionar -> https://desarrolloweb.com/articulos/polimorfismo-programacion-orientada-objetos-concepto.html3
 . Llamadas de telefono -> https://sekthdroid.wordpress.com/tag/ejemplos-java-polimorfismo-con-interfaces/
 . Cuentas bancarias y depositos -> https://unavdocs.files.wordpress.com/2011/07/polimorfismo-tema8.pdf
 
-5.
+8.
 . Ejercicios con patrones
 
-6.
+9.
 . Conectar a una base de datos de alguna manera
 . Manipular una base de datos
+. Cargar datos de una base (levantarlos en memoria) y operar la aplicacion, por ejemplo, cargar en una base articulos (100 digamos) y que la aplicacion
+  los reconosca. A su vez, dichos articulos no deberian cargarse siempre a mano en la aplicacion o tener una hardcodeo en la aplicacion, sino tomarlo de algun archivo,
+  ya se de un json, un xml, csv, o texto plano
+. Una ABM que guarde en una base de datos y no en arrays (o sea, persistencia). Se podria comenzar a usar la aplicacion de Tienda virtual, bien sencilla, que tenga clientes, 
+  articulos y el carrito, y que eso se guarde en la base  
 
-7. 
+10. 
 . Consumir servicios REST
 
-8. 
+11. 
 . Usar frameworks como Grails una vez mas y aprender a usarlos con sus ventajas y desventajas
 . Que es hibernate y porque usarlos
 
-9.
+12.
 . Que son los DTO, los POJO y demas. Cual es su relacion con los patrones?
 
-10.
+13.
 . Comprender y manipular las diferentes estructuras de almacenamiento, listas, listas enlazadas, etc
 
-11.
+14.
 . TDD, test unitarios y de integracion

@@ -23,7 +23,6 @@
 . Hay que ejercitar y comprender la logica, con ejercicios muy simples
 . La mayor brecha no es conocimientos, sino destreza. Aplicar la teoria para solucionar problemas
 
-
 - Seccion: Divide y venceras
 
 . Hay que dividir las tareas en partes pequeñas. En tareas aisladas
