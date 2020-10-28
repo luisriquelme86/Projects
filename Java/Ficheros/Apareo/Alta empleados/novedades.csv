@@ -1,0 +1,11 @@
+seccion, empleado, nombre y apellido, cargo, sueldo basico
+ventas, 1, lucas delgado, vendedor, 1000
+ventas, 2, juan diaz, repositor, 1200
+recepcion, 3, lucas rodo, recepcionista, 2000
+laboratorio, 10, juana loretti, ensayista, 1200
+taller, 11, lucas gonzalez, reparador, 900
+taller, 12, diego mulan, encargado, 1800
+ventas, 13, maria angeloni, encargado, 2500
+limpieza, 14, mirta luciani, ordenanza, 1400
+limpieza, 15, julian alegre, ordenanza, 1800
+taller, 16, andres vergara, tecnico, 2000 

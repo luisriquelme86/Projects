@@ -6,6 +6,7 @@
 . Tiempo de vida de las variables
 . Diferencia entre una aplicacion GUI y de consola
 . Scope o ambito de funciones y variables. Creacion, destruccion, tiempo de vida
+. Que es un stream en Java, al java-mixins-un-ejemplo-sencillo
 . Espacio reservado por instancias, clases
 . La declaracion static en metodos, variables, etc y final
 . De que hablamos cuando algo es "virtual"

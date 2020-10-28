@@ -1,0 +1,12 @@
+- Lecciones aprendidas
+. Mirando el archivo "original.html" se puede extraer varias conclusiones
+  
+  	El ejercicio pide exclusivamente acceder al nodo label y a partir de ahi modificar los campos. A simple vista, basta con hacer un 
+  	document.getElementsByTagName por el label, acceder al firstChild (span), otra vez lo mismo (el texto es un nodo) y luego el value. En la
+  	practica, esto no funciona. Y esto es porque, en la forma en que esta escrito, hay saltos de linea, y por lo tanto estos cuentan como nodos 
+  	para algunos sino todos los navegadores. Por eso se accede al firstChild y luego nextSibling (a la derecha)
+
+  	Es claro que es mas sencillo acceder a todos los span o poner una clase, pero el objetivo del ejercicio es notar esto justamente
+
+  	Otra cosa, es que en el ejercicio original los span estan pegados al label, y en este caso sin los saltos de linea, si funciona de la 
+  	forma mencionada antes	

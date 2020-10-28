@@ -1,0 +1,17 @@
+- Lecciones burbujas
+. Lo importante en algo tan simple como las busquedas por burbuja es armar dibujos y sobretodo, no perderse en los ciclos o loop. Es decir,
+  comprender realmente porque un ciclo comienza o termina con un indice y porque. Los dibujos y el pseudocodigo antes de escribir en un lenguaje
+  ayudan mucho
+. Los ciclos pueden traer confusiones, y mas porque los indices iniciales o finales toman los valores que toman
+
+- Comprension
+. Entender porque un ciclo esta dentro de otro es importantisimo. Y la logica detras de la burbuja. Simplemente sucede que recorre y compara todos los indices contra todos los demas, en orden
+  lineal, dejando atras los ya comparados. El primer ciclo se encarga de recorrer la coleccion completa. Por cada elemento, entra en un ciclo interior, que compara ese actual contra todos los 
+  demas, cuando el ciclo interior termina, sigue el primer ciclo, con el subsiguiente elemento, y asi
+. Esa es la explicacion de dos ciclos y porque uno esta contenido en el otro. Pero no en todas las aplicaciones un ciclo esta contenido dentro de otro de esta manera, puede variar segun
+  la necesidad, como en los apareos de archivos, por ejemplo  
+
+- Corolario
+. Aprender a manejar los ciclos, cual es el ciclo que marca la pauta (que ademas puede ser un ciclo que involucre mas de una "entidad") y cuales son el/los interiores
+  y porque se arma asi lleva tiempo y practica, pero es indispensable para obtener eficiencia, evitar perderse y trabarse en el codigo. Requiere analizar bien 
+  y ser minuicioso con las condiciones previas  

@@ -1,0 +1,6 @@
+- Objetivo: 
+. Dados dos archivos llamados alumnos.csv (padron, apellido, nombre, carrera) y notas.csv (padron, materia, nota) se pide mostrar por pantalla y volcar en un archivo llamado 
+  nuevo.csv todas las notas que corresponden a cada uno de los alumnos
+
+- Condiciones  
+. Todos los archivos estan ordenados por numeros de legajo de menor a mayor (el archivo "nuevo.csv" generado tambien debe cumplir esta condicion)

@@ -1,0 +1,18 @@
+- Objetivo: 
+. Dado dos archivos, maestro.csv y novedades.csv, con los siguientes registros, ordenados por empleado
+  seccion, empleado, nombre y apellido, cargo, sueldo basico
+
+. Se pide actualizar el archivo maestro.csv con el de novedades, generando un nuevo archivo maestro igual al original. Al final del proceso el archivo original
+   debera ser eliminado. El archivo de novedades es un archivo de altas
+
+. Hacer un apareo entre los dos archivos, incorporando las altas. Contar e imprimir "ALTA ERRONEA" cuando el registro de alta ya existe en el archivo
+  Informar por pantalla con el mismo formato de "seccion, empleado, nombre y apellido, cargo, sueldo basico" el alta erronea. Tambien las altas realizadas
+  y las erroneas con el siguiente formato
+
+  Total de altas realizadas: XXXX Erroneas: XXX
+
+. Para el ejercicio en cuestion, y para replicarlo de manera facil las veces que sea necesario, no borrar el maestro original, sino crear uno nuevo llamado "nuevo_maestro.csv"
+
+- Condiciones
+. Todos los archivos estan ordenados por numeros de empleado de menor a mayor (incluyendo el nuevo archivo generado "nuevo_maestro.csv", o si se borrara el maestro anterior
+  es logico pensar que el nuevo tenga las mismas condiciones)

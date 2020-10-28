@@ -1,0 +1,38 @@
+- Introduccion JS
+. El proposito de esta guia es mostrar un camino para encarar el aprendizaje de Javascript. La parte de JS mas interesante son las relacionadas al manejo del DOM del navegador,
+  los eventos y su manejo. Todo lo que hace a la manipulacion de los datos del navegador. Como en todos los lenguajes, es imposible conocer todas las funciones y demas. Ademas, la
+  dificultad adicional que tiene es que trabaja en el navegador, por lo que hay que tener conocimientos de HTML. Ademas, si se quiere que interactue con bases de datos o archivos,
+  hace falta aprender un lenguaje del lado del servidor, como PHP. En general la combinacion JS + PHP es la mas conocida, junto con MySQL
+
+. Entonces, si bien JS no es complicado, si requiere manejar otras herramientas a la par, haciendolo mas embrollado. Entonces la forma de encarar todo de una buena manera es 
+
+- 1. No tratar de entender todo el HTMl y CSS  
+. Lamentablemente, al depender del navegador, muchas veces no se conocen todos los estilos CSS y los tag HTML, y no se comprende como se forman cosas en el navegador. La
+  idea es abstraerse de todo eso, pasandolo un poco de largo, y centrarse en la funcionalidad de JS que se quiere aprender, sea algo del manejo del DOM o de los eventos
+
+. Dicho lo anterior, es muy comun que en mas de una ocasion, simplemente lo mas sencillo para dedicarse exclusivamente a JS, es copiar y pegar un HTML y usa hoja de estilo,
+  sin prestar atencion a dicha estructura. La idea no es convertirse en diseñador ni maquetador, sino poder con JS manipular la pagina de diferentes maneras, ya sea la carga,
+  el envio de datos de un formulario, recibir peticiones, transformar los datos, etc
+
+. Y diciendo mas de lo anterior, si, JS permite manipular el DOM y por lo tanto crear paginas de cero solo con JS, pero es una idea mas avanzada. A lo sumo se modificaran
+  pequeñas secciones que impactaran muy poco en el DOM de la pagina, al menos en un principio
+
+2. Centrarse en el manejo de eventos y el DOM
+. Las funciones basicas de JS como el manejo de arrays, ciclos y demas son muy parecidas a la de cualquier lenguaje. Lo dificil es aprender a usar los miles de eventos
+  disponibles y como manejar el DOM
+
+3. Aprender de a poco HTML
+. HTML es MUCHO mas que solo los tags, como se puede ver en esta pagina -> https://www.w3schools.com/html/default.asp
+  Si bien no es un lenguaje, tiene miles de cosas literalmente ademas de los tags para dar forma a la pagina. Es literalmente enorme. Por lo tanto, si una persona
+  esperaria a aprender HTML completo antes de lanzarse a JS seria imposible. No comenzaria nunca, por eso lo ideal es comenzar con JS y de a poco ir reconociendo que elementos
+  pertenecen a HTML y cuales a JS, buscando la documentacion en el momento y tratando de distinguir pero no entender todo
+
+4. HTML tambien tiene eventos
+. HTML cuenta con eventos, que se lanzan en determinadas ocasiones. Dichos eventos pueden ser atrapados por JS y realizar alguna accion
+
+- Aclaraciones
+. Siempre se menciona JS y el DOM. Hay que aclararlo, y es que el DOM no es parte de JS, es parte de la pagina web. Por lo tanto, puede ser usado por otros lenguajes
+. El DOM (document object model) se representa como un arbol de nodos  
+
+5. Cursos posibles
+   https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript

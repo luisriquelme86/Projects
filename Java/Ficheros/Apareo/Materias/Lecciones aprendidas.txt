@@ -2,3 +2,5 @@
 . Es muy interesante todo lo que se hizo. Aun asi, parece algo rebuscado la forma en que se hizo (el while de que uno de los dos no haya terminado). Se 
   puede pensar de otra manera quizas. Si se establece de antemano a base de cual de los dos se hace la comparacion, tranquilamente puede haber un ciclo dentro de otro
 . Habria aun asi que contemplar los casos especiales donde uno o ninguno de los dos no tenga datos. Se puede considerar una mejora  
+. Este pensamiento surge porque en general uno de los dos archivos es el principal y el otro el secundario, entonces se parte de la base que si el principal se termina el otro 
+  tambien estara obligado a terminar. En este caso ninguno se podria considerar el principal, asi que hay que definirlo

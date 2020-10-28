@@ -19,6 +19,9 @@
 . Instalar librerias de terceros
 . Aplicacion que lee un CSV mas complejo o un archivo excel
 
+4. 
+. Crud con MYSQL y Java
+
 6.
 . Ejercicios de abrir conexiones
 . Ejercicios de abrir conexiones con https y copiar cosas a un archivo o guardar imagen
@@ -46,8 +49,8 @@
 . Consumir servicios REST
 
 11. 
-. Usar frameworks como Grails una vez mas y aprender a usarlos con sus ventajas y desventajas
-. Que es hibernate y porque usarlos
+. Usar frameworks como Grails o Spring una vez mas y aprender a usarlos con sus ventajas y desventajas
+. Que es Hibernate. Y porque usarlos a todos los mencionados
 
 12.
 . Que son los DTO, los POJO y demas. Cual es su relacion con los patrones?

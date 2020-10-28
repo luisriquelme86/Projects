@@ -12,6 +12,7 @@ package com.application.interfazcompra;
  *      descuento del 30% si la compra es mayor a 100
  *
  * No hace falta en ningun momento crear un enum ni nada parecido con los tipos
+ *
  */
 
 public class Main {

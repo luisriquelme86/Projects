@@ -3,9 +3,10 @@
   volcar en el archivo nuevo.csv los legajos ordenados de menor a mayor y una de las siguientes leyendas "Rindio Fisica", "Rindio Analisis" o 
   "Rindio Fisica y Analisis"
 . El caso de apareo es del tipo mezcla
-. Todos los archivos estan ordenados por numeros de legajo de menor a mayor
-
 . Para no complicar las cosas, se supondran archivos de texto en formato csv
+
+- Condiciones
+. Todos los archivos estan ordenados por numeros de legajo de menor a mayor (incluyendo el nuevo archivo generado "nuevo.csv")
 
 - A tener en cuenta
 . Se suponen archivos CSV sencillos y simples. O sea, los valores separados por coma no contienen otras comas o comillas

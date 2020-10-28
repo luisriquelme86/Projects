@@ -1,0 +1,131 @@
+- Lecciones aprendidas sobre apareo
+. Segun el tipo de operacion de apareo que se hace, de eso dependera los ciclos while que se ponen, y de cual archivo se lee primero o no
+. Para comenzar y entender cada ejercicio, lo mejor es hacer dibujos. Dos tablas con los numeros de ID o clave que se usan, y hacer un pseudocodigo muy rudimentario. Esto ahorra un monton de 
+  escritura y tiempo de codigo en el IDE que es improductivo y solo genera ansiedad, porque se producen trabas y no se puede avanzar. Un pseudocodigo sencillo y facil de entender, que luego
+  se puede pasar a codigo de alto nivel es lo mejor
+. Como ejemplo, el codigo de alta de empleado es muy largo en comparacion con su pseudocodigo, que es claro y conciso, solo hay que traducirlo, pero se entiende perfectamente
+  y analizando a simple vista no parece tener fallas
+. Las condiciones o caracteristicas de inicio son indispensables para poder hace el ejercicio, de eso dependera como ubicar los ciclos y no trabarse al pensar  
+. En general siempre es recomendable no olvidar que en algun lugar hay que comprobar que el archivo no termino, aunque el pseudocodigo pareciera no necesitarlo (mirar el ejemplo de las notas)
+
+- Las condiciones
+. Las condiciones y caracteristicas de inicio no son algo menor para nada. En general se presuponen en los apareos, ya sean de mezcla, alta, baja o demas las siguientes
+  
+  Nunca se sabe en general cuantos registros contiene cada uno, ni si uno tiene mas o menos que el otro. Aunque en general, se supone que el archivo maestro siempre tendra
+  mas que el de novedades, pero podria haber excepciones
+  Todos los archivos (iniciales) y el resultante estan ordenados por una clave, ya sea menor a mayor o viceversa
+  Un archivo se considera el maestro y el otro el de novedades. Si no fuera asi hay que definirlo
+  En general el archivo que se considera maestro tiene todos los registros, y el otro puede o no tener algunos de los mismos
+  Con respecto a lo anterior, puede suceder que ninguno tenga todos los registros (pueden estar salteados) pero se sigue cumpliendo el orden por claves    
+
+. No hay reglas generales, pero si muchas ideas. Presuponer o razonar muchas condiciones iniciales es indispensable, teniendo en cuenta todas las vertientes  
+
+- Consecuencias de las condiciones
+. Una vez definidas las condiciones, se pueden empezar a hacer los planteos necesarios. Como ejemplo, los ejemplos de alta de empleados, la mezcla de materias y las notas de los alumnos
+  se encaran con los ciclos while para recorrer de manera totalmente distinta entre ellos. Y esto pasa por sus condiciones iniciales, que cambia todo. Ademas de esto, una vez que se tiene
+  ese razonamiento se agregaran otros. Por ejemplo, en el alta de empleados, se puede presuponer que las altas siempre seran menores al plantel actual (en el 90% de los casos), si hay 1000
+  empleados es muy dificil que una empresa tome otros 1000, aunque si fueran 2 podria tomar 3. Pero en casos grande se supone lo primero (tambien es el tema de la eficiencia, de recorrer los archivos
+  una sola vez dentro de lo posible, suponiendo millones de registros)
+
+- Eficiencia
+. En la eficiencia se tiene siempre en cuenta que lo mejor es recorrer cada archivo de principio a final una sola vez. Todos los planteos hechos deben contemplar esto
+
+- Estrategias
+1. Un archivo maestro y uno de novedades (maestro y altas)
+. Si hay un archivo maestro que tiene todos los registros y casi todos y uno de novedades, se presupone que el de novedades es mas chico, asi que se aplica la estrategia de que
+  "el mas chico esta englobado/contenido en el mas grande". El ciclo que marca la pauta y engloba todo la estrategia es el de novedades, y el interior se encarga del archivo maestro,
+  que recorre todo y graba, cuando termina ese que es el mas grande, sale y continua con el de novedades. Se supone que las altas o novedades van a lo ultimo, por eso son altas o novedades
+
+2. Un archivo maestro y uno de novedades (pero con mezcla)
+. Si hay un archivo maestro que tiene todos los registros y otro de novedades que solo tiene algunos pero puede superar en cantidad de registros al maestro, como las notas de los alumnos,
+  el ciclo del maestro es el que marca la pauta y engloba toda la estrategia. El ciclo interior se encarga de las notas, y no puede ser mayor ningun registro al de alumnos (notas de ningun alumno?
+  eso es imposible). Cuando termina el ciclo interior, sigue de largo el mayor hasta terminar, indicando que los mismos no tienen notas al tener nada
+
+3. Dos archivos donde ninguno se considera maestro, pero es una mezcla
+. En este caso, donde no se puede establecer cual archivo es maestro, y ademas se desconoce cual puede o no tener mas registros, la estrategia adecuada es un ciclo mayor que englobe a los archivos,
+  seguido de dos ciclos interiores, uno para cada uno de los archivos que haga lo suyo. Es el caso menos usual y el mas dificil de llegar solo
+
+- Ejemplos 
+1. Alta empleados
+. Este ejemplo es un alta de empleados. Dados dos archivos, uno maestro y otro de novedades, donde se suponen ordenados por una clave "empleado", el ciclo que engloba todo es el de 
+  las novedades o altas. Se debe comparar cada registro de altas con los del maestro
+
+2. Materias
+. Ejemplo de dos materias, ordenadas por padron. La forma mas eficiente es un ciclo que englobe ambas entidades a la vez, y luego dos ciclos internos, uno por cada entidad, POR FUERA DEL
+  CILCO QUE ENGLOBABA A AMBAS. Esto es porque al no conocer de antemano los archivos, puede suceder y es probable que uno termine antes que el otro pero la escritura debe continuar
+
+3. Notas
+. Ejemplo de alumnos y sus notas, en este caso el ciclo que engloba todo es el de alumnos, ya que aunque haya menos, no puede o deberia haber notas no asignadas a alumnos. Ademas,
+  siguiendo razonamiento anteriores, donde "el mas chico esta englobado/contenido en el mas grande", esto se cumple en este caso. El ciclo interno maneja las notas y cuando se termina,
+  simplemente sigue analizar los alumnos y dejarlos vacios porque las notas se terminaron, suponiendo que esos alumnos sin notas es porque no rindieron o sus notas no estaban en el archivo
+
+- Pseudocodigos
+1. Alta empleados
+
+	while (novedades) {
+		while (maestro) {
+			if (maestro.id === novedades.id) {
+				println("error alta")
+				novedades++
+			}
+			nuevo_maestro.write(maestro)
+			maestro++
+		}
+		nuevo_maestro.write(novedades)
+		novedades++
+	}
+
+2. Materias
+	defino materia 1 como maestro
+	while (materia1 && materia2) {
+
+		if (materia1.id < materia2.id) {
+			nuevo.write(materia1)
+			materia1++
+		}
+		else if (materia1.id > materia2.id) {
+			nuevo.write(materia2)
+			materia2++
+		}
+		else {
+			nuevo.write(materia1)
+			materia1++
+			materia2++
+		}
+	}
+	while (materia1) {
+		nuevo.write(materia1)
+		materia1++
+	}
+	while (materia2) {
+		nuevo.write(materia2)
+		materia2++
+	}
+
+3. Notas
+
+	while (alumnos) {
+		nuevo.write(alumnos)
+		while (notas) {
+			if (alumnos.id === notas.id) {
+				nuevo.write(notas)
+				notas++
+			}
+			else {
+				alumnos++
+				nuevo.write(alumnos)
+			}
+		}
+		alumnos++
+	}
+
+3. Notas - otra forma
+
+	while (alumnos) {
+		nuevo.write(alumno)
+		while (notas && alumno.id === notas.id) {
+			nuevo.write(notas)
+			notas++
+		}
+		alumnos++
+	}

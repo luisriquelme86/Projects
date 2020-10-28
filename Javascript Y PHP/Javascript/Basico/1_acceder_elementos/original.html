@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Curso JavaScript aprenderaprogramar.com</title> 
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				text-align: center;
+				font-family: sans-serif;
+			}
+			div {
+				margin:20px;
+			}
+			#contenedor {
+				width:405px;
+				margin:auto;
+			}
+			#adelante, #atras {
+				padding:15px; 
+				width: 130px; 
+				float: left;
+				color: white; 
+				border-radius: 40px; 
+				background: rgb(202, 60, 60);
+			}
+			#adelante:hover, #atras:hover {
+				background: rgb(66, 184, 221);
+			}
+		</style>
+		<script type="text/javascript">
+			var numeroImagenActual =9;
+			var valorSrc = ['http://aprenderaprogramar.com/images/thumbs_portada/thumbs_camisetas/camiseta_6_humor_informatico_foto.jpg',
+							'http://aprenderaprogramar.com/images/thumbs_portada/thumbs_camisetas/camiseta_9_humor_informatico_foto.jpg',
+							'http://aprenderaprogramar.com/images/thumbs_portada/thumbs_camisetas/camiseta_11_humor_informatico_foto.jpg'
+							];
+			var valorAlt = ['Camiseta 6 aprenderaprogramar.com', 'Camiseta 9 aprenderaprogramar.com', 'Camiseta 11 aprenderaprogramar.com'];
+			var valorTitle = ['Desbordado por los números',
+							  'Diálogo entre informáticos',
+							  'Estudiando programacion'];						
+			function moverImagen(movimiento) { 
+				if (numeroImagenActual == 6 && movimiento == 'atras' || numeroImagenActual == 11 && movimiento == 'adelante') {
+					alert ('No es posible hacer ese movimiento');
+				}
+				if (numeroImagenActual == 11 && movimiento == 'atras' || numeroImagenActual == 6 && movimiento =='adelante') {
+					valorNuevoNumeroImagen = 9;
+					document.getElementById('imgCarrusel').src = valorSrc[1];
+					document.getElementById('imgCarrusel').alt = valorAlt[1];
+					document.getElementById('imgCarrusel').title = valorTitle[1];
+				}
+				if (numeroImagenActual == 9 && movimiento == 'atras') {
+					valorNuevoNumeroImagen = 6;
+					document.getElementById('imgCarrusel').src = valorSrc[0];
+					document.getElementById('imgCarrusel').alt = valorAlt[0];
+					document.getElementById('imgCarrusel').title = valorTitle[0];
+				}
+				if (numeroImagenActual == 9 && movimiento == 'adelante') {
+					valorNuevoNumeroImagen = 11;
+					document.getElementById('imgCarrusel').src = valorSrc[2];
+					document.getElementById('imgCarrusel').alt = valorAlt[2];
+					document.getElementById('imgCarrusel').title = valorTitle[2];
+				}
+				numeroImagenActual = valorNuevoNumeroImagen;
+				document.getElementById('numeracion').firstChild.nodeValue = 'Camiseta ' + numeroImagenActual;
+			}
+		</script>
+	</head>
+	<body>
+		<div >
+			<p>Pulsa adelante o atrás</p>
+			<h1 id="numeracion">Camiseta 9</h1>
+			<img id="imgCarrusel" src="http://aprenderaprogramar.com/images/thumbs_portada/thumbs_camisetas/camiseta_9_humor_informatico_foto.jpg" alt="Camiseta 9 aprenderaprogramar.com" title="Diálogo entre informáticos">
+			<div id="contenedor">
+				<div id ="atras" onclick="moverImagen('atras')"> <<< Atrás </div>
+				<div id="adelante" onclick="moverImagen('adelante')" >Adelante >>></div>
+			</div>
+		</div>
+	</body>
+</html>

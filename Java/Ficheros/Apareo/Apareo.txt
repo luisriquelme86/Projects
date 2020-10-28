@@ -30,4 +30,7 @@
   donde el resulado es un archivo maestro nuevo y muchas veces un listado de errores
   Actualizar saldos de cuentas corrientes
   Actualizacion de movimientos de articulos de un almacen
-  Liquidacion de haberes de los empleados      
+  Liquidacion de haberes de los empleados    
+
+- Ejemplos
+  https://books.google.com.ar/books?id=sWjcMGUAnXwC&pg=PA417&lpg=PA417&dq=java+novedades+maestro+archivos&source=bl&ots=ydC0UsFDIF&sig=ACfU3U1Ay0LT-M8cPJWlE_cd5HiXbQgJng&hl=es-419&sa=X&ved=2ahUKEwiw7aOiz8nsAhX_I7kGHfbACqgQ6AEwB3oECAcQAg#v=onepage&q=java%20novedades%20maestro%20archivos&f=false    
