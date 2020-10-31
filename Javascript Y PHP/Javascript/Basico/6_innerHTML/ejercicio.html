@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+	<html>
+		<head> <title>Curso JavaScript aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.contenedor {
+				margin: auto;
+				width: 420px;
+			}
+			.cuadradoPrincipal {
+				width: 204px;
+				height: 204px;
+				border: 1px solid black;
+			}
+			.cuadradoInterior {
+				width: 100px;
+				height: 100px;
+				border-color: black;	
+				float: left;
+				text-align: center;
+				line-height: 100px;
+				margin: 0;
+				padding: 0;
+				border: 1px solid black;
+				color: black;
+			}
+			button {
+				background-color: lightblue;
+				margin: auto;
+				width: 100px;
+				padding: 5px;
+				margin-top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			var contador = 0;
+			function avanzar() {
+				var listaCuadradosInteriores = document.getElementsByClassName('cuadradoInterior');
+				if (contador === 0) {
+					listaCuadradosInteriores[0].innerHTML = "El";
+					listaCuadradosInteriores[0].style.backgroundColor = 'black';
+					listaCuadradosInteriores[0].style.color = 'white';
+					contador++;
+				}
+				else if (contador === 1) {
+					listaCuadradosInteriores[1].innerHTML = "poder";
+					contador++;
+				}
+				else if (contador === 2) {
+					listaCuadradosInteriores[2].innerHTML = "de";
+					contador++;
+				}
+				else if (contador === 3){
+					listaCuadradosInteriores[3].innerHTML = "Javascript";	
+					listaCuadradosInteriores[3].style.backgroundColor = 'yellow';
+					contador++;
+				}
+				else {
+					alert("No se puede avanzar mas");
+				}
+			}
+		</script>
+		</head>
+	<body>
+		<div class="contenedor">
+			<div class="cuadradoPrincipal">	
+				<div class="cuadradoInterior"> ? </div>
+				<div class="cuadradoInterior"> ? </div>
+				<div class="cuadradoInterior"> ? </div>
+				<div class="cuadradoInterior"> ? </div>
+			</div>
+			<button onclick="avanzar()"> Avanzar </button>	
+		</div>
+	</body>
+</html>

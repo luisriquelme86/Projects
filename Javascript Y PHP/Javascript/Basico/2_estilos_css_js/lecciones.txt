@@ -9,4 +9,7 @@
   	Es claro que es mas sencillo acceder a todos los span o poner una clase, pero el objetivo del ejercicio es notar esto justamente
 
   	Otra cosa, es que en el ejercicio original los span estan pegados al label, y en este caso sin los saltos de linea, si funciona de la 
-  	forma mencionada antes	
+  	forma mencionada antes
+
+. Ademas, no pasar de largo que se exploro la forma de modificar las propiedades css de la pagina, usando cosas como 
+  nodo_del_dom.style.nombrePropiedad = 'valorPropiedad'. No se hizo nada, pero se explico o se mostro  		

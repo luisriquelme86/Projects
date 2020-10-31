@@ -1,0 +1,3 @@
+- Objetivos:
+. Comprobar el funcionamientos de los checkbox (que son un tipo de input)
+. Comprobar el funcionamiento del boton submit y su evento asociado. Comprender y entender porque esta en el form y no en el boton

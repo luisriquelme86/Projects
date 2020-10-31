@@ -1,0 +1,7 @@
+- Eventos en HTML
+. Un tema que confunde muchisimo al principio. La confusion viene dada porque se piensa que los eventos son exclusivos de Javascript. En verdad, html
+  tambien tiene eventos. Estos se pueden declarar inline en un tag html. Lo que si realmente sucede, es que el codigo del evento debe ser escrito en un
+  lenguaje del lado del cliente, soportado por el navegador (como por ejemplo, Javascript)
+
+. Los eventos permiten agregar interactividad y dinamismo entre la pagina y el visitante
+. Los eventos no son exclusivos de HTML y Javascript, estan presentes en otros lenguajes tambien  

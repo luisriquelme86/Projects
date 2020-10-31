@@ -1,0 +1,23 @@
+- Lecciones aprendidas
+. Hay varias lecciones para aprender, asi que se separan en secciones por su importancia
+
+1- Inner html
+. Una propiedad demasiado importante. Solo se aplica a nodos de tipo elemento, no se puede en nodos de tipo texto. Es importante porque permite en su interior
+  usar tags html, si bien muchos la utilizan para poner texto dentro. InnerHTML permite cambiar el contenido de un nodo de tipo elemento html, ya sea
+  este un texto o un conjunto de tags html
+
+2- El codigo HTML mostrado en la pagina es el codigo fuente
+. Si se explora el codigo html de la pagina por medio de las opciones correctas, y el codigo de la pagina cambio por medio de Javascript, esos cambios no se 
+  visualizan. Lo que se ve es el codigo fuente, y claramente el mismo no muta por Javascript (a menos que se cambie el archivo, el codigo fuente es el mismo). Es 
+  importante darse cuenta de esto, porque una vez que entran en juego los cambios dinamicos producidos por Javascript (estemos o no conscientes de esos cambios)
+  lo que vemos no esta actualizado con dichos cambios
+
+3- Manejo de eventos en el html directamente
+. O el manejo inline (en la misma linea). En general, siempre que a un tag html se le quiere asignar una accion cuando ocurre un evento, el mismo se deriva en una 
+  funcion, lo cual es lo mas logico. Pero tambien es posible hacerlo en el mismo lugar, como se ve en este ejercicio. En general, se acostumbra a poner una sola sentencia, 
+  pero si se quieren tener mas sentencias, se pueden separar con una coma, como se mostro antes y con este ejemplo
+
+
+  <h2 onclick="alert('Contenido innerHTML actual es: '+this.innerHTML); this.innerHTML='<div style=\' width:50%; border-style:solid; background-color: #FF7F50;  \'>Ahamham!</div>'">
+
+  Donde todo es parte de lo que ocurrira cuando el evento "onclick" ocurra. Primero se mostrara un alert, y acto seguido se asignara el innerHTML correspondiente

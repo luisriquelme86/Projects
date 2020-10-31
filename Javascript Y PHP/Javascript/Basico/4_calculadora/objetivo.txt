@@ -1,0 +1,2 @@
+- Objetivos:
+. Aprender a usar los eventos de Javascript, y la funcion eval (o similar) para armar una calculadora con Javascript 

@@ -1,0 +1,9 @@
+- Objetivos:
+. Aprender a usar el innerHtml
+. Aprender que el codigo fuente que se muestra en la pagina no es constante
+
+. Crea un documento html con div central (“el cuadrado principal”) que contenga a su vez cuatro divs (los cuadrados secundarios).  Debajo del cuadrado principal debe aparecer un botón con el texto “Avanzar”. 
+  Inicialmente los cuatro cuadrados tendrán fondo blanco y un signo ? de gran tamaño. Al pulsar en el botón por primera vez, el cuadrado superior izquierdo debe aparecer
+  con fondo negro, texto blanco, y tener como texto “El”. Al pulsar de nuevo el botón, el cuadrado superior derecho debe aparecer con fondo blanco y texto negro y tener como texto “poder”. Al pulsar de nuevo el 
+  botón el cuadrado inferior izquierdo debe aparecer con fondo blanco y texto negro y tener como texto “de”. Al pulsar de nuevo el botón el cuadrado inferior derecho debe aparecer con fondo amarillo y texto negro 
+  y tener como texto “JavaScript”. Si se pulsa nuevamente el botón avanzar debe mostrarse un mensaje que indique “No es posible avanzar más”

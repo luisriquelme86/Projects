@@ -1,0 +1,14 @@
+- Lecciones aprendidas
+
+1- NodeList
+. Un NodeList no se puede recorrer con un forin, aunque si con un for tradicional
+. Un NodeList y un array no son lo mismo, pero algunas cosas son iguales o parecidas
+. NodeList es dinamico, pero un array no. Esto quiere decir que el contenido del primero se actualiza (por ejemplo, si con Javascript se actualiza
+  un elemento de la pagina de ese NodeList) en cambio en el segundo no, es estatico
+  
+2. TextContent
+. Es muy comun que inicialmente, para obtener el texto de un nodo de texto, se use nodeValue. Lamentablemente, a veces como se encuentra creado el DOM
+  de una pagina, obtener el texto de un nodo de texto puede ser engorroso, por ejemplo, por el uso de espacios en blanco y cosas asi. Entonces, dada
+  esta situacion, se puede usar la propiedad textContent
+. Esto cobra mas sentido si en lugar de pensar en obtener un unico texto aislado (por ejemplo, el de un span, que seguramente represente solo una parte del texto deseado)
+  la idea es obtener un texto completo, por ejemplo, el texto completo que se haya en un div, pero que este repartido entre otros tags internos, como h1, h2, otros divs y span  

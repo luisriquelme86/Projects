@@ -33,13 +33,14 @@
 			}
 			function cambiarIdioma(idioma) {
 				var labels = document.getElementsByTagName('label');
-				if(idioma == "espaniol") {
-					document.getElementsByTagName('h1')[0].firstChild.nodeValue = "Otra cosa";	
+				if (idioma == "espaniol") {
+					document.getElementsByTagName('h1')[0].firstChild.nodeValue = "Portal web aprenderaprogramar.com";	
 					labels[0].firstChild.nextSibling.firstChild.nodeValue = "Nombre:"; 	
 					labels[1].firstChild.nextSibling.firstChild.nodeValue = "Apellidos:"; 	
 					labels[2].firstChild.nextSibling.firstChild.nodeValue = "Correo electrónico:";
 				}
-				if(idioma == "ingles") {
+				if (idioma == "ingles") {
+					document.getElementsByTagName('h1')[0].firstChild.nodeValue = "WebPortal aprenderaprogramar.com";	
 					labels[0].firstChild.nextSibling.firstChild.nodeValue = "Name:"; 	
 					labels[1].firstChild.nextSibling.firstChild.nodeValue = "Surname:"; 	
 					labels[2].firstChild.nextSibling.firstChild.nodeValue = "email:"; 

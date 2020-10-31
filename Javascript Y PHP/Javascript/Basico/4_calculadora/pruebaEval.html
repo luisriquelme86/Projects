@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prueba de la funcion eval</title>
+	</head>
+	<style type="text/css">
+		.contenedor {
+			padding-top: 5px;
+			padding-bottom: 5px; 
+		}
+		label {
+			padding: 5px;
+		}
+		#sumandos, 
+		#resultadoSuma {
+			background-color: lightgray;
+			width: 100px;
+			height: 18px;
+		}
+		#resultadoSuma {
+			display: inline-block;
+			line-height: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function evaluarSuma() {
+			alert("Entra a evaluar suma");
+			var sumandos = document.getElementById('sumandos');
+			var expresionSumandos = sumandos.value;
+			var resultadoEvaluacion = eval(expresionSumandos);
+			var resultadoSuma = document.getElementById('resultadoSuma');
+			resultadoSuma.firstChild.nodeValue = resultadoEvaluacion;
+			return resultadoEvaluacion;
+		}
+		function colorearLabels() {
+			var labels = document.getElementsByTagName('label');
+			labels[0].style.backgroundColor = 'lightblue';
+			labels[1].style.backgroundColor = 'lightgreen';
+		}
+		function evalFuncion(nombreDeFuncion) {
+			// hace eval de una funcion, la ejecuta. Y ahora asigno el resultado si lo hubiera
+			// Cuidado. Si la funcion no tiene los parentesis no ejecuta nada, solo la evalua
+			var resultadoEval = eval(nombreDeFuncion);
+			alert("El resultado de la evaluacion de la funcion " + nombreDeFuncion + " es " + resultadoEval); 
+		}
+		function funcionConNew(llamadaDeFuncion) {
+			// tengo que pasarle la llamada de la funcion, no solo el nombre
+			var llamadaFuncion = new Function(llamadaDeFuncion);
+			// y ejecutarla
+			var resultadoEval = llamadaFuncion();
+			alert("El resultado de la evaluacion de la funcion con new " + llamadaDeFuncion + " es " + resultadoEval); 
+		}
+	</script>
+	<body>
+		<h1>Vamos a probar la funcion eval de Javascript</h1>
+		<div>
+			<div class="contenedor">
+				<p>Ingrese una suma de dos o mas numeros</p>
+				<label for="sumandos">
+					<span>Sumandos:</span><input id="sumandos" type="text"/>
+				</label>
+				<button onclick="evaluarSuma()">Sumar</button><br>	
+			</div>
+			<div class="contenedor">
+				<label for="resultadoSuma">
+					<span>Resultado de la suma:</span>
+					<div id="resultadoSuma"> </div>
+				</label>	
+			</div>
+		</div>
+		<div>
+			<button onclick="colorearLabels()">Colorear labels</button>
+			<button onclick="evalFuncion('colorearLabels')">Eval Colorear labels</button>
+			<button onclick="evalFuncion('colorearLabels()')">Eval Funcion Colorear labels</button>
+			<button onclick="evalFuncion('evaluarSuma')">Eval suma</button>
+			<button onclick="evalFuncion('evaluarSuma()')">Eval Funcion suma</button>
+			<button onclick="funcionConNew('evaluarSuma()')">Funcion suma con new</button>
+		</div>
+	</body>
+</html>

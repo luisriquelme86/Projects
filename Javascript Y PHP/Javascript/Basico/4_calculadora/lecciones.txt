@@ -1,0 +1,12 @@
+- Lecciones aprendidas
+. Si bien no era parte del aprendizaje en este ejercicio, que los input text no usan nodeValue, sino value
+. A aprender a utilizar la funcion eval. La misma puede usarse para una evaluacion o para una ejecucion, por ejemplo
+	
+	eval(3+5)
+	eval("moverImagen('adelante')")
+. En su defecto, a aprender como funciona eval y como no recomiendan su uso, un reemplazo de la misma
+. Aprender a crear una calculadora en Javascript, algo muy importante ya que usa eventos y no es algo que se suela hacer en otros lenguajes, por ejemplo,
+  en Java (no hay interfaz grafica ni eventos, al menos no en Java puro, quizas con Swing si) aunque si en otros como VisualBasic
+
+. Con respecto a la estructura HTML y los estilos, si bien el objetivo principal no es aprender CSS, es bueno notar que dentro de un solo div, llamado "teclas" 
+  se encuentran todos los span, uno debajo de otro y luego se acomodan de algun manera con CSS 

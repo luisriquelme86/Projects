@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+			 	margin:25px;
+			}
+			#pulsador {
+				padding:15px;
+				width: auto;
+				display: inline-block;
+				margin: 25px; cursor: pointer;
+				color: white;
+				border-radius: 40px;
+				background: rgb(202, 60, 60);
+			}
+			#pulsador:hover, #marcaOperadores:hover {
+				background: rgb(66, 184, 221);
+			}
+		</style>
+		<script type="text/javascript">
+			function ejemploForIn() {
+				var nodoSpan = document.getElementsByTagName('span');
+				var msg = 'Primer for \n';
+				alert ('items en nodoSpan son ' + nodoSpan.length);
+
+				//Primer for
+				for (var i=0; i< nodoSpan.length; i++) {
+				 	msg = msg + i + ': contiene ' +nodoSpan[i].textContent + ' , y nodeValue '+nodoSpan[i].firstChild.nodeValue +'  ** \n';
+				}
+				alert ('Contenido de los nodos span \n ' + msg);
+
+				msg = 'Segundo for \n';
+				//Segundo for
+				for (var i=0; i< nodoSpan.length; i++) {
+				 	msg = msg + i + ': contiene ' +nodoSpan[i].innerText + '** \n';
+				}
+				alert ('Contenido de los nodos span \n ' + msg);
+
+				msg = 'Tercer for \n';
+				//Tercer for
+				for (i in nodoSpan) {
+				 	msg = msg + i + ': contiene ' + nodoSpan[i].textContent + ' -- \n';
+				}
+				alert ('Contenido de los nodos span \n ' + msg);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cabecera">
+			<h2>Cursos aprenderaprogramar.com</h2>
+			<h3>Ejemplo for in JavaScript</h3>
+		</div>
+		<div id="calculadora">
+			<span>7</span>
+			<span>+</span>
+			<span>4</span>
+			<span>-</span>
+			<span>1</span>
+			<span>÷</span>
+			<span>0</span>
+			<span>.</span>
+			<span>=</span>
+			<span>x <p>Genera un <b>nuevo</b> nodo</p></span>
+		</div>
+		<div id ="pulsador" onclick="ejemploForIn()"> Probar </div>
+	</body>
+</html>
