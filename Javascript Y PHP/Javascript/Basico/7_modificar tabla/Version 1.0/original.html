@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Tabla nutricional</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			table, th, td {
+  				border: 1px solid black;
+  				border-collapse: collapse;
+			}
+			th, td {
+				padding: 5px;
+			}
+			p {
+				text-align: center;
+			}
+			.center {
+				margin: 0 auto;
+				text-align: center;
+			}
+			.edicion {
+				color: blue;
+			}
+            #contenedorConsultaEdicion {
+                visibility: hidden;
+            }
+            #contenedorBotones {
+                /* Para tirar los botones al centro, simplemente tire el texto al centro del contenedor, no toque los botones*/
+                text-align: center;
+                margin: 0 auto;
+            }
+		</style>
+		<script type="text/javascript">
+            var filaActual;
+            var htmlFilaOriginal;
+            var contenedorConsultaEdicion;
+            function obtenerParametros(coleccionElementosFila) {
+                var form = document.getElementById('formularioNutricional')
+                var url = form.getAttribute("action");
+                var dataAlimentos = [];
+                for (var index = 0; index < coleccionElementosFila.length - 1; index++) {
+                    dataAlimentos.push(coleccionElementosFila[index].textContent);
+                } 
+                var parametros = "alimento=" + dataAlimentos[0] + "&calorias=" + dataAlimentos[1] + "&grasas=" + dataAlimentos[2] + "&proteina=" + dataAlimentos[3] + "&carbohidratos=" + dataAlimentos[4]; 
+                form.setAttribute('action', url + "?" + parametros);
+            }
+			function editarFila(datoFila) {            
+				datoFila.style.color = 'black';
+				datoFila.textContent = 'En edición';
+                filaActual = datoFila.parentNode;
+                htmlFilaOriginal = filaActual.innerHTML;
+                contenedorConsultaEdicion = document.getElementById('contenedorConsultaEdicion')
+                // estos children estan "vivos" por lo tanto se modifican en el momento que los toco
+                var coleccionElementosFila = filaActual.children;
+                // digo -1 porque ya se de antemano que el ultimo elemento no me interesa modificarlo
+                for (var index = 0; index < coleccionElementosFila.length - 1; index++) {
+                    coleccionElementosFila[index].contentEditable = "true";
+                }
+
+                // hago visibles los botones de cambio
+                contenedorConsultaEdicion.style.visibility = "visible";
+                obtenerParametros(coleccionElementosFila)
+			}
+            function deshacerEdicion(coleccionElementosFila) {
+                // oculto los botones de aceptar/cancelar
+                contenedorConsultaEdicion.style.visibility = "hidden";
+                coleccionElementosFila[coleccionElementosFila.length - 1].textContent = 'Editar';
+                coleccionElementosFila[coleccionElementosFila.length - 1].style.color = "blue";
+            }
+            function aceptarCambios(form) {
+                var coleccionElementosFila = filaActual.children;
+                deshacerEdicion(coleccionElementosFila);
+            }
+            function cancelarCambios() {
+                // pongo otra vez el contenido html original de la fila
+                filaActual.innerHTML = htmlFilaOriginal;
+
+                // logica -> Si tengo que volver los cambios atras puedo usar el innerHTML aprendido, que no solo es para textos,
+                // sino que copiar html completos       
+                // buscar la fila que esta siendo editada -> Podria marcarla con una clase al momento de la edicion, y luego buscar esa clase
+
+                var coleccionElementosFila = filaActual.children;
+                deshacerEdicion(coleccionElementosFila);
+                for (var index = 0; index < coleccionElementosFila.length - 1; index++) {
+                    coleccionElementosFila[index].contentEditable = "false";
+                } 
+            }
+		</script>
+	</head>
+	<body>
+		<div>
+			<p>Contenido nutricional por cada 100 g de alimento.</p>	
+            <form id="formularioNutricional" action="http://aprenderaprogramar.com" method="get" onsubmit="aceptarCambios(this)">
+                <table class="center">
+                    <tr>
+                        <th>Alimento</th>
+                        <th>Calorías (kCal)</th>
+                        <th>Grasas (g)</th>
+                        <th>Proteína (g)</th>
+                        <th>Carbohidratos (g)</th>
+                        <td>Acciones</td>
+                    </tr>
+                    <tr>
+                        <td>Arandano</td>
+                        <td>49</td>
+                        <td>0.2</td>
+                        <td>0.4</td>
+                        <td>12.7</td>
+                        <td class="edicion" onclick="editarFila(this)">Editar</td>
+                    </tr>
+                    <tr>
+                        <td>Platano</td>
+                        <td>90</td>
+                        <td>0.3</td>
+                        <td>1.0</td>
+                        <td>23.5</td>
+                        <td class="edicion" onclick="editarFila(this)">Editar</td>
+                    </tr>
+                    <tr>
+                        <td>Cereza</td>
+                        <td>46</td>
+                        <td>0.4</td>
+                        <td>0.9</td>
+                        <td>10.9</td>
+                        <td class="edicion" onclick="editarFila(this)">Editar</td>
+                    </tr>
+                    <tr>
+                        <td>Fresa</td>
+                        <td>37</td>
+                        <td>0.5</td>
+                        <td>0.8</td>
+                        <td>8.3</td>
+                        <td class="edicion" onclick="editarFila(this)">Editar</td>
+                    </tr>
+                </table> 
+                <div id="contenedorConsultaEdicion">
+                    <!-- deberian estar ocultos de un principio -->
+                    <p>Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>      
+                    <div id="contenedorBotones">
+                        <button type="submit">Aceptar</button>
+                        <button onclick="cancelarCambios()">Cancelar</button>    
+                    </div>  
+                </div>   
+            </form>
+		</div>
+	</body>
+</html>

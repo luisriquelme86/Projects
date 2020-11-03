@@ -1,0 +1,43 @@
+- Lecciones aprendidas
+. Hasta este punto, cuando fue hecho el ejercicio de las tablas nutricionales, muchos de los conocimientos para hacerlo no
+  son conocidos. Entonces, no queda mas remedio que investigar para poder realizar el ejercicio. Lo cual es algo muy comun en la programacion,
+  no se conocen todas las sentencias o sintaxis, asi que consultar libros, manuales, o paginas para obtener informacion adicional
+
+. En este caso, el conocimiento de como armar una tabla al momento no fue explicado. La tabla se podria armar con un conjunto de divs, pero la creacion
+  de tablas en html es algo bastante conocido. No hace falta ser un experto en la creacion de tablas, ni siquiera conocer la sintaxis de punta a punta. Si bien
+  la sintaxis de "table", "row", "data" y"header" son conocidas, simplemente se puede buscar algo como "html tag table" en un navegador para ver un ejemplo de como
+  crear una tabla, una plantilla ya hecha, y comenzar a partir de ella
+
+. Con lo dicho anteriormente, no siempre hace falta partir de cero. Se puede copiar un ejemplo y comenzar a modificarlo para trabajar. El aprendizaje de la sintaxis
+  es de a poco, a medida que se codea  
+
+
+- Pasos seguidos
+
+- Parte 1
+1. Investigar como formar una tabla. La primera parte es bastante sencilla. Simplemente, hay que buscar y se obtiene la existencia de los tags table, tr, th y td y se rellenan con datos
+2. La tabla en si misma, ya esta creada. Todo lo que sigue despues, son estilos. A veces son mas complicados y otras veces no tanto. Este caso es masomenos basico
+3. Luego sigue crear las lineas de separacion, como cuadriculas. Bastaria con darle bordes a todos los elementos de la tabla, menos al row
+3. Es casi una tabla pero no se parece. El problema es que por default, los bordes son independientes, no compartidos. Para compartirlos, hay que "colapsar" los bordes
+   por medio de estilos, usando la propiedad correspondiente
+4. Queda centrar la tabla y los campos. Luego usar un tipo de padding en los datos y titulos   
+. Hasta aca, la primera parte antes de seguir. Cumple perfectamente con los requisitos iniciales para mostrar al usuario
+
+- Parte 2
+. La parte de edicion es la siguiente
+
+- Mas lecciones aprendidas
+. No se nota de inmediato, pero la tablas en html son estaticas. Para modificarlas, hay que usar Javascript. El ejercicio justamente pide que se puedan
+  editar las tablas
+
+- Lecciones sobre nombres
+. No es parent, sino parentNode
+. No es nodeChildren, es children
+. No es editable, es contentEditable, y se asigna con string
+
+- Lecciones html y css
+. Muchas veces, si uno de los dos no tiene una propiedad, el otro si. Por ejemplo, si quiero ocultar un div, eso no se puede hacer con html 
+  (ni siquiera que comienze invisible). Es necesario que hacerlo con css
+
+- Leccion sobre button
+. El tag button puede ser de tipo "submit" al igual que los input

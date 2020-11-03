@@ -1,0 +1,21 @@
+- Lecciones aprendidas
+. Una de las lecciones mas importantes es con respecto a los form, los input, y como un tag puede contener otro tranquilamente (siempre que este permitido, y lo esta para la mayoria de los casos)
+. En primer lugar, los input pueden estar dentro de las tablas y dentro de los th, td y demas. Hay una pagina que muestra justamente las prohibiciones de los elementos
+  html. La idea de que las tablas solo pueden tener elementos de tabla es errada, pero es un sentido comun bastante "comun". Esto surge porque en la primera version lo que se intento
+  es que los datos en la tabla simplemente fueran "editables" pero no se pueden enviar datos por formulario (al menos en html y con Javascript) si no pertenecen a un input
+. Lo que si es cierto, es que los datos en la tabla tienen que estar dentro de celdas, no se pueden poner cosas sueltas en la tabla, las celdas son necesarias  
+
+. En segundo lugar, el tema de los parametros url que se envian en las peticiones. El action de los form no puede contener los query parameters, si los hubiera, el mismo form los elimina
+  para hacer lugar a los parameters. Esta razon es la que refuerza el primer punto
+
+. Una buena idea tambien es tener una paleta de colores online, para poder consultarla y dar colores rapidos en caso de necesidad, sin estar adivinando nombres
+  o hexadecimales  
+
+1. Acerca de los button
+. Parece que siempre son de tipo o type "submit" a menos que indique lo contrario  
+
+2. Propiedad html del dom: className y classList
+. La propiedad className no tiene nada de malo, pero comprobe que la propiedad classList es mas conveniente en otras situaciones
+
+- Pagina prohibiciones html
+  https://www.w3.org/TR/xhtml1/#prohibitions te muestra que tags no pueden ir dentro de otros. Por ejemplo, los form no pueden contener otros forms dentro

@@ -53,7 +53,7 @@
 . Que es Hibernate. Y porque usarlos a todos los mencionados
 
 12.
-. Que son los DTO, los POJO y demas. Cual es su relacion con los patrones?
+. Que son los DTO, DAO, los POJO y demas. Cual es su relacion con los patrones?
 
 13.
 . Comprender y manipular las diferentes estructuras de almacenamiento, listas, listas enlazadas, etc

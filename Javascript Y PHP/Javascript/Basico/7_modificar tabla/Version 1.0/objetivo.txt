@@ -1,0 +1,39 @@
+- Objetivos:
+. Los objetivos consisten en realizar el siguiente ejercicio
+  Una página web carga una tabla con datos relativos al contenido nutricional de los alimentos como se muestra a continuación
+
+
+  					Contenido nutricional por cada 100 g de alimento.
+
+  Alimento	Calorías (kCal)	Grasas (g)	Proteína (g)	Carbohidratos (g)	Acciones
+  Arándano		49				0.2			0.4				12.7			 Editar *  		
+  Plátano		90				0.3			1.0				23.5		     Editar *
+  Cereza		46				0.4			0.9				10.9			 Editar *
+  Fresa			37				0.5			0.8				8.3				 Editar *
+
+  Nota: Los marcados con * se mostraran en color azul para distinguirlo de los otros textos
+  Se desea que al pulsar en el texto Editar de la columna Acciones, ocurra lo siguiente:
+
+a) El texto de esa columna que ponía <<Editar>> en color azul, será reemplazado por el texto <<En edición>> en color gris o negro
+
+b) Los datos en la fila correspondiente se convertirán en casillas de texto editables de modo que el usuario pueda modificar los datos de esa fila
+
+c) Debe aparecer en la parte inferior de la tabla el texto: <<Pulse Aceptar para guardar los cambios o cancelar para anularlos>> y dos botones: Aceptar y Cancelar, 
+   que podrán ser pulsados por el usuario para Aceptar los cambios o para cancelar.
+
+. Si el usuario pulsa en el botón Aceptar los datos de la fila en edición deben ser enviados a una url de destino por el método get. Por ejemplo si la url de destino es aprenderaprogramar.com 
+  y editáramos la fila correspondiente a Fresa y  pulsamos aceptar, el navegador debe enviarnos a una url como esta:
+
+  http://aprenderaprogramar.com/?alimento=Fresa&calorias=57&grasas=1.5&proteina=0.4&carbohidratos=12.8
+
+. Atención: los datos que se deben enviar a la url de destino son los datos editados por el usuario, no los datos originales de la tabla
+
+. Si el usuario pulsa en Cancelar se recargará la tabla original (de forma que no habrá ninguna fila en edición)
+
+. Si estando seleccionada una fila en edición el usuario pulsa sobre Editar en otra fila, se mostrará un mensaje indicando lo siguiente: 
+  “Solo se puede editar una línea. Recargue la página para poder editar otra”.
+
+  La imagen llamada "edicion.png" guardada en esta carpeta refleja la idea de lo que se quiere conseguir
+
+d) En este ejercicio suponemos que la tabla va a cargar datos desde una base de datos, pero como nuestro objetivo no es el manejo de bases de datos ni de
+   lenguajes del lado del servidor sino ver aplicaciones de JavaScript, nos limitaremos a crear la tabla manualmente con el código HTML necesario.  

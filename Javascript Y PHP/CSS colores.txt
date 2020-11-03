@@ -1,0 +1,3 @@
+- CSS Paleta de colores
+  
+  https://developer.mozilla.org/es/docs/Web/CSS/color_value

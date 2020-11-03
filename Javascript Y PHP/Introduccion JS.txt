@@ -38,4 +38,8 @@
 . El DOM (document object model) se representa como un arbol de nodos  
 
 5. Cursos posibles
-   https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript
+    https://www.aprenderaprogramar.com/index.php?option=com_content&view=category&id=78&Itemid=206
+    https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript
+
+https://www.aprenderaprogramar.com/index.php?option=com_content&view=category&id=78&Itemid=206
+https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=819:ejemplo-innerhtml-javascript-ejercicio-resuelto-modificar-campos-de-tabla-dinamica-editar-filas-cu01139e&catid=78&Itemid=206

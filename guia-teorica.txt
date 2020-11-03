@@ -26,6 +26,7 @@
 . Inversion de control e inyeccion de dependencias
 . Herramientas para automatizar la compilacion de proyectos (ANT para Java, por ejemplo, o Maven) 
 . Instalar librerias de terceros para poder hacer ciertas cosas (leer un csv mas complejo o un excel)
+. DAO, DTO, POJO
 
 ) Que es el codigo fuente
 . El codigo fuente o fuente (source, en ingles) es el codigo escrito por un programador en lenguaje de alto nivel. Para que la maquina pueda leerlo, hay que pasarlo a codigo objeto y 
