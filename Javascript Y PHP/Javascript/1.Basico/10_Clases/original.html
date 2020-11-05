@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo curso aprenderaprogramar.com</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+                background-color: cadetblue;
+            }
+            button {
+                border-radius: 5px;
+                border: 1px solid white;
+                padding: 10px;
+                background-color: cornflowerblue;
+            }
+        </style>
+        <script type="text/javascript">
+            function CuentaBancaria(nombreTitular, apellidoTitular, saldo) {
+                this.nombreTitular = nombreTitular;
+                this.apellidoTitular = apellidoTitular;
+                this.saldo = saldo;
+                // atencion! No estoy asignando una funcion. La estoy creando. Parecido al ejemplo de crear crear nodos (ejemplo 8), donde en 
+                // realidad la funcion se esta definiendo, creando, y no ejecutando, donde no tenia que permitir ese puntero this pasado a la funcion
+                // del onclick me mareara
+                this.mostrarDatos = function () {   
+                    var msg = 'Los datos son nombreTitular' + this.nombreTitular + ", apellidoTitular " + this.apellidoTitular + " y saldo " + this.saldo;
+                    return msg;
+                }
+                this.costeManuntencionCuenta = consultarManuntencionCuenta;
+                function consultarManuntencionCuenta() {
+                    return "Las cuentas no tienen coste de manuntencion por mes";
+                }
+            }
+            function crearCuentaBancaria() {
+                var nombreTitular = prompt("Ingrese el nombre del titular", "Juan");
+                var apellidoTitular = prompt("Ingrese el apellido del titular", "Perez");
+                var saldoTitular = prompt("Ingrese el saldo", 0.0);
+                var nuevaCuentaBancaria = new CuentaBancaria(nombreTitular, apellidoTitular, saldoTitular);
+                alert(nuevaCuentaBancaria.mostrarDatos());
+                alert(nuevaCuentaBancaria.costeManuntencionCuenta());
+            }
+        </script>
+    </head>
+    <body>
+        <p>Pulse el boton para crear una nueva cuenta bancaria</p>
+        <button type="button" onclick="crearCuentaBancaria()">Crear cuenta bancaria</button>
+    </body>
+</html>

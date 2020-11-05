@@ -1,0 +1,4 @@
+- Objetivos:
+. Aprender a crear clases en Javascript
+. Aprender a usar el prompt
+. Aprender a crear funciones de esas clases, ya sean anonimas o con nombre

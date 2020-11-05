@@ -5,7 +5,7 @@
   hace falta aprender un lenguaje del lado del servidor, como PHP. En general la combinacion JS + PHP es la mas conocida, junto con MySQL
 
 . En lineas generales se puede decir que: HTML se encarga de la estructura de la pagina, CSS del aspecto de la pagina y Javascript se encarga de la parte dinamica. Esto ultimo 
-  quiere decir que Javascript se encarga de dar una respuesta a las acciones del usuario
+  quiere decir que Javascript se encarga de dar una respuesta dinamica a las acciones/eventos generados por el usuario
 
 . Entonces, si bien JS no es complicado, si requiere manejar otras herramientas a la par, haciendolo mas embrollado. Entonces la forma de encarar todo de una buena manera es 
 

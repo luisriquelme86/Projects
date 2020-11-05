@@ -1,0 +1,6 @@
+- Objetivos:
+. Aprender a dejar de utilizar los event handler "inline" en el codigo html y comenzar a declararlos con Javascript para que sean propiedades de objetos
+. Aprender a utilizar el metodo confirm de window, comprendiendo que window es un objeto que siempre existe en Javascript
+. Comprender los tiempos de carga de la pagina web, por ejemplo, porque a veces la etiqueta script se pone antes o despues del tag body
+. Entender el funcionamiento del evento "onload"
+. Comprender el funcionamiento del valor booleano de retorno en la ejecucion de una funcion de un event handler

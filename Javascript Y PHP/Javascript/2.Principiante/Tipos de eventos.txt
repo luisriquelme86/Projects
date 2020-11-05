@@ -1,0 +1,41 @@
+- Tipos de eventos
+. Podemos clasificar los eventos en dos grandes tipos
+
+  Eventos disparados por el usuario
+  Eventos disparados por el navegador o el sistema
+
+. Como ejemplo del primer tipo, podria ser un evento como hacer click o pulsar una tecla. Como ejemplo del segundo, cuando se termina la carga
+  de la pagina en el navegador se dispara el evento de sistema "onload" (carga terminada). Con respecto a lo anterior, habla de cuando se termina
+  la carga del documento HTML en su totalidad
+
+1. Acerca de los target de eventos
+. Cada evento esta asociado a un objeto, que es quien recibe o detecta el evento. Por ejemplo, si se tiene un div con un imagen dentro, y se hace click en la imagen,
+  el "target" u "objetivo" pueden ser dos, el nodo HTML de la imagen y el nodo HTML del div. A su vez, esto deriva en otro tema muy importantisimo, que es la propagacion de eventos
+
+2. Propagacion de los eventos
+. La propagacion de eventos esta muy relacionada a la pregunta de "¿Si dos eventos suceden simultaneamente, cual se EJECUTA primero?". Esta pregunta es muy importante, porque 
+  determina la forma de trabajar y como resolver nuestros problemas. Suponer el caso mas simple, por ejemplo
+
+  <div onclick="lanzarEventoDiv()">
+  	<img src="imagen.png" onclick="lanzarEventoImagen()" />
+  </div>
+
+  Si se hace click sobre la imagen, se producen dos eventos simultaneamente, el evento onclick del div y el evento onclick de la imagen. Cual codigo se deberia
+  ejecutar primero es la pregunta
+
+. La respuesta puede no ser siempre la misma, pero la propagacion de eventos puede ser de afuera hacia adentro, o de adentro hacia afuera (normalmente llamada "burbuja")
+
+3. Manejadores de eventos con valores de retorno
+. Los valores de retorno en los event handler se inventaron para poder manejar el hecho de que muchos tags HTML tienen acciones predeterminadas, ademas del evento que se quiere manejar,
+  por ejemplo los tag anchor (<a>) que dirigen a una pagina web. Si un tag tiene un event handler y una accion predeterminada, por convencion y por default
+  se determino que primero se ejecuta el script de respuesta al evento, y luego la accion predeterminada
+
+. La idea de los valores de retorno booleano en una event handler es para decidir manualmente si la ejecucion de la accion predeterminada ocurre o no 
+  (ya no se habla de que sea primero o no, sino que directamente se ejecute o no). Por default, claramente la accion del evento devuelve true, e indicando
+  explicitamente el valor en false, no se ejecuta la accion predeterminada
+
+. Se podria hacer algo asi...
+
+  <a onclick="return confirm('Va a acceder a aprenderaprogramar.com ¿Está seguro?')" href="http://aprenderaprogramar.com">Aprende a programar</a>    
+
+.  

@@ -1,0 +1,7 @@
+- Lecciones aprendidas
+. Una forma muy practica de insertar antes de algo otra cosa. En este caso, hay un div vacio que sirve de referencia para poner cosas antes de el. Es
+  muy util, en este caso muestra como insertar una nueva persona para enviar en el formulario. Es un excelente y practico ejemplo
+
+. MUY IMPORTANTE: Esta leccion muestra de forma practica una elemento div en accion. Originalmente, como se ve, un elemento div sin contenido existe
+  en la pagina, pero el mismo no se muestra. No esta oculto ni nada, pero al no tener contenido, no es visible. Aunque le pusiera color de fondo
+  no se veria nada, porque no hay contenido. Pero tiene utilidades como usar el insert before  

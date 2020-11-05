@@ -1,0 +1,14 @@
+- Lecciones aprendidas
+. La mas importante y que cuesta entender. Las clases de otros lenguajes se crean en Javascript con una funcion, con la diferencia que por convencion general
+  se crean comenzando con mayuscula
+. A su vez, las funciones de una clase tambien se crean con otras funciones, y mas bien parecen asignaciones
+
+1. Metodos de una clase con funciones anonimas y con nombre
+. Los metodos de una clase se pueden crear con funciones anonimas o con nombre. La diferencia principal es que la primera solamente se usa la sintaxis
+  function() {} y el codigo dentro de las llaves, en cambio la otra se asigna un nombre y abajo se declara la funcion don dicho nombre. Ademas, notar fuertemente
+  que en el primer caso, si bien parece una asignacion, en verdad es la declaracion de una funcion. Y en el segundo caso, no se ponen parentesis despues del nombre
+  de la funcion, porque se esta declarando la misma, no ejecutando
+
+2. Mas lecciones
+. No se practica aqui hasta ahora, pero Javascript tambien puede definir o al menos simular metodos de clase (llamados static en otros lenguajes)
+  y tambien herencias

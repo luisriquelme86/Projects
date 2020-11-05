@@ -1,0 +1,6 @@
+- Objetivos:
+. Los objetivos del ejercicio son: 
+
+  a) Mediante el control de los eventos onmouseover y onmouseout, debemos hacer que cuando el usuario pase el ratón sobre las etiquetas h1 y h3, el color del texto pase a ser orange y cuando deje de pasarlo el texto quede en marrón
+  b) Mediante el control del evento onmouseover, debemos hacer que cuando el usuario pase el ratón sobre un párrafo, el color de fondo del párrafo sea amarillo y cuando deje de pasarlo no haya color de fondo
+  c) El código JavaScript debe estar situado entre las etiquetas <head> … </head>  

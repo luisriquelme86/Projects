@@ -1,0 +1,5 @@
+- Convenciones en Javascript
+. Cada vez que se invoque funciones del estilo getElementsByXXX se debe asignar en una variable que se llame
+  coleccionXXX
+. Esto es para ser conciente de que la lista que se devuelve no es un array, sino una coleccion de elementos "vivos" y que ademas 
+  tienen ciertos problemas con el forin (por ejemplo, no se recorre en orden)  

@@ -1,0 +1,5 @@
+- Lecciones aprendidas
+. La creacion de elementos nodo 
+. La creacion de elementos texto
+. El metodo "appendChild" que se encarga de agregar al final (por eso es append) a un child o hijo. Por eso mismo, 
+  se diria que agregue un elemento como el ultimo hijo de todos

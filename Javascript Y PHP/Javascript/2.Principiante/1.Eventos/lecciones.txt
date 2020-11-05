@@ -1,0 +1,26 @@
+- Lecciones aprendidas
+
+1. Ejemplo 1
+. El uso de un tag script al final de body tiene la explicacion es que primero se cargan todos los elementos html del dom y luego recien
+  se ejecuta el script. Una vez que existen los elementos, el script se puede ejecutar correctamente. Si se pusiera primero, entonces
+  el problema es que seguramente muchos elementos no existirian y el script fallaria
+. El hecho de no usar mas los event handler inline (porque se mezcla y ensucia el codigo html) asi que se crean los event handler como propiedades
+  de un objeto
+
+2. Ejemplo 2
+. En este ejemplo, el evento onload se carga en el script, y se adjunta como propiedad del objeto window. El evento se llama siempre
+  que la pagina se carga. Se puede adjuntar como propiedades a otros objetos, y en todo caso, se activaria al momento de carga tambien    
+
+3. Ejercicio
+. El recordatorio que los script se cargan en el head
+. Extremadamente importante, como asignar funciones mas "genericas" (o sea, que reciban parametros) en la seccion de scripts, para evitar
+  hacer asignaciones inline en el html
+  
+  Si bien la asignacion de una funcion con nombre (sin parentesis, no es ejecucion) es valida, cuando tiene parametros, pareciera no haber forma. En dicho
+  caso, se sigue llamando una funcion anonima y luego dicha funcion llama a la funcion con nombre, pasando parametros
+
+  La mejor forma de imaginar todo esto, es que la funcion que esta dentro de la que se asigna, declara pero no ejecuta como propiedad del objeto, donde la propiedad es
+  el event handler, es como si se "pegara" en el tag html si fuera una funcion inline. O sea imaginar la primera linea como si fuera la segunda
+
+  coleccionTitulos[index].onmouseover = function() {pintarElementoColor(this, 'orange')};
+  <h1 class="titulo" onmouseover="pintarElementoColor(this, 'orange')">Novedades</h1>  

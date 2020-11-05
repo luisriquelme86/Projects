@@ -1,0 +1,18 @@
+- Funciones destructivas
+. En Javascript, existen lo que se denominan muchas veces "funciones destructivas". En general estan asociadas a los array
+. Estas funciones se caracterizan porque el cambio en el array son permanentes (lo modifican) en cambios otras funciones solo producen alteraciones, 
+  donde dichas alteraciones en general se devuelven y puede ser atrapadas en una variable
+
+1. Slice
+. Como el nombre lo dice, esta funcion es rebanar, es tomar un trozo. Toma un trozo de la funcion, y lo devuelve, pero la funcion no queda
+  modificada (solo toma un trozo, nada mas). O sea, no es destructiva
+  Array.prototype.slice(start, end);  
+
+2. Splice
+. Esta funcion cuyo nombre es mas largo que la anterior, es una funcion destructiva. Modifica el array permanentemente y devuelve los valores
+  cortados. Splice en ingles es algo asi como cortar y empalmar, lo cual es adecuado a lo que sucede, se toma un trozo y lo que queda "se empalma/cierra" y
+  queda modificado
+  Array.prototype.splice (start, deleteCount [ , item1 [ , item2 [ , … ] ] ] );
+
+- Lecciones
+. La mayoria de las funciones son "destructivas" en un array, como pueden ser pop, shift (cambiar, correr o mover) y demas
