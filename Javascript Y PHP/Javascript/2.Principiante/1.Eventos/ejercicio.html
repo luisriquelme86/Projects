@@ -14,7 +14,7 @@
 					var coleccionParrafos = document.getElementsByTagName('p');
 					for (var index = 0; index < coleccionParrafos.length; index++) {
 						coleccionParrafos[index].onmouseover = function() {pintarElementoColorFondo(this, 'yellow')};
-						coleccionParrafos[index].onmouseout = function() {pintarElementoColorFondo(this, 'none')};
+						coleccionParrafos[index].onmouseout = function() {pintarElementoColorFondo(this, 'transparent')};
 					}
 				}
 				function pintarElementoColor(elemento, color) {
