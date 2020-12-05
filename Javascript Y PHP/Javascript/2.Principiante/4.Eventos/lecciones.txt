@@ -1,0 +1,8 @@
+- Lecciones aprendidas
+. Sobre el objeto event. Es un objeto que se pasa automaticamente a todas las funciones que se disparan por eventos. Solo es cuestion de indicarla
+  en la funcion y asi se puede tomar. 
+
+. El target devuelve el elemento que disparo el evento INICIALMENTE
+. El current target devuelve el elemento que esta disparando el evento ACTUALMENTE (como en un burbujeo). De todo esto se deduce que si hay un solo elemento
+  estos dos target coincidirian
+. Los eventos del mouse para la posicion son clientX y clientY  

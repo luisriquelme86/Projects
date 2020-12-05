@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo aprenderaprogramar.com</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+                background-color: antiquewhite;
+            }
+            div {
+                margin: 200px;
+                height:300px;
+                width:300px;
+                border: 5px solid black;
+                background-color: khaki;
+                position: relative;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function() {    
+                document.addEventListener("keyup", function(event) {
+                    var keyCode = event.keyCode;
+                    var caja = document.getElementById("caja");
+                    var posicionX = caja.offsetLeft;
+                    if (keyCode == 37) { // izquierda
+                        caja.style.left = posicionX - 228 + "px";
+                    }
+                    if (keyCode == 39) { // derecha
+                        caja.style.left = posicionX - 188 + "px";
+                    }       
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Pulsa una flecha</h1>
+        <div id="caja"></div>
+    </body>
+</html>

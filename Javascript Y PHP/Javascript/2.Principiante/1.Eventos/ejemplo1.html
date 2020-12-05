@@ -17,6 +17,8 @@
 <script type="text/javascript">
 	var elemsA = document.getElementsByTagName('a');
 	for (var i=0;i<elemsA.length;i++) {		
-		elemsA[i].onclick = function() {return confirm('Ud. va a ser transferido de url hacia ' + this.href);}
+		elemsA[i].onclick = function() {
+			return confirm('Ud. va a ser transferido de url hacia ' + this.href);
+		}
 	}
 </script>

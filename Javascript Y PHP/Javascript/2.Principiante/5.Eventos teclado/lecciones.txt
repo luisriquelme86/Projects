@@ -1,0 +1,56 @@
+- Lecciones aprendidas
+. Hay varias lecciones que aprender de este ejemplo
+
+1. Asignar eventos a document
+. Es algo novedoso. La idea es que en lugar de asignarle a un tag de html especifico un listener se asigna a todo el documento. En este caso
+  en lugar de leer la tecla de un input se puede directamente leer de "todo el documento"
+
+2. Asignacion de mas de 1 evento a la vez
+. Tambien es novedosa la idea de poder asignar varios eventos a un solo tag (en este ejemplo, a todo el documento)  
+
+3. Eventos para detectar una tecla
+. En Javascipt, para detectar la tecla presionada se cuenta con los eventos "keydown", "keypress" y "keyup" que responden a los eventos de algo asi como
+  "tecla baja", "tecla pulsada", "tecla sube"
+. No es una regla absoluta, pero como buena practica, para aquellas teclas "presionables" (letras, numeros y demas, o sea, teclas que no son comandos o especiales como "shift") 
+  se usa "keypress" y para otras combinaciones o tecla "no imprimibles" se usan los otros dos eventos
+. Por suerte, Javascript cuenta tambien con informacion en el evento si se presiono alguna tecla especial como "alt", "control" y "shift" y otras
+
+4. Tipos de codigos de tecla
+. Hay dos tipos de codigos diferentes para las teclas. El primero es el codigo de caracter y el otro es el codigo de tecla (charCode y keyCode). El primero tiene la correspondencia con los codigos ascii,
+  donde una tecla simple como 'A' (miniscula o mayuscula) le corresponde un caracter unicode y por lo tanto un numero (65 y 97 respectivamente). El segundo es el codigo de teclado, un codigo o numero
+  que se corresponde internamente para cada tecla (y no es tan sencillo de conocer dichos numeros, a diferencia de la tabla ascii que se encuentra en cualquier lugar)
+
+5. Propiedades de los eventos de teclado
+. Se cuenta con propiedades utiles como which, keyCode y charCode para detectar que tecla realmente se presiono
+
+6. Excepciones a la regla con keypress
+. El keypress como convencion es util usarlo con teclas simples o "imprimibles". Es un poco especial porque si bien detecta cuando se pulsa una tecla, no se activa con todas
+  las teclas (por ejemplo, con la tecla ESC). Pero demas, tiene sus excepciones. Por ejemplo, si se activa con teclas como ENTER, cuyo codigo caracter es 13
+
+7. Teclas direccionales
+. Los key code de los cursores izquierda, arriba, derecha y abajo usan los numeros 37, 38, 39 y 40  
+
+- Lecciones aprendidas en el ejercicio
+. El ejercicio tambien deja varias lecciones, especialmente con respecto a los posicionamientos
+
+1. La propiedad offset
+. Para averiguar la distancia de un objeto a su padre mas proximo (en los ejemplos mas sencillos es claramente el elemento body) se puede la propiedad offset, en sus
+  modos left y top. Independientemente de que las posiciones esten fijadas, tiene un valor. Offset se puede traducir como distancia o desplazamiento o coordenadas en programacion
+
+2. Los tags tienen propiedades como el margin
+. Por ejemplo, es interesante descubrir que el body tiene un margin por default de 8px. Esto toma relevancia al usar la propiedad offsetLeft por ejemplo, al descubrir 
+  la distancia de un caja al body (como ejemplo sencillo) esta compuesto por los margenes no solo del elemento sino de su padre (en este caso, el body). Por ejemplo,
+  en este ejercicio el div (caja) tiene un margen de 200 y el body por default de 8, por lo tanto el offsetLeft es de 208 pixeles
+
+3. La propiedad left
+. Para que la misma tenga efecto, el tag html que lo use no puede tener la posicion por defecto (static) hay que cambiarla. Esto sucede porque algo no puede "desplazarse"
+  en el html si no se cambia esa propiedad. Al setear algo como left: 200px, no puede "moverse" a 200 de su caja padre si no se actualiza esta propiedad
+
+4. No confundir offsetLeft y left
+. La primera indica la distancia de un tag con su padre, con las reglas antes vistas (margenes y demas) y siempre tiene un valor. Pero left no es el caso. Podria
+  no tenerlo o incluso ser 0. Esto seria el valor "natural" de left, porque no tiene left si no se indica explicitamente. Si inicialmente el valor
+  de offsetLeft es 200px y el de left es 0, es normal, porque el primero indica desplazamiento y el otro aun no tomo valor, inicialemente simplemente "aparecio ahi"
+  al crear el arbol
+. En este ejercicio, la idea era setear en los primeros "movimientos" con teclado un left de 20px y -20px. Como lograrlo si solo se tiene el offsetLeft. Es como una ecuacion,
+  si se parte de un offsetLeft de 208 y se quiere un left de 20, hay que despejar ese valor, que es 188, restarlo y listo. En cada iteracion, el valor de offsetLeft se actualiza,
+  y con cada resta (o suma) el desplazamiento es correcto     

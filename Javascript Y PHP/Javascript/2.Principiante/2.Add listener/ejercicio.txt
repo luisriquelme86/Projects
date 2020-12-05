@@ -1,0 +1,5 @@
+- Objetivos:
+. Crear un documento HTML donde dentro del elemento body tengamos un div con id “principal”, dentro de principal otro div denominado “secundario”, y dentro de secundario 
+  otro div con id “terciario”. Dentro de terciario debe existir un párrafo con el texto: Ejemplo de bubbling (burbujeo). Añade eventListeners con el evento click para 
+  los párrafos y todos los elementos div, document y window, y una función de respuesta común para todos ellos que emita el mensaje de alerta <<Soy un nodo tipo NombreDelNodo y estoy burbujeando>>
+

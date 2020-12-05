@@ -1,0 +1,23 @@
+- Tipos de eventos
+. Es bueno recordar que los mismos se aplican sobre los nodos, pero tambien muchos de ellos se aplican sobre el evento window (como onload). Y como
+  recordatorio, muchas funciones de html se aplican sobre el elemento "document" (como los elementos de getElementById)
+
+1. Una pequeña lista
+
+   . Los eventos del teclado
+   . Los eventos del mouse
+   . Los eventos de la ventana o frames (como onload)   
+   . Los eventos de formularios
+   . Los eventos de arrastre de elementos
+   . Otros (como los eventos de deteccion de copiar y pegar)
+
+2. Nociones
+. Es imposible y hasta inutil aprenderse todos los eventos posibles. Sin embargo, hay algunos "basicos" en el sentido de que se utilizan la mayor parte del tiempo. Como
+  ejemplo, los eventos de formularios son muy comunes y aplicables. Como dato, casi todos actuan o sobre los inputs o sobre los botones. Algo asi
+
+  focus
+  blur
+  change
+  select
+  submit
+  reset

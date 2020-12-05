@@ -1,0 +1,8 @@
+- Objetivos:
+. Crear un documento HTML que conste de un título h1 con el texto <<Posición x:  - Posición y>>, y un div con ancho 500 px y alto 400 px. Utilizar el evento onmousemove para mostrar dinámicamente en el
+  título h1 las coordenadas del puntero del ratón a medida que se desplaza por el elemento div.
+
+. Por ejemplo, cuando el usuario coloca el ratón sobre el div se deberá mostrar:  Posición x:  244 Posición y: 188, al mover el ratón las coordenadas indicadas cambiarán a otro valor,
+  por ejemplo Posición x:  322 Posición y: 228, y así sucesivamente.
+
+

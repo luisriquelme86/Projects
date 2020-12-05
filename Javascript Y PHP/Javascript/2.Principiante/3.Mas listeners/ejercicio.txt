@@ -1,0 +1,6 @@
+- Objetivos:
+. Crear un documento HTML que conste de un título h1 con el texto <<La web para aprender programación>>, dos párrafos de texto y una imagen. Utilizar los eventos onmouseover 
+  para que la imagen original sea reemplazada por otra imagen cuando el usuario pasa el ratón sobre ella. Utiliza el evento onmouseout para hacer que cuando el usuario salga del espacio de la imagen,
+  vuelva a aparecer la imagen original
+
+

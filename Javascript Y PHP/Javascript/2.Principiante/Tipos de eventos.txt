@@ -36,6 +36,4 @@
 
 . Se podria hacer algo asi...
 
-  <a onclick="return confirm('Va a acceder a aprenderaprogramar.com ¿Está seguro?')" href="http://aprenderaprogramar.com">Aprende a programar</a>    
-
-.  
+  <a onclick="return confirm('Va a acceder a aprenderaprogramar.com ¿Está seguro?')" href="http://aprenderaprogramar.com">Aprende a programar</a>

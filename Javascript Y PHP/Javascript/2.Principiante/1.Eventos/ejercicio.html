@@ -8,13 +8,21 @@
 				window.onload = function () {
 					var coleccionTitulos = document.getElementsByClassName('titulo');
 					for (var index = 0; index < coleccionTitulos.length; index++) {
-						coleccionTitulos[index].onmouseover = function() {pintarElementoColor(this, 'orange')};
-						coleccionTitulos[index].onmouseout = function() {pintarElementoColor(this, 'brown')};
+						coleccionTitulos[index].onmouseover = function() {
+							pintarElementoColor(this, 'orange')
+						};
+						coleccionTitulos[index].onmouseout = function() {
+							pintarElementoColor(this, 'brown')
+						};
 					}
 					var coleccionParrafos = document.getElementsByTagName('p');
 					for (var index = 0; index < coleccionParrafos.length; index++) {
-						coleccionParrafos[index].onmouseover = function() {pintarElementoColorFondo(this, 'yellow')};
-						coleccionParrafos[index].onmouseout = function() {pintarElementoColorFondo(this, 'transparent')};
+						coleccionParrafos[index].onmouseover = function() {
+							pintarElementoColorFondo(this, 'yellow')
+						};
+						coleccionParrafos[index].onmouseout = function() {
+							pintarElementoColorFondo(this, 'transparent')
+						};
 					}
 				}
 				function pintarElementoColor(elemento, color) {

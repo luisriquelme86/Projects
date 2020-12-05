@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejercicio 1 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				background-color: teal;
+				width: 750px;
+				margin: 10px auto;
+			}
+			div {
+				width: 500px;
+				height: 400px;
+				background-color: cornflowerblue;
+				border: 2px solid darkkhaki;
+				margin: 10px auto;
+			}
+			h1 {
+				background-color: darkgoldenrod;
+				border: 1px solid darkkhaki;
+				text-align: center;
+				padding: 20px 0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var tituloDisplayPosicion = document.getElementById("displayPosicion");
+				var divColeccion = document.getElementsByTagName("div");
+				divColeccion[0].addEventListener("mousemove", function(e) {
+					tituloDisplayPosicion.textContent = "Posicion x: " + e.clientX + " - Posicion y: " + e.clientY; 
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1 id="displayPosicion">Posición x:  - Posición y:</h1>
+		</div>
+	</body>
+</html>

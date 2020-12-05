@@ -1,26 +1,35 @@
 - Lecciones aprendidas
+. Las lecciones se aprender sobre todo en el ejercicio, mas que en el ejemplo original
 
-1. Ejemplo 1
-. El uso de un tag script al final de body tiene la explicacion es que primero se cargan todos los elementos html del dom y luego recien
-  se ejecuta el script. Una vez que existen los elementos, el script se puede ejecutar correctamente. Si se pusiera primero, entonces
-  el problema es que seguramente muchos elementos no existirian y el script fallaria
-. El hecho de no usar mas los event handler inline (porque se mezcla y ensucia el codigo html) asi que se crean los event handler como propiedades
-  de un objeto
+1. Sobre css y html
+. El conocimiento basico de css y html es muy importante en este ejercicio. Permite entender bien lo que esta sucediendo en cada momento, porque si bien los mensajes
+  de alerta ayudan, no son muy utiles si no se aprecia en pantalla a lo que se estan refiriendo. En el caso del ejercicio, permite identificar cada div o cuadro
+  con un color y un diseño incluso esperable para el ejercicio (que alla un cuadro mas chico dentro de otro)
 
-2. Ejemplo 2
-. En este ejemplo, el evento onload se carga en el script, y se adjunta como propiedad del objeto window. El evento se llama siempre
-  que la pagina se carga. Se puede adjuntar como propiedades a otros objetos, y en todo caso, se activaria al momento de carga tambien    
+  a. Crear los div con contenido 
+     Si bien no es obligatorio, crear los div con contenido hace que "ocupen espacio" y al aplicar estilos al menos haya
+     una pequeña diferenciacion entre ellos. Despues se puede quitar el texto en caso de no ser necesario
 
-3. Ejercicio
-. El recordatorio que los script se cargan en el head
-. Extremadamente importante, como asignar funciones mas "genericas" (o sea, que reciban parametros) en la seccion de scripts, para evitar
-  hacer asignaciones inline en el html
-  
-  Si bien la asignacion de una funcion con nombre (sin parentesis, no es ejecucion) es valida, cuando tiene parametros, pareciera no haber forma. En dicho
-  caso, se sigue llamando una funcion anonima y luego dicha funcion llama a la funcion con nombre, pasando parametros
+  b. Estilos para los divs
+     Ni siquiera se trata de ser diseñador, sino solo tener una nocion minima para poder hacer pruebas en la pantalla y entender que se esta haciendo. Estilos
+     tan sencillos como width, margin con auto, padding y background color bastan y sobran para mostrar sobre la pantalla algo minimamente entendible. Ni siquiera
+     hace falta un height. Incluso es recomendable darle unos estilos al body. Con el valor "auto" en margin se pueden hacer centrados y aumentar la elegancia
+     muy facilmente
 
-  La mejor forma de imaginar todo esto, es que la funcion que esta dentro de la que se asigna, declara pero no ejecuta como propiedad del objeto, donde la propiedad es
-  el event handler, es como si se "pegara" en el tag html si fuera una funcion inline. O sea imaginar la primera linea como si fuera la segunda
+     margin: 10px auto;     ------>     UNA DE LAS PROPIEDADES CON UNO DE LOS VALORES MAS UTILES 	
 
-  coleccionTitulos[index].onmouseover = function() {pintarElementoColor(this, 'orange')};
-  <h1 class="titulo" onmouseover="pintarElementoColor(this, 'orange')">Novedades</h1>  
+  c. El texto de los nodos, como recordatorio
+     Es bueno recordar que para ver el texto de un nodo, el mismo tiene que ser de tipo texto, y segun el dom, es uno de los hijos (en general, el primero)
+     de uno de los elementos, asi que el atajo nodoElemento.firstChild.nodeValue es indispensable recordarlo. Ademas, como devuelve tambien los espacios en blanco,
+     se puede usar sobre esto el metodo trim
+
+2. Sobre el burbujeo
+. Demasiado importante. La idea es notar que al hacer click en el elemento mas interior, indirectamente se esta haciendo click en todos los otros que lo contienen, por una 
+  simple cuestion de "pertenencia" (se podria pensar que "la caja mas pequeña es parte de las otras cajas mas grandes por definicion"). Se puede pensar en la vida real, 
+  si con una tiza dibujo en el piso 4 rectangulos de diferentes tamaños uno dentro del otro, al poner la mano en el mas pequeño, se puede pensar que tambien se esta 
+  poniendo la mano en todos los anteriores (por eso, en este ejercicio usar html y css adecuadamente es importante, para entender la idea) ya que al apoya la mano
+  se puede ver que esta contenida no solo por la caja pequeña sino tambien por las mas grandes
+
+. Con respecto a la parte tecnica, el burbujeo se produce siempre, pero no quiere decir que sus efectos se noten. Para notar esos efectos hay que "atrapar" 
+  o "escuchar" la burbuja. Por eso, es necesario incluir los listeners necesarios a cada elemento. En el ejercicio, los mismos estan en los parrafos y en los div,
+  por eso al burbujear pasa por todas las cajitas. Si solo pusiera en los parrafos, el burbujeo se produce siempre pero solo se veria en el parrafo    

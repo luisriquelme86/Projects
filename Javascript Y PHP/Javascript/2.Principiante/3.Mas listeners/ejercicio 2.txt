@@ -1,0 +1,14 @@
+- Objetivos:
+. Crear un documento HTML que conste de un título h1 con el texto <<La web para aprender programación>>, dos párrafos de texto y un formulario con los campos nombre,
+  apellidos, edad y correo electrónico, así como con botones enviar y cancelar
+  Utilizar el evento onsubmit y otras herramientas para impedir que se envíe el formulario si se produce alguna de estas circunstancias:
+
+  a) El nombre está vacío ó el correo electrónico está vacío.
+  b) El correo electrónico no contiene los símbolos @ (arroba) y . (punto). Por ejemplo juan arroba gmail.com no es un correo válido.
+  c) No existe al menos una letra precediendo el símbolo @ del correo electrónico y una letra después de este símbolo. Por ejemplo a@.com no es un correo válido.
+  d) No existen al menos dos letras después del punto en el correo electrónico. Por ejemplo juan@gmail.c no es un correo válido.
+  e) La edad es cero o menor de cero.
+
+. En caso de producirse una de estas circunstancias, debe mostrarse el campo del formulario de un color distinto y un mensaje de advertencia. El color de advertencia
+  debe desaparecer (dinámicamente) cuando el campo que tenía un problema tome el foco (para ello usa el evento onfocus).
+

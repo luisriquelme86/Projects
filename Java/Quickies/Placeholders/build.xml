@@ -1,0 +1,76 @@
+<project name="Placeholders" basedir=".">
+
+    <!-- Propiedades globales del proyecto -->
+    <property name="src"        value="src"/>
+    <property name="build"      value="build"/>
+    <property name="lib"        value="lib"/>
+    <property name="classes"    value="build/classes"/>
+    <property name="jar"        value="build/jar"/>
+    <property name="javadoc"    value="doc"/>
+    <property name="test"       value="test"/>
+
+    <path id="classpath">
+        <fileset dir="${lib}" includes="**/**.jar"/>
+    </path>
+
+    <path id="application" location="${classes}"/>
+
+    <!-- Limpiar siempre el directorio destinado a almacenar nuestras construcciones -->
+    <target name="clean">               <!-- Objetivo -->
+        <delete dir="${build}"/>        <!-- Tarea -->
+        <delete dir="${javadoc}"/>      <!-- Tarea -->
+    </target>
+
+    <!-- Compilar las unidades de compilación almacenado los archivos de salida en directorios especificados-->
+    <target name="compile" depends="clean">
+        <mkdir dir="${classes}"/>
+        <javac includeantruntime="false" srcdir="${src}" destdir="${classes}" />
+    </target>
+
+    <!-- Crear el .jar -->
+    <!-- El objetivo "jar" no se ejecuta hasta que lo hace su dependencia que es "compile" -->
+    <target name="jar" depends="tests">
+        <mkdir dir="${jar}"/>
+        <jar destfile="${jar}/${ant.project.name}.jar" basedir="${classes}">
+            <manifest>
+                <attribute name="Main-Class" value="com.application.quickies.placeholders.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="compile-tests" depends="compile">
+        <mkdir dir="${classes}-tests"/>
+        <javac fork="true" srcdir="${test}" destdir="${classes}-tests" classpathref="classpath" includeantruntime="false">
+            <classpath>
+                <pathelement location="${lib}/junit-4.12.jar"/>
+                <path refid="application"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Correr los test -->
+    <!-- El tag junit es muy util, permite definir un classpath para la ejecucion de los test -->
+    <!-- Bachtest permite indicar el path de ejecucion de los test con una expresion -->
+    <target name="tests" depends="compile-tests">
+        <mkdir dir="${test}/reports"/>
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <pathelement location="${lib}/junit-4.12.jar"/>
+                <pathelement location="${lib}/hamcrest-core-1.3.jar"/>
+                <path location="${classes}"/>
+                <path location="${classes}-tests"/>
+            </classpath>
+            <formatter type="xml"/>
+            <batchtest fork="yes" todir="${test}/reports">
+                <fileset dir="${test}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- Ejecutar la aplicación -->
+    <target name="run">
+        <java jar="${jar}/${ant.project.name}.jar" fork="true"/>
+    </target>
+</project>

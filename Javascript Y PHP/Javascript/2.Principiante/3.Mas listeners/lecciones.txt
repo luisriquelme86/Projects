@@ -1,0 +1,21 @@
+- Lecciones aprendidas
+. Las lecciones mas importantes estan en el ejercicio 2, el del formulario
+
+1. Acerca de los input
+. El valor de los input es a traves de la propiedad "value" y no "nodeValue" o "textContent"
+
+2. Contenido de texto
+. Cuando se trata de los parrafos, lo mejor es usar el "textContent"
+
+3. El preventDefault
+. En otros momentos, se uso el "return false" dentro de los eventos inline en html para cancelar la accion por defecto de un elemento html. No esta mal,
+  pero cuando se usan listeners, esto no se puede hacer, simplemente no funciona. Hay que llamar al metodo preventDefault del evento. De esta manera, el
+  evento se cancela o no se ejecuta bajo determinadas condiciones
+
+4. El input "submit"
+. Este input se dibuja asi mismo como un boton (button)
+
+5. Estructura basica del formulario
+. Se puede tomar como modelo base la estructura label - nombre descriptivo
+											    input
+											    parrafo (para los errores)
