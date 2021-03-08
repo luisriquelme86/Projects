@@ -2,6 +2,7 @@
 
 ) Algunas cosas que todo programador deberia saber como
 
+. Parseo
 . El "continue" en los loops es mas bien un "skip" o un "saltar"
 . Que es el codigo fuente
 . Tiempo de vida de las variables
@@ -27,6 +28,10 @@
 . Herramientas para automatizar la compilacion de proyectos (ANT para Java, por ejemplo, o Maven) 
 . Instalar librerias de terceros para poder hacer ciertas cosas (leer un csv mas complejo o un excel)
 . DAO, DTO, POJO
+
+) Parseo
+. El parseo consiste en analizar un dato y tratar de convertirlo en otro. En general, la mayoria de las veces se analiza una cadena de texto y se la quiere convertir en 
+  otra cosa (una fecha, un numero, un objeto, etc)
 
 ) Que es el codigo fuente
 . El codigo fuente o fuente (source, en ingles) es el codigo escrito por un programador en lenguaje de alto nivel. Para que la maquina pueda leerlo, hay que pasarlo a codigo objeto y 

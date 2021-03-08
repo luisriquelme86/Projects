@@ -1,0 +1,8 @@
+- Objetivos:
+. Usando la propiedad userAgent de los objetos Navigator, determinar el navegador que está usando el usuario y mostrar un mensaje por pantalla informando de ello.
+  El resultado debe ser del tipo: <<Estás usando: nombreNavegador>>, donde nombreNavegador será Google Chrome, Apple Safari, Opera, Mozilla Firefox, Microsoft Internet Explorer ó Desconocido.
+  Resuélvelo de dos maneras distintas
+
+  Usando expresiones regulares.
+  Usando el método indexOf de los objetos tipo String de JavaScript
+

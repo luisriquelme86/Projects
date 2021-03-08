@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejercicio 2 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				width: 750px;
+				background-color: aquamarine;
+				margin: 10px auto;
+				border: 1px solid antiquewhite;
+			}
+			h3 {
+				text-align: center;
+				padding: 10px;
+			}
+			button {
+				padding: 5px;
+			}
+			#displayCuentaAtras {
+				margin: 10px auto;
+				padding: 20px;
+				background-color: darksalmon;
+				text-align: center;
+				color: white;
+				font-size: 24px;
+				font-family: "Arial";
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var displayCuentaAtras = document.getElementById("displayCuentaAtras");
+				var intervaloCuentaAtras;
+
+				document.getElementsByTagName("button")[1].addEventListener("click", function() {
+					if (intervaloCuentaAtras) {
+						clearInterval(intervaloCuentaAtras);
+					}
+				});
+
+				document.getElementsByTagName("button")[0].addEventListener("click", function() {
+					intervaloCuentaAtras = setInterval(function() {
+						displayCuentaAtras.textContent = cuentaAtras(displayCuentaAtras.textContent)
+					}, 1000)
+				});
+
+				function cuentaAtras(tiempo) {
+					var minutos = tiempo.substring(0, tiempo.indexOf(":"));
+					var segundos = tiempo.substring(tiempo.indexOf(":") + 1);
+					if (segundos == "00") {
+						segundos = "59";
+						minutos = (parseInt(minutos) - 1).toString();
+					}
+					else if (parseInt(segundos) <= 10) {
+						segundos = "0" + (parseInt(segundos) - 1);
+					}
+					else {
+						segundos = (parseInt(segundos) - 1).toString();
+					}
+					if (minutos == "0") {
+						return "Tu tiempo ha terminado";
+					}
+					return minutos + ":" + segundos;
+				};
+
+			};
+		</script>
+	</head>
+	<body>
+		<h3>Presione el boton para iniciar la cuenta atras del reloj digital de horas, minutos y segundos</h1>
+		<button type="button">Iniciar cuenta atras</button>
+		<button type="button">Detener cuenta atras</button>
+		<div id="displayCuentaAtras">10:13</div>
+	</body>
+</html>

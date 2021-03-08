@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redireccionamiento con cuenta atras</title>
+	<style type="text/css">
+		body {
+			background-color: sienna;
+		}
+
+		h1, div {
+			color: black;
+			background-color: seashell;	
+			width: 500px;
+			padding: 10px;
+			margin: 10px auto;
+			text-align: center;
+		}
+
+		div {
+
+		}
+
+	</style>
+	<script type="text/javascript">
+		var contador = 5;
+		window.onload = function() {
+			var mensaje = document.getElementById("mensaje");
+			mensaje.innerHTML = "Hemos cambiado de ubicación esta página. En breves momentos será redireccionado…";
+			var tiempo = document.getElementById("tiempo");
+			for(var index = 1; index <= 5; index++) {
+				// setTimeout(cuentaAtras, 1000 * index);
+				setTimeout(function(index) {
+					tiempo.innerHTML = "" + index;
+				}, 1000 * index);
+			}
+		};
+
+		function cuentaAtras() {
+			tiempo.innerHTML = "" + contador;
+			contador--;
+		};
+
+	</script>
+</head>
+<body>
+	<h1>
+		Inicio de pagina
+	</h1>
+	<div id="principal">
+		<span id="mensaje"></span><span id="tiempo"></span>
+	</div>
+</body>
+</html>

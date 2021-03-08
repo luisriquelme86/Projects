@@ -4,5 +4,7 @@
 
 0. Introduccion
 
- . Su relacion con el polimorfismo
-. 
+. Su relacion con el polimorfismo
+. El uso de protected
+. La invocacion de super
+. Override de metodos en la clases hijas. Cuando se usa la funcion de la clase base y cuando la funcion de las clases heredadas 

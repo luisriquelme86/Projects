@@ -1,7 +1,6 @@
 - Funciones destructivas
 . En Javascript, existen lo que se denominan muchas veces "funciones destructivas". En general estan asociadas a los array
-. Estas funciones se caracterizan porque el cambio en el array son permanentes (lo modifican) en cambios otras funciones solo producen alteraciones, 
-  donde dichas alteraciones en general se devuelven y puede ser atrapadas en una variable
+. Estas funciones se caracterizan porque el cambio en el array son permanentes (lo modifican) en cambios otras funciones solo toman datos pero no modifican nada
 
 1. Slice
 . Como el nombre lo dice, esta funcion es rebanar, es tomar un trozo. Toma un trozo de la funcion, y lo devuelve, pero la funcion no queda

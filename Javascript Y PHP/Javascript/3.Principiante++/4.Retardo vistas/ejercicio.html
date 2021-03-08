@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+
+			*{
+				font-family: verdana, sans-serif;
+			}
+
+			.nodoNuevo{
+				background-color: black;
+				color:white;
+				width:100px;
+				text-align:center;
+				padding:20px;
+				font-size:32px;
+				float:left;
+			}
+
+		</style>
+		<script type="text/javascript">
+			var contador = 1;
+
+			function mostrarNumConRetardo() {
+				setTimeout(crearNodo, 1000);
+			}
+			
+			function crearNodo() {
+				if (contador != 11) {
+					var nodoHijo = document.createElement("div");
+					nodoHijo.className="nodoNuevo";
+					nodoHijo.innerHTML = ''+contador;
+					document.body.appendChild(nodoHijo);
+					contador = contador+1;
+					setTimeout(crearNodo, 1000);
+				}
+			}
+		</script>
+	</head>
+	<body onload="mostrarNumConRetardo()" >
+		<div id="cabecera">
+			<h2>Cursos aprenderaprogramar.com</h2>
+			<h3>Ejemplos JavaScript</h3>
+		</div>
+	</body>
+</html>

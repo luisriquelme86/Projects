@@ -1,0 +1,6 @@
+- Objetivos:
+. Crea una pagina web que al ser invocada muestre un mensaje “Hemos cambiado de ubicacion esta página. En breves momentos sera redireccionado…” junto a una cuenta atras
+  que muestre 5, 4, 3, 2, 1 (correspondiente a 5 segundos). Tras transcurrir 5 segundos y mostrarse la cuenta atras, el usuario debe ser redireccionada a la url 
+  http://aprenderaprogramar.com. Para realizar este ejercicio debes usar la propiedad window.location junto con funciones que permitan el retardo en la ejecución vistas en entregas anteriores del curso
+
+

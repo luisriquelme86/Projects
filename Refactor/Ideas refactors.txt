@@ -9,5 +9,5 @@
   Si una funcion ya esta creada y se llama de muchos lugares, un refactor implicaria modificarla y ademas modificar en todos los lugares donde se hizo
   la llamada. Para evitar eso se puede hacer lo siguiente
 
-  . Aplicar un filtro
-    Al resultado de lo anterior, una vez recibido, se puede tomar ese resultado y filtrar hasta obtener lo que deseamos  
+. Aplicar un filtro
+  Al resultado de lo anterior, una vez recibido, se puede tomar ese resultado y filtrar hasta obtener lo que deseamos  

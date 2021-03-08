@@ -1,0 +1,5 @@
+- Objetivos:
+. Crear un reloj JavaScript que marque inicialmente 01:00 (es decir, 1 minuto) y que marche hacia atrás (00:59, 00:58, 00:57 … etc.) hasta llegar a 00:00.
+  Cuando llegue a 00:00 debe deternerse y mostrar el mensaje: “Tu tiempo ha terminado”
+
+

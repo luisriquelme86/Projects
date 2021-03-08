@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejemplos</title>
+	<script type="text/javascript">
+		
+		window.onload = function() {
+
+			console.log("Se cargo la pagina, y se ejecutara el primer ejemplo de closure");
+
+			function mostrarNombre() {
+				var name = "Luis";
+				function mostrarMensaje() {
+					document.getElementById("ejemplo1").innerHTML = "Ejemplo closure 1, el nombre es " + name;
+				}
+				mostrarMensaje();
+			}
+
+			mostrarNombre();
+
+			function mostrarNombre2() {
+				var name = "Luis";
+				function mostrarMensaje() {
+					document.getElementById("ejemplo2").innerHTML = "Ejemplo closure 2, el nombre es " + name;
+				}
+				return mostrarMensaje;
+			}
+
+			var name2 = mostrarNombre2();
+			name2()
+
+			function showHelp(help) {
+				document.getElementById("help").innerHTML = help;
+			}
+
+			function personalizeHelp(help) {
+				// no poner "help" como parametro en la funcion interna (quizas podria tener un nombre diferente al de la externa) porque no funciona, toma el event
+				// que se le pasa por default a todas las funciones que son callbacks de eventos. Ademas tiene sentido, el help de la funcion externa ya es conocido
+				// por la interna, y se supone que el parametro de la funcion interna deberia ser otro, no el mismo
+				// return function(help) {  
+				return function() {  
+					document.getElementById("help").innerHTML = help;		
+				};
+			}
+
+			function setInputTips() { // caso3
+
+				var items = [
+					{"id": "email", "help": "Direccion de correo electronico"},
+					{"id": "name", "help": "Nombre completo"},
+					{"id": "age", "help": "Edad (debes tener mas de 16)"}
+				]
+
+				for (var index = 0; index < items.length; index++) {
+					// -> sino guardo el item en una variable, como el operador incremento primero asigna y despues incrementa, el indice queda siempre a lo ultimo
+					// al entrar al callback del onfocus
+					var item = items[index]; 
+					/* document.getElementById(item.id).onfocus = function () { // funcion anonima que ejecuta otra funcion, ya visto
+						showHelp(item.help);
+					} */
+					// la solucion es esta
+					document.getElementById(item.id).onfocus = personalizeHelp(item.help);
+				}
+			}
+
+			setInputTips();
+		}
+
+	</script>
+</head>
+<body>
+
+		<p>Ejemplos de closures</p>
+
+		<p>Ejemplo de closure 1</p>
+		<p id="ejemplo1"></p>
+		<p><----------------------------------></p>
+
+		<p>Ejemplo de closure 2</p>
+		<p id="ejemplo2"></p>
+		<p><----------------------------------></p>
+
+		<p>Ejemplo de closure 3, con loops</p>
+		<p id="ejemplo4"></p>
+
+		<p id="help">Helpful notes will appear here</p>
+		<p><input type="text" name="email" id="email"></p>
+		<p><input type="text" name="name" id="name"></p>
+		<p><input type="text" name="age" id="age"></p>
+		<p><----------------------------------></p>
+
+</body>
+</html>

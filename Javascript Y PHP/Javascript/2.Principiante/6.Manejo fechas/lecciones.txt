@@ -1,0 +1,20 @@
+- Lecciones aprendidas
+
+1. Acerca de las fechas
+. Por lo que se ve, no hay ningun date format (formato de fecha) que tenga el forma de dia, mes y año escrito de alguna manera en ese orden. Y la mayoria de las 
+  fechas respetan la siguiente peculiar caracteristica, en general, el mes precede al dia, independientemente del orden total, asi
+
+  2015-03-25              ISO date
+  03/25/2015              Short date
+  Mar 25 2015             Long date (2 formas)
+  25 Mar 2015             Unica excepcion
+
+  Fecha como 21-03-1988 son invalidas en Javascript entonces (en ese formato, al menos, del dia primero). Y como se ve, usando numeros, el mes siempre
+  precede al dia
+
+2. Acerca del manejo de strings
+. En el codigo del ejercicio dos, se uso para tratar las fechas la funcion "split" sobre un string con un formato de fecha. Si bien no esta mal, si hay un string, en lugar
+  de convertirlo en un array, es mejor usar una funcion como substring. Mas que nada, porque es mas comodo pasar de un string a otro string. El split funciona
+  a partir de un parametro, y si se puede identificar el patron como con la funcion split, tambien con substring. En el primer caso, el patron es un "-" en cambio en el 
+  otro, las fechas ingresadas son siempre del tipo dd-mm-yyyy y sabiendo eso se pueden tomar las partes deseadas 
+  siempre (comprobar que siempre son en ese formato es otro tema)

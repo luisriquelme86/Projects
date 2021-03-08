@@ -1,0 +1,67 @@
+- Funciones
+
+. Las funciones en cualquier lenguaje son esenciales para poder programar, ya que son utiles para la reutilizacion de codigo. Esto no es diferente en javascript. Pero
+  por alguna razon, el manejo de las funciones en js a veces se presta a confusiones y malentendidos. En la mayoria de los lenguajes, las funciones no estan "sueltas", 
+  sino dentro de clases. Y aunque esten sueltas, no hay muchas variantes. O se crea la funcion, o se ejecuta. No hay mas
+
+0. Funciones en js
+. En js es muy comun ver funciones que devuelven funciones, que se asignan a variables, funciones dentro de funciones, callbacks (llamadas de vuelta), funciones anonimas, funciones 
+  anonimas que se ejecutan en el momento, y mas. En otros lenguajes esto no es tan comun, aunque se aplica cada vez mas
+
+1. Explicaciones de los ejemplos caso 1 y 2
+. En estos dos casos, se usa el el "event handler inline" o sea, agregar el handler del evento en el mismo elemento html. Lo que va dentro del handler inline es
+  codigo js
+
+. Vale hacer una aclaracion muy fuerte. El handler mezcla html y js al mismo tiempo, por lo que hay que tener claro en todo momento que es lo que sucede. El handler
+  se pone en el html, y hace referencia a codigo javascript. En el primer caso, se llama a una funcion js y en el segundo el codigo js esta escrito ahi mismo
+
+. El primer caso llama mucho la atencion. Por que el event handler ejecuta la funcion ahi mismo en el elemento html en lugar de solo pasar el 
+  nombre de la funcion en el tag html? Esto pasa por la explicacion dada antes, que es una mezcla entre html y js. Internamente, el browser recorre
+  los tags html y se van renderizando uno a uno, secuencialmente. Al llegar al tag html y escribir y renderizar el tag, se encuentra con el manejador de 
+  evento, que debe ser un codigo en js por definicion., asi que lo "pega" en el dom. Cuando se dispara el evento (cosa que hace js) el manejador del mismo
+  (que tambien esta en js) es buscado, y si en el tag html simplemente dice el literal, asi onclick="funcionCaso1" no la encontrara porque no esta definido, lo 
+  que necesita es llamar a la funcion, por eso se usan los parentesis, asi onclick="funcionCaso1()". Todo esto esta fuertemente relacionado por el simple hecho
+  que el handler esta directamente en el codigo fuente (inline) mientras que el handler esta en js
+
+. Internamente tambien al momento de ejecutar el handler se evalua el mismo (probablemente javascript lo hace con eval). Al evaluar y encontrar
+  solamente un literal no hace nada, porque no necesita la referencia a la funcion sino la ejecucion de la misma  
+
+. El segundo caso es muy sencillo. Es simplemente codigo js que se ejecuta cuando se dispara el evento, ya que los eventos inline esperan codigo js
+
+2. Explicaciones de los ejemplos caso 3
+. Este caso esta completamente del lado de javascript. Se asigna el handler directamente al evento del objeto/tag html en cuestion, pero todo manejado desde
+  javascript. Es muy interesante notar que simplemente se asigna una funcion anonima con lo que hace dentro de la misma
+
+3. Explicaciones de los ejemplos caso 4  
+. Un caso muy interesante que se usa muchisimo. Una funcion anonima que funciona como "wrapper" que contiene dentro otra funcion. Como es una funcion que 
+  contiene otra, en estos casos hay que llamar a la funcion mas interior, sino esta se quedaria "atrapada" dentro del wrapper y cuando se produzca
+  el evento el mismo no podria ejecutar la funcion dentro del wrapper
+
+4. Explicaciones de los ejemplos caso 5 y 6
+. En estos casos, se asigna la funcion al handler. Es bueno notar que la funcion no se llama (por eso no se usan parentesis) sino que se asigna
+  la misma al event handler. Si se llamara en el momento, devolveria "undefined" o bien el resultado de la funcion inmediatamente, que no es lo deseado,
+  lo deseado es que se llame cuando el evento tenga lugar
+. La diferencia mas notable entre el caso 5 y el caso 6 es que mientras el primero usa como referencia directamente la funcion el segundo usa la
+  variable donde se guardo
+
+5. Explicaciones de los ejemplos caso 7
+. Es el caso de los closures (o cerraduras). En este caso, se crea una funciona que contiene y devuelve otra funcion. Como la funcion mas externa
+  la unica forma que tiene de devolver la funcion interna es con un return, hay que llamarla para que se produzca el mismo    
+
+6. Explicaciones de los ejemplos caso 8
+. Un caso comun, donde simplemente se le asigna un listener a un objeto html desde javascript y se asigna la referencia de una funcion
+
+7. Llamadas, referencias y devoluciones de funciones
+. Hay algunas cuestiones muy interesantes de analizar, por ejemplo
+  
+  Si una funcion no devuelve nada (no hay return) se supone que la devolucion de la misma es "undefined"
+  Al llamar a una funcion, se ejecuta inmediatamente
+  Al asignar el nombre de una funcion, se asigna una referencia a la misma, pero no se ejecuta (se puede notar porque no se usan parentesis)
+
+. En el caso de la asignacion de un handler de un evento en javascript, si se asigna el nombre de la funcion, se asigna realmente una referencia. En el caso
+  de invocar la funcion, se devuelve el resultado correspondiente o undefined inmediatamente. Eso esta mal, porque en general no es lo que se desea, sino
+  que se desea que la funcion se ejecute en el momento que se ejecuta el disparador  
+
+. Siguiendo con el hilo de arriba, la funcion que se asigna como handler de un evento es una funcion de callback, o sea, una funcion que se ejecuta en 
+  respuesta a dicho evento. Tambien se utilizan para "avisar" cuando una funcion termina de hacer algo. Es simplemente una funcion que se pasa como 
+  argumento en otra funcion. Seria algo asi como "que quieres hacer una vez que este termine?"  

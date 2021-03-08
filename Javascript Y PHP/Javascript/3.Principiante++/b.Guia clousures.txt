@@ -1,0 +1,74 @@
+- Closures
+
+. Una closure, tambien llamada clausura, cierre o "cerradura" (un nombre bastante util) es simplemente una funcion dentro de otra funcion,
+  o sea, una funcion interna dentro de otra externa. Simplemente eso, como definicion basica
+
+  function mostrarAlerta() {
+  	function mostrarMensaje() {
+  	}
+  }
+
+. Es conveniente usar la palabra "closure" para que todos lo comprendan y asocien, pero la palabra "cerradura" ayuda a entender mejor los conceptos que encierran
+  los closures
+
+. Lo de arriba es un closure, muy basico, que en si no tiene todas las caracteristicas de un closure y tampoco es muy util, pero sirve para ejemplificar. Mas abajo 
+  se explican algunos ejemplos de los closures que ayudan a entender las explicaciones dadas sobre los mismos
+
+0. Caracteristicas de los closures  
+. Son funciones tambien llamadas "cerraduras" porque "guardan" o recuerdan "cosas en su interior", en este caso, otras funciones y variables
+  Es una funcion que guarda el ENTORNO en que se creo la misma, ese entorno incluye las variables locales y las funciones internas
+
+  Las funciones internas solo se pueden acceder a traves de la funcion externa
+  Las variables y funciones del closure son parte del entorno que el mismo "guarda" o "recuerda"
+  Las funciones internas pueden usar las variables de la funcion externa aunque la misma haya terminado su ejecucion porque se guardo el 
+  entorno
+
+1. Explicaciones mas tecnicas sobre los closures
+. Supongamos el siguiente
+
+	function A() {
+		var something = "something"
+		return function B() {
+			alert(something)
+		}
+	}
+
+	var a = A();
+	a();  
+
+. Con respecto al codigo de arriba, se ejecuta la funcion A, se guarda el resultado (que es otra funcion) y se ejecuta, mostrando el alert. Hay varias cuestiones
+  para analizar
+
+  . La funcion A se ejecuto, por la tanto, su ejecucion se termino. Ese resultado se guardo y se volvio a ejecutar (llama a la funcion interna) y dicha funcion, 
+    funciona. Pero normalmente no deberia, porque una vez que una funcion se ejecuto, el garbage collector libera el espacio de las variables locales de la funcion,
+    asi que la funcion interna no deberia poder hacer un alert con "something", deberia devolver undefined. Por que?
+
+  . Esto ultimo, mas alla de que la respuesta es porque "es un closure" tiene la razon tecnica. Y la razon es que esta funcion interna tiene una referencia al scope
+    de la funcion externa, por eso la variable local es accesible y el garbage collector no la elimina   	
+
+2. Explicaciones de los ejemplos caso 1    
+. Un closure muy simple. Una funcion tiene dentro otra funcion (interna) y en su propia declaracion la llama o ejecuta. Cuando la funcion externa
+  es ejecutada, la interior tambien, produciendose un resultado. La funcion mas externa tambien tiene una variable local
+
+3. Explicaciones de los ejemplos caso 2
+. Es una closure mas compleja. La funcion externa no ejecuta inmediatamente la funcion interna, sino que la devuelve. Cuando se llama la funcion externa,
+  la interna se devuelve y se ejecuta. Lo interesante es que la variable del closure aun esta "viva" cuando se ejecuta la funcion interna. Normalmente
+  las variables locales se destruyen o no son accesibles una vez que la funcion termino de ejecutarse
+
+. Lo de arriba no es el caso, la variable aun esta viva porque esta un closure, es parte de su entorno, entonces el closure y sus funciones internas pueden acceder
+  a ella en cualquier momento. En un caso normal, la funcion interna no podria acceder a la variable de la funcion porque la misma ya dejo de ejecutarse, dicha
+  variable esta fuera de la funcion que se esta usando (en este caso, la funcion interna)
+
+4. Explicaciones de los ejemplos caso 3
+. El caso 3 ya es todo un desafio. Primero que nada, aunquen no se note, la asignacion en el evento onclick es un closure (aunque no se note por la sintaxis). Es una
+  funcion que tiene dentro otra funcion, y tiene una variable que se pasa desde fuera. Lo que sucede es que es una funcion anonima que luego ejecuta otra funcion. Javascript
+  tiene esa particularidad, que se pueden declarar las cosas de muchas formas
+
+. Al ser un closure, la funcion ya juega con sus mismas reglas, o sea, funciones internas y variables que se "encierran", o sea, un ambito, entorno o scope
+. La solucion pasa por usar mas closures, o sea, hacer una "fabrica de funciones", algo asi
+  
+  function a(paramA) {
+  	return function b(paramB) {
+  		// hacer algunos
+  	} 
+  }   

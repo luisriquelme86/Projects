@@ -1,0 +1,3 @@
+- Objetivos:
+. Realizar el "caso 2" del settimeout usando llamadas recursivas que simulen un bucle o loop
+

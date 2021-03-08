@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function ejemplo() {
+                msg = '';
+                var moneda = extraerParametroUrl('moneda');
+                if (moneda) {
+                	alert ('El valor del parámetro moneda en la url es: '+moneda)
+                }
+                else {
+                	alert ('No se recibe moneda en la url'); 
+                }
+			}
+
+			function extraerParametroUrl( nombreParametro ){
+                var regexS = "[\\?&]"+nombreParametro+"=([^&#]*)";
+                var regex = new RegExp ( regexS );
+                var tmpURL = window.location.href;
+                var results = regex.exec( tmpURL );
+                if( results == null ) { 
+                	return "";
+                } 
+                else {
+                	return results[1];
+                }
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cabecera">
+			<h2>Cursos aprenderaprogramar.com</h2>
+			<h3>Ejemplos JavaScript</h3>
+		</div>
+		<div style="color:blue; margin:20px;" id ="pulsador" onclick="ejemplo()">
+			<a href="#"> Probar</a> 
+		</div>
+	</body>
+ </html>

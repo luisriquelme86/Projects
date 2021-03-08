@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejercicio 2 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				width: 750px;
+				background-color: aquamarine;
+				margin: 10px auto;
+			}
+		</style>
+		<script type="text/javascript">
+
+			window.onload = function() {
+
+				var buttonsCollection = document.getElementsByTagName("button");
+				var browserData = navigator.userAgent.toLowerCase(); // -> devuelve nombre, version y plataforma del browser actual
+
+				buttonsCollection[0].addEventListener("click", function() {
+
+					var browserName;
+					if (browserData.search(/chrome/i) !== -1) {
+
+						if (browserData.search(/opr/i) !== -1) {
+							browserName = "Opera"
+						}
+						else if (browserData.search(/edg/i) !== -1) {
+							browserName = "Microsoft Edge";
+						}
+						else {
+							browserName = "Google Chrome";
+						}
+
+					}
+					else if (browserData.search(/chrome/i) == -1 && browserData.search(/safari/i) !== -1) {
+						browserName = "Apple Safari";	
+					}
+					else if (browserData.search(/trident/i) !== -1) {
+						browserName = "Microsoft Internet Explorer";
+					}
+					else {
+						browserName = "Desconocido";	
+					}
+					alert("Estas usando: " + browserName);
+				});
+
+				buttonsCollection[1].addEventListener("click", function() {
+					
+					var browserName;
+					if (browserData.indexOf("chrome") !== -1) {
+
+						if (browserData.indexOf("opr") !== -1) {
+							browserName = "Opera"
+						}
+						else if (browserData.indexOf("edg") !== -1) {
+							browserName = "Microsoft Edge";
+						}
+						else {
+							browserName = "Google Chrome";
+						}
+
+					}
+					// else if (browserData.indexOf("chrome") == -1 && browserData.indexOf("safari") !== -1) {
+					// la expresion de arriba es muy comun	
+					else if (browserData.indexOf("safari") !== -1) {	
+						browserName = "Apple Safari";	
+					}
+					else if (browserData.indexOf("trident") !== -1) {
+						browserName = "Microsoft Internet Explorer";
+					}
+					else {
+						browserName = "Desconocido";	
+					}
+					alert("Estas usando: " + browserName);
+				})
+
+			}
+		
+		</script>
+	</head>
+	<body>
+		<button type="button">Averiguar browser con expresiones regulares</button>
+		<button type="button">Averiguar browser con indexOf</button>
+	</body>
+</html>
+
+<!-- 
+  Usando la propiedad userAgent de los objetos Navigator, determinar el navegador que está usando el usuario y mostrar un mensaje por pantalla informando de ello.
+  El resultado debe ser del tipo: <<Estás usando: nombreNavegador>>, donde nombreNavegador será Google Chrome, Apple Safari, Opera, Mozilla Firefox, Microsoft Internet Explorer ó Desconocido.
+-->
+
+<!--
+	Chrome:  mozilla/5.0 (macintosh; intel mac os x 10_13_6)        applewebkit/537.36   (khtml, like gecko)       chrome/87.0.4280.67  safari/537.36
+	Firefox: mozilla/5.0 (macintosh; intel mac os x 10.13; rv:83.0)                              gecko/20100101                         firefox/83.0
+	Safari:  mozilla/5.0 (macintosh; intel mac os x 10_13_6)        applewebkit/605.1.15 (khtml, like gecko) version/13.1.2             safari/605.1.15"
+	Opera:   mozilla/5.0 (macintosh; intel mac os x 10_13_6)        applewebkit/537.36   (khtml, like gecko)       chrome/86.0.4240.198 safari/537.36 opr/72.0.3815.400
+    ie       Mozilla/5.0 (Windows NT 10.0;                          WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko
+    edge     Mozilla/5.0 (Windows NT 10.0; Win64; x64)              AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36 Edg/84.0.522.69
+
+    chrome    chrome/87.0.4280.67   safari/537.36
+    firefox                                          firefox/83.0
+    safari                          safari/605.1.15"
+    opera     chrome/86.0.4240.198  safari/537.36    opr/72.0.3815.400
+    ie        Trident
+    edge      Chrome/84.0.4147.135  Safari/537.36    Edg/84.0.522.69

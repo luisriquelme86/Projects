@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejercicio 1 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				width: 750px;
+				background-color: aquamarine;
+				margin: 10px auto;
+				border: 1px solid antiquewhite;
+			}
+			h3 {
+				text-align: center;
+				padding: 10px;
+			}
+			button {
+				padding: 5px;
+			}
+			#displayReloj {
+				margin: 10px auto;
+				padding: 20px;
+				background-color: darksalmon;
+				text-align: center;
+				color: white;
+				font-size: 24px;
+				font-family: "Arial";
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var displayReloj = document.getElementById("displayReloj");
+				var intervaloTiempo;
+
+				document.getElementsByTagName("button")[1].addEventListener("click", function() {
+					if (intervaloTiempo) {
+						clearInterval(intervaloTiempo);
+					} 
+				});
+
+				document.getElementsByTagName("button")[0].addEventListener("click", function() {
+					intervaloTiempo = setInterval(function() {	
+						reloj();
+					}, 500);
+				});
+
+				function reloj() {
+					hoy = new Date();
+					displayReloj.textContent = hoy.getHours() + ":" + actualizarHora(hoy.getMinutes()) + ":" + actualizarHora(hoy.getSeconds());
+				}
+
+				function actualizarHora(unidadTiempo) {
+					if (unidadTiempo < 10) {
+						return "0" + unidadTiempo;
+					}
+					return unidadTiempo;
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<h3>Presione el boton para iniciar el reloj digital de horas, minutos y segundos</h1>
+		<button type="button">Iniciar reloj</button>
+		<button type="button">Detener reloj</button>
+		<div id="displayReloj">00:00:00</div>
+	</body>
+</html>

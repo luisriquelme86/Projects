@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			window.onload = function () {
+
+				var adelante = document.getElementById('irAdelante');
+				var atras = document.getElementById('irAtras');
+
+				adelante.addEventListener("click", irAdelante);
+				atras.addEventListener("click", irAtras);
+
+				function irAdelante() {
+				 	this.style.color = 'orange';
+				 	window.history.forward();
+				 }
+				function irAtras() {
+					this.style.color = 'red';
+					window.history.back();
+				}
+			}
+		</script>
+
+	</head>
+	<body>
+		<div id="cabecera">
+			<h2>Cursos aprenderaprogramar.com</h2>
+			<h3>Ejemplos JavaScript</h3>
+		</div>
+		<div style="color:blue; margin:20px;" id ="irAdelante">Ir adelante</div>
+		<div style="color:blue; margin:20px;" id ="irAtras">Ir atras </div>
+		<a href="http://aprenderaprogramar.com">Pulsa para generar un avance y poder volver atrás con back</a>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+- Eventos
+
+. Ya hay varias guias y comentarios sobre los eventos en javascript, pero hay muchos mas, como estos
+
+1. Como declarar los eventos
+. Los eventos se pueden declarar inline en el html, sobre un objeto html usando javascript, o declarando un listener sobre un objeto,
+  tambien usando javascript. Los dos primeros casos, usan el nombre del evento anteponiendo la palabra "on" delante, en cambio los listener,
+  usan el evento "puro" sin ningun prefijo  
+
+2. Disparo de los eventos
+. Cuando se produce un evento, javascript solo lo dispara, y si hay un handler, el mismo se ejecuta para realizar una accion
+
+3. Defincion y ejecucion de los eventos
+. Ahora bien, si un evento tiene un handler, se pueden diferenciar dos etapas, la etapa de declaracion y la de ejecucion. Es importante
+  diferenciar ambas etapas. Cuando se declara una funcion, la misma puede tener un conjunto o scope de variables definidas de antemano. Sin embargo,
+  el valor de las variables de ese scope o ambito pueden cambiar desde el momento que se declaro el handler hasta que se ejecuto, no es que las variables
+  dentro de la declaracion "estan encerradas" y no pueden cambiar
+
+. Es importante comprender que cuando se ejecuta un handler, solo pasa cuando se dispara el evento, y mientras tanto, el scope o ambito, o sea,
+  lo que sucede en ese handler puede variar desde su declaracion o definicion  

@@ -1,0 +1,10 @@
+- Lecciones aprendidas
+. Este ejercicio de jerarquia de objetos es importante no tanto por el contenido academico sino por la forma de programar. En este ejercicio, 
+  no se conoce que devuelve el userAgent a priori. La unica informacion que se tiene es que permite conocer el navegador actual, pero nunca 
+  es claro exactamente lo que devuelve. De hecho, es muy ambiguo, usando la palabra "chrome" o "safari" no solo para esos navegadores
+
+. Asi que la unica manera segura es probando en todos los navegadores la respuesta. Aun mas, esto podria funcionar de casualidad. La unica forma
+  es ver el valor de esta propiedad en todos los navegadores, analizar dicha respuesta entre la cantidad y recien ahi resolver el problema
+
+. Es importante esta leccion porque lo primero que se intenta hacer es "adivinar" o "suponer" que cada navegador va a dar una respuesta exacta,
+  pero al empezar a probar se cae todo por la borda    

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo aprenderaprogramar.com</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+                background-color: teal;
+                width: 750px;
+                margin: 20px auto;
+                border: 1px solid white;
+            }
+            h3{
+                text-align: center;
+                padding: 20px;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                padding: 10px;
+            }
+            div {
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function() {
+                var startButton = document.getElementById("start");
+                startButton.addEventListener("click", function() {
+                    var name = prompt("Introduzca su nombre: ");
+                    if (name != null) {
+                        var tiempoInicial = Date.now();
+                        var pais = prompt("Introduzca su pais: ");
+                        if (pais != null) {
+                            var tiempoFinal = Date.now();
+                            var tiempoMinutos = ((tiempoFinal - tiempoInicial) / 1000) / 60;  
+                            alert("Han pasado " + tiempoMinutos + " minutos desde su respuesta")
+                        }
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Este es un programa que funciona a base de scripts</h1>
+        <p>Se le pedira que ingrese dos datos en total, y cada vez que ingrese un dato debe confirmarlo</p>
+        <p>Presione el boton de abajo para comenzar</p>
+        <div>
+            <button id="start" type="button">Comenzar!</button>
+        </div>
+    </body>
+</html>

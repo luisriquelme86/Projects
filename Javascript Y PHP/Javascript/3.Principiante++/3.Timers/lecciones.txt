@@ -1,0 +1,28 @@
+- Lecciones aprendidas
+
+1. Que es un timer
+. Un timer se traduce como un "temporizador". Pero la idea es basicamente en español la de un cronometro, va contando tiempo. Pero en programacion, ademas, la idea de 
+  poder ejecutar cosas despues de pasado un tiempo, o a intervalos regulares (digamos, que algo se ejecute cada 10 segundos, por ejemplo)
+
+2. Sobre el reloj
+. El ejemplo del reloj utilizaba originalmente una funcion que creaba el reloj de cero y al final usaba en setTimeout llamando a la misma funcion, 
+  haciendo de esto un caso recursivo, ademas no utilizaba ningun boton, solo estaba adjuntado al body con la funcion onload. En el ejemplo actual
+  se usa una funcion setInterval que se repite cada 500 ms y que recrea el reloj cada vez
+
+. De lo anterior se puede deducir que muchas veces se pueden intercambiar dichas funciones si se hacen los cambios adecuados, por ejemplo, el setInterval
+  tiene el mismo efecto que una funcion que se llama a si misma con un setTimeout
+
+3. Creacion del reloj
+. En el ejemplo original y en este, el reloj se crea usando un new date, y obteniendo las horas, minutos y segundos, para mostrarlo en el display. Luego, el mismo reloj 
+  se "recrea" una y otra vez, usando recursividad, como en el ejemplo actual, que usa un setInterval. Uno podria estar tentado a obtener la hora una unica vez, y con
+  un intervalo o recursividad, ir "aumentando" las horas, minutos y segundos con una funcion. Esto ultimo tiene varios problemas, las funciones deberian manejar
+  los pasos de hora (de 12 o 24 a 0) y minutos y segundos (de 59 a 00) y quizas es engorroso y no es tan sencillo
+
+. Esta solucion de recrear el date es muy interesante, y tampoco es tan grave recrear una y otra vez la hora usando un new date. En muchos procesos, a veces es mejor recrear
+  todo que solo actualizar una parte. Aunque a veces si los objetos son pesados esto no es la mejor opcion
+
+4. Concatenacion entre numeros y strings
+. La suma de numeros da un numero, la suma de strings da un string, pero la suma de numeros y string, da un string. Es como que gana el "mas fuerte" que seria el string
+
+5. Metodos globales en Javascript
+. Hay ciertos metodos que son globales a Javascript, como parseInt, que no requieren un objeto o entidad en si misma

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejemplos</title>
+	<script type="text/javascript">
+		
+		function funcionCaso1() {
+			document.getElementById('demoCaso1').textContent = 'Prueba funcion caso 1';
+		}
+
+		function funcionCaso4() {
+			document.getElementById('demoCaso4').textContent = 'Prueba funcion caso 4';
+		}
+
+		function funcionCaso5() {
+			document.getElementById('demoCaso5').textContent = 'Prueba funcion caso 5';
+		}
+
+		var miFuncion6 = function funcionCaso6() {
+			document.getElementById('demoCaso6').textContent = 'Prueba funcion caso 6';
+		}
+
+		function funcionCaso7() {
+			return function mostrarMensajeCaso7() {
+				document.getElementById('demoCaso7').textContent = 'Prueba funcion caso 7';
+			}
+		}
+
+		function funcionCaso8() {
+			document.getElementById('demoCaso8').textContent = 'Prueba funcion caso 8';
+		}
+
+		window.onload = function() {
+
+			document.getElementById("boton3").onclick = function() {
+				document.getElementById('demoCaso3').textContent = 'Prueba funcion caso 3';
+			}
+
+			document.getElementById("boton4").onclick = function() {
+				funcionCaso4();
+			}
+
+			document.getElementById("boton5").onclick = funcionCaso5;
+
+			document.getElementById("boton6").onclick = miFuncion6;
+
+			document.getElementById("boton7").onclick = funcionCaso7();
+
+			document.getElementById("boton8").addEventListener('click', funcionCaso8);
+
+		};
+
+	</script>
+</head>
+<body>
+
+	<p> Un ejemplo para mostrar como se declaran, invocan y funcionan las funciones en JS</p>		
+	<button onclick="funcionCaso1()">Probar funcion caso 1</button>
+	<p id="demoCaso1"></p>
+
+	<button onclick="document.getElementById('demoCaso2').textContent='Prueba funcion caso 2'">Probar funcion caso 2</button>
+	<p id="demoCaso2"></p>
+
+	<button id="boton3">Probar funcion caso 3</button>
+	<p id="demoCaso3"></p>
+
+	<button id="boton4">Probar funcion caso 4</button>
+	<p id="demoCaso4"></p>
+
+	<button id="boton5">Probar funcion caso 5</button>
+	<p id="demoCaso5"></p>
+
+	<button id="boton6">Probar funcion caso 6</button>
+	<p id="demoCaso6"></p>
+
+	<button id="boton7">Probar funcion caso 7</button>
+	<p id="demoCaso7"></p>
+
+	<button id="boton8">Probar funcion caso 8</button>
+	<p id="demoCaso8"></p>
+
+</body>
+</html>

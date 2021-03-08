@@ -10,6 +10,7 @@
   gran problema y sucedio por no darle el enfoque adecuado al lenguaje, comprendiendo para que se utiliza   
 
 - Javascript
+. Comprender bien la funcion "call" en Javascript
 . Aprender a utilizar javascript orientado a los eventos y listeners
 . Conectar de alguna manera con PHP
 . Hacer algo basico entre JS y PHP, como un formulario con eventos y esas cosas
@@ -26,3 +27,14 @@
   lo que sea que le corresponda, evento, etc, hacer el dibujo y poner lo que espero
 . En el caso de javascript y PHP, podria hacer un dibujo "partiendo" con una linea la hoja al medio para dibujar lo que espero de un lado
   y otro de cada lugar (server y host) 
+
+- Pendientes
+
+  para este ejercicio
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=859:javascript-redireccionar-y-recargar-webs-windowlocation-href-hostname-assign-reload-replace-cu01171e&catid=78&Itemid=206  
+
+. Esto
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=860:retroceder-pagina-anterior-javascript-windowhistory-obtener-tamano-pantalla-screen-y-frames-cu01172e&catid=78&Itemid=206  
+
+
+  

@@ -1,0 +1,28 @@
+- Jerarquia de objetos en Javascript
+. Esta jerarquia que se menciona en el documento no es una jerarquia asociada a un objeto en particular, o una entidad particular. Habla
+  de los objetos de Javascript como lenguaje
+
+1. Comienzo
+. Al principio, el objeto mas conocido de JS es el objeto window. Y su metodo mas comun y conocido es "alert" que no requiere ningun objeto 
+  asociado a simple vista, solo se invoca. Esto es asi porque el objeto que lo maneja es "window". Cuando a un metodo no se le indica el objeto
+  al cual esta asociado, se supone un OBJETO GLOBAL, un objeto window
+
+2. Mas objetos
+. Como se menciona anteriormente, metodos como "alert", "confirm" y demas son globales. Ademas de este objeto global, hay otros objetos ya predefinidos
+  en javascript sobre los que se puede operar, como "document" que hace referencia al DOM del html. Y hay unos cuantos mas que son nativos en JS
+  y sobre los que se puede operar, entre ellos
+
+  window
+  document
+
+  navigator
+  location
+  history
+
+3. Mas objetos aun
+. Ademas de los viejos conocidos, tambien hay otros, como "forms" y "links" que claramente devuelven una coleccion con todos los forms o links 
+  existentes en el html
+
+4. Mas jerarquias
+. La razon de que "document" no se escriba "window.document" es justamente la explicada arriba, al ser "window" global el acceso a sus mas directos
+  es directo, sin indicarlo. Lo mismo pasa con navigator y location, no hace falta escribir window.navigator ni window.location        

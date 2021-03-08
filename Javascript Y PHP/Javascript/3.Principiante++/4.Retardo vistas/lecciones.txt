@@ -1,0 +1,20 @@
+- Lecciones aprendidas
+. Es una buena idea revisar los archivos "original.html" y "original2.html" para comprender las nociones
+. En ambos ejercicios se trabaja con la idea del setTimeout, es decir, una funcion que permite un retardo en la ejecucion
+
+- Caso 1
+. El primer ejemplo es muy sencillo, simplemente despues de 1 segundo creada la pagina crea un div con el numero 1 en su interior
+  y lo muestra por pantalla
+
+- Caso 2
+. El segundo ejemplo es mas complicado. Se muestra un loop del tipo "for" donde dentro del mismo se pone una funcion setTimeout,
+  tiempo de retardo de 1 segundo. La primera impresion es que si se tiene una funcion que se ejecuta con un retardo de 1 segundo dentro de cada iteracion,
+  lo que termine pasando es que por cada iteracion del for se haga una llamada al setTimeout, con retardo entre cada timeout de 1 segundo. Pero
+  eso no es lo que sucede
+. Lo que termina pasando es que como el ciclo se ejecuta inmediatamente (pasa de 1 a 10 en milesimas de segundo) se ejecutan todos los timeout al mismo tiempo,
+  y el tiempo de retardo al ser de 1 segundo, lo que pasa es que se ejecutan todos despues de 1 segundo. Es casi como poner 10 setTimeout uno abajo del otro
+  en el codigo
+
+- Solucion
+. La solucion al caso 2 es que simplemente, los timeout no pueden tener el mismo tiempo. Esto se puede lograr de varias formas, usando un contador distinto con un 
+  loop, o una funcion recursiva, u otras maneras    

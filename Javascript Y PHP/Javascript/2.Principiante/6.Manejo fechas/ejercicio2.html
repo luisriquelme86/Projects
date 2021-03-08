@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo aprenderaprogramar.com</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body {
+                background-color: burlywood;
+                width: 750px;
+                margin: 20px auto;
+                border: 1px solid white;
+            }
+            h3{
+                text-align: center;
+                padding: 20px;
+            }
+            p {
+                text-align: center;
+            }
+            button {
+                padding: 10px;
+            }
+            div {
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function() {
+                var startButton = document.getElementById("start");
+                startButton.addEventListener("click", function() {
+                    var fecha = prompt("Introduzca una fecha en formato dd-mm-yyyy: ");
+                    if (fecha != null) {
+                        var otraFecha = prompt("Introduzca otra fecha en formato dd-mm-yyyy: ");
+                        if (otraFecha != null) {
+                            // existe el date format "short date" que es MM/DD/YYYY (no es lo mismo que el DD-MM-YYYY)
+                            var arrayFecha = fecha.split("-");
+                            var arrayOtraFecha = otraFecha.split("-");
+                            var fechaMillseg = Date.parse(arrayFecha[1] + "/" + arrayFecha[0] + "/" + arrayFecha[2]);
+                            var otraFechaMillseg = Date.parse(arrayOtraFecha[1] + "/" + arrayOtraFecha[0] + "/" + arrayOtraFecha[2]);
+                            var dias = Math.floor((((otraFechaMillseg - fechaMillseg) / 1000) / 86400));
+                            alert("Los dias entre " + fecha + " y " + otraFecha + " son de " + dias + " dias");
+                        }
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Este es un programa que funciona a base de scripts</h1>
+        <p>Se le pedira que ingrese dos datos en total, y cada vez que ingrese un dato debe confirmarlo</p>
+        <p>Presione el boton de abajo para comenzar</p>
+        <div>
+            <button id="start" type="button">Comenzar!</button>
+        </div>
+    </body>
+</html>
+
+<!--
+. Crear un script donde pida al usuario que introduzca una primera fecha (fecha1) en formato dd-mm-yyyy, y una segunda fecha en el mismo formato y calcule los dias que han
+  pasado entre las dos fechas, asi 
+  Introduzca la fecha 1: 05-09-2076 >> Introduzca la fecha 2: 09-09-2076 >> Entre las 00:00 horas del primer día a las 00:00 del segundo hay 4 días.
+-->
+
