@@ -5,8 +5,12 @@
 		<meta charset="utf-8">
 		<script type="text/javascript">
 			window.onload = function() {
-				iframe = window.frames;
-  				alert( "Tenemos: " + iframe[0].name + ', ' + iframe[1].name );
+				console.log("la pagina cargo");	
+				// el window.frames es una propiedad irregular y esta influida por parametros (server side headers) que se envian al servidor de la pagina web
+				// no es mala de por si, pero es mejor evitarla y usar el document
+				// iframe = window.frames; 				
+				iframe = document.getElementsByTagName("iframe");
+  				console.log( "Tenemos: " + iframe[0].name + ', ' + iframe[1].name );
   			}
 
 			function ejemplo() {
@@ -23,11 +27,11 @@
 			<h3>Ejemplos JavaScript</h3>
 		</div>
 		<div style="color:blue; margin:20px;" id ="pulsador" onclick="ejemplo()"> Probar </div>
-		<iframe name="aprende1" style="margin:20px; padding:20px;" src="http://aprendeaprogramar.es" width="350" height="600">
-		  <p>Tu navegador no admite iframes.</p>
+		<iframe name="aprende1" style="margin:20px; padding:20px;" src="https://es.wikipedia.org/wiki/Logos" width="350" height="600">
+			<p>Tu navegador no admite iframes.</p>
 		</iframe>
-		<iframe name="aprende2" style="margin:20px; padding:20px;" src="http://aprenderaprogramar.com/foros" width="350" height="600">
-		  <p>Tu navegador no admite iframes.</p>
+		<iframe name="aprende2" style="margin:20px; padding:20px;" src="http://aprenderaprogramar.com" width="350" height="600">
+			<p>Tu navegador no admite iframes.</p>
 		</iframe>
 
 	</body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redireccionamiento con cuenta atras</title>
+	<style type="text/css">
+		body {
+			background-color: sienna;
+		}
+
+		h1, div {
+			color: black;
+			background-color: seashell;	
+			width: 500px;
+			padding: 10px;
+			margin: 10px auto;
+			text-align: center;
+		}
+
+		div {
+
+		}
+
+	</style>
+	<script type="text/javascript">
+		
+		window.onload = function() {
+
+			var mensaje = document.getElementById("mensaje");
+			var tiempo = document.getElementById("tiempo");
+			mensaje.innerHTML = "Hemos cambiado de ubicacion esta página. En breves momentos sera redireccionado…";
+			var redirectFlag = false;
+
+			for (var i = 1; i < 6; i++) {
+				setTimeout(cuentaAtras(i), 1000 * i);	
+			}
+
+		};
+
+		function cuentaAtras(numero) {
+			function mostrar() {
+				tiempo.innerHTML = numero;
+				if (numero == 5) {
+					location.href = "http://aprenderaprogramar.com";
+				}
+			}
+			return mostrar;
+		};
+
+	</script>
+</head>
+<body>
+	<h1>
+		Inicio de pagina
+	</h1>
+	<div id="principal">
+		<span id="mensaje"></span><span id="tiempo"></span>
+	</div>
+</body>
+</html>

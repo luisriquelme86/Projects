@@ -1,4 +1,4 @@
-. Java pendientes
+- Java pendientes
 
 . Agenda en Java, tomando un ejemplo de Java y otro de Pascal
 

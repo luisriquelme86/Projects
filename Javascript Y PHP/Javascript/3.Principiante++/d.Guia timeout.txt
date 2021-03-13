@@ -1,0 +1,56 @@
+- Set time out
+
+. La funcion de javascript se encarga de ejecutar otra funcion despues de pasado un tiempo. Esta es la parte mas sencilla de todas
+. Esta funcion se ejecuta una sola vez (a diferencia de set interval)
+
+. Para entender bien la funcion settimeout hay que tener en cuenta dos cosas, la primera es que javascript solo dispone de un hilo de ejecucion,
+  y la segunda es que existe la llamada "cola de eventos" y que existe para encolar los eventos, donde uno no empieza hasta que termina el otro
+
+. Settimeout puede recibir una funcion anonima o la referencia a una funcion. Dicha funcion es una funcion de callback, ya que settimeout pasado
+  el tiempo indicado "avisa" que el tiempo se cumplio y se ejecuta la funcion (la funcion no se ejecuta en el momento, sino que para hacerlo necesita
+  que se cumpla un evento) 
+
+. Settimeout es una funcion asincrona. Esto quiere decir que no bloquea el hilo del broswer o del programa. La funcion que se le pasa como
+  referencia es una funcion de callback que puede o no ser asincrona   
+
+0. Conceptos a conocer fuertemente para comprender el settimeout
+. Unico hilo (una tarea a la vez)
+. Call Stack
+. Callback Queue
+. Event Loop
+. Web API  
+. Asincronia o Non Blocking
+
+1. Explicaciones de los ejemplos caso 1
+. El caso 1 es muy sencillo. Carga la pagina, espera 5 segundos e imprime un mensaje saludando al usuario. No hay mas
+
+2. Explicaciones de los ejemplos caso 2
+. El caso 2 es mucho mas interesante. Si se presiona el boton de "congelar" lo que termina pasando es que se congela el browser
+  (en verdad, hay un bucle infinito por 10 segundos) y recien despues se muestra el mensaje de los "5 segundos". Este caso
+  introduce al concepto de "cola de eventos" y al hilo de ejecucion de javascript
+. En el ejemplo, como hay un solo hilo de ejecucion, y hay una cola de eventos, si bien se debe mostrar un mensaje a los 5 segundos,
+  se muestra a los 10 segundos, porque el browser esta "congelado" y no puede ejecutarse el saludo a los 5 segundos porque el bucle 
+  dura 10  
+
+3. Explicacion de los ejemplos caso 3
+. El caso 3 muestra la funcion settimeout desde otra perspectiva. En lugar de setearle a la misma una funcion anonima, le pasa 
+  la referencia a una funcion. Aqui tambien se empieza a vislumbrar lo que es realmente. Es una funcion que recibe un callback o una
+  funcion de callback. Settimeout ejecuta una funcion pasado un tiempo determinado, es decir, pasado ese tiempo, settimeout "le avisa"
+  a la funcion que se pasa como referencia que llego el momento de ejecutarse  
+
+4. Explicacion de los ejemplos caso 4
+. El caso 4 es muy complejo, es un settimeout dentro de un ciclo. Es un caso que no funciona, pero hace falta verlo. Para comprenderlo bien,
+  es necesario conocer los conceptos de call stack, callback queue, y los event loop e incluso hacer los dibujos
+. Lo que sucede aqui es simple. Se ejecuta un bucle, y por cada iteracion, se ejecuta un settimeout, que llamara a una funcion de callback a los
+  2 segundos. A los 2 segundos, dicha funcion se ejecutara, y a su vez, se ejecutara la funcion interna pasandole como parametro el numero de 
+  iteracion (que es la ultima, porque dicha iteracion ya termino)
+
+5. Explicacion de los ejemplos caso 5
+. Este caso es parecido al anterior, pero totalmente diferente. Aqui el caso es distinto. La funcion de callback no es la referencia a una funcion
+  que en su interior ejecuta otra. Aqui, la funcion que se usa como callback, si bien es una referencia, se ejecuta para devolver otra referencia, 
+  que es un closure y por lo tanto guardo cada uno de los valores de la iteracion. Luego esa referencia si es llamada posteriormente, por eso
+  los valores se guardan correctamente
+. A diferencia del caso 4, que se guarda la referencia a una funcion que ejecuta otra funcion y que toma el ultimo valor de la iteracion 
+  (si, la funcion que se ejecuta internamente es un closure, pero el valor de iteracion que esta es el ultimo haciendo todos los closures iguales), aqui
+  aqui se guarda directamente la referencia a un closure, no a una funcion que contiene un closure, entonces en cada iteracion, el valor de la misma
+  se guarda ahi adentro y al momento de ejecutarse tiene la iteracion correcta

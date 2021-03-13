@@ -1,0 +1,19 @@
+- Javascript pendientes
+
+0. Manejo de los siguientes conceptos avanzandos
+ 
+. Unico hilo (una tarea a la vez)
+. Call Stack
+. Callback Queue
+. Event Loop
+. Web API  
+. Asincronia 
+  
+1. Web API
+. Javascript tiene muchas APIs disponibles, pero que no son parte de js en si mismas, pero si estan CONSTRUIDAS sobre js. Algunas de esas APIs
+  son setTimeout, XMLHttpRequest, y el FileReader. Algo mas de esto en https://developer.mozilla.org/en-US/docs/Web/API  
+
+2. Block
+  https://stackoverflow.com/questions/1451009/javascript-infamous-loop-issue
+. JavaScript's scopes are function-level, not block-level, and creating a closure just means that the enclosing scope gets added to the lexical environment of the enclosed function.
+  After the loop terminates, the function-level variable i has the value 5, and that's what the inner function 'sees'.  

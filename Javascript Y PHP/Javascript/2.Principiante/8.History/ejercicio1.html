@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- 
+
+		Objetivos:
+		. Crear una página web que muestre en el lado izquierdo tres opciones donde podrá pulsar el usuario
+
+		  clarin.com
+		  elmercurio.cl
+		  elespectador.com
+
+  		  En la parte inferior izquierda, debajo de estas opciones, habrá un frame donde deberá cargarse la página web según elija el usuario 
+  		  (por ejemplo si el usuario pulsa en elmercurio.cl en el frame que se encuentra debajo deberá mostrarse la web de elmercurio.cl)
+
+
+		. En el lado derecho estarán las opciones eluniversal.com.mx, elcomercio.pe y elmundo.es
+  		  En la parte inferior derecha, debajo de estas opciones, habrá un frame donde deberá cargarse la página web según elija el usuario
+
+		-->
+
+		<title>Ejercicio 1 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				width: 850px;
+				background-color: aquamarine;
+				margin: 10px auto;
+				border: 1px solid white;
+			}
+			#izquierda, #derecha {
+				display: inline-block;
+				margin: 30px;
+				padding: 20px;
+				border: 1px solid white;
+			}
+			p {
+				background-color: lightsalmon;
+				padding: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+
+			window.onload = function() {
+				console.log("la pagina esta lista");
+				var clarin = document.getElementById("clarin");
+				var mercurio = document.getElementById("mercurio");
+				var espectador = document.getElementById("espectador");
+				var spiegel = document.getElementById("spiegel");
+				var comercio = document.getElementById("comercio");
+				var mundo = document.getElementById("mundo");
+
+				clarin.onclick = loadIframe("http://www.clarin.com.ar", "iframeIzquierda");
+				mercurio.onclick = loadIframe("http://www.elmercurio.com", "iframeIzquierda");
+				espectador.onclick = loadIframe("http://www.elespectador.com", "iframeIzquierda");
+				spiegel.onclick = loadIframe("https://www.spiegel.de/", "iframeDerecha");
+				comercio.onclick = loadIframe("http://www.elcomercio.pe.", "iframeDerecha");
+				mundo.onclick = loadIframe("http://www.elmundo.es", "iframeDerecha");
+			}
+
+			function loadIframe(url, iframe) {
+				function load() {
+					var currentIframe = document.getElementById(iframe);
+					currentIframe.src = url;
+				}
+				return load;
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div id="principal">
+			<div id="izquierda">
+				<h3>Seleccione el iframe a cargar debajo</h1>
+				<div name="menuIframe">
+					<p id="clarin">clarin.com</p>
+					<p id="mercurio">elmercurio.cl</p>
+					<p id="espectador">elespectador.com</p>
+				</div>
+				<iframe id="iframeIzquierda" src=""></iframe>
+			</div>
+			<div id="derecha">
+				<h3>Seleccione el iframe a cargar debajo</h1>
+				<div name="menuIframe">
+					<p id="spiegel">spiegel.de</p>
+					<p id="comercio">elcomercio.pe</p>
+					<p id="mundo">elmundo.es</p>
+				</div>
+				<iframe id="iframeDerecha" src=""></iframe>
+			</div>
+		</div>	
+	</body>
+</html>

@@ -55,9 +55,11 @@
 					// -> sino guardo el item en una variable, como el operador incremento primero asigna y despues incrementa, el indice queda siempre a lo ultimo
 					// al entrar al callback del onfocus
 					var item = items[index]; 
+
 					/* document.getElementById(item.id).onfocus = function () { // funcion anonima que ejecuta otra funcion, ya visto
 						showHelp(item.help);
 					} */
+					
 					// la solucion es esta
 					document.getElementById(item.id).onfocus = personalizeHelp(item.help);
 				}

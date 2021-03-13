@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio timer 1</title>
+</head>
+<script type="text/javascript">
+
+	// este ejercicio esta hecho por mi despues de aprender bien los settimeout (si bien aqui se usa el setinterval)
+	
+	window.onload = function() {
+
+		var botonCuentaAtras = document.getElementById("cuentaAtras");
+		var reloj = document.getElementById("reloj");
+		var contadorReloj;
+		// si la pagina cargo, asigno al evento on click del elemento una funcion
+		botonCuentaAtras.onclick = function() {
+			contadorReloj = setInterval(comenzarCuentaAtras, 1000);
+		}
+
+		// contadorReloj = setInterval(comenzarCuentaAtras, 1000);
+	};
+
+	function comenzarCuentaAtras() {
+
+		var minutero = reloj.innerHTML.split(":")[0];
+		var segundero = reloj.innerHTML.split(":")[1];
+
+		if (minutero == "00" && segundero == "00") {
+			clearInterval(contadorReloj);
+			var mensajeReloj = document.getElementById("mensajeReloj");
+			mensajeReloj.innerHTML = "La cuenta atras termino";
+		}
+		else if (segundero == "00") {
+			segundero = "59";
+			if (parseInt(minutero) < 10) {
+				minutero = "0" + (parseInt(minutero) - 1);
+			}
+			else {
+				minutero = (parseInt(minutero) - 1).toString();	
+			}
+		}
+		else if (parseInt(segundero) > 10){
+			segundero = (parseInt(segundero) - 1);
+		}
+		else if (parseInt(segundero) <= 10) {
+			segundero = "0" + (parseInt(segundero) - 1);
+		}
+		reloj.innerHTML = minutero + ":" + segundero;	
+	};
+
+
+
+</script>
+<style type="text/css">
+	
+	body {
+		width: 850px;
+		margin: 10px auto;
+
+		background-color: teal;
+		color: aliceblue;
+	}
+
+
+</style>
+<body>
+
+	<!-- 
+		Objetivos:
+	    Crear un reloj JavaScript que marque inicialmente 01:00 (es decir, 1 minuto) y que marche hacia atrás (00:59, 00:58, 00:57 … etc.) hasta llegar a 00:00.
+	    Cuando llegue a 00:00 debe deternerse y mostrar el mensaje: “Tu tiempo ha terminado”
+	-->
+
+</body>
+
+	<p>Presione el boton para comenzar la cuenta regresiva</p>
+	<input type="button" value="Comenzar cuenta regresiva" id="cuentaAtras">
+	<p id="reloj">01:00</p>
+	<p id="mensajeReloj"></p>
+
+</html>

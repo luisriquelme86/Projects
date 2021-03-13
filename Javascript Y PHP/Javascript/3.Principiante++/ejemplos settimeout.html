@@ -3,81 +3,106 @@
 <head>
 	<title>ejemplos</title>
 	<script type="text/javascript">
-		
-		function funcionCaso1() {
-			document.getElementById('demoCaso1').textContent = 'Prueba funcion caso 1';
-		}
-
-		function funcionCaso4() {
-			document.getElementById('demoCaso4').textContent = 'Prueba funcion caso 4';
-		}
-
-		function funcionCaso5() {
-			document.getElementById('demoCaso5').textContent = 'Prueba funcion caso 5';
-		}
-
-		var miFuncion6 = function funcionCaso6() {
-			document.getElementById('demoCaso6').textContent = 'Prueba funcion caso 6';
-		}
-
-		function funcionCaso7() {
-			return function mostrarMensajeCaso7() {
-				document.getElementById('demoCaso7').textContent = 'Prueba funcion caso 7';
-			}
-		}
-
-		function funcionCaso8() {
-			document.getElementById('demoCaso8').textContent = 'Prueba funcion caso 8';
-		}
-
+	
 		window.onload = function() {
 
-			document.getElementById("boton3").onclick = function() {
-				document.getElementById('demoCaso3').textContent = 'Prueba funcion caso 3';
+			var saludo = document.getElementById("saludo");
+			var congelado = document.getElementById("congelado");
+			var otroSaludo = document.getElementById("otroSaludo");
+
+			setTimeout(function() {
+				saludo.innerHTML = "Hola usuario!!!";                   // caso 1
+			}, 5000);
+
+			setTimeout(saludar, 2000); 									// caso 3
+
+
+			var contador1 = document.getElementById("contador1");
+			var contador2 = document.getElementById("contador2");
+
+			for (var i = 1; i < 5; i++) {
+				setTimeout(function() {
+					console.log("Numero: " + i);
+					contador1.innerHTML = "Numero: " + i;
+				}, 2000);
 			}
 
-			document.getElementById("boton4").onclick = function() {
-				funcionCaso4();
+			function mostrarEntero(entero) {
+				function mostrar() {
+					console.log("Mostrar entero: " + entero);
+					contador2.innerHTML = "Numero: " + entero;
+				}
+				return mostrar;
 			}
 
-			document.getElementById("boton5").onclick = funcionCaso5;
+			for (var i = 1; i <= 5; i++) {
+				// setTimeout(mostrarEntero, 2000); // intento fallido 1, no muestra nada, con el return mostrar() mejora, pero es undefined, logico porque no paso el parametro
+													// si es un return mostrar no funciona porque es la referencia de una referencia 	
 
-			document.getElementById("boton6").onclick = miFuncion6;
+													// intento fallido 2, a los dos segundos se ejecuta y como el ciclo se termino le pasa el ultimo entero, o sea, 5
+													// ademas, es una ejecucion dentro de una funcion anonima, y no esta nada aislado o "cerrado" o "wrappeado". Al terminar el timer
+													// entra adentro de la funcion y ejecuta con el ultimo numero, 5 veces, uno por cada timer
 
-			document.getElementById("boton7").onclick = funcionCaso7();
+				/* setTimeout(function() {          	 // caso 4
+					mostrarEntero(i);    
+				}, 2000); */ 
+														 // caso 5
+				setTimeout(mostrarEntero(i), 2000 * i);  // el ciclo "entra" a cada ejecucion de funcion y queda "encerrado" por el closure como variable
+			}
 
-			document.getElementById("boton8").addEventListener('click', funcionCaso8);
 
-		};
+		}
+
+		function saludar() {
+			otroSaludo.innerHTML = "Los que van a morir te saludan!!!";			
+		}
+
+		function congelar() { 											// caso 2
+			var tiempo = new Date();
+			console.dir(tiempo);
+			tiempo.setSeconds(tiempo.getSeconds() + 10);
+			while (new Date().getTime() < tiempo.getTime()) {
+				// do nothing
+			}
+			congelado.innerHTML = "Se congelo el tiempo por 10 segundos"
+		}
 
 	</script>
 </head>
 <body>
 
-	<p> Un ejemplo para mostrar como se declaran, invocan y funcionan las funciones en JS</p>		
-	<button onclick="funcionCaso1()">Probar funcion caso 1</button>
-	<p id="demoCaso1"></p>
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
 
-	<button onclick="document.getElementById('demoCaso2').textContent='Prueba funcion caso 2'">Probar funcion caso 2</button>
-	<p id="demoCaso2"></p>
+	<p>Debajo de este parrafo se mostrar un saludo despues de 5 segundos de cargada la pagina</p>
+	<p id="saludo"></p>
 
-	<button id="boton3">Probar funcion caso 3</button>
-	<p id="demoCaso3"></p>
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
 
-	<button id="boton4">Probar funcion caso 4</button>
-	<p id="demoCaso4"></p>
+	<p>Pulse el boton para congelar la pantalla por 10 segundos</p>
+	<input type="button" value="congelar" onclick="congelar()" />
+	<p id="congelado"></p>
 
-	<button id="boton5">Probar funcion caso 5</button>
-	<p id="demoCaso5"></p>
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
 
-	<button id="boton6">Probar funcion caso 6</button>
-	<p id="demoCaso6"></p>
+	<p>Debajo de este parrafo se mostrara otro saludo despues de 2 segundos de cargada la pagina</p>
+	<p id="otroSaludo"></p>
 
-	<button id="boton7">Probar funcion caso 7</button>
-	<p id="demoCaso7"></p>
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
 
-	<button id="boton8">Probar funcion caso 8</button>
-	<p id="demoCaso8"></p>
+	<p>Aqui se intentara mostrar los numeros del 1 al 5, con diferencia de 2 segundos entre cada mostrada</p>
+	<p id="contador1"></p>
 
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
+
+	<p>Aqui se intentara mostrar los numeros del 1 al 5, con diferencia de 2 segundos entre cada mostrada, otro intento</p>
+	<p id="contador2"></p>
+
+	<p>--------------------------------------------------------------------------------------</p>
+	<p>--------------------------------------------------------------------------------------</p>
 </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- 
+
+		Objetivos:
+		. Crear una página web que muestre en el lado izquierdo tres opciones donde podrá pulsar el usuario
+
+		  clarin.com
+		  elmercurio.cl
+		  elespectador.com
+
+  		  En la parte inferior izquierda, debajo de estas opciones, habrá un frame donde deberá cargarse la página web según elija el usuario 
+  		  (por ejemplo si el usuario pulsa en elmercurio.cl en el frame que se encuentra debajo deberá mostrarse la web de elmercurio.cl)
+
+
+		. En el lado derecho estarán las opciones eluniversal.com.mx, elcomercio.pe y elmundo.es
+  		  En la parte inferior derecha, debajo de estas opciones, habrá un frame donde deberá cargarse la página web según elija el usuario
+
+		-->
+
+		<title>Ejercicio 1 aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				width: 850px;
+				background-color: aquamarine;
+				margin: 10px auto;
+				border: 1px solid white;
+			}
+			#izquierda, #derecha {
+				display: inline-block;
+				margin: 30px;
+				padding: 20px;
+				border: 1px solid white;
+			}
+			p {
+				background-color: lightsalmon;
+				padding: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+
+			window.onload = function() {
+
+				var menuIframeIzquierda = document.getElementById("menuIframeIzquierda").getElementsByTagName("p");
+				var menuIframeDerecha = document.getElementById("menuIframeDerecha").getElementsByTagName("p");
+
+				for (var index = 0; index < menuIframeIzquierda.length; index++) {
+					var parrafo = menuIframeIzquierda[index];
+					parrafo.onclick = loadIframe(parrafo.getAttribute("url"), "iframeIzquierda");
+				}	
+
+				for (var index = 0; index < menuIframeDerecha.length; index++) {
+					var parrafo = menuIframeDerecha[index];
+					parrafo.onclick = loadIframe(parrafo.getAttribute("url"), "iframeDerecha");
+				}
+			}
+
+			function loadIframe(url, iframe) {
+				function load() {
+					var currentIframe = document.getElementById(iframe);
+					currentIframe.src = url;
+				}
+				return load;
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div id="principal">
+			<div id="izquierda">
+				<h3>Seleccione el iframe a cargar debajo</h1>
+				<div id="menuIframeIzquierda">
+					<p id="clarin" url="http://www.clarin.com.ar">clarin.com</p>
+					<p id="mercurio" url="http://www.elmercurio.com">elmercurio.cl</p>
+					<p id="espectador" url="http://www.elespectador.com">elespectador.com</p>
+				</div>
+				<iframe id="iframeIzquierda" src=""></iframe>
+			</div>
+			<div id="derecha">
+				<h3>Seleccione el iframe a cargar debajo</h1>
+				<div id="menuIframeDerecha">
+					<p id="spiegel" url="https://www.spiegel.de/">spiegel.de</p>
+					<p id="comercio" url="http://www.elcomercio.pe">elcomercio.pe</p>
+					<p id="mundo" url="http://www.elmundo.es">elmundo.es</p>
+				</div>
+				<iframe id="iframeDerecha" src=""></iframe>
+			</div>
+		</div>	
+	</body>
+</html>
