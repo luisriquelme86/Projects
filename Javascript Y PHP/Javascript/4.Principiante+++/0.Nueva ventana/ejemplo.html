@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo aprenderaprogramar.com</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+
+			// Queremos conocer las siguientes propiedades del objeto nuevaVentana y mostrarlas por pantalla: 
+			// si está cerrada o no,
+			// dimensiones del viewport,
+			// número de frames presentes en ella, 
+			// url a la que apunta,
+			// valor de name,
+			// dimensiones de la ventana completa hasta los bordes exteriores
+			// y cuántos píxeles está desplazada en horizontal y vertical respecto al punto origen de la pantalla
+
+			window.onload = function () {
+                var ejemplo = document.getElementById('ejemplo');
+
+
+                var estadoVentana = window.closed ? "cerrada" : "abierta";
+                console.log(" Estado de la ventana: " + estadoVentana + "\n" + 
+                	  " Dimension del viewport: altura interna -> " + window.innerHeight + " anchura interna -> " + window.innerWidth + "\n" + 
+                	  " Los frames son : " + window.length + "\n" + 
+                	  " Url a la que apunta " + window.location.href + "\n" + 
+                	  " Valor del name " + window.name + "\n" + 
+                	  " Dimensiones de la ventana completa: altura externa -> " + window.outerHeight + " anchura externa -> " + window.outerHeight + "\n" + 
+                	  " Pixeles o coordenadas respecto al punto de origen de la pantalla -> desde la izquierda: " + window.screenX +  " y de arriba: " + window.screenY);
+
+                console.log(" <========================================================================================================================> ");
+
+                ejemplo.addEventListener("click", ejecutarEjemplo);
+            }
+
+            function ejecutarEjemplo () {
+                var nuevaVentana = window.open ('http://aprendeaprogramar.es', 'miNombre', 'width=300, height=300, resizable=true, menubar=yes');
+                nuevaVentana.focus();
+            	var estadoVentana = nuevaVentana.closed ? "cerrada" : "abierta";
+            	console.log(" Estado de la ventana: " + estadoVentana + "\n" + 
+            	  " Dimension del viewport: altura interna -> " + nuevaVentana.innerHeight + " anchura interna -> " + nuevaVentana.innerWidth + "\n" + 
+            	  " Los frames son : " + nuevaVentana.length + "\n" + 
+            	  " Url a la que apunta " + nuevaVentana.location.href + "\n" + 
+            	  " Valor del name " + nuevaVentana.name + "\n" + 
+            	  " Dimensiones de la ventana completa: altura externa -> " + nuevaVentana.outerHeight + " anchura externa -> " + nuevaVentana.outerHeight + "\n" + 
+            	  " Pixeles o coordenadas respecto al punto de origen de la pantalla -> desde la izquierda: " + nuevaVentana.screenX +  " y de arriba: " + nuevaVentana.screenY);
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3></div>
+		<div style="color:blue; margin:20px;" id ="ejemplo">Pulsa aquí</div>
+	</body>
+ </html>

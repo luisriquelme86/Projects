@@ -1,0 +1,60 @@
+- Lecciones aprendidas parte 2
+
+. Las lecciones aprendidas vienen de haber replicado el ejercicio de ejemplo con los formularios. Hay cosas muy interesantes a remarcar
+
+0. Sobre los listener
+. Excelente uso y comprension de como funcionan, especialmente el this
+
+1. Uso de variables globales
+. Las mismas se declaran con "var" por fuera de todas las funciones, o sin usar var cuando se declaran
+. Las variables declaradas dentro de onload no son globales por estar dentro de esa funcion
+
+2. Eventos change y click
+. Los eventos change son usadas en los input de tipo texto, y se activan cuando el input pierde el foco
+  Tambien se usan en los select
+. Los eventos click se usan en los input de tipo checkbox y radio button
+
+3. Renderizar completamente el innerHTML
+. Es muy comun que muchas veces se busque modificar solo una parte de algo, en lugar de todo de ese algo. Sin embargo, aqui hay un muy buen
+  ejemplo de cuando es conveniente producir de vuelta todo y no tomar algo existente y modificar una parte. Es respecto al innerHTMl que maneja
+  la informacion cargada en el formulario. En lugar de tratar de asignar o corregir el nombre, apellido o cada uno de los campos del 
+  formulario, es mejor reconstruir o rearmar un nuevo texto para el innertHTML
+
+4. El uso de los values en los select y los input
+. Aprender a usar los mismos es muy importante. Es bueno distinguir entre el valor que toma el tag y el que se enviara al servidor, el primero
+  es lo que se ve en la pantalla y el segundo es el que se manda y evalua en el codigo fuente. Gracias a esto, es posible ver que un select en una 
+  de sus opciones muestra un mensaje, pero en si no tiene un valor asignado 
+  (no tiene sentido enviarlo, o mejor dicho, al estar vacio se puede entender que no se envio nada)
+
+. Lo mismo aplica para los input de tipo radio button  
+
+5. Buen uso del splice
+. El empalmar funciona bastante bien para aprender a sacar cosas de un array en una determinada posicion
+
+- Para aprender mas
+. Es recomendable hacer unas correcciones al codigo de replica del ejemplo. Por ejemplo, es bueno notar como los listener del ejemplo original
+  son siempres los mismos ya que siempre se replica el mismo compartamiento, armar una cadena nueva para mostrar la informacion del innerHTML
+
+  A su vez, notar que el ejemplo original al hacer lo anterior, las consultas se vuelven a realizar sin necesidad de estar guardando
+  los datos en variables globales, que ocupan espacio y en general son una mala practica
+
+  Es muy interesante como los metodos de los listener se puede refactorizar en funciones mas utiles y claras, como ejemplo
+  se puede poner la funcion original en la replica del ejemplo, listenerCheckbox. Esta funcion originalmente usa un splice y un array, pero
+  en la version de refactor, como al fin y al cabo siempre se vuelve a rearmar todo, es mucho mas sencillo volver a recorrer con un bucle
+  los "checked" y ponerlos en un array, de todas maneras cuando cambia algun checkbox algun listener se va a ejecutar y realizar todas las tareas nuevamente
+
+0. El refactor
+. Llevo menos de 10 minutos
+
+1. El papel de los listener
+. Notar bien que los listener llaman todos a la misma funcion, que vuelve a rearmar todo. Se podria pensar que la funcion de mostrarInformacion
+  deberia recibir los parametros de cada uno de los listener y uno se podria trabar pensando. En este caso, la solucion es muy elegante. Los ciclos
+  for se usan genericamente, pero dentro de la funcion se usan los nombre correctos y se llaman a las cosas por su id, name o tag, por medio de consultas
+
+  Con respecto a esto, radica en que hacer todo generico a veces es imposible o poco conveniente, o porque algo sea generico no tiene porque serlo todo
+  En este caso, se deja de manera generica o lo mas generica posible la creacion de listeners, y la creacion de la cadena del innerHTML es mas especifica
+
+2. Los name como atributo
+. Es muy bueno notar como el atributo es muy usado en el caso de los checkbox o radio input, y tiene sentido. Representan grupos de cosas con diferentes valores,
+  y la mayor diferencia radica en que los primeros son inclusivos y los segundos exclusivos (uno u otro, sin excepcion). Aqui por primera vez se utiliza la consulta
+  getElementsByName, y se usa bien los check, en ambos casos para saber que informacion mostrar

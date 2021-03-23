@@ -1,0 +1,15 @@
+- Lecciones aprendidas
+
+. En este ejemplo, al obtener los datos de la nueva ventana, se ven los siguientes
+
+  Dimension del viewport: altura interna -> 0 anchura interna -> 0
+  Los frames son : 0
+  Url a la que apunta about:blank
+  Valor del name miNombre
+  Dimensiones de la ventana completa: altura externa -> 300 anchura externa -> 300
+  Pixeles o coordenadas respecto al punto de origen de la pantalla -> desde la izquierda: 0 y de arriba: 23
+
+. Para los efectos del curso, estos valores estan muy bien. La realidad es que los valores internos, la url y demas no se muestran
+  porque primero se abre la pagina y luego asincronicamente se carga la url especifica
+
+. Aun asi, deja importantes lecciones. Ejemplo, se pide la url. Esto no se obtiene con la propiedad window, sino con la propiedad location  

@@ -1,0 +1,52 @@
+- Lecciones aprendidas
+
+. url -> 
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=867:eventos-forms-javascript-change-radio-checkbox-select-value-checked-options-selectedindex-cu01179e&catid=78&Itemid=206
+
+. Despues de responder las siguientes preguntas, la mejor manera de aprender la leccion es tomar el ejemplo sobre el formulario y viendolo graficamente en el 
+  browser, tratar de replicarlo lo mejor posible, comprendiendo bien el uso de los radiobutton, checkbox, uso de las imagenes, labels y tipos de input, y porque se 
+  usaron ciertas cosas, como por ejemplo, un array comun para los checkbox
+
+- Preguntas
+
+. Responde estas preguntas (mantén la consola activada para ver posibles mensajes de error):
+
+a) ¿Qué código es el que hace posible que cuando se selecciona el radio button Sr aparezca la imagen caraHombre.jpg y que cuando se selecciona el radio button Sra aparezca la imagen caraMujer.jpg?
+
+b) ¿radioButTrat es una variable global o local a una función? ¿Por qué?
+
+c) ¿radioButTrat es una array o un objeto NodeList de tipo array-like? ¿El método length es aplicable a objetos de tipo array? ¿El método length es aplicable a objetos de tipo array-like?
+
+d) ¿Qué ocurre si tratas de aplicar el método push a radioButTrat? Escribe el código para ello. ¿Qué mensaje visualizas en la consola? Busca información y trata de explicar por qué ocurre esto.
+
+e) ¿Las imágenes son el fondo de un elemento HTML distinto de img o es el atributo source de un elemento img?
+
+f) ¿checkBoxSel es un array o un NodeList de tipo array-like?
+
+g) ¿Qué significa y para qué sirve este código: checkBoxSel||' --- ' ?
+
+h) ¿Y este otro: elementoCiudad.options[elementoCiudad.selectedIndex].text ?
+
+- Respuestas
+
+a) El codigo es este
+   document.getElementById('encuadraImagen').style.background='url("'+rutaImagen+'") no-repeat';
+
+b) radioButTrat es una variable global. Las variables globales no son recomendables porque si se usaran muchas primero que nada afecta la extensibilidad del codigo y segundo
+   que nunca se liberaria la memoria de las mismas (en las funciones locales, las variables se destruyen - se borran de la memoria - una vez usadas, excepto en los closures)
+   Si declarásemos todas las variables con ámbito global, en este caso probablemente no nos afectaría mucho, pero en un código mas extenso estaríamos sobrecargando el uso de memoria. 
+   Por lo cual lo aconsejable sería que las variables, siempre que podamos evitar declararlas en ámbito global, las declaremos con ámbito loca
+
+c) Es un objeto NodeList (son listas "vivas"), la mayoria de los metodos "getElementByXXX" lo son. Los metodos que son querys (consultas) no estan "vivas" 
+   (no se actualizan constantemente cuando se guardan en una referencia) porque son justamente eso, consultas del momento. Ambos pueden utilizar el metodo length
+
+d) Un NodeList no es una array, tiene una estructura de array. No se pueden aplicar las mismas operaciones necesariamente. Se puede recorrer y cosas asi como si fuera un array,
+   pero nada mas
+
+e) Son el fondo de un elemento HTML
+
+f) Es un array
+
+g) Es el operador de cortocircuito de javascript. Si lo que esta primero se puede evaluar como "falso" (falsy) se pone ' --- '
+
+h? Es para tomar la opcion seleccionada

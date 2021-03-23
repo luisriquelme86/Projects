@@ -1,0 +1,31 @@
+- Lecciones aprendidas
+. Los ejemplos tratan basicamente de los formularios y los event listener
+
+1- Ejemplo 1
+. En este primer ejemplo no hay mucho secreto. Simplemente hay event listener asociados a los campos de un formulario. La parte mala es que 
+  el codigo es muy poco generico y extensible. En primer lugar, si cambian los nombres asociados a los formularios, habria que cambiar los otros nombres
+  en las llamadas. Y despues y ademas, si se quisiera extender a otros campos es tedioso. El ejemplo funciona bien, pero para aplicaciones mas grandes no es
+  recomendable programar algo asi
+
+2- Ejemplo 2
+. Este ejemplo soluciona algunos de los problemas anteriores. En primer lugar, ya no se depende del nombre de los tag html, sino que se recorren todos los
+  elementos y si son del tipo "input" se le asignan los handler. Es muy bueno. Pero con este tipo de ejemplos aun no se pueden enviar parametros
+
+3- Ejemplo 3
+. Este ejemplo quiere intentar que segun si el elemento input del tipo text es par o impar asigne o no un color. Es la parte mas dificil de comprender. El gran reto
+  es ademas no solo enviar un parametro sino el elemento implicito "Event", ademas de que se siga teniendo en cuenta el elemento que disparo el evento, cosa que cambia
+  porque el elemento "this" solo es el elemento que disparo el evento en handlers comunes y no cuando empiezan a jugar las funciones anonimas o closures, porque ya cambio el 
+  ambito al hacer este tipo de funciones. Aun asi, en este ejercicio se resuelven estos dilemas, usando una funcion anonima que obtiene el evento y el this, que como se 
+  recordara, dentro del ambito en general hace referencia al elemento html que disparo todo
+
+4- Ejemplo 4
+. Este ejemplo es mio. Intente de alguna manera hacerlo solo, pero no es tan sencillo pasar el event y los parametros. No sirve pasarle algo llamado "event"
+  porque toma el de la carga del listener. Y si se arma un closure, es posible obtener el event, pero en el handler al hacer una invocacion ya no resulta
+  Al parecer la mejor opcion es la del ejemplo 3   
+
+- Recordatorios
+. Una funcion manejadora de evento reconocera como "this" al objeto HTML que dispara el evento
+. Una funcion manejadora de evento recibe de manera automatica un elemento del tipo "Event". El argumento se pasa de manera automatica
+  al invocarse la funcion, aunque el mismo para poder usarse se tiene que declarar implicitamente dentro de la funcion
+. Asignar una funcion anonima que ejecute una funcion internamente es lo mismo que devolver una referencia de la funcion interna. Esto 
+  es simplemente una de las tantas maneras en como funciona javascript

@@ -1,0 +1,30 @@
+- Javascript y los formularios
+. Los formularios como tal no se usan casi mas nativamente, pero los conceptos asociados (como el submit, los input de diferentes tipos y los eventos)
+  se siguen usando ampliamente y es necesario conocerlos, enumerarlos y entenderlos para poder trabajar con los frameworks que se basan en javascript
+
+. Los elementos asociados a los formularios son de los mas usados en la programacion web  
+
+0. Curiosidad sobre los tags de form
+. Los browser en general, pero por alguna razon sucede mas seguido con los tag de formularios, si los tags de apertura y cierre estan bien escritos pero por alguna razon no estan alineados
+  (por ejemplo, dentro de un form se cerro un div que no existe)el broswer al renderizarlos lo hara correctamente (esto se puede apreciar inspeccionando el dom). Uno de los ejemplos donde se puede 
+  apreciar esto es en el formulario de personas con fotos en la carpeta de principiantes++
+
+1. Resumen
+
+  form -> method y action
+  inputs del tipo text, radio y checkbox
+  radio y checkbox y la propiedad "checked"	
+  los input del tipo text responden al evento change y el mismo se activa al perder el foco el input
+  los input del tipo radio y checkbox se agrupan con el atributo name, se pueden consultar por dicho atributo y se activan al cambiar
+  los mismos (boton o caja)
+  usar los labels, y los input por fuera o por dentro, pero son una buena practica
+  los botones de enviar y reset pueden ser inputs del tipo submit y reset
+  los select se componen de options. Los mismos tienen la propiedad value
+  los select tienen una coleccion de options que es accesible
+  los input y select tienen una propiedad value que es la que se envia al servidor o se puede consultar por medio de javascript
+  y luego el valor que se muestra por pantalla que puede ser totalmente diferente. El select usar propiedades vacias en el primer campo
+  como buena practica
+  revisar los multiples ejemplos de formularios, especialmente el de la carpeta "mas formularios" dentro de principiante+++
+
+Z. Donde encontrar informacion
+   https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=867:eventos-forms-javascript-change-radio-checkbox-select-value-checked-options-selectedindex-cu01179e&catid=78&Itemid=206  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo2 aprenderaprogramar.com</title>
+    <meta charset="utf-8">
+    <style type="text/css"> 
+        label
+        { 
+            display:block;
+            margin:5px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var formularios = document.forms;     
+
+            for (var index = 0; index < formularios.length; index++) {
+
+                for (var indexElement = 0; indexElement < formularios[index].elements.length; indexElement++) {
+
+                    if (formularios[index].elements[indexElement].type == 'text') {
+                        // el ejemplo numero 3 querra probar esto y usar dos funciones diferentes pasando un parametro
+                        // if (formularios[i].elements[j].type=='text' && j%2==0 ) {
+                        formularios[index].elements[indexElement].addEventListener('click', cambiaColor);
+                    }
+
+                }
+            }             
+        }
+
+        function cambiaColor () {
+            this.style.backgroundColor = 'yellow';
+        }
+
+    </script>
+</head>
+<body>
+    <div id="cabecera">
+        <h2>Cursos aprenderaprogramar.com</h2>
+        <h3>Ejemplos JavaScript</h3>
+    </div>
+    <form name ="formularioContacto" method="get" action="accion1.html">
+        <h2>Formulario de contacto</h2>
+        <label>Nombre:<input id="nombreFormContacto" type="text" name="nombre" maxlength="4"/></label>
+        <label>Apellidos:<input id="apellidosFormContacto" type="text" name="apellidos" /></label>
+        <label><input id ="botonEnvio1" type="submit" value="Enviar"></label>
+    </form>
+    <form name ="formularioReclamacion" method="get" action="accion2.html">
+        <h2>Formulario de reclamación</h2>
+        <label>Motivo reclamación:<input id="motivoFormReclama" type="text" name="motivo" /></label>
+        <label>Fecha del hecho:<input id="fechaFormReclama" type="text" name="fecha" /></label>
+        <label><input id="botonEnvio2" type="submit" value="Enviar"></label>
+    </form>
+</body>
+</html>

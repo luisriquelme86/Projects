@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo2 aprenderaprogramar.com</title>
+    <meta charset="utf-8">
+    <style type="text/css"> 
+        label
+        { 
+            display:block;
+            margin:5px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            var formularios = document.forms;     
+
+            for (var i = 0; i < formularios.length; i++) {
+
+                for (var j = 0; j < formularios[i].elements.length; j++) {
+
+                    if (formularios[i].elements[j].type=='text' && j%2==0 ) {
+                        formularios[i].elements[j].addEventListener('click', function(elEvento) {
+                            // version 1
+                            // cambiaColor(elEvento, 'yellow');
+                            // version 2
+                            // cambiaColor(elEvento, 'yellow', formularios[i].elements[j]);
+                            // version 3
+                            cambiaColor(elEvento, 'yellow', this);
+                        });
+
+                    }
+                    else {       
+                        formularios[i].elements[j].addEventListener('click', function(elEvento) {
+                            // version 1
+                            // cambiaColor(elEvento, 'orange');
+                            // version 2
+                            // cambiaColor(elEvento, 'orange',formularios[i].elements[j]);
+                            // version 3
+                            cambiaColor(elEvento, 'orange', this);
+                        });                
+                    }
+                }
+            }             
+        }
+
+        // version 1
+        /* function cambiaColor (elEvento, elColor) {
+            this.style.backgroundColor = elColor;
+        } */
+
+        function cambiaColor (elEvento, elColor, quienEsThis) {
+            quienEsThis.style.backgroundColor = elColor;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="cabecera">
+        <h2>Cursos aprenderaprogramar.com</h2>
+        <h3>Ejemplos JavaScript</h3>
+    </div>
+    <form name ="formularioContacto" method="get" action="accion1.html">
+        <h2>Formulario de contacto</h2>
+        <label>Nombre:<input id="nombreFormContacto" type="text" name="nombre" maxlength="4"/></label>
+        <label>Apellidos:<input id="apellidosFormContacto" type="text" name="apellidos" /></label>
+        <label><input id ="botonEnvio1" type="submit" value="Enviar"></label>
+    </form>
+    <form name ="formularioReclamacion" method="get" action="accion2.html">
+        <h2>Formulario de reclamación</h2>
+        <label>Motivo reclamación:<input id="motivoFormReclama" type="text" name="motivo" /></label>
+        <label>Fecha del hecho:<input id="fechaFormReclama" type="text" name="fecha" /></label>
+        <label><input id="botonEnvio2" type="submit" value="Enviar"></label>
+    </form>
+</body>
+</html>

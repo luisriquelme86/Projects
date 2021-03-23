@@ -1,0 +1,27 @@
+- Js y el operador cortocircuito
+
+. Es uan buena idea acostumbrarse a este operador, ya que se ve mucho. Se puede usar como reemplazo del if o del if/else, segun sea el caso
+
+- Caso 1
+
+  if (a) {
+    c = a.dato;
+  }
+
+  c = a && a.dato;
+
+- Caso 2
+
+  if (a) {
+    c = a;
+  }
+  else {
+    c = b;
+  }
+
+  c = a || b;
+
+
+
+
+  

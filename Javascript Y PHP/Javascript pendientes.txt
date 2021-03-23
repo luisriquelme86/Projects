@@ -8,6 +8,9 @@
 . Event Loop
 . Web API  
 . Asincronia 
+
+0a. Los siguientes conceptos fueron omitidos
+. Bind
   
 1. Web API
 . Javascript tiene muchas APIs disponibles, pero que no son parte de js en si mismas, pero si estan CONSTRUIDAS sobre js. Algunas de esas APIs

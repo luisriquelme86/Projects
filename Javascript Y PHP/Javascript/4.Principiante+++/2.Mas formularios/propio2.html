@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Replicar el formulario de ejemplo lo mejor posible-->    
+    <title>Formularios</title>
+    <script type="text/javascript">
+        
+        // aprender a buscar. En un momento necesitaba saber cual es el seleccionado para un un determinado select y no encontraba nada en 
+        // HTML <select> Tag. Eso es porque es el select como tag, hay que buscar el select como objeto del dom, asi
+        // HTML DOM reference: Select Object
+
+        window.onload = function() {
+
+            // obtengo los input
+            var inputs = document.getElementsByTagName("input");
+            var select = document.getElementsByTagName("select")[0];
+            for (var inputIndex = 0; inputIndex < inputs.length; inputIndex++) {
+
+                if (inputs[inputIndex].type === "text") {
+                    inputs[inputIndex].addEventListener("change", mostrarInformacion);
+                }
+
+                if (inputs[inputIndex].type === "radio") {
+                    inputs[inputIndex].addEventListener("click", mostrarInformacion);
+                }
+
+                if (inputs[inputIndex].type === "checkbox") {
+                    inputs[inputIndex].addEventListener("click", mostrarInformacion);
+                }
+            }
+
+            select.addEventListener("change", mostrarInformacion);
+
+        }
+
+        function mostrarInformacion() {
+
+            var foto = document.getElementById("foto");
+            var urlImage;
+            foto.innerHTML = "";
+
+            var radioInputs = document.getElementsByName("tratamiento");
+            var checkedRadioInput;
+            var preferencias = [];
+
+            for (var index = 0; index < radioInputs.length; index++) {
+                if (radioInputs[index].checked === true) {
+                    checkedRadioInput = radioInputs[index];
+                }
+            }
+
+            if (checkedRadioInput.value === "sr") {
+                urlImage = "./caraHombre.jpg";
+                tratamiento = "Sr.";
+            }
+            if (checkedRadioInput.value === "sra") {
+                urlImage = "./caraMujer.jpg";
+                tratamiento = "Sra.";
+            }
+
+            var checkboxInputs = document.getElementsByName("preferencias");
+
+            for (var index = 0; index < checkboxInputs.length; index++) {
+                if (checkboxInputs[index].checked === true) {
+                    preferencias.push(checkboxInputs[index]);
+                }
+            }
+
+            foto.style.backgroundImage = "url('" + urlImage + "')";
+
+            var informacion = document.getElementById("informacion");
+            var select = document.getElementsByTagName("select")[0];
+
+            var ciudad = select.options[select.selectedIndex].value || "---";
+            var preferenciasTexto = preferencias.join(", ") || "---"; 
+
+            informacion.innerHTML = "";
+            informacion.innerHTML += "<h5>Datos introducidos: </h5>";
+            informacion.innerHTML += "<label>Tratamiento: " + tratamiento + "</label><br>"
+            informacion.innerHTML += "<label>Nombre: " + document.getElementById("nombre") + "</label><br>";
+            informacion.innerHTML += "<label>Apellidos: " + document.getElementById("apellidos") + "</label><br>";   
+            informacion.innerHTML += "<label>Direccion: "+ document.getElementById("direccion") + "</label><br>";
+            informacion.innerHTML += "<label>Ciudad: " + ciudad + "</label><br>";
+            informacion.innerHTML += "<label>Preferencias: " + preferenciasTexto + "</label><br>";
+        }
+
+    </script>
+    <style type="text/css">
+        
+        body {
+            font-family: Arial
+            font-size: 11px;
+            background-color: orange;
+            text-align: left;
+        }    
+
+        .formulario, .datos {
+            float: left; /* si uso display inline block al tocar un input text se queda roto para siempre */
+            margin: 10px;
+        }
+
+        .formulario {
+            padding: 20px;
+            border: 2px solid black;
+            width: 450px;
+        }
+
+        #foto {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: center;
+            line-height: 100px; 
+            margin-bottom: 10px;
+        }
+
+        #informacion {
+            padding: 20px;
+            border: 2px solid black;
+            width: 450px;
+            height: 200px;
+        }
+
+        .input-text {
+            width: 60px;
+            display: inline-block;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <form>
+            <div>
+                Tratamiento
+                <label for="senior">Sr<input type="radio" id="senior" name="tratamiento" value="sr"></label>
+                <label for="seniora">Sra.<input type="radio" id="seniora" name="tratamiento" value="sra"></label>
+            </div>
+            <div><label class="input-text" for="nombre">Nombre</label><input type="text" id="nombre" name="nombre"></div>
+            <div><label class="input-text" for="apellidos">Apellidos</label><input type="text" id="apellidos" name="apellidos"></div>
+            <div><label class="input-text" for="direccion">Direccion</label><input type="text" id="direccion" name="direccion"></div>
+            <div>
+                <label class="input-text for="ciudad">Ciudad</label>
+                <select id="ciudad" name="ciudad">
+                    <option value="" selected>Elija una opcion</option>
+                    <option value="Mexico">Mexico DF</option>
+                    <option value="Madrid">Madrid (ES)</option>
+                    <option value="Santiago">Santiago (CL)</option>
+                </select>    
+            </div>
+            <div>
+                Preferencias    
+                <label for="libros"><input type="checkbox" id="libros" name="preferencias" value="libros">Libros</label>
+                <label for="peliculas"><input type="checkbox" id="peliculas" name="preferencias" value="peliculas">Peliculas</label>    
+            </div> 
+            <div>
+                <label for="enviar"></label><input type="submit" id="enviar" value="Enviar">
+                <label for="reset"></label><input type="reset" id="reset" value="Reset">    
+            </div>
+        </form>    
+    </div>
+    <div class="datos">
+        <div id="foto">
+            ?
+        </div>
+        <div id="informacion">
+            <h5>Datos introducidos: </h5>
+        </div>    
+    </div>
+</body>
+</html>
+
