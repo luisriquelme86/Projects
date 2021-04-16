@@ -1,0 +1,14 @@
+- Shortcuts para IJI
+. Seleccionar las ocurrencias -> Ctrl + G
+
+
+- Shortcurs para sublime
+. Los mejores shortcuts estan resumidos en esta pagina
+  https://dev.to/weeb/30-of-the-most-useful-sublime-text-3-shortcuts-4d0p
+
+. Para la mayoria de las ediciones basta con usar
+
+  . alt + flechas horizontales (salto entre palabras)
+  . command + flechas horizontales (salto entre principio y final de linea)
+  . alt + flecha arriba (moverse al principio, contra el borde izquierdo del editor)
+  . alt + flecha abajo (salto entre finales de linea)

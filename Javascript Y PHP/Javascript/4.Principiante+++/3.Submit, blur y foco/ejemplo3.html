@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validarForm() {
+
+            var x = document.forms["elForm1"]["nombre"].value;
+
+            if (x == null || x == "") { 
+                alert("El formulario no puede enviarse sin rellenar el nombre");
+                return false; 
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form style ="margin:30px;" name="elForm1" action="http://aprenderaprogramar.com" onsubmit="return validarForm()" method="get">
+        Nombre: <input type="text" name="nombre">
+                <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

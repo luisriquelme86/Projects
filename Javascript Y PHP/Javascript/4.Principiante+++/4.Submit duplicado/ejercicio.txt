@@ -1,0 +1,54 @@
+- Objetivos:
+. Crear el codigo HTML y JavaScript que cumpla con las siguientes funciones
+
+a) Debera presentarse un formulario con 2 elementos select. El primer elemento select permitira elegir pais y podra elegirse entre Mexico, España, Peru y Colombia
+b) El segundo elemento select permitira elegir ciudad y podra elegirse entre Mexico D.F., Guadalajara, Madrid, Barcelona, Lima, Trujillo, Bogota y Cali
+c) Si el usuario selecciona ciudad sin haber elegido pais, debera mostrarse como opcion elegida de pais el pais correspondiente a la ciudad
+   Por ejemplo, si el usuario selecciona Bogota debera aparecer como pais seleccionado Colombia
+d) Si el usuario selecciona un pais en primer lugar, deberan deshabilitarse todas las opciones que no correspondan a ciudades de ese pais. Por ejemplo si el
+   usuario elige España, solo podra elegir entre Madrid y Barcelona, debiendo estar Mexico D.F., Guadalajara, Lima, Trujillo, Bogota y Cali deshabilitadas. Si el usuario 
+   cambia el pais, deberán cambiar las ciudades cuya eleccion es posible
+
+e) Ampliacion opcional para el ejercicio: introduce medidas de seguridad adicionales para que no puedan existir incoherencias entre el país seleccionado y la ciudad. Por ejemplo,
+   imagina que el usuario elige en primer lugar como ciudad México D.F. y luego elige como país Perú. Introduce medidas de seguridad que impidan que esto suceda
+
+- Lecciones sobre el ejercicio
+
+a. Sobre el listener de ciudades y paises
+. El listener se hace sobre el select, no sobre los options. Lo que "cambia" es el select en si, y se escucha el evento
+  "change"
+
+b. Sobre los objetos
+. Los objetos en el ejercicio estan declarados como literales. Los objetos en si mismo representan una entidad de la vida real con
+  sus atributos, algo del estilo
+
+  var auto = {
+  	patente: "AAA 123",
+  	color: "rojo"
+  }      
+
+  En el ejercicio se crearon objetos "unicos" por asi decirlo donde el atributo era la ciudad que se queria representar
+  y el valor el pais. Es mass parecido a un mapa donde se almacenan claves-valores (muy parecido al concepto de objeto) pero
+  muy poco "purista" porque incluso se presta a confusion. La clave es la ciudad, el valor es el pais, algo asi y eso se guardo en un array
+
+  var ciudad1 = {mexicodf = "mexico"}
+  var ciudad2 = {guadalajara = "mexico"}
+  var ciudades = [ciudad1, ciudad2]
+
+. Esta leccion permite ver que quizas se puede hacer de otra manera el mismo ejercicio en lugar de usar un array, porque
+  incluso el orden en que se almacenan las ciudades no importa. Quizas algo asi
+
+  var ciudades = {
+  	mexicodf: "mexico",
+  	guadalajara: "mexico",
+  	.
+  	.
+  	.
+  	N
+  }
+
+  Es una buena opcion, porque en todo caso se puede repetir los valores, pero no las claves (las claves como en los objetos tienen que ser unicas,
+  un auto no puede tener dos propiedades de "color" o de "patente")
+
+. No es "purista" porque en si no es una entidad con sus atributos, sino mas bien es una lista de clave-valor, un mapa, a pesar de que se declara
+  de la misma manera que un objeto  

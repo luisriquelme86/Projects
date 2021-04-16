@@ -1,0 +1,24 @@
+- Lecciones aprendidas
+
+- Sobre foco y blur
+. Tomar el foco indica que se puede escribir sobre un elemento (como en un input de texto) o que el elemento esta seleccionado
+. No todos los elementos pueden tener un foco, por ejemplo, el elemento span no puede
+. hablar de "hacer blur" o perder el foco es exactamente lo mismo
+ 
+  nombreElemento.focus() 	->		hacer foco en el elemento
+  nombreElemento.blur() 	-> 		hacer que un elemento pierda el foco
+
+. Ademas se pueden capturar dichos eventos que suceden sobre elementos del DOM  
+
+- Responder las siguientes preguntas sobre el ejemplo 3
+ 
+a) Que ocurre si en lugar de onsubmit="return validarForm()" se escribe onsubmit="validarForm()"
+b) Si x no es null ni es vacio, que devuelve la funcion validarForm() y como afecta al envio del formulario
+
+a) En el primer caso, el formulario se envia pase lo que pase y devuelva lo que devuelva. La razon es sencilla, es simplemente
+   una ejecucion de funcion, y esta funcion no tiene nada que impida enviar el formulario
+
+b) En este caso, la funcion no devuelve nada y el formulario se envia. Para que no envie el formulario la funcion debe retornar false,
+   y en caso positivo no devuelve nada, asi que pasa de largo y la ejecuta. Una cuestion muy puntillosa es que la funcion en si devuelve
+   "algo" (es un undefined) pero la comparacion que hace js es estricta, no debil (usando "===" y no "==") entonces si el valor
+   devuelto no es explicitamente false no lo toma en cuenta   

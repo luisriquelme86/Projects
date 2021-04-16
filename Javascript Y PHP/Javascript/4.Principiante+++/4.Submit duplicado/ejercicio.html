@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dos select en formulario</title>
+	<style type="text/css">
+		
+		body {
+			font-family: 'Arial';
+			background-color: silver;
+			margin: 20px auto;
+			padding: 20px;
+			width: 750px;
+			border: 1px solid white;
+		}
+
+		#botones {
+			margin: 10px 0;
+		}
+
+		#botones input {
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		#botones input:hover {
+			background-color: bisque;
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		/* los objetos (aqui declarados como un literal) se supone que representan una entidad de la vida real. Cada propiedad del objeto lo define
+		   en si mismo. Por ejemplo, un objeto "auto" podria tener color, patente, etc. En el "mapa" (estructura) de ciudades, se puede pensar que cada objeto es una ciudad, asi 
+
+		   var mexicodf = {
+				pais: "mexico"
+		   }
+
+		   Por cuestiones de rapidez y espacio, ademas de compresion, se puede dejar de lado la definicion "purista" y usarlo como un simple mapa,
+		   donde el key es la ciudad en si misma y el valor es el pais, ya que en el array en si no "vemos" el nombre de la ciudad. Si
+		   se quiere algo mas purista deberia ser 
+		   {ciudad: "mexicodf", pais: "mexico"} o
+		   {nombre: "mexicodf", pais: "mexico"} pero complicaria las operaciones innecesariamente
+
+		 */  
+		
+		var mapaCiudades = [
+			{mexicodf: "mexico"},
+			{guadalajara: "mexico"},
+			{madrid: "espania"},
+			{barcelona: "espania"},
+			{lima: "peru"},
+			{trujillo: "peru"},
+			{bogota: "colombia"},
+			{cali: "colombia"}
+		];
+
+		// cada objeto es un mapa. Guardo una clave con un valor, que puede ser un primitivo o un objeto, como un array
+		var mapaPaises = [
+			{mexico: ["mexicodf", "guadalajara"]},
+			{espania: ["madrid", "barcelona"]},
+			{peru: ["lima", "trujillo"]},
+			{colombia: ["bogota", "cali"]}
+		];
+
+		var paisYaSeleccionado = false;
+
+		window.onload = function() {
+			var selectCiudades = document.getElementById("ciudades");
+			selectCiudades.addEventListener("change", inicializarCiudades);
+			var selectPaises = document.getElementById("paises");
+			selectPaises.addEventListener("change", inicializarPaises);
+		}
+
+		function inicializarPaises() {
+			if (this.value != "") {
+				habilitarCiudades(this.value);
+			}
+		}
+
+		function habilitarCiudades(pais) {
+			var ciudadesPorPais = mapaPaises.filter(function(entry) {
+				return entry[pais];
+			})[0][pais];
+			var selectCiudades = document.getElementById("ciudades");
+			var ciudades = selectCiudades.options;
+			for (var indexTodasCiudades = 0; indexTodasCiudades < ciudades.length; indexTodasCiudades++) {
+				ciudades[indexTodasCiudades].disabled = true;
+				for (var indexCiudades = 0; indexCiudades < ciudadesPorPais.length; indexCiudades++) {
+					if (ciudades[indexTodasCiudades].value === ciudadesPorPais[indexCiudades]) {
+						ciudades[indexTodasCiudades].disabled = false;
+					}
+				}
+			}
+		}
+
+		function inicializarCiudades() {
+			if (paisYaSeleccionado) {
+				return;
+			}
+			var paises = document.getElementById("paises");
+			if (paises[paises.selectedIndex].value == "") {
+				setPais(this.value);
+				paisYaSeleccionado = true;
+			}
+		}
+
+		function setPais(ciudad) {
+			var entry;
+			var pais;
+			for (var index = 0; index < mapaCiudades.length; index++) {
+				entry = mapaCiudades[index];
+				if (entry[ciudad]) {
+					pais = entry[ciudad];
+					break;
+				}
+			}
+			var paises = document.getElementById("paises");
+			for (var indexPais = 0; indexPais < paises.length; indexPais++) {
+				paises[indexPais].disabled = true;
+				if (paises[indexPais].value == pais) {
+					paises.selectedIndex = indexPais;
+					paises[indexPais].disabled = false;
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h2>Elija un pais y una ciudad</h2>
+	<div>
+		<form method="get" action="">
+			<label for="paises">Elija un pais: </label><select id="paises">
+				<option value="">Presione aqui para desplegar la lista de paises</option>
+				<option value="mexico">Mexico</option>
+				<option value="espania">España</option>
+				<option value="peru">Peru</option>
+				<option value="colombia">Colombia</option>
+			</select><hr>
+			<label for="ciudades">Elija una ciudad: </label><select id="ciudades">
+				<option value="">Presiona aqui para desplegar la lista de ciudades</option>
+				<option value="mexicodf">Mexico DF</option>
+				<option value="guadalajara">Guadalajara</option>
+				<option value="madrid">Madrid</option>
+				<option value="barcelona">Barcelona</option>
+				<option value="lima">Lima</option>
+				<option value="trujillo">Trujillo</option>
+				<option value="bogota">Bogota</option>
+				<option value="cali">Cali</option>
+			</select>
+			<div id="botones">
+				<input type="submit" name="" value="Enviar">
+				<input type="reset" name="" value="Reset">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

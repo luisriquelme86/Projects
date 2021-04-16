@@ -1,0 +1,24 @@
+Pensionierung <%Leistungsbezüger%>.
+
+Old Placeholders have the following syntax:
+<%Whatever%>
+
+New Placeholders are so defined:
+<img class='standard-placeholder placeholder-image' data-placeholder-key='Whatever'/>
+
+We need a class that takes a Text as parameter and replaces the old placeholders with the newer.
+
+This needs, unfortunately, a list of old names vs. new names, even considering translations.
+For example:
+Old: <%Leistungsbezüger%>
+New: <img class='standard-placeholder placeholder-image' data-placeholder-key='BenefitRecipient'/>
+
+The full list of Old/New can be assembled later, start providing the mechanism.
+We should call this before trying to replace the placeholders (Ask GM).
+
+Example text:
+"<ul>↵<li>Erwerb einer Vorsorge (<span style="color: #ff00ff;"><em><strong><%Bezeichnung%></strong></em></span> / <%Vorsorgeträger%> / <%Vorsorgenehmer%> / <%Vertragsnummer%>)</li>↵<li>Erwerb einer Vorsorge (<%Vertragsnummer%> / <span 
+style="color: #ff00ff;"><em><strong><%Bezeichnung%></strong></em></span> / <%Vorsorgeträger%> / <%Vorsorgenehmer%>) </li>↵</ul>"
+
+- Como proceder?
+. Es sencillo, es una funcion que recibe un texto y un mapa y hace el cambio

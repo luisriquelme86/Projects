@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dos select en formulario</title>
+	<style type="text/css">
+		
+		body {
+			font-family: 'Arial';
+			background-color: silver;
+			margin: 20px auto;
+			padding: 20px;
+			width: 750px;
+			border: 1px solid white;
+		}
+
+		#botones {
+			margin: 10px 0;
+		}
+
+		#botones input {
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		#botones input:hover {
+			background-color: bisque;
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		var mapaCiudades = {
+			mexicodf: "mexico",
+			guadalajara: "mexico",
+			madrid: "espania",
+			barcelona: "espania",
+			lima: "peru",
+			trujillo: "peru",
+			bogota: "colombia",
+			cali: "colombia"
+		};
+
+		// cada objeto es un mapa. Guardo una clave con un valor, que puede ser un primitivo o un objeto, como un array
+		var mapaPaises = {
+			mexico: ["mexicodf", "guadalajara"],
+			espania: ["madrid", "barcelona"],
+			peru: ["lima", "trujillo"],
+			colombia: ["bogota", "cali"]
+		};
+
+		var paisYaSeleccionado = false;
+
+		window.onload = function() {
+			var ciudades = document.getElementById("ciudades");
+			ciudades.addEventListener("change", inicializarCiudades);
+			var paises = document.getElementById("paises");
+			paises.addEventListener("change", inicializarPaises);
+		}
+
+		function inicializarPaises() {
+			if (this.value != "") {
+				habilitarCiudades(this.value);
+			}
+		}
+
+		function habilitarCiudades(paisActual) {
+			var ciudadesPaisActual;
+			for (var pais in mapaPaises) {
+				if (pais == paisActual) {
+					ciudadesPaisActual = mapaPaises[pais];
+				}
+			}
+			var ciudades = document.getElementById("ciudades");
+			for (var indexCiudades = 0; indexCiudades < ciudades.length; indexCiudades++) {
+				ciudades[indexCiudades].disabled = true;
+				for (var indexCiudadesPais = 0; indexCiudadesPais < ciudadesPaisActual.length; indexCiudadesPais++) {
+					if (ciudades[indexCiudades].value === ciudadesPaisActual[indexCiudadesPais]) {
+						ciudades[indexCiudades].disabled = false;
+					}
+				}
+			}
+		}
+
+		function inicializarCiudades() {
+			if (paisYaSeleccionado) {
+				return;
+			}
+			var paises = document.getElementById("paises");
+			if (paises[paises.selectedIndex].value == "") {
+				setPais(this.value);
+				paisYaSeleccionado = true;
+			}
+		}
+
+		function setPais(ciudadActual) {
+			var pais;
+			for (var ciudad in mapaCiudades) {
+				if (ciudad == ciudadActual) {
+					pais = mapaCiudades[ciudad];
+					break;
+				}
+			}
+			var paises = document.getElementById("paises");
+			for (var indexPais = 0; indexPais < paises.length; indexPais++) {
+				paises[indexPais].disabled = true;
+				if (paises[indexPais].value == pais) {
+					paises.selectedIndex = indexPais;
+					paises[indexPais].disabled = false;
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h2>Elija un pais y una ciudad</h2>
+	<div>
+		<form method="get" action="">
+			<label for="paises">Elija un pais: </label><select id="paises">
+				<option value="">Presione aqui para desplegar la lista de paises</option>
+				<option value="mexico">Mexico</option>
+				<option value="espania">España</option>
+				<option value="peru">Peru</option>
+				<option value="colombia">Colombia</option>
+			</select><hr>
+			<label for="ciudades">Elija una ciudad: </label><select id="ciudades">
+				<option value="">Presiona aqui para desplegar la lista de ciudades</option>
+				<option value="mexicodf">Mexico DF</option>
+				<option value="guadalajara">Guadalajara</option>
+				<option value="madrid">Madrid</option>
+				<option value="barcelona">Barcelona</option>
+				<option value="lima">Lima</option>
+				<option value="trujillo">Trujillo</option>
+				<option value="bogota">Bogota</option>
+				<option value="cali">Cali</option>
+			</select>
+			<div id="botones">
+				<input type="submit" name="" value="Enviar">
+				<input type="reset" name="" value="Reset">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -4,6 +4,8 @@
 
 . Parseo
 . El "continue" en los loops es mas bien un "skip" o un "saltar"
+. Conocer el uso de los operadores de igualdad estricta y debil, y como funcionan internamente. En todos los lenguajes
+  se realizan operacion y convenciones
 . Que es el codigo fuente
 . Tiempo de vida de las variables
 . Diferencia entre una aplicacion GUI y de consola
