@@ -1,0 +1,30 @@
+- Las cookies en la programacion web
+
+. Las cookies son el primer acercamiento a la programacion orientada a usuarios. En la mayoria de los ejercicios planteados para principiantes, 
+  se trabajan muchos conceptos, pero siempre dentro de una misma pagina. Con las cookies, se da un paso mas. Permite que dos paginas compartan datos
+  entre ellas
+
+. En los ejemplos mas basicos, si tenemos dos html (aqui, inicio e item1) la informacion de la variables tienen un "tiempo de vida" atado entre otras
+  cosas al documento actual. Al cargar otro documento (en este caso, navegacion por medio de un anchor) la informacion de las variables se pierden,
+  aunque sea una variable global
+
+. Como se puede hacer para que esa informacion no se pierda? Se deberia guardar en algun lado. Se podria guardar informacion dentro de una base de datos. Sin
+  embargo, eso es una solucion del lado del servidor. Si se quisiera una solucion del lado del cliente, podrian usarse cookies (que es el caso que se trata aqui)
+
+- Conceptos
+
+. Para solucionar los problemas de persistencia de informacion en la navegacion web se crearon las cookies. Las cookies se ALMACENAN EN EL BROWSER, 
+  es decir que ellas y la informacion que guardan no se pierde al navegar entre diferentes urls
+
+. Las cookies no estan pensadas para almacenar informacion durante mucho tiempo. Las mismas se borran en las siguientes: Al borrar las cookies
+  del navegador (sin excepcion), cuando se cumple el tiempo de expiracion y si no lo tuviere, al cerrar el navagador. No hay mas
+
+- Propiedades
+
+. Las propiedades de las cookies son el nombre de la misma, la fecha de expiracion y el path (no se puede falsear). Los mismos se guardan al 
+  estilo de un "mapa" o sea, clave-valor y se recuperan de la misma manera 
+
+. Con respecto a lo anterior, independientemente de los valores de la fecha de expiracion y path, en document.cookies solo se guardan los 
+  nombres definidos en las mismas. En dicha propiedad las cookies no se sobreescriben unas a otras, sino que se agregan 
+  las cookies separadas por un espacio    
+
