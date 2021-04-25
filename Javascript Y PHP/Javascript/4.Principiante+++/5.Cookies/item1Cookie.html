@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+    <script type="text/javascript">
+        // Función para encontrar el valor de una cookie
+
+        function readCookie(nombre) {
+            var nombreIgual = nombre + "=";
+            var numeroCookies = document.cookie.split(';');
+            for(var i = 0; i < numeroCookies.length; i++) { // Recorremos todas las cookies
+                var valorCookie = numeroCookies[i]; // Analizamos la cookie actual
+                while (valorCookie.charAt(0) == ' ') {
+                    valorCookie = valorCookie.substring(1, valorCookie.length); 
+                } // Eliminamos espacios
+                if (valorCookie.indexOf(nombreIgual) == 0) {
+                    return valorCookie.substring(nombreIgual.length, valorCookie.length);
+                } // Devolvemos el valor
+            }
+            return null; // Si numeroCookies es cero se devuelve null
+        }
+
+        window.onload = function () {
+            alert ('El valor de la cookieNombreUsuario es: ' + readCookie('cookieNombreUsuario'));
+            alert ('El valor de la cookieEdadUsuario es: ' +readCookie('cookieEdadUsuario'));
+        };
+    </script>
+</head>
+<body>
+    <div id="numeroCookiesbecera">
+        <h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3>
+    </div>
+    <div style="color:blue;" id="pulsador">
+        <a href="inicioCookie.html">Pulse aquí para volver</a>
+    </div>
+</body>
+</html>

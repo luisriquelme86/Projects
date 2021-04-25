@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+    <script type="text/javascript">
+
+        var miVariableGlobal = 8;
+
+        // 2 cookies con sus respectivos datos que vencen al mismo tiempo
+
+        document.cookie = 'cookieNombreUsuario = Alberto; expires=Thu, 12 Aug 2049 20:47:11 UTC; path=/';
+        document.cookie = 'cookieEdadUsuario=' + miVariableGlobal + '; expires=Thu, 12 Aug 2049 20:47:11 UTC; path=/';
+        alert ('El contenido de document.cookie es: ' + document.cookie);
+
+    </script>
+</head>
+<body>
+    <div id="cabecera">
+        <h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplos JavaScript</h3>
+    </div>
+    <div style="color:blue;" id="pulsador">
+        <a href="item1Cookie.html">Pulse aquí para visitar la sección "Animales salvajes"</a>
+    </div>
+</body>
+</html>
