@@ -1,0 +1,12 @@
+- Lecciones aprendidas
+
+- Sobre el geolocation de navigator
+. El geolocation del navigator es nada mas y nada menos que una herramienta presente en la api de HTML Geolocation API 
+   - https://www.w3schools.com/html/html5_geolocation.asp
+. El getCurrentPosition es un metodo que recibe, como se ve, una funcion de callback, o sea, una funcion que cuando termine de ejecutarse 
+  la anterior, llama a la funcion que le hemos definido y le pasa un parametro con los datos obtenidos, en este caso, la posicion   
+. En el caso que se llame a la api de google maps no funcionara porque la api pide que se use un token para usar la misma, pero eso es
+  otra cuestion  
+
+- Sobre el api google maps en javascript
+. Se invoca cargando el script correspondiente

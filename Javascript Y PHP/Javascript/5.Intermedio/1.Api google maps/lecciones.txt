@@ -1,0 +1,16 @@
+- Lecciones aprendidas
+
+- Sobre el drag and drop
+. Con una pequeña busqueda en w3schools, se puede aprender que por default, no es posible soltar un elemento sobre otro. Por eso el evento
+  dragover usa el preventdefault (porque es comportamiento por default no esta permitido). Se usa sobre el elemento que recibira el drop
+  del drag
+
+. El elemento que se draggeara utiliza la propiedad de "draggable" en true para permitir arrastrarlo
+. No hace falta cargar ningun script ni nada raro, simplemente se usa en el html y javascript directamente esta
+  caracteristica de drag and drop
+
+. Todos los elementos de arrastre tienen la propiedad de "dataTransfer" que permite almacenar informacion sobre lo que se esta arrastrando,
+  donde se especifica el tipo o formato de lo que se arrastra y su valor     
+
+- Sobre el css
+. El div donde se hace drop no tiene contenido y aun asi tiene un tamaño. Eso es porque ese div tiene un width, height y padding predefinidos en los styles  

@@ -1,0 +1,4 @@
+- Algunas curiosidades de javascript
+
+. Las variables declaradas en el ciclo for (el indice) no se eliminan al salir del mismo
+. Javascript al igual que otros lenguajes tiene problemas para manejar los decimales, o sea, 0.1 + 0.2 analizado en un if no es 0.3, cuidado con eso
