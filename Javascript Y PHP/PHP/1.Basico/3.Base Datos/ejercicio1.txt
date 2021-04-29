@@ -1,0 +1,14 @@
+- Ejercicio
+
+. Utilizando la tabla de ciudades ya creada (ver el documento de datos de prueba)
+  se pide
+
+
+  Crear un archivo php donde se realice una consulta a la base de datos para extraer 
+  todos los datos de la tabla y a continuación muestra por pantalla los valores de pais y ciudad de cada fila
+
+ 
+
+
+
+

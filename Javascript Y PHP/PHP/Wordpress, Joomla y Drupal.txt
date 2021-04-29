@@ -1,0 +1,39 @@
+- Comienzo con PHP, conceptos y mas
+
+. Comienzo 25 de abril, en teoria son 150 horas de dedicacion para aprender PHP (6 dias y medio completos, o 2.5 horas al dia de lunes a viernes)
+
+0- Introduccion
+
+. PHP se utiliza para crear paginas web dinamicas (o sea, que los contenidos en general no son siempre los mismos, sino que cambian) a diferencia
+  de las paginas estaticas cuyo contenido html es siempre el mismo y no cambia. Se puede decir que las paginas dinamicas son aquellas que 
+  "interactuan con el usuario". Acciones tales como dejar comentarios en un blog, comprar en una web, subir archivos o fotos, son propios
+  de paginas dinamicas, porque seguramente por detras utilizen una base de datos
+
+1- Diferencias con HTML
+
+. HTML no es un lenguaje de programacion, sino de etiquetas. Las paginas son totalmente estaticas, muestran la informacion siempre igual. No
+  es posible realizar calculos, tomar decisiones o repetir un proceso un cierto numero de veces una vez que la pagina es mostrada
+
+. PHP es una lenguaje de programacion, y permite hacer los items sugeridos arriba. Un buen ejemplo es una aplicacion de compra web, con HTML
+  es posible crear la pagina de compra, pero no hacer ningun proceso
+
+. PHP es un lenguaje potente y permite hacer mas cosas que HTML. Sin embargo, este ultimo se sigue utilizando por cuestiones de 
+  eficiencia y rapidez, porque es mas rapido enviar la informacion a traves de la web en HTML que en otros formatos. Para el envio 
+  de informacion es excelente, mucho mas que un ejecutable que se tuviera que usar en el cliente
+
+2- Relacion con un servidor
+
+. Cuando en la web un broser solicita una pagina a un servidor, si la pagina es una pagina estatica HTML, todos los visitantes del sitio 
+  veran el mismo contenido y este no cambiara con el tiempo. Una vez que el servidor envio la informacion no realiza mas operaciones
+
+. En cambio si la pagina servida es una pagina dinamica, la pagina cambia. Para que la pagina pueda ser dinamica, algo tiene que producir 
+  ese cambio, o sea, tiene que haber un lenguaje del lado del servidor que se pueda ejecutar (Java, PHP, etc). Esto quiere decir 
+  que a diferencia de una pagina estatica, el servidor siempre devuelve un codigo HTML, pero no siempre es el mismo, este 
+  dependera de lo que se solicite desde el cliente o browser
+
+. En las paginas dinamicas, el codigo en el lenguaje de servidor usado (PHP en este caso) es procesado en el servidor, ejecutado y
+  luego renderizado el HTML correspondiente en el browser        
+
+3- Proyectos hechos en PHP
+
+. Algunos de ellos son Wordpress, Joomla y Drupal  

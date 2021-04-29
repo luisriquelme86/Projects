@@ -1,0 +1,13 @@
+- PHP pendientes
+
+. Creacion de clases en PHP
+  Operador flecha
+
+. Operador flecha gorda
+. Cambios a partir de PHP 5 y deprecados en el 7
+
+. Insertar cosas en la base de datos a partir de un formulario
+
+- Videos
+. https://www.youtube.com/watch?v=NMklF4uBcec&ab_channel=CHHNZ   
+  

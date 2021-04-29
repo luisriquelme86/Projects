@@ -1,0 +1,17 @@
+- Ejercicio
+
+. Utilizando la tabla agenda ya creada (ver el documento de datos de prueba)
+  se pide
+
+
+  Crear un archivo php que realize una insercion en la base de datos con estos datos
+
+  Pedro, Somoza Castro , Solera nº88        , 88834321 , 44, 1.66	
+  Juana, Pérez Rozas   , Avda. Luarcato nº22, 888111222, 22, 1.77
+  Jesús, Murillo Moreno, Pintor Murillo nº33, 655221122, 34, 1.67
+   
+ 
+
+
+
+

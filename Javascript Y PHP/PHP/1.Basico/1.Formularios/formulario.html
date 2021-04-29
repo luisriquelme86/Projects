@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Envio de formulario</title>
+	<style type="text/css">
+
+		/*
+			Estilos mas sencillos. Los label y los input van uno debajo del otro
+			El input de submit no necesita label
+			Labels e inputs son elementos de linea, lo que implica que se muestran en una linea y si hay otro elemento del mismo tipo
+			se acomodara, si hay espacio
+			Dicho lo anterior, basta con poner un display block solo a los elementos label o en el caso necesario al input de submit
+		*/
+		
+		body {
+			font-family: 'Arial';
+			width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: antiquewhite;
+			border: 1px solid brown;
+		}
+
+		label {
+			display: block;
+			margin-top: 5px;
+		}
+
+		.btn {
+			display: block;
+			margin-top: 10px;
+		}
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+
+	<h2>Complete el formulario</h2>
+	<div>
+		<form method="get" action="http://localhost:8080/recibe.php">
+
+			<label for="factura">Desea recibir factura: </label>
+			<input type="checkbox" name="factura" id="factura" value="si">
+
+			<label for="hombre">Hombre: </label>
+			<input type="radio" name="sexo" id="hombre" value="hombre">
+
+			<label for="mujer">Mujer: </label>
+			<input type="radio" name="sexo" id="mujer" value="mujer">
+
+			<label for="nombre">Nombre: </label>
+			<input type="text" name="nombre" id="nombre">
+
+			<label for="direccion">Direccion: </label>
+			<input type="text" name="direccion" id="direccion">
+
+			<label for="email">Email: </label>
+			<input type="text" name="email" id="email">
+
+			<input class="btn" type="submit" value="Enviar">
+		</form>
+	</div>
+
+
+
+</body>
+</html>
+
+<!--
+
+. Crear un archivo HTML que contenga un formulario que contenga un checkbox (¿Desea recibir factura?), dos input radio (Varon/Mujer), tres input tipo texto (Nombre, Dirección, Email) 
+  y un combobox para forma de envio (normal, por avión o urgente), junto con un boton de envio. Establece como url de envio la direccion recibe.php y 
+  método de envio get y comprueba que se recuperan los datos enviados correctamente a través de la url.
+
+-->

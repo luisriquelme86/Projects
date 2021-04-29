@@ -1,0 +1,42 @@
+- Datos de prueba
+
+1. Tabla agenda
+   
+   nombre 				VARCHAR 		100
+   apellidos 			VARCHAR 		100
+   direccion 			VARCHAR 		100
+   telefono				VARCHAR 		100	
+   edad 				  INT
+   altura 				FLOAT
+
+   nombre “Manuel Jesús”, apellidos “López de la Rosa”, dirección “C/Juan Bautista Nº 3”   , telefono “658954875”, edad 32 y altura 1.80
+   nombre “María”       , apellidos “Manzano Cabezas” , direccion “C/Arco del triunfo Nº 7”, telefono 695001002  , edad 19 y altura 1.99
+
+   sin id
+
+2. Tabla ciudades
+
+  id 					    INT, PRIMARY, A_I
+  ciudad   				VARCHAR 				80
+  pais 					  VARCHAR 				50
+  habitantes 			BIGINT
+  superficie 			DOUBLE
+  tieneMetro 			TINYINT
+
+
+  México D.F. , México   , 555666, 23434.34, 1
+  Barcelona   , España   , 444333, 1111.11 , 0
+  Buenos Aires, Argentina, 888111, 333.33  , 1
+  Medellín    , Colombia , 999222, 888.88  , 0
+  Lima        , Perú     , 999111, 222.22  , 0
+  Caracas     , Venezuela, 111222, 111.11  , 1
+  Santiago    , Chile    , 777666, 222.22  , 1
+  Antigua     , Guatemala, 444222, 877.33  , 0
+  Quito       , Ecuador  , 333111, 999.11  , 1
+  La Habana   , Cuba     , 111222, 333.11  , 0
+
+ 
+
+
+
+

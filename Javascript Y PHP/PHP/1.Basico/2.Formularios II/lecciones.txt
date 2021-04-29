@@ -1,0 +1,4 @@
+- Lecciones aprendidas
+
+. Sobre la recuperacion de datos en PHP con $_GET[nombre_del_campo] los campos no se recuperan del formulario, sino 
+  que lo hacen de la url cuando se hace submit del formulario y quedan en la url

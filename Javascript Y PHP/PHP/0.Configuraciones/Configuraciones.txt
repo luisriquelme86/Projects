@@ -1,0 +1,15 @@
+- Comienzo con PHP, configuraciones
+
+. Para el hosting gratuito mirar esta pagina con instrucciones
+  https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=529:hosting-gratuito-elegir-crear-la-cuenta-en-servidor-php-y-acceder-via-cpanel-y-via-ftp-ejemplo-cu00813b&catid=70&Itemid=193
+  y luego descargar Filezilla
+
+. Para el trabajo en remoto en mac lo mejor es descargar XAMPP y ver como configurarlo
+
+. Primera pagina con 
+  https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=540:conceptos-basicos-php-estructura-basica-pagina-etiquetas-apertura-y-cierre-embeber-en-html-cu00815b&catid=70&Itemid=193
+
+. Descargar XAMPP, una version como
+  xampp-osx-7.4.16-0-vm
+      
+
