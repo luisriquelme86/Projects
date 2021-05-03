@@ -1,0 +1,25 @@
+- Lecciones
+
+. Este ejercicio deja varias utiles lecciones sobre el html y php, a saber
+
+1- Sobre el html y js
+
+. El "name" en el select se pone sobre el mismo y no sobre los options, como si ocurre en el caso de los radio button. Sino, en el request del 
+  lado de php no llega nada
+
+. Si se quiere poner un tag html "legend" el mismo y todos los campos del form deben ir dentro de un fieldset. Es un poco 
+  mas estilizado usarlo asi
+
+. Importantisimo: El action del form, el path del archivo de php aunque este en la misma carpeta, no se puede escribir como el path
+  del sistema operativo, sino que tiene que ser el path del servidor. Una cosa es que un link se redireccione a otro html, pero el formulario
+  es otra cosa
+
+  MAL : 			action="recibe.php"
+  BIEN: 			action="http://localhost:8080/project/recibe.php"
+
+2- Sobre el php
+
+. La insercion en la base de datos de los campos de un formulario, si bien con las comillas dobles se parsean
+  es necesario antes usar comillas simples, asi
+
+  echo 'Hay ' . $result->num_rows . ' alumnos en la tabla' . "<br>";      

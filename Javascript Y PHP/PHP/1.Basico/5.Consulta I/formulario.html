@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consulta de alumnos</title>
+
+	<style type="text/css">
+		
+		body {
+			background-color: teal;
+			font-family: 'Arial';
+			width: 750px;
+			margin: 0 auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+
+		label {
+			display: block;
+		}
+
+		input {
+			margin-top: 5px;
+		}
+
+		.btn {
+			margin-top: 20px;
+			display: block;
+		}
+
+		.mensajeError {
+			color: red;
+			margin-bottom: 15px;	
+		}
+
+		 .mensajeEnvio {
+		 	color: white;
+		 	margin-top: 15px;
+		 	margin-left: 5px;
+		 }
+
+	</style>
+
+	<script type="text/javascript">
+
+		window.onload = function() {
+			console.log("documento cargado");
+			var form = document.forms[0];
+			form.addEventListener('submit', verificarFormulario);
+
+		}
+
+		function verificarFormulario(e) {
+			e.preventDefault();
+			var inputs = document.forms[0].getElementsByTagName('input');
+			var flagErrores = false;
+
+			for (var index = 0; index < inputs.length; index++) {
+				var input = inputs[index];
+				if (input.type == "text" && input.value === "") {
+					flagErrores = true;
+					break;
+				}
+			}
+
+			var mensajeError = document.getElementsByClassName('mensajeError')[0];
+			if (flagErrores) {
+				mensajeError.innerHTML = "Hay un error. Los campos no pueden estar vacios";
+			}
+			else {
+				mensajeError.innerHTML = "";
+				simularEnvio();
+			}
+		}
+
+		function simularEnvio() {
+			document.getElementsByClassName('btn')[0].disabled = true;
+			var mensaje = document.getElementsByClassName('mensajeEnvio')[0];
+			mensaje.innerHTML = "Enviando formulario, espere por favor";
+			setTimeout(function() {
+				document.forms[0].submit();	
+			}, 3000);
+		}	
+
+	</script>
+
+</head>
+
+<body>
+
+	<h3>Ingrese el email de un alumno</h3>
+	<div class="mensajeError"></div>
+	<form action="http://localhost:8080/project/recibe.php" method="get">
+
+		<fieldset>
+			
+			<legend>Datos personales: </legend>
+
+			<label for="email">Email: </label>
+			<input type="text" name="email" id="email" size="50">
+
+			<input class="btn" type="submit" value="Buscar">
+				
+		</fieldset>
+
+	</form>
+
+	<div class="mensajeEnvio"></div>	
+
+</body>
+</html>

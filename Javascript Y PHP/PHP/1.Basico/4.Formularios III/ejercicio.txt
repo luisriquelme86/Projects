@@ -1,0 +1,10 @@
+- Ejercicio
+
+. Crear una base de datos si no esta creada ya
+. Crear un formulario de carga para alumnos con los siguientes campos: nombre, mail y curso (es un select, y se envia el codigo del mismo)
+  
+  1.PHP
+  2.ASP
+  3.JSP
+
+. Crear un archivo de php que se encargue de dar de alta el alumno (una insercion en la base de datos)  

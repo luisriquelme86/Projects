@@ -1,0 +1,9 @@
+- Ejercicio
+
+. Utilizando el ejercicio anterior de php, donde se ingresaba un alumno en la base con un codigo, email y curso,
+  reutilizar la base de alumnos, y si es necesario ingresar algunos mail nuevos. Ademas reutilizar el formulario y la parte
+  de php que sean necesarias para no perder tiempo (estilo de formularios, validaciones, conexion a la base de datos)
+  para lo siguiente
+
+  a. Ingresar en un formulario un email para buscar un alumno en la base. Si el mismo se encuentra en la base,
+     devolver los datos. Sino, indicar que no existe. Se supone siempre que no hay mail repetidos   

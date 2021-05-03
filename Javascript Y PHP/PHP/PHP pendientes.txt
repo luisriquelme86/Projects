@@ -1,5 +1,7 @@
 - PHP pendientes
 
+
+. Ambito de las variables en PHP
 . Creacion de clases en PHP
   Operador flecha
 

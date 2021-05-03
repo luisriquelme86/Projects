@@ -1,0 +1,16 @@
+- Ejercicio
+
+. Utilizando los ejercicios anteriores de php, tanto el html del formulario como el php que se procesa en el servidor,
+  y con la existencia de las bases de alumnos, de la forma que se crea conveniente para llevar a cabo el siguiente, se 
+  pide
+
+   a. Crear una tabla de cursos que respete la siguiente
+
+      codigo int auto_increment primery_key
+  		nombrecurso varchar(40) 
+
+  		y cargar los siguientes nombre de cursos: php, asp y jsp
+
+   b. Hacer un update de un registro de una tabla. Se recomienda dividir el ejercicio en 3 partes, un formulario
+      que permita la busqueda de un alumno, una pagina con otro formulario donde se pueda modificar el mail del alumno
+      y otra donde finalmente se guarde el dato		

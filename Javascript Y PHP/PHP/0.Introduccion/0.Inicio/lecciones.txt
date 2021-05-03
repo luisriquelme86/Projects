@@ -1,0 +1,5 @@
+- Lecciones aprendidas
+
+. El ejemplo2 de php es muy didactivo y ayuda a comprender porque con php se pueden crear paginas dinamicas y con html esto no es 
+  posible. Si una pagina solo debe mostrar un contenido los primeros 10 dias del mes, usando html esto no es posible de ninguna forma. Es 
+  un lenguaje de etiquetas, de marcado, es imposible hacer algo como esto sin la intervencion de un lenguaje de programacion (php, javascript, etc)
