@@ -1,0 +1,6 @@
+- Ejercicio
+
+. Suponiendo una tabla creada de rubros, crear un formulario de alta de articulos (la tabla tambien se supone creada) y 
+  dar de alta, permitiendo que se seleccione el rubro, el mismo se debe cargar de la base de datos
+
+. Una buena idea es tener una formulario de carga en php, y que se diriga a otro formulario  

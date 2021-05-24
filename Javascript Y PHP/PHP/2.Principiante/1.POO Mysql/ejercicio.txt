@@ -1,0 +1,15 @@
+- Ejercicio
+
+. Con el phpmyadmin crear una tabla de rubros y una tabla de articulos con la siguientes
+
+  
+  Rubros    -> codigo y descripcion (autoincrement del tipo int y primaria, y varchar de 50)	
+  Articulos -> codigo, descripcion, precio y codigorubro (autoincrement del tipo int y primaria, varchar de 50, float y un int)
+
+
+. Usar la extension orientada a objetos de mysql con php (buscar documentacion) y realizar el alta de rubros mediante
+  formularios
+
+. Suponer el caso feliz donde la base y la tabla siempre existen
+. Nuevo item: Usar el atributo required en el input para hacer las validaciones. En aplicaciones mas profesionales donde hay ciertos estilos
+              de antemano o se validan otras cosas pueden no servir, pero en estas aplicaciones de prueba si es bueno acostumbrarse a usarlas  

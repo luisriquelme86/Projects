@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mantenimiento de articulos</title>
+</head>
+<style type="text/css">
+	
+	body {
+		font-size: 14px;
+		font-family: 'Arial';
+		background-color: cornflowerblue;
+		color: white;
+		width: 850px;
+		margin: 10px auto;
+		padding: 40px;
+		border: 1px solid khaki;
+	}
+
+	table	{
+		border-collapse: collapse;
+		width: 90%;
+	}
+
+	table, th, td {
+		border: 1px solid lavender;
+	}
+
+	th {
+		background-color: mediumaquamarine;
+		height: 50px;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	tr:hover {
+		background-color: lightsteelblue;
+	}
+
+	.add {
+		display: block;
+		margin-top: 20px;
+	}
+
+</style>
+<body>
+
+	<h3>Listado de articulos</h3>	
+
+	<table>
+		<tr>
+			<th>Columna</th>
+			<th>Descripcion</th>
+			<th>Precio</th>
+			<th>Rubro</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>rivotril</td>
+			<td>25.2</td>
+			<td>farmaceutico</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=1">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=1">Borrar</a></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>monitor</td>
+			<td>350.8</td>
+			<td>tecnologia</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=2">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=2">Borrar</a></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>fideos</td>
+			<td>2.15</td>
+			<td>alimenticio</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=3">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=3">Borrar</a></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>radar</td>
+			<td>5000</td>
+			<td>telecomunicaciones</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=4">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=4">Borrar</a></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>tina industrial</td>
+			<td>700</td>
+			<td>industrial</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=5">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=5">Borrar</a></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>clonazepalm</td>
+			<td>700</td>
+			<td>farmaceutico</td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=modificar&codigo=6">Modificar</a></td>
+			<td><a href="http://localhost:8080/project/articulos.php?operacion=borrar&codigo=6">Borrar</a></td>
+		</tr>
+	</table>
+
+	<span class="add"><a href="http://localhost:8080/project/articulos.php?operacion=alta">Agregar un nuevo articulo</a></span>
+
+
+</body>
+</html>

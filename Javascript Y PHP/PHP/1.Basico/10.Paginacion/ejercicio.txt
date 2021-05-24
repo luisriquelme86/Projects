@@ -1,0 +1,8 @@
+- Ejercicio
+
+. Se pide mostrar los datos de la tabla alumnos paginados de a 2
+. Recurrir a los conocimientos que sean necesarios, desde el limite en la base de datos, contar los registros, etc
+. Una vez mas, usar los casos mas "felices" donde se suponen creadas las bases de datos, las tablas y demas para operar con la tabla alumnos
+
+. La idea es mostrar tambien los datos paginados usando parametros en anchors o hipervinculos
+  

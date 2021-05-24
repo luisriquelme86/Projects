@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consulta de alumnos</title>
+
+	<style type="text/css">
+		
+		body {
+			background-color: teal;
+			font-family: 'Arial';
+			width: 750px;
+			margin: 0 auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+
+		label {
+			display: block;
+		}
+
+		input {
+			margin-top: 5px;
+		}
+
+		.btn {
+			margin-top: 20px;
+			display: block;
+		}
+
+		.mensajeError {
+			color: red;
+			margin-bottom: 15px;	
+		}
+
+		 .mensajeEnvio {
+		 	color: white;
+		 	margin-top: 15px;
+		 	margin-left: 5px;
+		 }
+
+	</style>
+
+	<script type="text/javascript">
+
+		window.onload = function() {
+			console.log("documento cargado");
+			var form = document.forms[0];
+			form.addEventListener('submit', simularEnvio);
+
+		}
+
+		function simularEnvio() {
+			setTimeout(function() {
+				document.forms[0].submit();	
+			}, 3000);
+		}	
+
+	</script>
+
+</head>
+
+<body>
+
+	<h3>Datos de los alumnos</h3>
+	<div class="mensajeError"></div>
+	<form action="http://localhost:8080/project/recibe.php" method="get">
+
+		<fieldset>
+			
+			<legend>Datos personales: </legend>
+			<input class="btn" type="submit" value="Buscar">
+				
+		</fieldset>
+
+	</form>
+
+	<div class="mensajeEnvio"></div>	
+
+</body>
+</html>

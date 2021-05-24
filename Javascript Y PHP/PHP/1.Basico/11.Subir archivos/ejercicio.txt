@@ -1,0 +1,4 @@
+- Ejercicio
+
+. Crear un pequeño formulario y subir una foto, luego guardarla en el servidor y mostrarla con un tag html de img
+  

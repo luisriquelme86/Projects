@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Subida de imagenes</title>
+
+	<style type="text/css">
+		
+		body {
+			background-color: teal;
+			font-family: 'Arial';
+			width: 750px;
+			margin: 0 auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+
+		.btn {
+			margin-top: 20px;
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h3>Subida de imagenes</h3>
+	<form method="post" action="http://localhost:8080/project/upload.php" enctype="multipart/form-data">
+		
+		<label for="upload"></label>	
+		<input type="file" name="upload" id="upload">
+		<input type="submit" name="" value="Enviar" class="btn">
+
+	</form>
+
+</body>
+</html>

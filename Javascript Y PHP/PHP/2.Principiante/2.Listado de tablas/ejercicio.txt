@@ -1,0 +1,21 @@
+- Ejercicio
+
+. Suponiendo ya creada la tabla de rubros, se pide listar los mismos en una tabla
+. El objetivo del ejercicio es hacerlo con orientacion a objetos (los objetos de mysql) y ademas usar algunas estilos. La idea
+  es recordar los estilos basicos de una tabla, ya que sin los mismos es bastante fea
+
+- Tips
+. Tener al menos 5 rubros cargados para ver bien los datos
+
+. Investigar la creacion de tablas en html. En general constan de la tabla en si misma, el lugar para los titulos de las columnas
+  y luego para los datos de las mismas. Concepto como tr(row) y td(data) deberian ser los mas comunes. Hacer las anotaciones
+  que convengan sobre las tablas
+
+. Son siempre 3 componentes dentro de una tabla  
+
+  	tabla
+  		titulo
+  		fila
+  		datos
+
+. Cuidado: Si bien los titulos pueden ir sin row, todo dentro de una tabla (titulos y datos) deben estar dentro de una fila o row 		

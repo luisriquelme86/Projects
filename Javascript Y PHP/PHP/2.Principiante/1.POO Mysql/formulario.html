@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alta de rubros con POO</title>
+	<style type="text/css">
+		
+		body {
+			font-family: 'Arial';
+			width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: antiquewhite;
+			border: 1px solid brown;
+		}
+
+		label {
+			display: block;
+			margin-top: 5px;
+		}
+
+		.btn {
+			display: block;
+			margin-top: 10px;
+		}
+
+	</style>
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+
+	<h2>Ingrese un rubro</h2>
+	<div>
+		<form method="post" action="http://localhost:8080/project/recibe.php">
+
+			<label for="rubro">Rubro: </label>
+			<input type="text" name="descripcion" id="rubro" size="50" required>
+
+			<input class="btn" type="submit" value="Enviar">
+		</form>
+	</div>
+
+
+
+</body>
+</html>

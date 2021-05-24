@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de tabla</title>
+</head>
+<style type="text/css">
+	
+	/* Hay propiedades especificas de css para las tablas. Algunas cosas de css, como los fonts o los colores, se pueden
+	   aplicar sobre casi todos los elementos html, en cambio algunos son especificos de ciertos elementos, como por ejemplo 
+	   la tabla y sus diversos componentes */
+
+	table {
+		border: 1px solid black; /* aplicable a cualquier elemento. De esta manera es solo la tabla, pero no sus elementos internos */
+	}
+
+	th, td {
+		border: 1px solid black;
+	}
+
+	/* Notar que con los estilos de arriba, la tabla tendra bordes, y cada elemento th y td tambien lo tendra, creando los famosos
+	   "bordes dobles" que no siempre se desean. Para "fundir" los bordes dobles en uno solo, se puede usar la propiedad de colapse */
+
+	table {
+		border-collapse: collapse;
+		width: 50%;
+	}    
+
+	body {
+		background-color: teal;
+		width: 750px;
+		margin: 10px auto;
+		font-family: 'Arial';
+		border: 1px solid bisque;
+		padding: 40px;
+	}
+
+	th {
+		// height: 70px;
+		text-align: left;
+	}
+
+	th, td {
+		padding: 10px;
+	}
+
+	/* Muy bueno, "iluminar la tabla al pasar sobre cada fila */
+
+	tr:hover {
+		background-color: lightblue;
+	}
+
+	th {
+		background-color: lightgreen;
+	}
+
+
+</style>
+<body>
+
+	<!-- La tabla basica -->
+	<!-- No tiene lineas separadoras -->
+	<!-- Los titulos y los datos no estan alineados -->
+	<!-- No tiene lineas separadoras -->
+	<!-- No tiene lineas separadoras -->
+	<!-- No tiene lineas separadoras -->
+	<!-- No tiene lineas separadoras -->
+	<h3>Tabla de rubros</h3>
+	<table>
+		<tr>
+			<th>Columna</th>
+			<th>Rubro</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>alimenticio</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>telecomunicaciones</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>industrial</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>tecnologia</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>farmaceutico</td>
+		</tr>	
+	</table>
+
+</body>
+</html>

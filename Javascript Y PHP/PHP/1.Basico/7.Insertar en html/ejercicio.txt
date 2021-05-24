@@ -1,0 +1,12 @@
+- Ejercicio
+
+. Utilizando los ejercicios anteriores de php, tanto el html del formulario como el php que se procesa en el servidor,
+  y con la existencia de las bases de alumnos, de la forma que se crea conveniente para llevar a cabo el siguiente, se 
+  pide
+
+   a. Realizar el alta de un alumno en la base, como ya se hizo en ocasiones, pero con la sutil diferencia que los cursos
+      no son html puro, sino que se cargan de la base de datos, especificamente de la tabla de "alumnos"
+
+   b. Sugerencia: Ya se manejaron las excepciones en ejemplos anteriores, ahora la idea es suponer siempre casos "felices"
+      donde los datos siempre estan bien, las bases existen, etc, sin validaciones para evitar perder el tiempo y
+      aprender mejor los conceptos

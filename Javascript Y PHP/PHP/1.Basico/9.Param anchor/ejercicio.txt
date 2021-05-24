@@ -1,0 +1,7 @@
+- Ejercicio
+
+. Crear una pagina sencilla con 3 anchor o hipervinculos que redirijan a un solo php pero con diferentes parametros. Atrapar
+  esos parametros en el php y mostrar lo que corresponda
+
+. Cada parametro se pide que muestre las tablas de multiplicar del 2, del 3 y del 5. La idea es comunicarse con el php del
+  servidor sin usar un formulario
