@@ -1,0 +1,88 @@
+- Apunte sobre las copias en Javascript
+
+. Hay que comenzar diciendo que al igual que en otros lenguajes, la copia/clonacion no es trivial. Cuando se habla de copias o clonaciones,
+  hablamos de elementos que tienen los mismos valores pero no son el mismo elemento
+. En javascript, segun el tipo de dato (primitivo u objeto - donde estan incluidos los array) se guardan de forma diferente en memoria  
+. El copiado de objetos en javascript no es algo obvio a priori a menos que se cuenten con algunos conocimientos fuertes de programacion
+  en general. Muchas veces uno no se percata de la falta de conocimiento del copiado de objetos en javascript hasta que se encuentra
+  con muchos errores que parecen no tener explicacion
+. Al igual que en muchos lenguajes, existe la copia por valor y por referencia. Y como cada lenguaje, para algunas cosas se utiliza
+  por default la copia por valor y en otros casos la copia por referencia
+. Para comprender cada concepto explicado, es una buena idea tener lapiz y papel para hacer los dibujos que se crean necesarios para
+  entender bien los conceptos
+. Tips: Los objetos o "valores complejos" incluyen los objetos, arrays, RegExp, Date, y un largo etc  
+
+- Conceptos
+. Cuando se hace unas asignacion con "=" si bien no se nota y lo mas comun es pensar en una asignacion, por dentro se esta realizando
+  una copia de algun tipo. O sea, la asignacion y la copia son el mismo concepto   
+
+- Indice
+. Los conceptos a tratar se separan por nivel de dificultad, a saber
+  
+  Copia por valor
+  Copia por referencia
+  Copiar arrays         
+    con primitivos      -> shallow copy
+  Copiar Objetos        
+    con primitivos      -> shallow copy
+  Copiar arrays         
+    con objetos         -> deep copy
+  Copiar Objetos        
+    con objetos         -> deep copy
+
+
+0- Copias por valor
+. En el caso de los elementos primitivos en javascript (como por ejemplo, los string), al asignar el valor de una variable string
+  en otro, se copia el valor directamente. No se mantiene ningun tipo de referencia. Por eso en el caso de una variable llamada foo,
+  si le asigno una cadena y luego asigno foo a una variable llamada bar, y luego modifico es variable bar, foo y bar no son iguales,
+  porque son copias independientes. El lenguaje se limita a copiar el valor contenido en foo, en la variable bar
+
+1- Copias por referencia
+. En javascript, los primitivos son, por decirlo facilmente, "valores simples". Toman un valor y ahi se termino la cosa. En el caso
+  de los arrays y objetos, hablamos de "valores complejos", ya que su composicion no es tan sencilla 
+  (digamos por el momento que porque al ser mas complejos ocupan mas de "un" espacio en memoria)       
+
+. Partiendo de lo mismo. Si a una variable foo se le asigna un array de digamos, 5 posiciones, este array esta repartido entre varias
+  posiciones de memoria (esto es algo transparente para el programador) y en esta variable foo se guarda en realidad una referencia a este
+  array para poder ubicarlo. Si la variable foo se copia a la variable bar, en bar no se copia un array nuevo con los mismos valores
+  del array de foo, sino que se copia la referencia, por lo tanto, bar y foo apuntan al mismo array, y modificar foo modifica bar, y viceversa  
+
+2- Copiar un array (clonar)
+. Para copiar realmente el contenido del array y no solo una referencia, hay que operar de la manera descrita arriba. Tener un nuevo array y copiar
+  los valores dentro de el. Hay varias maneras de realizar esto. Y dependera del tipo de array tambien. No es lo mismo copiar un array con valores
+  primitivos que con objetos (mas arrays en su interior u objetos)
+. Primero se abordara la copia de un array con tipos primitivos y no objetos, Date, RegExp o arrays, y luego los mencionados antes  
+
+2a. Con primitivos
+. Para realizar esto, se puede operar de varias maneras
+. Usar un ciclo, recorrer el array que se quiere copiar y copiar los valores del mismo a un nuevo array
+. Usar la funcion slice de un array, que devuelve en un nuevo array la porcion del array en cuestion deseada (si no se indica nada, es el array completo)
+. Copiar o clonar un array de primitivos se conoce como copia superficial (shallow copy)    
+
+3- Copiar un objeto (clonar)
+. Al igual que con los arrays, para copiar un objeto exitosamente, dependera de como este compuesto dicho objeto. No es lo mismo copiar un objeto compuesto
+  de primitivos que de otros objetos (ya mencionados antes cuales son). Y tambien al igual que en los arrays, al hacer una asignacion (copia) de un objeto a
+  otro se copia la referencia directamente y no los valores
+. El concepto de copia de un objeto es sencillo, crear un objeto nuevo, copiar los key y sus valores y ponerlos en el nuevo objeto  
+
+3a. Con primitivos
+. Para realizar esto, se puede realizar de varias maneras
+. Usar un ciclo, recorrer las propiedades y valores del objeto y copiarlas en un nuevo objeto
+. Usar la funcion assign de Object
+. Esta es una copia superficial
+
+4- Copiar objetos que no tienen primitivos
+. Hasta ahora, los casos anteriores se podian resolver facilmente, un objeto o array que contiene primitivos, con un simple slice o assign
+  el problema quedaba resuelto. Para las copias mas profundas (deep copy) no es tan sencillo. En general, hay que recurrir a la recursividad
+  o a otros librerias
+. El caso de los objetos es muy dificil, porque hay que tener en cuenta por ejemplo los null (es un objeto, tiene un constructor), los wrappers de 
+  Integer, Number, Boolean, los de errores, las funciones, y demas. Con muchos analisis se pueden obtener cuales son los casos que realmente importan. Por ejemplo,
+  el hecho de copiar las funciones dentro de un objeto podria no tener mucho sentido, lo mismo los elementos de error, los constructores de promises, etc
+. Aun asi, se puede dar una funcion MUY basica de copia profunda para los objetos
+
+- Serializacion de objetos
+. La serializacion, un concepto introducido en ES5 (un standard), permite realizar la copia profunda de objetos (con ciertas excepciones, pero valido para un 90% de los casos)
+  con mucho exito. Se trata de convertir primero un objeto en un string (serializar) para luego deserializarlo (o sea, convertirlo en un objeto de vuelta). Basicamente algo asi
+
+  var foo = {a:1, b:2, c: {d:3, e:4}};
+  var bar = JSON.parse(JSON.stringify(foo));  

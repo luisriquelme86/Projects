@@ -1,0 +1,33 @@
+- Paginas a seguir
+
+
+. ES6 - API fetch (recuperar archivo json) -> esto aplica una vez q sabes ajax
+. O bien buscar mas cosas de php o
+
+
+. https://www.tutorialesprogramacionya.com/javascriptya/index.php?inicio=100 -> algunas cosas mas de javascript para ver
+  https://www.tutorialesprogramacionya.com/javascriptya/index.php?inicio=110
+
+. https://www.tutorialesprogramacionya.com/ajaxya/
+. https://www.aprenderaprogramar.com/index.php?option=com_content&view=category&id=83&Itemid=212
+. API Rest
+. Buscar algo de jquery
+. Buscar mas de php
+. Rest
+. Pegarle a una api
+. Microservicios
+. Mongo
+. Angular
+
+
+. https://www.idento.es/blog/desarrollo-web/que-es-una-api-rest/
+. https://academy.leewayweb.com/como-consumir-un-webservice-rest-con-php/
+. MercadoLibre tiene una API RESTful que permite interactuar con el sitio de forma simple.
+. https://codigonaranja.com/crear-restful-web-service-php
+
+. Tambien algo de esto
+  https://www.tutorialesprogramacionya.com/cssya/
+
+  CSS, CSS3 y Bootstrap
+  https://www.tutorialesprogramacionya.com/
+

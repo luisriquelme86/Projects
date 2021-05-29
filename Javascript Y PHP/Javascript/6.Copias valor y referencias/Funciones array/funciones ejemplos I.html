@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funciones para arrays</title>
+</head>
+
+<script type="text/javascript">
+	
+	window.onload = function() {
+
+		var tareas = [
+			{
+				'nombre': 'programar',
+				'duracion': 120
+			},
+			{
+				'nombre': 'entrenar',
+				'duracion': 180
+			},
+			{
+				'nombre': 'cocinar',
+				'duracion': 30
+			}
+		];
+
+		// objetivo: dado un array de tareas como el de arriba, usando un loop, obtener solo los nombres de las tareas
+		// 1. forma molesta y larga
+
+		var soloTareas = [];
+		for (var index = 0; index < tareas.length; index++) {
+			soloTareas.push(tareas[index].nombre + " loop");
+		}
+
+		console.log("EJEMPLO 1 --- Operador funcional de arrays: MAP");
+		console.log("===========================================================");
+		console.log("Toma un array y modifica cada elemento de la misma manera");
+		console.log("El array original no cambia");
+		console.log("Objetivo: Obtener solo los nombres de las tareas");
+		console.log("===========================================================");
+		console.log("a. Tareas obtenidas mediante loop basico", soloTareas);
+
+		// 2. hacer lo mismo de arriba mediante el metodo de map
+
+		var nombresTareas = tareas.map(function(tarea, index) {
+			return tarea.nombre + " map";
+		});
+
+		console.log("b. Tareas obtenidas mediante la funcion map de arrays", nombresTareas);
+
+		// 3. hacer lo mismo que en 2. pero usando la funcion flecha o arrow
+		// la funcion flecha permite omitir el return si el codigo es de una sola linea
+
+		var task_names = tareas.map(tarea => tarea.nombre + " flecha"); // con un parametro se puede obviar el parentesis
+		var task_names_2 = tareas.map((tarea) => {
+			return tarea.nombre + " flecha"
+		});
+
+		console.log("c. Tareas obtenidas mediante la funcion map de arrays con funcion flecha", task_names);
+		console.log("c. Tareas obtenidas mediante la funcion map de arrays con funcion flecha", task_names_2);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 2 --- Operador funcional de arrays: FILTER");
+		console.log("Toma un array y saca los elementos no deseados");
+		console.log("El array original no cambia");
+		console.log("Objetivo: Obtener aquellas tareas que llevan mas de dos horas");
+
+
+		var tareasMayorTiempo = [];
+		for (var tarea of tareas) {
+			if (tarea.duracion >= 120) {
+				tareasMayorTiempo.push(tarea);
+			}
+		}
+
+		console.log("a. Duracion de las tareas obtenidas mediante loop basico", tareasMayorTiempo);
+
+
+		var mayoresTareas = tareas.filter(function(tarea) {
+			return tarea.duracion >= 120;
+		});
+
+
+		console.log("b. Duracion de las tareas obtenidas mediante la funcion filter de arrays", mayoresTareas);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 3 --- Operador funcional de arrays: REDUCE");
+		console.log("Toma un array y devuelve un unico valor");
+		console.log("El array original no cambia");
+		console.log("Objetivo: Obtener el tiempo total de las tareas");
+
+		tiempoTareas = 0;
+		tareas.forEach(function(tarea) {
+			tiempoTareas += tarea.duracion;
+		});
+
+		console.log("a. Duracion total de las tareas obtenidas mediante loop basico", tiempoTareas);
+
+		tiempoTotalTareas = tareas.reduce(function(anterior, tarea, index) {
+			return anterior + tarea.duracion;
+		}, 0);
+
+		console.log("b. Duracion total de las tareas obtenidas mediante la funcion reduce de arrays", tiempoTotalTareas);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 4 ---");
+		console.log("Dado un array de nombres, contar los duplicados");
+		
+		// se puede hacer imitando un mapa, algo muy comun
+		// tengo un array de nombres
+		// imito el mapa con un objeto (cada propiedad es una key y cada value es el value), parecido a php
+		// si necesito contar los duplicados, tengo que contar todos los nombres si o si hasta el final para saber si hay duplicados, asi que seria
+		// en dos pasos, los cuento y despues los separare
+
+		var nombres = ['Julian', 'Pedro', 'Luis', 'Pablo', 'Gerardo', 'Luis', 'Julian', 'Julian', 'Roberto', 'Luciano', 'Marta', 'Luis', 'Julian'];
+		console.log("Array de nombres", nombres);
+
+		// con contadores 0 se hace asi
+
+		var nombresContados = nombres.reduce(function(contados, nombre, index) {
+			// evaluar esto como true o truthy es si existe, y si el valor es 0 se evalua como falsy. Es mejor poner que si es distinto de undefined sume
+			if (contados[nombre] !== undefined) {
+				contados[nombre] += 1;
+			}
+			else {
+				contados[nombre] = 0;
+			}
+			return contados;
+		}, {});
+
+		// pongo un {} (objeto) porque es lo que quiero como salida
+
+
+		/*
+		var nombres = ['Julian', 'Julian', 'Julian'];
+
+	
+		var nombresContados = nombres.reduce(function(contados, nombre, index) {
+			// cuidado aca, si el de abajo de todo es 0, este if es "falsy" y pasa de largo
+			if (contados[nombre]) {
+				contados[nombre] += 1;
+			}
+			else {
+				contados[nombre] = 1;
+			}
+			// hay que devolver los contados
+			return contados;
+		}, {}); */
+
+		/* 
+		var nombresContados = nombres.reduce(function(contados, nombre, index) {
+			if (contados[nombre] !== undefined) {
+				contados[nombre] += 1
+			}
+			else {
+				contados[nombre] = 1;
+			}
+			return contados;
+		}, {}); */
+
+		/*
+		var nombresContados = nombres.reduce(function(contados, nombre, index) {
+			contados[nombre] = (contados[nombre] || 0) + 1;
+			return contados;
+		}, {}); */
+
+		console.log("Mapa de nombres contados", nombresContados);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 5 ---");
+		console.log("Dado un array de arrays de numeros, hacer un flattening");
+
+		console.log("Array con grupos de numeros", nombresContados);
+
+		var numeros = [
+			[1, 2, 3, 4, 5],
+			[6, 7, 8, 9, 10]
+		];
+
+		var todosNumeros = numeros.reduce(function(numeros, coleccion, index) {
+			return numeros.concat(coleccion);
+		}, []); 
+
+		console.log("Array de numeros", todosNumeros);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 6 ---");
+		console.log("Dado un array de arrays de pedidos, indicar cuales entradas tienen como princial el plato de sajta");
+
+
+		var pedidos = [
+			{entrada:'ensalada de pepinos', principal: 'sajta', postre: "platano"},
+		  	{entrada:'ensalada de tomates', principal: 'silpancho', postre: "helado"},
+		  	{entrada:'ensalada simple', principal: 'sajta', postre: "yogurt"},
+		  	{entrada:'ensalada simple', principal: 'anticucho', postre: "yogurt"},
+		  	{entrada:'ensalada de tomates', principal: 'sajta', postre: null}
+		];
+
+		console.log("Array con grupos de numeros", pedidos);
+
+		var pedidosPorPrincipal = pedidos.reduce(function(lista, pedido, index) {
+			if (pedido.principal == "sajta") {
+				lista.push(pedido.entrada);
+			}
+			return lista;
+		}, []);
+
+		console.log("Lista de pedidos que tienen como principal a sajta", pedidosPorPrincipal);
+
+
+	}
+
+
+</script>
+
+<body>
+
+
+
+</body>
+</html>

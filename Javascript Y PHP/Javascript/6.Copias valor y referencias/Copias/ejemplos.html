@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Copia de arrays y objetos</title>
+</head>
+<style type="text/css">
+	
+	body {
+		font-size: 15px;
+		font-family: 'Arial';
+		background-color: antiquewhite;
+		width: 1200px;
+		margin: 10px auto;
+		padding: 25px;
+		border: 2px solid darkkhaki;
+	}
+
+</style>
+<script type="text/javascript">
+	
+	window.onload = function () {
+		console.log("Cargo el documento");
+
+		var foo = "Soy Bond";
+		var bar = foo;
+		bar += ", James Bond";
+
+		console.log("===========================================================");
+
+		console.log("EJEMPLO 1 --- Copia de primitivos");
+
+		console.log("foo = " + foo);
+		console.log("bar = " + bar);
+
+		console.log("foo = " + foo);
+
+		console.log("===========================================================");
+
+		var title = document.createElement("h4");
+		title.innerHTML = "Primer ejemplo, copia por valor de variables string";
+		document.body.append(title);
+
+		var span = document.createElement("span");
+		var contenido = 'var foo = "Soy Bond";<br>';
+			 contenido += 'var bar = foo;<br>';
+			 contenido += 'bar += ", James Bond";<br><br>';
+			 contenido += 'Resultado => <br>';
+			 contenido += 'foo = Soy Bond; <br>';
+			 contenido += 'bar = Soy Bond, James Bond; <br><br>';
+			 contenido += 'Cuando a la variable BAR le asigno FOO, se copia el valor de FOO en BAR <br>';
+			 contenido += 'y no se mantiene ningun tipo de referencia <br>';
+			 contenido += 'Por eso si bien foo y bar inicialmente son iguales, al modificar bar no se modifica foo, porque son variables independientes';
+		span.innerHTML = contenido;
+		document.body.append(span);
+
+		var title = document.createElement("h4");
+		title.innerHTML = "Segundo ejemplo, copia por referencia de arrays";
+		document.body.append(title);
+
+		var foo = [1, 2, 3, 4, 5];
+		var bar = foo;
+
+		console.log("EJEMPLO 2 --- Copia de arrays");
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar.length = 2;
+
+		console.log("La copia NO funciono");
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		console.log("===========================================================");
+
+		var span = document.createElement("span");
+		var contenido = 'var foo = [1, 2, 3, 4, 5];<br>';
+			 contenido += 'var bar = foo;<br><br>';
+			 contenido += 'Resultado => <br>';
+			 contenido += 'foo = [1, 2, 3, 4, 5]; <br>';
+			 contenido += 'bar = [1, 2, 3, 4, 5]; <br><br>';
+			 contenido += 'Cuando creo un array y lo asigno a la variable FOO, en verdad guardo una referencia al array indicado<br>';
+			 contenido += 'Cuando copio el valor de FOO en BAR, copio la referencia que esta en FOO en BAR tambien<br>';
+			 contenido += 'Esto quiere decir, que no es que se toman los valores del array FOO, y en un nuevo array se ponen dichos valores, sino que <br>';
+			 contenido += 'tanto BAR como FOO utilizan el mismo array. En BAR no hay un nuevo array con los mismos valores <br>';
+			 contenido += 'Asi que si modifico cualquier variable, ambas quedan modificadas <br><br>';
+			 contenido += 'bar.length = 2;<br>';
+			 contenido += 'foo = [1, 2]; <br>';
+			 contenido += 'bar = [1, 2]; <br><br>';
+		span.innerHTML = contenido;
+		document.body.append(span);
+
+		console.log("EJEMPLO 3 --- Copia de arrays con primitivos");
+
+		var title = document.createElement("h4");
+		title.innerHTML = "Tercer ejemplo, como copiar un array de primitivos";
+		document.body.append(title);
+
+		var parrafo = document.createElement("p");
+		var contenido = "";
+		    contenido += "var foo = [1, 2, 3, 4, 5];<br>";
+		    contenido += "var bar = foo.slice();<br>";
+		    contenido += "bar.length = 2;<br><br>";
+		    contenido += 'Resultado => <br>';
+			 contenido += 'foo = [10, 20, 30, 40, 50]; <br>';
+			 contenido += 'bar = [10, 20]; <br><br>';
+		parrafo.innerHTML = contenido;
+		document.body.append(parrafo);
+
+		var foo = [1, 2, 3, 4, 5];
+		for (var i = 0, bar = [], len = foo.length; i < len; i++) {
+			bar[i] = foo[i];
+		};
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar.length = 2;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 4 --- Copia de arrays con primitivos con slice");
+
+		var foo = [10, 20, 30, 40, 50];
+		var bar = foo.slice();
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar.length = 2;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+		console.log("===========================================================");
+		console.log("EJEMPLO 5 --- Copia de arrays con primitivos");
+
+		var title = document.createElement("h4");
+		title.innerHTML = "Cuarto ejemplo, como copiar un objeto de primitivos";
+		document.body.append(title);
+
+		var parrafo = document.createElement("p");
+		var contenido = "";
+		    contenido += "var foo = {a: 1, b: 2};<br>";
+		    contenido += "var bar = Object.assign({}, foo);<br>";
+		    contenido += "bar['a'] = 3;<br>";
+		    contenido += "bar['a'] = 3;<br><br>";
+		    contenido += 'Resultado => <br>';
+			 contenido += 'foo = {a: 1, b: 2}; <br>';
+			 contenido += 'foo = {a: 3, b: 3}; <br><br>';
+		parrafo.innerHTML = contenido;
+		document.body.append(parrafo);
+	
+		var foo = {a: 1, b: 2}
+		var bar = {};
+		for (var key in foo) {
+			bar[key] = foo[key];
+		}
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar['a'] = 5;
+		bar['b'] = 5;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		console.log("===========================================================");
+		console.log("EJEMPLO 6 --- Copia de objetos con primitivos con assign");
+
+		var foo = {a: 1, b: 2};
+		var bar = Object.assign({}, foo);
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar['a'] = 3;
+		bar['b'] = 3;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+		console.log("===========================================================");
+		console.log("EJEMPLO 7 --- Copia de objetos mas complejos");
+
+		var title = document.createElement("h4");
+		title.innerHTML = "Septimo ejemplo, como copiar un objeto mas complejo";
+		document.body.append(title);
+
+		var parrafo = document.createElement("p");
+		var contenido = "";
+		    contenido += "var foo = {a: 1, b: 2, c: {d: 3, e: 4}, f: [1, 2]};<br>";
+		    contenido += "bar['a'] = 3;<br>";
+		    contenido += "bar['a'] = 3;<br><br>";
+		    contenido += 'Resultado => <br>';
+			 contenido += 'foo = {a: 1, b: 2, c: {d: 3, e: 4}, f: [1, 2]}<br>';
+			 contenido += 'bar = {a: 1, b: 2, c: {d: 3, e: 4}, f: 1}; <br><br>';
+		parrafo.innerHTML = contenido;
+		document.body.append(parrafo);
+	
+		var foo = {a: 1, b: 2, c: {d: 3, e: 4}, f: [1, 2]};
+		
+		function deepCopy(sourceObject) {
+			// el caso basico, pero podria ser si tiene un array
+			// var clone = {};
+			if (typeof(sourceObject) !== "object" || sourceObject === null) {
+				return sourceObject;
+			}
+			var clone = Array.isArray(sourceObject) ? [] : {};
+			for (var key in sourceObject) {
+				clone[key] = deepCopy(sourceObject[key]);
+			}
+			return clone;
+		}
+
+		var bar = deepCopy(foo);
+
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+
+		bar['a'] = 15;
+		bar['b'] = 25;
+		bar['c']['d'] = 35;
+		bar['c']['e'] = 45;
+		bar['f'] = 1;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+		console.log("===========================================================");	
+		console.log("EJEMPLO 8 --- Copia de objetos mas complejos con serializacion");
+		console.log("foo = ", foo);
+		var bar = JSON.parse(JSON.stringify(foo));
+
+		bar['a'] = 19;
+		bar['b'] = 29;
+		bar['c']['d'] = 39;
+		bar['c']['e'] = 49;
+		bar['f'] = 9;
+
+		console.log("La copia SI funciono");
+		console.log("foo = ", foo);
+		console.log("bar = ", bar);
+	}
+
+</script>
+<body>
+
+	<h3>Informacion sobre las copias por valor y por referencia</h3>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+- Webs a visitar
+. https://www.it-swarm-es.com/es/javascript/combinar-aplanar-una-matriz-de-matrices/1067022509/
+. https://javascript.plainenglish.io/three-ways-to-merge-arrays-in-javascript-27cef85fe67b
+. https://ed.team/blog/javascript-filtrar-elementos-de-un-array-con-filter
+. https://dev.to/duxtech/las-bondades-del-metodo-filter-en-javascript-1p0m
+. https://www.oscarblancarteblog.com/2019/03/12/javascript-la-funcion-filter/
+. https://itdo-solutions.medium.com/javascript-m%C3%A9todos-de-iteraci%C3%B3n-map-filter-reduce-foreach-every-y-some-ec8fcbd3692
+. https://dev.to/duxtech/las-bondades-del-metodo-reduce-en-javascript-516o
+. https://www.arquitecturajava.com/javascript-reduce-y-su-flexibilidad/
+. https://levelup.gitconnected.com/sneak-peak-of-map-filter-and-reduce-in-javascript-79d38181a48
+. https://northcoders.com/company/blog/the-beginners-guide-to-.foreach-.map-and-.filter-in-javascript
+. https://www.tutorialspoint.com/typescript/typescript_array_filter.htm
+. https://stackoverflow.com/questions/34901593/how-to-filter-an-array-from-all-elements-of-another-array
+. https://www.codegrepper.com/code-examples/javascript/includes+in+typescript
+. https://stackoverflow.com/questions/34901593/how-to-filter-an-array-from-all-elements-of-another-array
+. https://www.codegrepper.com/code-examples/javascript/includes+in+typescript
+. https://stackoverflow.com/questions/7353917/filter-array-using-another-arrays-elements
+. https://stackoverflow.com/questions/34901593/how-to-filter-an-array-from-all-elements-of-another-array
+. https://www.digitalocean.com/community/tutorials/js-finally-understand-reduce
+
+  var arr1 = [1,2,3,4],
+      arr2 = [2,4],
+      res = arr1.filter(item => !arr2.includes(item));
+      console.log(res);
+
+. https://stackoverflow.com/questions/34901593/how-to-filter-an-array-from-all-elements-of-another-array
+
+You can use the this parameter of the filter() function to avoid to store your filter array in a global variable.
+
+	var filtered = [1, 2, 3, 4].filter(
+	    function(e) {
+	      return this.indexOf(e) < 0;
+	    },
+	    [2, 4]
+	);
+	console.log(filtered);
+
+https://reactivex.io/learnrx/
+https://code.tutsplus.com/courses/functional-programming-in-javascript
+https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html
+https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209
+
+Jafar Husain magnífico conjunto de ejercicios sobre la programación funcional en JavaScript, con una sólida introducción a Rx.js
+Instructor Jason Rhodes de Envato Tuts+ 'Curso de Programación Funcional en JavaScript
+La guía mayormente adecuada a la programación funcional, que profundiza en por qué evitamos la mutación y el pensamiento funcional en general

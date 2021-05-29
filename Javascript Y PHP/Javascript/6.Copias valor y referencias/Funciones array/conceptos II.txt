@@ -1,0 +1,20 @@
+- Conceptos sobre funciones de array II
+
+- Funcion map
+. Esta funcion es muy util. Ya de por si, incluye un ciclo foreach, o sea, recorre el array. Y se encarga de devolver un array totalmente nuevo,
+  con los elementos que se le pidan en una funcion de callback
+
+. En general, se usa para tomar los elementos y aplicarle una transformacion, pero no es lo unico. Por ejemplo, si un array tiene dentro objetos,
+  puede ser interesante armar un nuevo array con solo una de las propiedades de los objetos, por ejemplo  
+
+- Funcion filter
+. Al igual que la funcion map, la funcion de filtro ya incluye un foreach. Su funcion es filtrar los elementos indeseados y quedarse solo con los deseados. Para
+  determinar cuales son los elementos deseados, se escriben en la funcion de callback
+
+- Funcion reduce
+. Esta funcion tambien ya incluye un foreach. La gracia de esta funcion es que devuelve un unico valor. Cuidado con ese concepto, porque no tiene porque dicho
+  valor ser algo unitario (string, numero, boolean, etc) sino que puede ser un objeto, un array, etc. Es una funcion que se puede decir que permite obtener totales
+  usando un acumulador
+
+. El primer valor de la funcion es el llamado "anterior" (que se puede setear como valor inicial), el elemento actual y el indice actual. Ademas, cada llamada de la 
+  funcion conoce el valor anterior    

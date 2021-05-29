@@ -1,0 +1,23 @@
+- Conceptos sobre funciones de array I
+
+. Hay un conjunto de operaciones que es muy comun realizar sobre un array. Ya sea recorriendolo, filtrando, sacando o poniendo
+  elementos, hay un conjunto de operaciones que siempre se repiten. Es bueno conocer como realizar estas tareas de la manera 
+  mas rapida (fea y larga, por asi decirlo) y de la manera elegante usando las herramientas del lenguaje
+
+. Tambien identificar cuales tareas son siempre tediosas de realizar. Por ejemplo, dada la fusion de dos array, eliminar los duplicados
+  en el resultante siempre resulta molesto. Algunas operaciones comunes a realizar sobre un array
+
+- Operaciones mas comunes a realizar sobre un array
+
+a. Dado un array, obtener solo los que cumplan cierta condicion, una condicion simple (o sea, tomar unos y desechar otros)
+b. Dado un array, contar los duplicados
+b. Dado un array, obtener aquellos que esten duplicados
+c. Fusionar dos arrays en uno
+d. Eliminar los duplicados de un array (no tiene ningun parecido al punto b) ---> foreach e includes?
+e. "Aplanar un array"
+
+- Herramientas a conocer
+a. Ciclos loop como for, foreach, forEach
+b. Filter, map y every
+c. Concat
+d. Prototype.apply

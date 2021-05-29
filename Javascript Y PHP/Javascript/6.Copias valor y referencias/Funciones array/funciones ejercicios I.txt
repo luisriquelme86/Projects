@@ -1,0 +1,12 @@
+- Ejercicios de funciones sobre arrays I
+
+- Lista de tareas
+. Obtener una lista de los nombres de las tareas
+. Obtener las tareas de mas de dos horas de duracion
+. Obtener el numero total de horas de las tareas
+
+- Lista de nombres
+. Contar los nombres duplicados o que se repiten
+
+- Array de array
+. Hacer un flattening o aplastar el array -> viene de la mano del flattening
