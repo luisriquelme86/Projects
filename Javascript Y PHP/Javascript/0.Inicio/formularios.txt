@@ -25,6 +25,3 @@
   y luego el valor que se muestra por pantalla que puede ser totalmente diferente. El select usar propiedades vacias en el primer campo
   como buena practica
   revisar los multiples ejemplos de formularios, especialmente el de la carpeta "mas formularios" dentro de principiante+++
-
-Z. Donde encontrar informacion
-   https://aprenderaprogramar.com/index.php?option=com_content&view=article&id=867:eventos-forms-javascript-change-radio-checkbox-select-value-checked-options-selectedindex-cu01179e&catid=78&Itemid=206  

@@ -1,6 +1,6 @@
 - Objetivos:
-. Modifica el código anterior para introducir div que simule un botón con el texto “Cambiar a Inglés” y otro div simulando un botón “Cambiar a español”
-  Al pulsar sobre el botón cambiar a inglés, debes acceder a los nodos del DOM de tipo label y usando relaciones de parentesco entre nodos acceder a aquellos nodos cuyo
-  nodeValue es Nombre:, Apellidos:, y Correo electrónico: y cambiar su nodeValue por Name:, Surname: y e-mail:.
+. Modificar el codigo anterior para introducir div que simule un boton con el texto “Cambiar a Ingles” y otro div simulando un boton “Cambiar a español”
+  Al pulsar sobre el boton cambiar a ingles, acceder a los nodos del dom de tipo label y usando relaciones de parentesco entre nodos acceder a aquellos nodos cuyo
+  nodeValue es nombre, apellidos y correo electronico y cambiar su nodeValue por name, surname y e-mail
 
-  Orientación: tendrás que conocer la estructura del DOM para poder acceder a los nodos con el contenido texto que nos interesa, ya que estos nodos son descendientes de los nodos label
+. Tips: Hay que conocer la estructura del dom para poder acceder a los nodos del tipo texto que se quiere cambiar, ya que estos nodos son descendientes de los nodos label

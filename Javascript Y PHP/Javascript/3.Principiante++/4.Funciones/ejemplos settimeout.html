@@ -14,7 +14,7 @@
 				saludo.innerHTML = "Hola usuario!!!";                   // caso 1
 			}, 5000);
 
-			setTimeout(saludar, 2000); 									// caso 3
+			setTimeout(saludar, 2000); 										  // caso 3
 
 
 			var contador1 = document.getElementById("contador1");
@@ -37,16 +37,17 @@
 
 			for (var i = 1; i <= 5; i++) {
 				// setTimeout(mostrarEntero, 2000); // intento fallido 1, no muestra nada, con el return mostrar() mejora, pero es undefined, logico porque no paso el parametro
-													// si es un return mostrar no funciona porque es la referencia de una referencia 	
+													         // si es un return "mostrar "no funciona porque es la referencia de una referencia 	
 
-													// intento fallido 2, a los dos segundos se ejecuta y como el ciclo se termino le pasa el ultimo entero, o sea, 5
-													// ademas, es una ejecucion dentro de una funcion anonima, y no esta nada aislado o "cerrado" o "wrappeado". Al terminar el timer
-													// entra adentro de la funcion y ejecuta con el ultimo numero, 5 veces, uno por cada timer
+																// intento fallido 2, a los dos segundos se ejecuta y como el ciclo se termino le pasa el ultimo entero, o sea, 5
+																// ademas, es una ejecucion dentro de una funcion anonima, y no esta nada aislado o "cerrado" o "wrappeado". Al terminar el timer
+																// entra adentro de la funcion y ejecuta con el ultimo numero, 5 veces, uno por cada timer
 
-				/* setTimeout(function() {          	 // caso 4
+				/* setTimeout(function() {          // caso 4
 					mostrarEntero(i);    
 				}, 2000); */ 
-														 // caso 5
+														      // caso 5
+
 				setTimeout(mostrarEntero(i), 2000 * i);  // el ciclo "entra" a cada ejecucion de funcion y queda "encerrado" por el closure como variable
 			}
 

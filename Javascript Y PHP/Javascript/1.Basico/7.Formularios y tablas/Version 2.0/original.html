@@ -1,133 +1,151 @@
 <!DOCTYPE html>
 <html>
-	<head> 
-		<title>Tabla nutricional</title>
-		<meta charset="utf-8">
-		<style type="text/css">
-            table {
-                /* Para evitar que la tabla "salte" cuando se hacen las ediciones, ese flip es molestisimo */
-                width: 650px;
-                table-layout: fixed;
-            }
-			/* table, th, td {
-  				border: 1px solid black; 		-> Esto le da bordes a los cells y data
-  				border-collapse: collapse;
-			} */
-            table { /* Quiero el borde solo para la tabla, no para los headers ni datos */
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-			th, td {
-				padding: 5px;
-			}
-			p {
-				text-align: center;
-			}
-			.center {
-				margin: 0 auto;
-				text-align: center;
-			}
-			.edicion {
-				color: blue;
-			}
-            #contenedorConsultaEdicion {
-                visibility: hidden;
-            }
-            #contenedorBotones {
-                /* Para tirar los botones al centro, simplemente tire el texto al centro del contenedor, no toque los botones*/
-                text-align: center;
-                margin: 0 auto;
-            }
-            input {
-                width: 75%;
-                box-sizing: border-box; /* Si no pongo esto, el width 100% para que tome el width del td no funciona, se calcula mal*/
-            }
-		</style>
-		<script type="text/javascript">
-            var filaActual;
-            var parametros = ["alimento", "calorias", "grasas", "proteina", "carbohidratos"];
-            var tablaOriginal;
-			function editarFila(datoFila) {
-				if (filaActual && filaActual.classList.contains("editando")) {
-					alert("Solo se puede editar una línea. Recargue la página para poder editar otra");
-					return;
-				}
-				if (!tablaOriginal) {
-					tablaOriginal = document.getElementsByTagName('table')[0].innerHTML;
-				}    
-				// modo edicion
-				filaActual = datoFila.parentNode;
-                datoFila.textContent = "En edición";
-                datoFila.style.color = "black";       
-                document.getElementById('contenedorConsultaEdicion').style.visibility = "visible";
-                // marco la fila como "editando"
-                filaActual.classList.add("editando");
+<head> 
+	<title>Tabla nutricional</title>
+	<meta charset="utf-8">
+	<style type="text/css">
 
-                var coleccion = filaActual.children;
-                for (var index = 0; index < coleccion.length - 1; index++) {
-                    coleccion[index].innerHTML = '<td><input type="text" ' + 'name="' + parametros[index] + '" value="' + coleccion[index].textContent + '"/></td>';
-                }
+		table {
+		   /* Para evitar que la tabla "salte" cuando se hacen las ediciones, ese flip es molestisimo */
+		   width: 650px;
+		   table-layout: fixed;
+		}
+
+		/* table, th, td {
+				border: 1px solid black; 		-> Esto le da bordes a los cells y data
+				border-collapse: collapse;
+		} */
+
+		table { /* Quiero el borde solo para la tabla, no para los headers ni datos */
+		   border: 1px solid black;
+		   border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 5px;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		.center {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.edicion {
+			color: blue;
+		}
+
+		#contenedorConsultaEdicion {
+		   visibility: hidden;
+		}
+
+		#contenedorBotones {
+		   /* Para tirar los botones al centro, simplemente tire el texto al centro del contenedor, no toque los botones*/
+		   text-align: center;
+		   margin: 0 auto;
+		}
+
+		input {
+		   width: 75%;
+		   box-sizing: border-box; /* Si no pongo esto, el width 100% para que tome el width del td no funciona, se calcula mal*/
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		var filaActual;
+		var parametros = ["alimento", "calorias", "grasas", "proteina", "carbohidratos"];
+		var tablaOriginal;
+
+		function editarFila(datoFila) {
+
+			if (filaActual && filaActual.classList.contains("editando")) {
+				alert("Solo se puede editar una línea. Recargue la página para poder editar otra");
+				return;
 			}
-            function cancelarCambios() {
-            	document.getElementsByTagName('table')[0].innerHTML = tablaOriginal;
-            }
-		</script>
-	</head>
-	<body>
-		<div>
-			<p>Contenido nutricional por cada 100 g de alimento.</p>	
-            <form id="formularioNutricional" action="http://aprenderaprogramar.com" method="get">
-                <table class="center">
-                    <tr>
-                        <th>Alimento</th>
-                        <th>Calorías (kCal)</th>
-                        <th>Grasas (g)</th>
-                        <th>Proteína (g)</th>
-                        <th>Carbohidratos (g)</th>
-                        <td>Acciones</td>
-                    </tr>
-                    <tr>
-                        <td>Arándano</td>
-                        <td>49</td>
-                        <td>0.2</td>
-                        <td>0.4</td>
-                        <td>12.7</td>
-                        <td class="edicion" onclick="editarFila(this)">Editar</td>
-                    </tr>
-                    <tr>
-                        <td>Plátano</td>
-                        <td>90</td>
-                        <td>0.3</td>
-                        <td>1.0</td>
-                        <td>23.5</td>
-                        <td class="edicion" onclick="editarFila(this)">Editar</td>
-                    </tr>
-                    <tr>
-                        <td>Cereza</td>
-                        <td>46</td>
-                        <td>0.4</td>
-                        <td>0.9</td>
-                        <td>10.9</td>
-                        <td class="edicion" onclick="editarFila(this)">Editar</td>
-                    </tr>
-                    <tr>
-                        <td>Fresa</td>
-                        <td>37</td>
-                        <td>0.5</td>
-                        <td>0.8</td>
-                        <td>8.3</td>
-                        <td class="edicion" onclick="editarFila(this)">Editar</td>
-                    </tr>
-                </table> 
-                <div id="contenedorConsultaEdicion">
-                    <!-- deberian estar ocultos de un principio -->
-                    <p>Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>      
-                    <div id="contenedorBotones">
-                        <button type="submit">Aceptar</button>
-                        <button type="button" onclick="cancelarCambios()">Cancelar</button>    
-                    </div>  
-                </div>   
-            </form>
-		</div>
-	</body>
+
+			if (!tablaOriginal) {
+				tablaOriginal = document.getElementsByTagName('table')[0].innerHTML;
+			}   
+
+			// modo edicion
+			filaActual = datoFila.parentNode;
+         datoFila.textContent = "En edición";
+         datoFila.style.color = "black";       
+         document.getElementById('contenedorConsultaEdicion').style.visibility = "visible";
+         // marco la fila como "editando"
+         filaActual.classList.add("editando");
+
+         var coleccion = filaActual.children;
+         for (var index = 0; index < coleccion.length - 1; index++) {
+             coleccion[index].innerHTML = '<td><input type="text" ' + 'name="' + parametros[index] + '" value="' + coleccion[index].textContent + '"/></td>';
+         }
+		}
+
+		function cancelarCambios() {
+			document.getElementsByTagName('table')[0].innerHTML = tablaOriginal;
+		}
+
+	</script>
+</head>
+<body>
+	<div>
+		<p>Contenido nutricional por cada 100 g de alimento.</p>	
+		<form id="formularioNutricional" action="http://aprenderaprogramar.com" method="get">
+		   <table class="center">
+				<tr>
+					<th>Alimento</th>
+					<th>Calorías (kCal)</th>
+					<th>Grasas (g)</th>
+					<th>Proteína (g)</th>
+					<th>Carbohidratos (g)</th>
+					<td>Acciones</td>
+				</tr>
+				<tr>
+					<td>Arándano</td>
+					<td>49</td>
+					<td>0.2</td>
+					<td>0.4</td>
+					<td>12.7</td>
+					<td class="edicion" onclick="editarFila(this)">Editar</td>
+				</tr>
+				<tr>
+					<td>Plátano</td>
+					<td>90</td>
+					<td>0.3</td>
+					<td>1.0</td>
+					<td>23.5</td>
+					<td class="edicion" onclick="editarFila(this)">Editar</td>
+				</tr>
+				<tr>
+					<td>Cereza</td>
+					<td>46</td>
+					<td>0.4</td>
+					<td>0.9</td>
+					<td>10.9</td>
+					<td class="edicion" onclick="editarFila(this)">Editar</td>
+				</tr>
+				<tr>
+					<td>Fresa</td>
+					<td>37</td>
+					<td>0.5</td>
+					<td>0.8</td>
+					<td>8.3</td>
+					<td class="edicion" onclick="editarFila(this)">Editar</td>
+				</tr>
+		   </table> 
+		   <div id="contenedorConsultaEdicion">
+		       <!-- deberian estar ocultos de un principio -->
+				<p>Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>      
+				<div id="contenedorBotones">
+				  <button type="submit">Aceptar</button>
+				  <button type="button" onclick="cancelarCambios()">Cancelar</button>    
+				</div>  
+		   </div>   
+		</form>
+	</div>
+</body>
 </html>

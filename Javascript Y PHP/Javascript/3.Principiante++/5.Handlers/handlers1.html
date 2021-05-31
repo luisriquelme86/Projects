@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba de eventos 1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+		body {
+			font-size: 14;
+			font-family: 'Arial';
+			width: 950px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: chocolate;
+		}
+
+		label	{
+			display: block;
+		}
+
+		input	{
+			margin-bottom: 10px;
+		}
+
+	</style>
+	<script type="text/javascript">
+			
+		function cambiaNombre() {
+			console.log('manejador para el evento change para el nombre');
+			console.log("El this es ", this);   //   ->   este this aqui es el window object implicito
+			console.log('Su nombre es ');
+			console.log('=======================================');
+		}
+
+		// function cambiaEdad(this) { -- error de consola, no le puedo poner de nombre a lo que recibe "this"
+		function cambiaEdad(elemento) {
+			console.log('manejador para el evento change para la edad');
+			console.log("El this es ", elemento);
+			console.log('Su edad es ');
+			console.log('=======================================');
+		}
+
+		function cambiaColor(event) {
+			console.log('manejador para evento change para el color');
+			console.log("El evento es ", event);
+			console.log('Su color es ');
+			console.log('=======================================');
+		}
+
+		function cambiaAnimal(event, elemento) {
+			console.log('manejador para el evento change para el animal');
+			console.log("El evento es ", event);
+			console.log("El this es ", elemento);
+			console.log('Su animal es ');
+			console.log('=======================================');
+		}
+
+		function cambiaBebida(event, elemento, envase) {
+			console.log('manejador para el evento change para la bebida');
+			console.log("El evento es ", event);
+			console.log("El this es ", elemento);
+			console.log('Su bebida es ');
+			console.log('=======================================');
+			console.log('Su envase es ' + envase);
+			console.log('=======================================');
+		}
+
+	</script>	
+
+</head>
+<body>
+
+	<h2>Prueba de eventos inline en tags, como propiedad de un objeto del dom y como add listener</h2>
+	<label for="nombre">Ingrese su nombre: </label>
+	<input type="text" name="nombre" id="nombre" onchange="cambiaNombre()">
+	<label for="edad">Ingrese su edad: </label>
+	<input type="text" name="edad" id="edad" onchange="cambiaEdad(this)">
+	<label for="color">Ingrese su color preferido: </label>
+	<input type="text" name="color" id="color" onchange="cambiaColor(event)">
+	<label for="animal">Ingrese su animal preferido: </label>
+	<input type="text" name="animal" id="animal" onchange="cambiaAnimal(event, this)">
+	<label for="bebida">Ingrese su bebida favorita (se considera que es en botella): </label>
+	<input type="text" name="bebida" id="bebida" onchange="cambiaBebida(event, this, 'botella')">
+
+	<p>Bienvenido señor/a <span id="nombrePersona"></span></p>
+
+</body>
+</html>

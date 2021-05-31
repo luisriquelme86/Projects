@@ -1,8 +1,9 @@
 - Lecciones aprendidas
 
 - En este ejercicio
-. Acceder a los nodos del DOM por medio de Javascript y no con html, usando las funciones de Javascript como
-  document.getElementById. Sino, habria que recorrer todos los nodos a manos con html puro, con estas funciones accedemos directamente al nodo
+. Acceder a los nodos html del dom por medio de las funciones de javascript como document.getElementById. Sino, 
+  habria que recorrer todos los nodos a mano (linea por linea) o con funciones recursivas. Con las funciones de javascript se puede
+  acceder directamente al nodo que se quiera
 
 . Los textos cuentan como nodos, por ejemplo en los parrafos y titulos de los headers
 . El primer nodo hijo es el de mas a la izquierda
@@ -13,16 +14,14 @@
   getElementsByName
   getElementsByTagName
   getElementsByClassName  
-  querySelectorAll 		 	   -> por css
-  querySelector 			     -> por css
+  querySelectorAll 		 	     -> por css
+  querySelector 			       -> por css
 
 . Cuidado con los nombres de las funciones anteriores. Notar que excepto el ById, es "Elements" y no "Element"
 
 - Otras lecciones
 . Mirando el archivo "original.html" se puede extraer varias conclusiones
-	
-	Los dos botones del html tienen declarado el evento de "onclick" y cuando el mismo sucede Javascript
+. Los dos botones del html tienen declarado el evento de "onclick" y cuando el mismo sucede javascript
 	se encarga de hacer algo con eso por medio de funciones
-	
-  	El carrusel es muy sencillo, simplemente se reemplaza con cada click la imagen
+. El carrusel es muy sencillo, simplemente se reemplaza con cada click la imagen
   

@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Portal web - aprenderaprogramar.com</title>
-		<meta name="description" content="Portal web aprenderaprogramar.com">
-		<meta name="keywords" content="aprender, programar, cursos, libros"><meta charset="utf-8">
-			<script type="text/javascript">
-				window.onload = function () {
-					var coleccionTitulos = document.getElementsByClassName('titulo');
-					for (var index = 0; index < coleccionTitulos.length; index++) {
-						coleccionTitulos[index].onmouseover = function() {
-							pintarElementoColor(this, 'orange')
-						};
-						coleccionTitulos[index].onmouseout = function() {
-							pintarElementoColor(this, 'brown')
-						};
-					}
-					var coleccionParrafos = document.getElementsByTagName('p');
-					for (var index = 0; index < coleccionParrafos.length; index++) {
-						coleccionParrafos[index].onmouseover = function() {
-							pintarElementoColorFondo(this, 'yellow')
-						};
-						coleccionParrafos[index].onmouseout = function() {
-							pintarElementoColorFondo(this, 'transparent')
-						};
-					}
-				}
-				function pintarElementoColor(elemento, color) {
-					elemento.style.color = color;
-				}
-				function pintarElementoColorFondo(elemento, colorFondo) {
-					elemento.style.backgroundColor = colorFondo;
-				}
-			</script>
-	</head>
- 	<body>
- 		<p>
- 			<a href="principal.html" title="Página principal" >Ir a la pagina principal</a>
- 		</p>
-		<h1 class="titulo">Novedades</h1>  
-		<p>Aquí presentamos las novedades del sitio.</p>
-		<h3 class="titulo">Lanzamos el producto X-FASHION</h3>
-		<p>Este producto permite estirar la piel hasta dejarla como la de un bebé.</p>
-		<p>
-			<img src="http://i.imgur.com/tq5Bs.png" title="Imagen del producto" alt="imagen producto x-fashion" />
-		</p>
-		<h3 class="titulo">Mejoramos el producto T-MOTION</h3>
-		<p>Hemos lanzado una nueva versión del producto T-MOTION</p>
-		<p>
-			<img src="http://i.imgur.com/SpZyc.png" title="Imagen del proudcto tmotion" alt="imagen producto tmotion" />
-		</p>
-	</body>	
+<head>
+	<title>Portal web - aprenderaprogramar.com</title>
+	<meta name="description" content="Portal web aprenderaprogramar.com">
+	<meta name="keywords" content="aprender, programar, cursos, libros"><meta charset="utf-8">
+	<script type="text/javascript">
+
+		window.onload = function () {
+
+			var coleccionTitulos = document.getElementsByClassName('titulo');
+
+			for (var index = 0; index < coleccionTitulos.length; index++) {
+
+				coleccionTitulos[index].onmouseover = function() {
+					pintarElementoColor(this, 'orange')
+				};
+
+				coleccionTitulos[index].onmouseout = function() {
+					pintarElementoColor(this, 'brown')
+				};
+
+			}
+
+			var coleccionParrafos = document.getElementsByTagName('p');
+
+			for (var index = 0; index < coleccionParrafos.length; index++) {
+
+				coleccionParrafos[index].onmouseover = function() {
+					pintarElementoColorFondo(this, 'yellow')
+				};
+
+				coleccionParrafos[index].onmouseout = function() {
+					pintarElementoColorFondo(this, 'transparent')
+				};
+				
+			}
+
+		}
+
+		function pintarElementoColor(elemento, color) {
+			elemento.style.color = color;
+		}
+
+		function pintarElementoColorFondo(elemento, colorFondo) {
+			elemento.style.backgroundColor = colorFondo;
+		}
+
+	</script>
+</head>
+<body>
+
+	<p>
+		<a href="principal.html" title="Página principal" >Ir a la pagina principal</a>
+	</p>
+
+	<h1 class="titulo">Novedades</h1>  
+
+	<p>Aquí presentamos las novedades del sitio.</p>
+
+	<h3 class="titulo">Lanzamos el producto X-FASHION</h3>
+
+	<p>Este producto permite estirar la piel hasta dejarla como la de un bebé.</p>
+
+	<p>
+		<img src="http://i.imgur.com/tq5Bs.png" title="Imagen del producto" alt="imagen producto x-fashion" />
+	</p>
+
+	<h3 class="titulo">Mejoramos el producto T-MOTION</h3>
+
+	<p>Hemos lanzado una nueva versión del producto T-MOTION</p>
+
+	<p>
+		<img src="http://i.imgur.com/SpZyc.png" title="Imagen del proudcto tmotion" alt="imagen producto tmotion" />
+	</p>
+</body>	
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba de eventos 3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+		body {
+			font-size: 14;
+			font-family: 'Arial';
+			width: 950px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: chocolate;
+		}
+
+		label	{
+			display: block;
+		}
+
+		input	{
+			margin-bottom: 10px;
+		}
+
+	</style>
+	<script type="text/javascript">
+
+		window.onload = function() {
+
+			// si no pongo esto, no puede tomar los element by id, necesito el onload, que los elementos ya esten renderizados
+			var nombre = document.getElementById("nombre");
+			var edad = document.getElementById("edad");
+			var color = document.getElementById("color");
+			var animal = document.getElementById("animal");
+			var bebida = document.getElementById("bebida");
+
+			// con funciones anonimas. Son rapidas y faciles de usar si solo necesito los eventos o el this
+
+			nombre.addEventListener('change', cambiaNombre);
+
+			edad.addEventListener('change', cambiaEdad);
+
+			color.addEventListener('change', cambiaColor);
+
+			animal.addEventListener('change', cambiaAnimal);
+
+			// bebida.addEventListener('change', cambiaBebida);   //   -> como le paso el parametro del tipo de envase a esto? No puedo hacerlo, asi como esta escrita no puede
+																					//      recibir parametros, aqui le paso la definicion al listener y no puedo poner parentesis, sino se ejecuta, asi
+																					//      que tampoco parametros. Debo hacer lo de abajo  	
+
+			bebida.addEventListener('change', function(e) {   //   -> Para que la funcion interna tome el evento necesito declararlo en los parametros de la funcion anonima
+				// cambiaBebida(e, 'botella');   //   -> pero ahora asi no me funciona el this, porque el this dentro de la otra funcion no es el que disparo el evento, cambio ...
+
+				// si lo de abajo fuera un console.log, lo ejecutaria, o sea, console.log('algo');
+				// en este caso, es lo mismo. Hay una funcion, asi que la ejecuta, cambiaBebida(e, this, 'botella');
+
+				cambiaBebida(e, this, 'botella');
+			});
+
+			// otra opcion es, sino quiero usar una funcion anonima, hacerlo al modo de invocar una funcion auxiliar que la invoque. O sea, es lo mismo que el modo que la anonima
+			// pero poniendole un nombre
+
+			// bebida.addEventListener('change', auxiliarBebida('botella'));
+			// basicamente, ejecuto auxiliarBebida y al hacer retorno lo mismo que esta en el listener original con una funcion anonima
+
+			/* 
+			function auxiliarBebida(envase) {
+				return function(event) {
+					cambiaBebida(event, this, envase);	
+				}
+			} */
+
+			console.log('=======================================');
+
+			function cambiaNombre() {
+				console.log('manejador para el evento change para el nombre');
+				console.log("El this es ", this);   //   ->   este this aqui es el window object implicito
+				console.log('Su nombre es ');
+				console.log('=======================================');
+			}
+
+			// function cambiaEdad(this) { -- error de consola, no le puedo poner de nombre a lo que recibe "this"
+			function cambiaEdad() {
+				console.log('manejador para el evento change para la edad');
+				console.log("El this es ", this);
+				console.log('Su edad es ');
+				console.log('=======================================');
+			}
+
+			function cambiaColor(event) {
+				console.log('manejador para evento change para el color');
+				console.log("El evento es ", event);
+				console.log('Su color es ');
+				console.log('=======================================');
+			}
+
+			function cambiaAnimal(event) {
+				console.log('manejador para el evento change para el animal');
+				console.log("El evento es ", event);
+				console.log("El this es ", this);
+				console.log('Su animal es ');
+				console.log('=======================================');
+			}
+
+			function cambiaBebida(event, elemento, envase) {
+				console.log('manejador para el evento change para la bebida');
+				console.log("El evento es ", event);
+				console.log("El this es ", elemento);
+				console.log('Su bebida es ');
+				console.log('=======================================');
+				console.log('Su envase es ' + envase);
+				console.log('=======================================');
+			}
+		}
+
+	</script>	
+
+</head>
+<body>
+
+	<h2>Prueba de eventos inline en tags, como propiedad de un objeto del dom y como add listener</h2>
+	<label for="nombre">Ingrese su nombre: </label>
+	<input type="text" name="nombre" id="nombre">
+	<label for="edad">Ingrese su edad: </label>
+	<input type="text" name="edad" id="edad">
+	<label for="color">Ingrese su color preferido: </label>
+	<input type="text" name="color" id="color">
+	<label for="animal">Ingrese su animal preferido: </label>
+	<input type="text" name="animal" id="animal">
+	<label for="bebida">Ingrese su bebida favorita (se considera que es en botella): </label>
+	<input type="text" name="bebida" id="bebida">
+
+	<p>Bienvenido señor/a <span id="nombrePersona"></span></p>
+
+</body>
+</html>
+
+<!-- 
+	https://medium.com/analytics-vidhya/reference-functions-in-event-listeners-dont-call-53063b21d64a
+	KEY POINT OF THIS ARTICLE: addEventListener passes theevent to our function implicitly.
+-->

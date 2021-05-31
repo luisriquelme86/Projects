@@ -7,7 +7,7 @@
   un elemento de la pagina de ese NodeList) en cambio en el segundo no, es estatico
   
 2. TextContent
-. Es muy comun que inicialmente, para obtener el texto de un nodo de texto, se use nodeValue. Lamentablemente, a veces como se encuentra creado el DOM
+. Es muy comun que inicialmente, para obtener el texto de un nodo de texto, se use nodeValue. Lamentablemente, a veces como se encuentra creado el dom
   de una pagina, obtener el texto de un nodo de texto puede ser engorroso, por ejemplo, por el uso de espacios en blanco y cosas asi. Entonces, dada
   esta situacion, se puede usar la propiedad textContent
 . Esto cobra mas sentido si en lugar de pensar en obtener un unico texto aislado (por ejemplo, el de un span, que seguramente represente solo una parte del texto deseado)

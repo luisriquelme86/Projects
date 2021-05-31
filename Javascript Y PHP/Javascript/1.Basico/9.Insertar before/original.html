@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ejemplo curso aprenderaprogramar.com</title>
-        <meta charset="utf-8">
-        <style type="text/css">
-            body {
-                background-color:yellow;
-                font-family: sans-serif;
-            }
-            label {
-                color: maroon;
-                display:block;
-                padding:5px;
-            }
-            .simulaLink {
-                color: blue;
-                cursor:pointer;
-            }
-        </style>
-        <script type="text/javascript">
+<head>
+  <title>Ejemplo curso aprenderaprogramar.com</title>
+  <meta charset="utf-8">
+  <style type="text/css">
 
-            var contador = 1;
-            function addPersona () {
-                var nodoForm = document.querySelector('form');
-                var nuevoNodo = document.createElement('div');
-                contador = contador+1;
-                nuevoNodo.innerHTML = '<label for="nombre'+contador+'"><span>Nombre persona '+contador+':</span> <input id="nombre'+contador+
-                '" type="text" name="nombre'+contador+'" /></label>'+
-                '<label for="apellidos'+contador+'"><span>Apellidos persona '+contador+':</span> <input id="apellidos'+contador+
-                '" type="text" name="apellidos'+contador+'" /></label>'+
-                '<label for="email'+contador+'"><span>Correo electrónico persona '+contador+':</span> <input id="email"'+contador+
-                ' type="text" name="email'+contador+'" /></label>'+
-                '<p>Si quieres apuntar simultáneamente otra persona <span class="simulaLink" onclick="addPersona()">pulsa aquí</span></p>';
-                nodoForm.insertBefore(nuevoNodo, nodoForm.querySelector('#referenciaVacia1'));
-            }
-        </script>
-    </head>
-    <body>
-        <div id="cabecera">
-            <h1>Portal web aprenderaprogramar.com</h1>
-            <h2>Didáctica y divulgación de la programación</h2>
-        </div>
-        <!-- Formulario de contacto -->
-        <form name ="formularioContacto" class="formularioTipo1" method="get" action="http://aprenderaprogramar.com">
-            <p>Indica los datos de la persona que se apunta al curso:</p>
-            <label for="nombre"><span>Nombre:</span> <input id="nombre" type="text" name="nombre" /></label>
-            <label for="apellidos"><span>Apellidos:</span> <input id="apellidos" type="text" name="apellidos" /></label>
-            <label for="email"><span>Correo electrónico:</span> <input id="email" type="text" name="email" /></label>
-            <p>Si quieres apuntar simultáneamente otra persona <span class="simulaLink" onclick="addPersona()">pulsa aquí</span></p>
-            <div id="referenciaVacia1"></div>
-            <label><input type="submit" value="Enviar"><input type="reset" value="Cancelar"></label>
-        </form>
-    </body>
+      body {
+			background-color:yellow;
+			font-family: sans-serif;
+      }
+      label {
+			color: maroon;
+			display:block;
+			padding:5px;
+      }
+      .simulaLink {
+			color: blue;
+			cursor:pointer;
+      }
+
+  </style>
+  <script type="text/javascript">
+
+		var contador = 1;
+		function addPersona () {
+			var nodoForm = document.querySelector('form');
+			var nuevoNodo = document.createElement('div');
+			contador = contador+1;
+			nuevoNodo.innerHTML = '<label for="nombre' + contador + '"><span>Nombre persona ' + contador + ':</span> <input id="nombre' + contador +
+										 '" type="text" name="nombre' + contador + '" /></label>' +
+										 '<label for="apellidos' + contador + '"><span>Apellidos persona ' + contador + ':</span> <input id="apellidos' + contador +
+										 '" type="text" name="apellidos' + contador + '" /></label>' +
+										 '<label for="email' + contador + '"><span>Correo electrónico persona ' + contador + ':</span> <input id="email"' + contador +
+										 ' type="text" name="email' + contador + '" /></label>' +
+										 '<p>Si quieres apuntar simultáneamente otra persona <span class="simulaLink" onclick="addPersona()">pulsa aquí</span></p>';
+
+			nodoForm.insertBefore(nuevoNodo, nodoForm.querySelector('#referenciaVacia1'));
+		}
+
+  </script>
+</head>
+<body>
+	<div id="cabecera">
+	   <h1>Portal web aprenderaprogramar.com</h1>
+	   <h2>Didáctica y divulgación de la programación</h2>
+	</div>
+	<!-- Formulario de contacto -->
+	<form name ="formularioContacto" class="formularioTipo1" method="get" action="http://aprenderaprogramar.com">
+	   <p>Indica los datos de la persona que se apunta al curso:</p>
+	   <label for="nombre"><span>Nombre:</span> <input id="nombre" type="text" name="nombre" /></label>
+	   <label for="apellidos"><span>Apellidos:</span> <input id="apellidos" type="text" name="apellidos" /></label>
+	   <label for="email"><span>Correo electrónico:</span> <input id="email" type="text" name="email" /></label>
+	   <p>Si quieres apuntar simultáneamente otra persona <span class="simulaLink" onclick="addPersona()">pulsa aquí</span></p>
+	   <div id="referenciaVacia1"></div>
+	   <label><input type="submit" value="Enviar"><input type="reset" value="Cancelar"></label>
+	</form>
+</body>
 </html>

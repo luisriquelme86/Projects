@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html>
+<head> 
+	<title>Curso JavaScript aprenderaprogramar.com</title>
+	<meta charset="utf-8">
+	<style type="text/css">
 
-    <head> 
-        <title>Curso JavaScript aprenderaprogramar.com</title>
-        <meta charset="utf-8">
-        <style type="text/css">
-            body {
-                font-family: sans-serif;
-                text-align:center;
-            }
-            div {
-                border-style:solid;
-                margin: 20px;
-                padding:15px;
-                display:inline-block;
-            }
-        </style>
-        <script type="text/javascript">
-            var contador = 1;
+      body {
+			font-family: sans-serif;
+			text-align:center;
+      }
+      div {
+			border-style:solid;
+			margin: 20px;
+			padding:15px;
+			display:inline-block;
+      }
 
-            function crearNodoHijo(nodoPadre) {
-                if (nodoPadre.children.length == 0) {
-                    var nodoHijo = document.createElement("div");
-                    nodoHijo.id ='divElementID'+contador;
+  </style>
+  <script type="text/javascript">
 
-                    // No dejarse intimidar por el this de "crear nodo". Puesto aca mismo, asusta porque no se sabe a cual "this referencia". Este this
-                    // "tomara vida" en el momento en que este nodo comienze a existir en el html y no antes. Entonces, si se escribe en el DOM,
-                    // sera el mismo nodo. Muy parecido a las relaciones entre clases, donde una clase apunta a una clase que no se le hizo un new todavia. Cuando
-                    // se crea una clase, la otra quizas aun no esta hasta que se llama al constructor o en otro momento, pero la inicializacion es posible apunta
-                    nodoHijo.onclick = function() {
-                        crearNodoHijo(this)                 
-                    };
-                    nodoHijo.innerHTML = ''+contador;
-                    if (contador%2 == 0) {
-                        nodoHijo.style.backgroundColor = '#E9967A';
-                    }
-                    else {
-                        nodoHijo.style.backgroundColor = 'yellow'; 
-                    }
-                    nodoPadre.appendChild(nodoHijo);
-                    contador = contador +1;
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <div id="nodoRaiz" onclick="crearNodoHijo(this)" style="background-color:#E6E6FA">
-            Contenido inicial
-        </div>
-    </body>
+      var contador = 1;
+
+      function crearNodoHijo(nodoPadre) {
+			if (nodoPadre.children.length == 0) {
+				var nodoHijo = document.createElement("div");
+				nodoHijo.id = 'divElementID' + contador;
+
+				// No dejarse intimidar por el this de "crear nodo". Puesto aca mismo, asusta porque no se sabe a cual "this" referencia realmente. Este this
+				// "tomara vida" en el momento en que este nodo comienze a existir en el html y no antes. Entonces, si se escribe en el DOM,
+				// sera el mismo nodo. Muy parecido a las relaciones entre clases, donde una clase apunta a una clase que no se le hizo un new todavia. Cuando
+				// se crea una clase, la otra quizas aun no esta hasta que se llama al constructor o en otro momento, pero la inicializacion es posible apunta
+
+				nodoHijo.onclick = function() {
+				   crearNodoHijo(this)                 
+				};
+
+				nodoHijo.innerHTML = '' + contador;
+
+				if (contador % 2 == 0) {
+				   nodoHijo.style.backgroundColor = '#E9967A';
+				}
+				else {
+				   nodoHijo.style.backgroundColor = 'yellow'; 
+				}
+
+				nodoPadre.appendChild(nodoHijo);
+				contador = contador + 1;
+			}
+      }
+      
+  </script>
+</head>
+<body>
+	<div id="nodoRaiz" onclick="crearNodoHijo(this)" style="background-color:#E6E6FA">
+	   Contenido inicial
+	</div>
+</body>
 </html>

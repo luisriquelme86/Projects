@@ -1,15 +1,15 @@
 - Lecciones aprendidas
 . Mirando el archivo "original.html" se puede extraer varias conclusiones
   
-  	El ejercicio pide exclusivamente acceder al nodo label y a partir de ahi modificar los campos. A simple vista, basta con hacer un 
-  	document.getElementsByTagName por el label, acceder al firstChild (span), otra vez lo mismo (el texto es un nodo) y luego el value. En la
-  	practica, esto no funciona. Y esto es porque, en la forma en que esta escrito, hay saltos de linea, y por lo tanto estos cuentan como nodos 
-  	para algunos sino todos los navegadores. Por eso se accede al firstChild y luego nextSibling (a la derecha)
+. El ejercicio pide exclusivamente acceder al nodo label (leer objetivo.txt) y a partir de ahi modificar los campos. A simple vista, basta con hacer un 
+  document.getElementsByTagName para el label, acceder al firstChild (span), otra vez lo mismo (el texto es un nodo) y luego el value
 
-  	Es claro que es mas sencillo acceder a todos los span o poner una clase, pero el objetivo del ejercicio es notar esto justamente
+. Esto funciona para el ejemplo original pero no para el modificado. Y esto es porque, en la forma en que esta escrito en el modificado
+  (es mucho mas natural escribirlo de la ultima forma) hay saltos de linea, y por lo tanto estos cuentan como nodos 
+  para algunos sino todos los navegadores. Por eso se accede al firstChild y luego nextSibling (a la derecha)
 
-  	Otra cosa, es que en el ejercicio original los span estan pegados al label, y en este caso sin los saltos de linea, si funciona de la 
-  	forma mencionada antes
+. Es claro que es mas sencillo acceder a todos los span o poner una clase en los mismos. El ejercicio no lo menciona, pero en lugar de hacer
+  todo ese manejo es mas sencillo de la forma antedicha
 
 . Ademas, no pasar de largo que se exploro la forma de modificar las propiedades css de la pagina, usando cosas como 
   nodo_del_dom.style.nombrePropiedad = 'valorPropiedad'. No se hizo nada, pero se explico o se mostro  		

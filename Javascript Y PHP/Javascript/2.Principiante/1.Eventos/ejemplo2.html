@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Ejemplo aprenderaprogramar.com</title>
-		<meta charset="utf-8">
-		<script type="text/javascript">			
-			window.onload = function () {
-				alert("Pagina completamente cargada")
-				var elemsA = document.getElementsByTagName('a');
-				for (var i=0;i<elemsA.length;i++) {
-					elemsA[i].onclick = transferir;
-				}
-				function transferir() { 
-					return confirm('Ud. va a ser transferido de url hacia ' + this.href);
-				}
-			}
-		</script>
-	</head>
-	<body>
-		<div id="cabecera">
-			<h2>Cursos aprenderaprogramar.com</h2>
-			<h3>Ejemplos JavaScript</h3>
-		</div>
-		<div style="color:blue;" id ="pulsador" onclick="ejemplo()"> Probar </div>
-		<a href="http://aprenderaprogramar.com">Aprende a programar.</a>
-		<a href="http://aprenderaprogramar.es">Inténtalo, será divertido.</a>
-	</body>
+<head>
+	<title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+	<script type="text/javascript">
 
+		window.onload = function () {
+
+			alert("Pagina completamente cargada")
+			var elemsA = document.getElementsByTagName('a');
+
+			for (var i = 0; i < elemsA.length; i++) {
+				elemsA[i].onclick = transferir;
+			}
+
+			function transferir() { 
+				return confirm('Ud. va a ser transferido de url hacia ' + this.href);
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+
+	<div id="cabecera">
+		<h2>Cursos aprenderaprogramar.com</h2>
+		<h3>Ejemplos JavaScript</h3>
+	</div>
+
+	<div style="color:blue;" id ="pulsador" onclick="ejemplo()"> Probar </div>
+
+	<a href="http://aprenderaprogramar.com">Aprende a programar.</a>
+	<a href="http://aprenderaprogramar.es">Inténtalo, será divertido.</a>
+
+</body>
 </html>

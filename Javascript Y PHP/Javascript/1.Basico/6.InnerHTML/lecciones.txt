@@ -18,6 +18,6 @@
   pero si se quieren tener mas sentencias, se pueden separar con una coma, como se mostro antes y con este ejemplo
 
 
-  <h2 onclick="alert('Contenido innerHTML actual es: '+this.innerHTML); this.innerHTML='<div style=\' width:50%; border-style:solid; background-color: #FF7F50;  \'>Ahamham!</div>'">
+  <h2 onclick="alert('Contenido innerHTML actual es: '+ this.innerHTML); this.innerHTML='<div style=\' width:50%; border-style:solid; background-color: #FF7F50;  \'>Ahamham!</div>'">
 
   Donde todo es parte de lo que ocurrira cuando el evento "onclick" ocurra. Primero se mostrara un alert, y acto seguido se asignara el innerHTML correspondiente

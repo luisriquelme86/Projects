@@ -61,6 +61,10 @@
 					} */
 					
 					// la solucion es esta
+					// en javascript, los scopes se define no por bloques de llames como en este caso el for, sino por lo que esta contenido dentro de una funcion,
+					// en este caso personalizeHelp "atrapa" el item.help y lo "contiene" dentro de si mismo. La funcion al llamarse crea un nuevo scope, como si fuera
+					
+					// un objeto de un clase, que guarda el parametro que se le paso
 					document.getElementById(item.id).onfocus = personalizeHelp(item.help);
 				}
 			}

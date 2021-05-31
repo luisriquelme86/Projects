@@ -1,0 +1,45 @@
+- Lecciones y resumen sobre los manejadores de eventos
+
+. Los event handlers o los manejadores de eventos son una de las claves del dinamismo en javascript. Por eso es tan importante
+  aprender a usarlos, distinguirlos y poder programarlos rapidamente, porque son la base de todo comportamiento dinamico. Comprenderlos
+  permite programar y comprender con facilidad un monton de procesos al solo mirarlos
+
+1. Event handlers inline
+
+. Los handlers declarados inline son aquellos que se declaran en el mismo tag html para usarlos. Una vez que se declaran en el html, la funcion
+  asociada a ese handler se declara en la seccion de scripts del documento html o js
+
+. Cuando ya se entra al terreno de javascript en el documento, es bueno notar la existencia de un elemento "this". Este elemento sera segun las circunstancias
+  diferentes cosas. En los casos mas basicos hace referencia al objeto global "window" y en otros casos sera el elemento html en cuestion
+  que disparo el evento. Sabiendo esto se puede comenzar
+
+. En los manejadores inline, es necesario indicarle explicitamente en el html el event y el this para que las funciones del lado de javascript las reciban
+
+	<input type="text" name="animal" id="animal" onchange="cambiaAnimal(event, this)">
+  	function cambiaAnimal(event, elemento) {}
+
+2. Event handlers con add event listener, usando funciones anonimas
+
+. Esta es la forma mas "limpia" de todas. Solo hay que tomar el elemento del DOM correspondiente y al listener correspondiente asignarle la funcion 
+  (anonima o declarada) para que funcione
+
+. La diferencia con este tipo de declaraciones es que parece que funcionara por medio de "magia", por asi decirlo. La funcion que se asigna a un event handler 
+  en el addEventListener es un poco diferente a la misma funcion pero para el event handler inline. En primer lugar, el evento y el "this" no hace falta pasarlo
+  al llamar la funcion. Y al definir la funcion, solo hace falta pasar como argumento el evento si se quiere usar. El elemento "this" esta implicito y
+  es la referencia al elemento del dom que disparo el evento
+
+  	document.getElementById("animal").addEventListener("change", cambiaAnimal);	--->   la funcion "cambiaAnimal" no se le pasan parametros 
+  	function cambiaAnimal(e) {
+   	console.log(this);			
+  	}  
+
+3. Event handlers con add event listener, usando funciones con nombre
+
+. Es el metodo mas claro de todos, pero es un poco mas lento que el punto numero 2. Si solo necesito el evento y el elemento this, basta
+  y sobra con usar funciones anonimas como en el caso numero 2. Si es necesario un pasaje de otros argumentos, hay que recurrir a este caso. Basicamente
+  se trata de usar una funcion anonima que haga de "wrapper" (envoltura) y esta funcion envolvente a la vez llame a la funcion que se quiere
+  invocar originalmente con los parametros deseados
+
+. En el caso de que no se quiere utilizar una funcion anonima, simplemente se declara una funcion con nombre que se le pasan parametros y entonces
+  no queda mas remedio que devolver dentro de ella la definicion de otra funcion anonima que dentro tenga la funcion deseada. Mucho mas largo y engorroso,
+  pero es bueno conocerlo  
