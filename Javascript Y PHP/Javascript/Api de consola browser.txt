@@ -1,0 +1,6 @@
+- Api de console con el browser
+
+. Consultar https://developer.chrome.com/docs/devtools/console/api/
+
+
+  

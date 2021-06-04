@@ -53,7 +53,7 @@
 
 			    	contenidosRecibidos = xmlhttp.responseText.split(",");
 
-				   document.getElementById("txtInformacion").innerHTML =+ contenidosRecibidos[0];
+				   document.getElementById("txtInformacion").innerHTML = contenidosRecibidos[0];
 
 				   for (var i = 1; i < contenidosRecibidos.length; i++) {
 
@@ -66,7 +66,7 @@
 				}
 			}
 
-			xmlhttp.open("GET"," datosCU01206F.php?pais=" + str);
+			xmlhttp.open("GET"," http://localhost:8080/project/datosCU01206F.php?pais=" + str);
 			xmlhttp.send();
 
 		}

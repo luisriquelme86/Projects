@@ -37,4 +37,4 @@
   https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=860:retroceder-pagina-anterior-javascript-windowhistory-obtener-tamano-pantalla-screen-y-frames-cu01172e&catid=78&Itemid=206  
 
 
-  
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=932:responsexml-metodo-de-xmlhttprequest-recuperar-datos-desde-archivo-xml-con-ajax-ejemplo-cu01210f&catid=83&Itemid=212 
