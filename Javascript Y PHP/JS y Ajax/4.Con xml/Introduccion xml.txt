@@ -1,0 +1,17 @@
+- Introduccion al xml
+
+. XML es un formato estandarizo de intercambio de datos para su uso en la web. Es estandarizado porque sigue un conjunto de reglas ya fijado y conocido,
+  entonces al no haber ambiguedades todos pueden utilizarlo. Por que se crean los estandares? Porque sino el intercambio de informacion, en primer lugar
+  dependeria del lenguaje de programacion, y segundo, aun utilizando el mismo lenguaje, cada persona utilizaria su propia forma de envio de datos
+
+. Con XML se terminan las ambiguedades mencionadas arriba. En el caso de XML, el "lenguaje" por asi decirlo, es estandarizado, y se cumplen una 
+  cantidad de reglas. Estas reglas son, el archivo se basa en dos etiquetas, una de apertura y otra de cierre, donde se registra la informacion
+
+. Un ejemplo
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  	<pais>Argentina</pais>
+  	<pais>Bolivia<pais>
+
+. Donde la unica salvedad es que la etiqueta de xml se abre y cierra al principio con signos de interrogacion y se aclara la version y el
+  encoding  	  

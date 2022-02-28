@@ -18,7 +18,7 @@
 . El primer caso llama mucho la atencion. Por que el event handler ejecuta la funcion ahi mismo en el elemento html en lugar de solo pasar el 
   nombre de la funcion en el tag html? Esto pasa por la explicacion dada antes, que es una mezcla entre html y js. Internamente, el browser recorre
   los tags html y se van renderizando uno a uno, secuencialmente. Al llegar al tag html y escribir y renderizar el tag, se encuentra con el manejador de 
-  evento, que debe ser un codigo en js por definicion., asi que lo "pega" en el dom. Cuando se dispara el evento (cosa que hace js) el manejador del mismo
+  evento, que debe ser un codigo en js por definicion, asi que lo "pega" en el dom. Cuando se dispara el evento (cosa que hace js) el manejador del mismo
   (que tambien esta en js) es buscado, y si en el tag html simplemente dice el literal, asi onclick="funcionCaso1" no la encontrara porque no esta definido, lo 
   que necesita es llamar a la funcion, por eso se usan los parentesis, asi onclick="funcionCaso1()". Todo esto esta fuertemente relacionado por el simple hecho
   que el handler esta directamente en el codigo fuente (inline) mientras que el handler esta en js

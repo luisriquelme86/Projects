@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peticion a PHP con Ajax</title>
+</head>
+<style type="text/css">
+
+	/*
+		Tips CSS y HTML
+		Los estilos de letras, margin y padding se deben aplicar en el body y no es * (todo) sino sucedera que el margin y el padding
+		se aplican a todos los elementos (divs, parrafos, y demas elementos aplicables)
+	*/
+
+	body {
+		background-color: burlywood;
+		font-family: "Arial";
+		width: 850px;
+		margin: 10px auto;
+		padding: 20px;
+		border: 2px solid blanchedalmond;
+	}
+
+	h1	{
+		margin: 0;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	/*
+		Tips CSS y HTML
+		El box-sizing en el input es necesario para que considere el 100% los padding y margin no se sale del form el input
+	*/
+	input[type="text"] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		background-color: beige;
+		box-sizing: border-box;
+	}
+
+	input[type="submit"] {
+		width: 150px;
+		padding: 10px;
+		background-color: beige;
+		border-radius: 5px;
+	}
+
+	/*
+		Tips CSS y HTML
+		Es mas comodo usar una clase para poder modificar el hover, mucho mas comodo que usar el input type submit de arriba
+	*/
+	.sendButton:hover {
+		background-color: darkgray;
+	}
+
+</style>
+<script>
+	
+	/*
+		Tips Javascript
+		Usar el window.onload es lo mas basico en la carga. No se usa el documento porque quizas ni siquiera existe
+	*/
+	window.onload = function() {
+		console.log("El documento ya cargo");
+		document.forms[0].addEventListener("submit", enviar);
+	}
+
+	function enviar(e) {
+		// evito el envio del formulario. Lo hago asincronicamente despues, si no pongo esto el formulario se termina enviando dos veces,
+		// sincrona y asincronicamente
+		e.preventDefault();
+		var nombre = document.forms[0].elements.namedItem("nombre").value;
+		var xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.onreadystatechange = function() {
+
+			if (this.readyState == 4 && this.status == 200) {
+				var respuesta = xmlhttp.responseText;
+				document.getElementById("resultado").innerHTML = respuesta;
+			}
+
+		}
+
+		xmlhttp.open("GET", "respuesta.php?nombre=" + nombre);
+		xmlhttp.send();
+
+	}
+
+</script>
+<body>
+
+	<h1>Peticion a PHP con Ajax</h1>
+	<p>Ingrese un nombre en el campo nombre del formulario por favor: </p>
+	<form>
+		<label for="nombre">Nombre: </label>
+		<input type="text" name="nombre">
+		<input class="sendButton" type="submit" value="Chequear">			
+	</form>
+	<p>Resultado: </p>
+	<div id="resultado"></div>
+
+
+</body>
+</html>

@@ -6,37 +6,29 @@
  	<style type="text/css">
 
 	 	* {
-	 		font-family:sans-serif;
+	 		font-family: sans-serif;
 	 	}
 
 	 	a:link {
-	 		text-decoration:none;
+	 		text-decoration: none;
 	 	} 
 
 	 	select {
-	 		font-size:18px;
+	 		font-size: 18px;
 	 	}
 
 	 	div div {
-
 	 		color: blue;
-	 		background-color:#F1FEC6;
+	 		background-color: #F1FEC6;
 	 		font-size: 20px;
-	 		float:left;
+	 		float: left;
 	 		border: solid;
 	 		margin: 20px;
-	 		padding:15px;
-	 		
+	 		padding: 15px;
 	 	}
 
  	</style>
 	<script>
-
-		/* Para que funcione el ejemplo, levantar este archivo en 
-
-		   http://localhost:8080/project/cursoAjaxCU01206F.html   
-		   
-		*/
 
 		function mostrarSugerencia(str) {
 		
@@ -63,7 +55,16 @@
 
 				   for (var i = 1; i < contenidosRecibidos.length; i++) {
 
-				    	contenidosAMostrar = contenidosAMostrar + '<div id="ciudades' + i + '"> <a href="http://aprenderaprogramar.com">' + contenidosRecibidos[i]+ '</a></div>';
+				   	$datos = contenidosRecibidos[i].split("|");
+
+				   	$resultado = '<div id="ciudades' + i + '">' + 
+				   				    		$datos[0] + '<br>' + 
+				   				    	'<a href="' + $datos[1] + '" target="_blank"">' + 
+				   				    		$datos[1] + 
+				   				    	'</a>' + 
+				   				    '</div>';			
+
+				    	contenidosAMostrar = contenidosAMostrar + $resultado;
 
 				   }
 
@@ -72,7 +73,7 @@
 				}
 			}
 
-			xmlhttp.open("GET"," http://localhost:8080/project/datosCU01206F.php?pais=" + str);
+			xmlhttp.open("GET"," http://localhost:8080/project/ejercicio.php?pais=" + str);
 			xmlhttp.send();
 
 		}

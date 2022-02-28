@@ -5,7 +5,7 @@
 . No todos los elementos pueden tener un foco, por ejemplo, el elemento span no puede
 . hablar de "hacer blur" o perder el foco es exactamente lo mismo
  
-  nombreElemento.focus() 	->		hacer foco en el elemento
+  nombreElemento.focus() 	->		   hacer foco en el elemento
   nombreElemento.blur() 	-> 		hacer que un elemento pierda el foco
 
 . Ademas se pueden capturar dichos eventos que suceden sobre elementos del DOM  

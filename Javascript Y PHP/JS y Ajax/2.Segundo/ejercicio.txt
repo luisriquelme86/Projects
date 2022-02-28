@@ -1,0 +1,15 @@
+- Objetivos:
+. https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=928:metodos-open-send-getresponseheader-setrequestheader-de-xmlhttprequest-ajax-ejemplos-cu01209f&catid=83&Itemid=212
+
+
+1- Ejercicio
+. Crear un respuesta.php que devuelva lo siguiente
+  a. Si recibe el parametro nombre con valor "alberto", la frase "Alberto esta realizando un curso de programacion"
+  b. Si recibe el parametro nombre con valor "juan", la frase "Juan esta realizando practicas de ingenieria de sistemas"
+  c. Si el parametro viene vacio o no existe, la frase "No hay informacion. Revise la peticion"
+
+  En un archivo denominado peticion.html crear una casilla de texto que pida un nombre y un boton chequear, de modo que al pulsar el boton,
+  se produzca una peticion via Ajax para obtener los resultados contenidos en el archivo respuesta.php
+
+
+2- 

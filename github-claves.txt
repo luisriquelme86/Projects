@@ -1,0 +1,48 @@
+33279-44193 
+1f8d4-2dd9d 
+733b6-08366 
+e8eb7-2fb11 
+9aaee-26b29 
+16136-f1c40 
+b4861-68f84 
+6064f-21c6b 
+760a2-d9464 
+8117c-78930 
+d8130-03f5c 
+7a52e-a948f 
+faae9-e81f2 
+64d3b-ee465 
+088ee-679b4 
+b4bed-f970e
+
+https://docs.github.com/es/github/authenticating-to-github/configuring-two-factor-authentication
+
+My Security Keys
+
+https://docs.github.com/es/github/authenticating-to-github/accessing-github-using-two-factor-authentication
+
+Usar autenticación de dos factores con la línea de comando
+Después de haber habilitado 2FA, debes usar un token de acceso personal o una clave SSH en lugar de tu contraseña al acceder a GitHub en la línea de comando.
+
+Autenticar en la línea de comando mediante HTTPS
+Después de haber habilitado 2FA, debes crear un token de acceso personal para usar una contraseña al autenticar a GitHub en la línea de comando mediante las URL HTTPS.
+
+Cuando se te solicite el nombre de usuario y la contraseña en la línea de comando, usa tu nombre de usuario GitHub y el token de acceso personal. La indicación de la línea de comando no especificará que debes ingresar tu token de acceso personal cuando se te solicite la contraseña.
+
+Para obtener más información, consulta la sección "Crear un token de acceso personal".
+
+
+En la barra lateral izquierda, haz clic en Developer settings (Parámetros del desarrollador).
+En la barra lateral izquierda, da clic en Tokens de acceso personal.
+Haz clic en Generar un nuevo token.
+My bash script
+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
+
+luisriquelme86
+
+tengo esto
+token: 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
+
+
+
+

@@ -1,0 +1,3 @@
+- Ejercicio
+
+. Crear un archivo html que permita elegir el titulo (title) y dinamicamente recupere desde el archivo xml el contenido de todas las demás etiquetas incluido el id y los muestre por pantalla

@@ -1,0 +1,11 @@
+- Guia de leer y escribir archivos de texto en php
+
+. Primero que nada, se puede comenzar si no se tiene mucha idea buscando el manual de PHP en la red, en la siguiente url
+  https://www.php.net/manual/en/
+
+. Ahi se puede buscar, con la busqueda, algo de "file open" o algo asi y obtenemos algo asi, "fopen", lo cual es un buen comienzo
+. La idea de comenzar con esto fue tomada de 
+  
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=585:leer-y-escribir-archivos-de-texto-con-php-funcion-fopen-modo-fgets-fputs-fclose-y-feof-ejemplo-cu00836b&catid=70&Itemid=193
+
+  que da la idea basica de abrir, leer, y cerrar un archivo. Viene bien para la practica de un ejercicio de AJAX en la misma pagina	  

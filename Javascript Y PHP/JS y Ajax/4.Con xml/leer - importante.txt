@@ -1,0 +1,4 @@
+- Importante
+
+. Este ejemplo no funcionara si se ejecuta simplemente el html. Cuando se quiera ejercutar el AJAX, el navegador marcara un problema
+  con el origin (a pesar de estar en la misma carpeta) y el select no funcionara. Debe subirse a un server, como el server local XAMPP

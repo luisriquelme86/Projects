@@ -1,0 +1,3 @@
+- MacOS High cierra
+
+. brew install curl ca-certificates

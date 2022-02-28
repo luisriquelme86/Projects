@@ -1,0 +1,19 @@
+País: España
+Capital: Madrid:
+Texto capital: Madrid es un municipio y una ciudad de España. La localidad, con categoría histórica de villa, es la capital del país y de la Comunidad de Madrid. También conocida como la Villa y Corte, es la ciudad más poblada de España, con 3.165.235 habitantes. Como capital del Estado, Madrid alberga las sedes del gobierno, las Cortes Generales, ministerios, instituciones y organismos asociados, así como la residencia oficial de los reyes de España y del presidente del Gobierno. En el plano económico, es la cuarta ciudad más rica de Europa, tras Londres, París y Moscú.
+Ciudades más importantes: Madrid, Barcelona, Valencia, Sevilla, Zaragoza, Málaga, Murcia.
+
+País: México
+Capital: México D.F.
+Texto capital: La Ciudad de México, Distrito Federal o, en su forma abreviada, México, D.F., es la capital y sede de los poderes federales de los Estados Unidos Mexicanos. Se trata de una de las 32 entidades federativas que forman parte de México; como tal, no es parte integral de ninguna de las otras 31 (denominados estados), pero a la vez pertenece a toda la unión. Es el núcleo urbano más grande del país, y también el principal centro político, académico, económico, de moda, financiero, empresarial y cultural. Catalogada como ciudad global, es uno de los centros financieros y culturales más importantes de América y del mundo. Su población es de alrededor de 8,8 millones de habitantes.
+Ciudades más importantes: México D.F., Ecatepec, Guadalajara, Puebla, Juárez, Tijuana, León, Zapopan.
+
+País: Argentina
+Capital: Buenos Aires
+Texto Capital: Buenos Aires, formalmente Ciudad Autónoma de Buenos Aires (CABA) ―también llamada Capital Federal por ser sede del gobierno federal, es una de las veinticuatro entidades federales y capital de la República Argentina. Está situada en la región centro-este del país. La población de la ciudad se estima en 2.890.151 habitantes, y la de su aglomeración urbana, el Aglomerado Gran Buenos Aires, en 14.391.538 habitantes, siendo la mayor área urbana del país, la segunda de Sudamérica, Hispanoamérica y del hemisferio sur, y una de las 20 mayores ciudades del mundo.
+Ciudades más importantes: Buenos Aires, Córdoba, Rosario, La Plata, Mar del Plata, San Miguel de Tucumán, Ciudad de Salta.
+
+País: Colombia
+Capital: Bogotá
+Texto Capital: Bogotá, oficialmente Bogotá, Distrito Capital, abreviado Bogotá, D. C. es la capital de la República de Colombia y del departamento de Cundinamarca. Está administrada como Distrito Capital, y goza de autonomía de gestión. Está ubicada en el centro de Colombia, en la región natural conocida como la sabana de Bogotá. Según las últimas estimaciones, Bogotá tiene una población de 7.878.783 habitantes. Tiene una longitud de 33 km de sur a norte, y 16 km de oriente a occidente. Como capital, alberga los organismos de mayor jerarquía de la rama ejecutiva, legislativa y judicial.
+Ciudades más importantes: Bogotá, Medellín, Cali, Barranquilla, Cartagena, Cúcuta, Soledad, Ibagué.

@@ -6,6 +6,22 @@
     <meta charset="utf-8">
     <style type="text/css">
 
+        /*
+        Tips CSS y HTML
+        span, strong, i y b se consideran elementos para propiedades de texto
+        division y parrafo son elementos en bloque
+        los elementos del form, como select, label e input son elementos en linea
+        los elementos en bloque comienzan en una nueva linea y utilizan todo el espacio disponible
+        los elementos en linea utilizan el espacio que necesitan y no comienzan en nueva lineas
+        un elemento en linea no puede contener un elemento en bloque
+        la propiedad float saca del flujo de la pagina al elemento y los demas no float "flotaran" alrededor del mismo
+        la propiedad float convierte en un elememento de bloque al elemento
+        la propiedad float posiciona el elemento en los extremos del contenedor
+        la propiedad clear hara que no puedan flotar elementos en alguno de sus extremos o en ambos
+        la propiedad float es recomendable usarla dando un width para prevenir resultados inesperados
+        un elemento inline se le puede forzar a ser un elemento en bloque o usar un width al 100%
+        */
+
         body, p {
             margin-left:30px; 
             font-family: sans-serif;
@@ -20,7 +36,6 @@
         }
 
         .estiloForm label {
-            display: block; 
             width: 120px; 
             float: left; 
             text-align:right; 

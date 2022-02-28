@@ -1,0 +1,8 @@
+- Lecciones
+
+. Este ejercicio proporciona muchas lecciones. Es uno de los ejercicios que usa el "html" (por asi decirlo) principal (si bien tiene extension php)
+  con un php embebido dentro. Carga un select con el codigo y el nombre del curso (no esta en html estaticamente, se carga de la base) y con eso
+  se hace una insercion
+
+. Tambien podria ser un html puro que invoque un php. El proceso es el mismo, si tiene un php dentro en el servidor hara lo que deba, un simple "echo"
+  mostrara un mensaje cuando se cargue dentro del server  

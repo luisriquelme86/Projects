@@ -10,7 +10,8 @@
   Juana, Pérez Rozas   , Avda. Luarcato nº22, 888111222, 22, 1.77
   Jesús, Murillo Moreno, Pintor Murillo nº33, 655221122, 34, 1.67
    
- 
+. Tomado de
+  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=615:php-insert-into-values-insertar-datos-registros-filas-en-base-de-datos-mysql-ejemplos-y-ejercicio-cu00843b&catid=70&Itemid=193 
 
 
 

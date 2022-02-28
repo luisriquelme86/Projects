@@ -1,0 +1,15 @@
+- Objetivos:
+. https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=928:metodos-open-send-getresponseheader-setrequestheader-de-xmlhttprequest-ajax-ejemplos-cu01209f&catid=83&Itemid=212
+
+
+1- Ejercicio
+. Crear 3 archivos llamados
+  
+  respuesta1.txt
+  respuesta2.txt
+  respuesta3.txt
+  
+  que contengan varias lineas de texto
+
+. A continuacion crear un archivo html donde usando Ajax y 3 botones llamados "Ver archivo 1", "Ver archivo 2", "Ver archivo 3" se pueda visualizar el contenido de cada
+  archivo en un div, que tendra un parrafo encima que diga "Contenido del archivo solicitado es:"

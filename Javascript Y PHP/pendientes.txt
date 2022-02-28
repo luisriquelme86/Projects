@@ -38,3 +38,38 @@
 
 
   https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=932:responsexml-metodo-de-xmlhttprequest-recuperar-datos-desde-archivo-xml-con-ajax-ejemplo-cu01210f&catid=83&Itemid=212 
+
+- Delegacion de eventos con jquery y javascript
+. Actualizar una lista que cambia su numero de elementos. No hace falta tener una base de datos, sino agregar por medio de botones en el momento
+
+. Probar con codeacademy, udemy
+  https://www.acamica.com/cursos/257/jquery-basico  
+
+. Usar los efectos de toggle en listas para colapsar y desplegar la misma
+. https://www.youtube.com/watch?v=nBjiuHqdj_s&ab_channel=AsperosGeekAsperosGeek
+  Agregar y remover elementos dinámicamente con javascript
+
+. Delegación de Eventos del DOM con JavaScript - ¿Qué es delegación de eventos?
+. https://osmancea.medium.com/delegaci%C3%B3n-de-eventos-del-dom-con-javascript-d28131d43686     
+  
+  OK, suficiente tiempo. Registramos event listeners en elementos que están actualmente en el DOM. Si luego agregamos otro elemento con la clase btn, no habrá un event listener para este elemento
+
+. Eventos en jQuery: La delegación de eventos
+  https://guidacode.com/2017/jquery/delegacion-de-eventos-jquery/   
+  metodo "on" en javascript
+
+. https://uniwebsidad.com/libros/fundamentos-jquery/capitulo-9/utilizar-la-delegacion-de-eventos
+. https://www.it-swarm-es.com/es/javascript/que-es-la-delegacion-de-eventos-dom/968963500/
+
+  https://blog.ida.cl/desarrollo/como-delegar-eventos-javascript/
+  https://qastack.mx/programming/1687296/what-is-dom-event-delegation
+  https://ed.team/blog/como-usar-la-delegacion-de-eventos-en-javascript 
+
+  https://www.paradigmadigital.com/dev/entendiendo-delegacion-eventos-javascript/
+  https://tutorialesjquery.wordpress.com/author/tutorialesjquery/
+  https://tutorialesjquery.wordpress.com/author/tutorialesjquery/
+
+. jQuery: ¿Cómo escuchar los cambios DOM?
+. ¿Es posible y cómo puedo escuchar los cambios a través de todo el árbol DOM con jQuery?
+
+. https://www.javaer101.com/es/article/143417563.html

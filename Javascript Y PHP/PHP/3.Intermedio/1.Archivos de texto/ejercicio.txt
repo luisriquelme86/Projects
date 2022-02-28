@@ -1,0 +1,4 @@
+- Objetivos
+
+. Escribir un archivo de prueba sencillo de tipo texto, hacer las operaciones necesarias (abrir para escritura, leer las lineas, mostrarlas por pantalla y cerrar el archivo)
+  para mostrar el archivo

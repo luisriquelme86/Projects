@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leer 3 archivos con AJAX</title>
+	</head>
+	<style>
+		
+		body {
+			background-color: beige;
+			font-family: "Arial";
+			width: 850px;
+			margin: 20px auto;
+			padding: 20px;
+			border: 2px solid darkseagreen;
+		}
+
+		.buttons button {
+			width: 100px;
+			display: block;
+			border-radius: 5px;
+			padding: 5px;
+			margin-bottom: 10px;
+		}
+
+		.button_file:hover {
+			background-color: LightBlue;
+		}
+
+		#resultado {
+			width: 300px;
+			padding: 15px;
+			min-height: 50px;
+			margin-top: 20px;
+			border: 1px solid LightGrey;
+			border-radius: 5px;
+		}
+
+	</style>
+	<script>
+
+		window.onload = function() {
+			console.log("La pagina ya cargo con todos sus elementos");
+			var buttons = document.getElementsByClassName("button_file");
+			for (var index = 0; index < buttons.length; index++) {
+				var button = buttons[index];
+				verArchivo(button);
+			}
+		}
+
+		/*
+			TIPS JAVASCRIPT -> Closures
+			Los closures usados cuando hay que hacer un listener dentro de un ciclo normalmente implican en el momento declarar el listener sobre el elemento,
+			llamar a una funcion con nombre (no anonima) y luego ahi dentro hacer un return de una funcion anonima. Otra opcion mas sencillae igualmente
+			valida es la siguiente: Dentro del loop, se llama a una funcion con el elemento y dicha funcion se encarga de armar el listener. Esa funcion no es un
+			listener dentro de un ciclo, es una funcion que llama a un listener usando el parametro del objeto. Es mas claro y sencillo
+		*/
+
+		function verArchivo(button) {
+			button.addEventListener("click", function() {
+				httpRequest = new XMLHttpRequest()
+				httpRequest.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						var contenido = httpRequest.responseText;
+						if (contenido == "null") {
+							// no deberia pasar, como presiono botones que preguntan por archivos ya creados...
+							document.getElementById("resultado").innerHTML = "Se produjo un error";
+						}
+						else {
+							document.getElementById("resultado").innerHTML = contenido;	
+						}
+					}	
+				}
+				httpRequest.open("GET", "respuesta.php?filename=" + button.value);
+				httpRequest.send()
+			})
+		}
+		
+	</script>
+	<body>
+
+		<h2>Carga de 3 documentos con AJAX</h2>
+		<p>Por favor, presione el boton correspondiente para ver los archivos que usted quiera</p>
+
+		<div class="buttons">
+			<button class="button_file" type="button" value="respuesta1">Ver archivo 1</button>	
+			<button class="button_file" type="button" value="respuesta2">Ver archivo 2</button>	
+			<button class="button_file" type="button" value="respuesta3">Ver archivo 3</button>	
+		</div>
+
+		<p>Contenido del archivo solicitado es:</p>
+		<div id="resultado"></div>
+
+	</body>
+</html>

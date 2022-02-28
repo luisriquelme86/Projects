@@ -1,0 +1,7 @@
+- Objetivos:
+. Tomando como punto de partida el codigo de ejemplo, realizar las modificaciones oportunas en los archivos php y html para:
+
+a) Definir una url asociada a cada ciudad (usa la url de la ciudad en wikipedia, por ejemplo para la ciudad Medellín sera https://es.wikipedia.org/wiki/Medell%C3%ADn)
+
+b) Hacer que cuando se elige un pais en el select, cada ciudad aparezca con el link a su url en wikipedia y que si se pulsa en ese link se abra una nueva ventana 
+   en el navegador mostrando la url correspondiente

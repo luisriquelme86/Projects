@@ -1,0 +1,9 @@
+- Configuraciones
+
+. Puedes ver en este enlace como subir archivos a un servidor usando filezilla
+  https://www.aprenderaprogramar.es/index.php?option=com_content&view=article&id=538:subir-ficheros-al-servidor-ftp-trajabar-en-remoto-crear-una-pagina-web-con-programacion-php-cu00814b&catid=70&Itemid=193
+
+  https://aprenderaprogramar.com/foros/index.php?topic=4198.0
+
+      
+

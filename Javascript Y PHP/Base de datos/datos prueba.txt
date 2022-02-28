@@ -1,5 +1,10 @@
 - Datos de prueba
 
+. Levantar el XAMPP, ir a la solapa "General" y luego a "Go to Application"
+. En la pagina que se abre, poner el phpmyadmin
+. Para crear una nueva base, presionar en "New". Luego ahi dentro se pueden poner las tablas
+. Como manipular las bases desde PHP ya es otro cantar
+
 . Este ejemplo se tomo de ...
   https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=611:crear-tablas-mysql-con-phpmyadmin-tipos-de-datos-basicos-varchar-int-float-insertar-filas-cu00840b&catid=70&Itemid=193
   Crear tablas MySql con phpMyAdmin. Tipos de datos básicos (Varchar, Int, Float). Insertar filas

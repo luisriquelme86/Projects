@@ -16,6 +16,13 @@
             formularios['formularioContacto'].elements['apellidosFormContacto'].addEventListener('click', cambiaColor);
         }
 
+        /*
+            TIPS JS Listeners, puntero this y closures
+            Tomado de aca
+            https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=865:thisstyle-is-undefined-funcion-manejadora-de-eventos-addeventlistener-con-parametros-ejemplos-cu01177e&catid=78&Itemid=206
+            La referencia this nos devuelve el elemento HTML que dispara el evento
+        */
+
         function cambiaColor() {
             this.style.backgroundColor = 'yellow';
         }

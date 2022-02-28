@@ -27,7 +27,7 @@
 		echo "<br> El numero de ciudades es: " . $result_ciudades->num_rows;
 
 		for ($index = 0; $index < $result_ciudades->num_rows; $index++) { 
-			mysqli_data_seek($result_ciudades, $index); 					// posiciono el array de resultados
+			mysqli_data_seek($result_ciudades, $index); 					    // posiciono el array de resultados
 			$row = mysqli_fetch_array($result_ciudades); 				    // obtengo la fila en cuestion, un array asociativo, tiene nombres
 			echo "<br>";
 			$tieneMetro = $row['tieneMetro'] == 0 ? 'no' : 'si';

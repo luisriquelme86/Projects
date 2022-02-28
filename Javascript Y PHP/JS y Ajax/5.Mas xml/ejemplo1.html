@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX con XML de libros</title>
+	<style>
+		
+		body {
+			background-color: darksalmon;
+			font-family: "Arial";
+			width: 1000px;
+			margin: 20px auto;
+			padding: 20px;
+			border: 2px solid honeydew;
+		}
+
+
+
+	</style>
+	<script>
+
+		var seleccionLibros;
+
+		window.onload = function() {
+			console.log("La pagina se cargo sin problemas");
+			seleccionLibros = document.getElementById("libros");
+			seleccionLibros.addEventListener("change", cargarInformacionLibro);
+		}
+
+		/*
+			TIPS Javascript listeners
+			Cuando un elemento crea un listener, pasa como parametro de funcion el event implicitamente sin hacer nada (solo debo agregarlo si lo necesito),
+			y dentro de la funcion de callback el elementos "this" hace referencia al elemento que invoca el listener 
+			(no el que dispara el evento, como puede ser un button dentro de un div)
+		*/
+
+		function cargarInformacionLibro() {
+
+			if (this.selectedIndex == 0) {
+				document.getElementById("resultados").innerHTML = '';
+				return;
+			}
+
+			var optionIndex = this.selectedIndex - 1;
+
+			httpRequest = new XMLHttpRequest();
+			httpRequest.onreadystatechange = function() {
+				// state y status, uno es la condicion de "listo" el otro es la situacion (estado)
+				if (this.readyState == 4 && this.status == 200) {
+
+					var xml = httpRequest.responseXML;		
+					// no hace falta obtener el catalogo primero, por eso tengo los tagname, puedo obviarlo
+					// var catalogo = xml.getElementsByTagName("catalog")[0];
+					// pido directamente los "book" del xml
+					
+					var libro = xml.getElementsByTagName("book")[optionIndex];
+
+					var contenido = "<p> id: " + libro.getElementsByTagName("id")[0].textContent + "<br>" + 
+											 " author: " + libro.getElementsByTagName("author")[0].textContent + "<br>" + 
+											 " title: " + libro.getElementsByTagName("title")[0].textContent + "<br>" + 
+											 " price: " + libro.getElementsByTagName("price")[0].textContent + "<br>" + 
+											 " publish date: " + libro.getElementsByTagName("publish_date")[0].textContent + "<br>" + 
+										"</p>"	 
+					document.getElementById("resultados").innerHTML = contenido;										
+				}			
+			}
+			httpRequest.open("GET", "lista.xml");
+			httpRequest.send();
+		}
+		
+	</script>
+
+</head>
+<body>
+	<!-- 
+		Por que se hace asi, con el select hardcodeado? No se podria hacer como en los ejercicios de php donde se obtiene la informacion de la base de datos de la tabla
+		y se llena el select? Es una posibilidad. En esos casos es un php embebido donde se obtiene informacion solo de la tabla con el codigo y con su nombre, pero
+		aca no tengo un tabla o xml separado donde tenga solo los titulos y el id, y obtenerlos llamando al xml es doble llamada, primero para cargarlo, y despues para 
+		la llamada donde obtengo los otros datos. Este ejercicio no es para hacerlo asi
+	-->
+	<h1>Peticion AJAX a un xml de libros</h1>
+	<p>Por favor, seleccione un titulo de la lista para obtener su informacion</p>
+	<form>
+		<select id="libros">
+			<option value="none">Elija un titulo</option>
+			<option value="xml">XML Developer's Guide</option>		
+			<option value="rain">Midnight Rain</option>		
+			<option value="maeve">Maeve Ascendant</option>		
+		</select>
+	</form>
+
+	<div id="resultados"> </div>
+
+</body>
+</html>

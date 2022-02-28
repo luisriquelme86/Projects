@@ -38,7 +38,7 @@
 				// que se le pasa por default a todas las funciones que son callbacks de eventos. Ademas tiene sentido, el help de la funcion externa ya es conocido
 				// por la interna, y se supone que el parametro de la funcion interna deberia ser otro, no el mismo
 				// return function(help) {  
-				return function() {  
+				return function() {  // -> aqui es donde no hay que poner el "help"
 					document.getElementById("help").innerHTML = help;		
 				};
 			}
@@ -61,7 +61,7 @@
 					} */
 					
 					// la solucion es esta
-					// en javascript, los scopes se define no por bloques de llames como en este caso el for, sino por lo que esta contenido dentro de una funcion,
+					// en javascript, los scopes se define no por bloques de llaves como en este caso el for, sino por lo que esta contenido dentro de una funcion,
 					// en este caso personalizeHelp "atrapa" el item.help y lo "contiene" dentro de si mismo. La funcion al llamarse crea un nuevo scope, como si fuera
 					
 					// un objeto de un clase, que guarda el parametro que se le paso

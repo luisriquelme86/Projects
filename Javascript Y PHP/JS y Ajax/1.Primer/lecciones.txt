@@ -1,0 +1,38 @@
+- Lecciones en el primer ejemplo de Ajax y PHP
+
+. Para que el ejemplo de Ajax y PHP funcione, es necesario poner ambos archivos en el server de xampp y entrar al html asi
+  http://localhost:8080/project/cursoAjaxCU01206F.html
+
+0- Recarga de pagina
+
+. Al invocar un archivo php desde un html u otro php, OBLIGATORIAMENTE se produce una recarga de pagina (se llama al servidor y el php o 
+  bien se queda en el *.php mostrando lo que renderizo con la instruccion echo o a lo sumo redirige a otra pagina). No hay posibilidad de que
+  esto no suceda en los ejemplos ya hechos anteriormente. Se puede "dar el efecto" de que no se recargo cuando la aplicacion es chica 
+  y se redirije, pero nada mas  
+
+1- Que podia hacer y que no antes de ajax
+
+. En todos los ejemplos de php hechos, la mayoria trataba de lo mismo, como: 
+
+  . Un archivo php que creara un formulario de alta, donde el select era dinamico (no fijo con html, sino que se traian los datos de una base). Si 
+    bien esto era positivo, no habia posibilidades de mas cambios sin recarga de pagina 
+  . Un archivo php que creara un tabla con los datos de la base (alumnos, articulos, etc) y que permitiera modificar, borrar o dar de alta
+    elementos nuevos. Una vez mas, al borrar un elemento de la tabla por ejemplo y "refrescar" la tabla lo que en verdad sucedia era 
+    redirigir luego del borrado al archivo php que se encargaba de las listas
+
+2- Que no sucedio aun
+
+. Nunca los archivos php o javascript tuvieron listeners asociados a elementos dinamicos (como una tabla). Es un caso de estudio mas adelante
+
+3- La importancia del ejemplo actual
+
+. El ejemplo actual es muy importante porque permite a partir de lo seleccionado, mostrar mas cosas sin ir a otra pagina (o lo que es lo mismo
+  cargar otra pagina) sino quedarse en la misma. Suponer el ejemplo actual sin ajax. Hay dos opciones de lo que sucederia
+. La primera opcion, tener los datos pegados en el html, y al seleccionar algo del select, mostrar los datos. No es dinamica la pagina y si los
+  datos estan en una base asi no podemos usarlos
+. Opcion 2: tener los datos en un php como ahora, pero activar un evento "change" o esperar a mandar un formulario con un boton de submit, hacer
+  una peticion al php y que el mismo retorne los datos en una nueva pagina o renderizar la misma pagina con los datos nuevos para dar el 
+  "efecto" de que nada cambio       
+. En el primer caso, no recargo la pagina, pero los datos no son dinamicos, o sea, siempre son los mismos. En el segundo caso, los datos
+  son dinamicos, pueden cambiar, pero estoy obligado a cambiar de pagina si quiero obtener nuevos datos o modificarlos, esto implica una 
+  recarga, la cual segun el tamaño de los archivos y si la conexion es lenta, puede tardar mucho. Con ajax puedo evitar eso  
