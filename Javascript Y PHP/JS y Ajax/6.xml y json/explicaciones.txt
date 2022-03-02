@@ -1,0 +1,14 @@
+- Explicaciones
+
+. El formato xml y json son formatos de intercambio de archivos en la web. Al recuperar informacion de un servidor, se puede recuperar un archivo de texto (un txt)
+  o de un archivo php que hay definido ciertas cosas (por cierto, con php hasta ahora tambien recupere archivos de texto), o tambien de un archivo xml o json
+  que se encuentre en el servidor
+
+. La ventaja de los dos ultimos es que puedo obtener dichos dos archivos desde el servidor sin necesidad de un lenguaje de servidor, solo los pongo ahi
+
+0- Diferencias entre xml y json
+. El json es mucho mas liviano que el xml, ya que no repite las etiquetas de apertura y cierre, solo necesita una etiqueta de apertura
+. Con un AJAX y usando javascript, para obtener el objeto json obtengo la respuesta en txt, y para la respuesta xml, la respuesta en xml
+. A su vez, para convertir el json, necesito usar la funcion JSON.parse, en cambio para los xml basta con usar los tags de elementos como si fueran
+  elementos del DOM HTML usando javascript
+. Todo lo anterior vale usando javascript, en otros lenguajes puede ser totalmente diferente 

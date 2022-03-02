@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listadoPaises>
+	<pais>
+		<nombre>España</nombre>
+		<capital>Madrid</capital>
+		<textoCapital>Madrid es un municipio y una ciudad de España. La localidad, con categoría…</textoCapital>
+		<ciudadImportante>Madrid</ciudadImportante>
+		<ciudadImportante>Barcelona</ciudadImportante>
+		<ciudadImportante>Valencia</ciudadImportante>
+		<ciudadImportante>Sevilla</ciudadImportante>
+		<ciudadImportante>Zaragoza</ciudadImportante>
+		<ciudadImportante>Málaga</ciudadImportante>
+		<ciudadImportante>Murcia</ciudadImportante>        
+	</pais>
+	<pais>
+		<nombre>México</nombre>
+		<capital>México D.F.</capital>
+		<textoCapital>La Ciudad de México, Distrito Federal o, en su forma abreviada, México, D.F., es… </textoCapital>
+		<ciudadImportante>México D.F.</ciudadImportante>
+		<ciudadImportante>Ecatepec</ciudadImportante>
+		<ciudadImportante>Guadalajara</ciudadImportante>
+		<ciudadImportante>Puebla</ciudadImportante>
+		<ciudadImportante>Juárez</ciudadImportante>
+		<ciudadImportante>Tijuana</ciudadImportante>
+		<ciudadImportante>León</ciudadImportante>
+		<ciudadImportante>Zapopan</ciudadImportante>    
+	</pais>
+	<pais>
+		<nombre>Argentina</nombre>
+		<capital>Buenos Aires</capital>
+		<textoCapital>Buenos Aires, formalmente Ciudad Autónoma de Buenos Aires (CABA) ―también… </textoCapital>
+		<ciudadImportante>Buenos Aires</ciudadImportante>
+		<ciudadImportante>Córdoba</ciudadImportante>
+		<ciudadImportante>Rosario</ciudadImportante>
+		<ciudadImportante>La Plata</ciudadImportante>
+		<ciudadImportante>Mar del Plata</ciudadImportante>
+		<ciudadImportante>San Miguel de Tucumán</ciudadImportante>
+		<ciudadImportante>Ciudad de Salta</ciudadImportante>
+	</pais>
+	<pais>
+		<nombre>Colombia</nombre>
+		<capital>Bogotá</capital>
+		<textoCapital>Bogotá, oficialmente Bogotá, Distrito Capital, abreviado Bogotá, D. C. es la… </textoCapital>
+		<ciudadImportante>Bogotá</ciudadImportante>
+		<ciudadImportante>Medellín</ciudadImportante>
+		<ciudadImportante>Cali</ciudadImportante>
+		<ciudadImportante>Barranquilla</ciudadImportante>
+		<ciudadImportante>Cartagena</ciudadImportante>
+		<ciudadImportante>Cúcuta</ciudadImportante>
+		<ciudadImportante>Soledad</ciudadImportante>
+		<ciudadImportante>Ibagué</ciudadImportante>
+	</pais>
+</listadoPaises>
