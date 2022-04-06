@@ -1,0 +1,14 @@
+- Consulta sql basica
+
+. A continuacion las lineas mas basicas para hacer consultas sql con php a una base mysql
+
+
+0- Comandos basicos
+
+.  mysqli_connect
+	mysqli_select_db
+	mysqli_query 
+	mysqli_data_seek 
+	mysqli_fetch_array 
+	mysqli_free_result
+	mysqli_close

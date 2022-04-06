@@ -1,0 +1,15 @@
+- Consumir APIs publicas
+
+. En javascript, usando la API fetch, es posible consumir las APIs publicas de otros lugares. Un buen ejemplo de ello es 
+  este sitio, que permite obtener datos ficticios de 10 usuarios
+
+  https://jsonplaceholder.typicode.com/
+
+. El mismo sitio dice "Free fake API for testing and prototyping" o sea, APIs falsas para testeo y prototipos, que ayudan a hacer pruebas y programar mejor
+
+. Para poder operar con los datos, es necesario conocer la url y el formato de los datos devueltos (un json, normalmente)
+
+  JSONPlaceholder
+  users	10 users
+
+  https://jsonplaceholder.typicode.com/users    

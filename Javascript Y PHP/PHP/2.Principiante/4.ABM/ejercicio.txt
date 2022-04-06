@@ -2,7 +2,7 @@
 
 . Suponiendo creadas las tablas de rubros y articulos con algunos datos ya cargados para cada una, se pide implementar un ABM de articulos
 . El mismo se debera presentar graficamente como una tabla donde se listen todos los articulos, como ya se hizo anteriormente, con el extra
-  que debera tener una columna que permita modificar el registro y otra para modificarlo. A su vez, debajo de la tabla debera existir una opcion para agregar
+  que debera tener una columna que permita modificar el registro y otra para borrarlo. A su vez, debajo de la tabla debera existir una opcion para agregar
   un nuevo articulo
 
 - Tips

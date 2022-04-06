@@ -1,0 +1,5 @@
+- Ejercicio de fetch con archivo de texto
+
+- Objetivo:
+. En un servidor, crear 3 archivos de texto, como ejemplo, aries, geminis y tauro del tipo texto. Pedir el archivo desde el cliente, y desde el servidor 
+  enviarlo. Luego mostrarlo. Usar boostrap para mostrar como corresponde  

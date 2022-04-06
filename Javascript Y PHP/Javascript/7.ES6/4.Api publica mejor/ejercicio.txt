@@ -1,0 +1,12 @@
+- Ejercicio con javascript y APIs publicas
+
+. Mejorar el ejercicio anterior usando los string literals, mejorando las promesas en un sola linea, y haciendolo
+  mucho mas corto en esos sentidos. Usando los loops mejorados tambien
+
+. El for..of es de ES6, es especifica para colecciones y no para todos los objetos. El for..in es para iterar los objetos y sus propiedades. Si bien
+  los arrays tambien son objetos tambien, hay que hacer la diferenciacion, el for..in es para objetos que tienen enumerables e iteradores, si bien
+  se puede usar en colecciones es mejor dejarla para objetos y sus propiedades. El for..of tambien sirve para String y Map
+
+  la sintaxis basica es 
+
+  for (var persona of listaDePersonas) {}

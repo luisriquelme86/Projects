@@ -1,0 +1,22 @@
+- Lecciones php
+
+. Este documento es mas que nada para refrescar conceptos de php
+. Se pide en el ejercicio que se muestre la tabla de articulos al cargar la pagina. Y que al cargar un nuevo elemento, tambien se refresque la tabla
+. La pregunta es... como lograr todo eso con un solo archivo php? Hay varias cuestiones
+
+a. Si es un solo archivo php, como la respuesta del "echo" solo puede ser una, en todo caso, al responder, siempre devolveria el json con la tabla actualizada,
+   lo cual solo permitiria una respuesta posible. Ademas, se duplicara el codigo o se llamaria a una funcion que dibujaria la tabla cada vez, con la diferencia
+   que una llamada dibujaria la tabla unicamente, y otra lo haria previo a cargar todo, lo cual queda horrible en el html. Ademas el php estaria lleno de ifs,
+   haciendolo menos legible, porque habria que comprobar los datos del postbody cada vez. Frente a esto, hay algunas soluciones
+
+- Soluciones
+a. Tener dos archivos php separados, uno para mostrar los articulos, y otro para cargar los articulos
+b. Tener todo en un solo archivo, pero pasar parametros indicando el tipo de operacion "mostrar", "crear" y asi
+
+. Ambas opciones son validas, y ayudan a tener un codigo php mas prolijo y separado y entendible, lo mismo del lado del html
+
+- Corolarios del ejercicio
+. Como el mismo pide que despues de una carga se muestren los articulos actualizados, es inevitable hacer dos llamadas, una de carga y otra para mostrar,
+  pero la diferencia radica en el codigo que sea mas o menos legible
+. La respuesta del servidor podria y puede no devolver nada, teniendo que simplemente ejecutar otro codigo
+. Queda en manos del programador decidir si devuelve o no los articulso actualizados al realizar la carga   

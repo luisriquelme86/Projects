@@ -3,7 +3,7 @@
   y PHP en un servidor. Por lo general mucho tiempo trabajaron juntos
 . La idea es comenzar del principio en ambos lenguajes pero trabajandolo en el el ambito web, a diferencia de Java que el trabajo al principio es orientado a consola. Los lenguajes son
   diferentes y pensados y orientados a diferentes cosas y objetivos
-. PHP en un principio no tenia clases y Java si, no lo hacia ni mejor ni peor, estaba planteado para otra cosa
+. PHP en un principio no tenia clases y Java si, eso no lo hacia ni mejor ni peor, estaba planteado para otra cosa
 . El gran problema que tuve siempre con Javascript y PHP es que lo aprendi como Java, orientado a solamente usar las funciones basicas y estructuras basicas, arrays y esas cosas
   pero nunca aprendi la parte web de listeners, ni usando html y css basico ni haciendo peticiones ni nada de eso, jamas conecte un Javascript basico con un PHP basico
 . Por ejemplo, en Java es muy comun hacer una agenda. En Javascript, con solo JS no seria posible porque no guarda estados, es necesario PHP con un server para que los estados se guarden. Ese fue un
@@ -28,22 +28,15 @@
 . En el caso de javascript y PHP, podria hacer un dibujo "partiendo" con una linea la hoja al medio para dibujar lo que espero de un lado
   y otro de cada lugar (server y host) 
 
-- Pendientes
+- Curso de jquery  
 
-  para este ejercicio
-  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=859:javascript-redireccionar-y-recargar-webs-windowlocation-href-hostname-assign-reload-replace-cu01171e&catid=78&Itemid=206  
-
-. Esto
-  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=860:retroceder-pagina-anterior-javascript-windowhistory-obtener-tamano-pantalla-screen-y-frames-cu01172e&catid=78&Itemid=206  
-
-
-  https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=932:responsexml-metodo-de-xmlhttprequest-recuperar-datos-desde-archivo-xml-con-ajax-ejemplo-cu01210f&catid=83&Itemid=212 
-
-- Delegacion de eventos con jquery y javascript
+- Delegacion de eventos con javascript y jquery
 . Actualizar una lista que cambia su numero de elementos. No hace falta tener una base de datos, sino agregar por medio de botones en el momento
 
 . Probar con codeacademy, udemy
   https://www.acamica.com/cursos/257/jquery-basico  
+
+  27.- Curso jQuery - Método Get en AJAX?
 
 . Usar los efectos de toggle en listas para colapsar y desplegar la misma
 . https://www.youtube.com/watch?v=nBjiuHqdj_s&ab_channel=AsperosGeekAsperosGeek
@@ -51,6 +44,8 @@
 
 . Delegación de Eventos del DOM con JavaScript - ¿Qué es delegación de eventos?
 . https://osmancea.medium.com/delegaci%C3%B3n-de-eventos-del-dom-con-javascript-d28131d43686     
+  https://www.paradigmadigital.com/dev/entendiendo-delegacion-eventos-javascript/
+  https://ed.team/blog/como-usar-la-delegacion-de-eventos-en-javascript
   
   OK, suficiente tiempo. Registramos event listeners en elementos que están actualmente en el DOM. Si luego agregamos otro elemento con la clase btn, no habrá un event listener para este elemento
 

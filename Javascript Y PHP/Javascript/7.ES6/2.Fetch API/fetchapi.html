@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prueba de la fetch API</title>
+	</head>
+	<style type="text/css">
+		
+		body {
+			width: 800px;
+			padding: 10px;
+			margin: 50px auto;
+			background-color: antiquewhite;
+			border: 1px burlywood solid;	
+		}
+
+		.datos {
+			margin-top: 25px;
+			min-height: 200px;
+			padding: 10px;
+			background-color: darkgray;
+			border: 1px darkseagreen solid;	
+		}
+
+		.btn {
+			border-radius: 10px;
+			padding: 15px;
+		}
+
+		.btn:hover {
+			background-color: lightcyan;
+		}
+
+
+	</style>
+	<script type="text/javascript">
+		
+
+		window.onload = function() {
+
+			console.log("La pagina fue cargada exitosamente");
+			var boton = document.getElementById("getdata");
+			boton.addEventListener("click", pedirDatos); // no es un form, no usar el evento de onsubmit
+
+		}
+
+		function pedirDatos() {
+			console.log("Se estan pidiendo los datos al servidor");
+
+			// TIPS para fetch
+			// solo funciona si este archivo se abre en http://localhost:8080/project/fetchapi.html, o sea, en el propio servidor, sino hay problemas de CORS
+			var promesa1 = window.fetch("datos.php");
+			var promesa2 = promesa1.then(function(response) {
+				return response.json();
+			});
+			promesa2.then(function(datos) {
+				console.log(datos);
+				var result = "";
+				for (var index = 0; index < datos.length; index++) {
+					result += "<p>codigo: " + datos[index].codigo +
+									  ", descripcion: " + datos[index].descripcion +
+									  ", precio: " + datos[index].precio +
+									  ", rubro: " + datos[index].codigorubro + 
+							     "</p><br>";
+				}
+				document.getElementsByClassName("datos")[0].innerHTML = result;
+			});
+		}
+
+
+	</script>
+
+<body>
+
+	<h1>Prueba de la FETCH API de EMC6</h1>
+	<p>Por favor, presione el boton para hacer la peticion y los datos</p>
+	<input type="button" id="getdata" value="Pedir datos" class="btn">
+	<div class="datos"> </div>
+
+</body>
+</html>

@@ -1,6 +1,5 @@
 - Paginas a seguir
 
-
 . ES6 - API fetch (recuperar archivo json) -> esto aplica una vez q sabes ajax
 . O bien buscar mas cosas de php o
 

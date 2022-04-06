@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch api para documentos de texto en el server</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		
+		window.onload = function() {
+
+			console.log("Pagina cargada");
+			var buttons = document.getElementsByClassName("btn-primary");
+			for (var button of buttons) {
+				button.addEventListener("click", cargarHoroscopo);
+			}
+		}
+
+		function cargarHoroscopo() {
+			var anchorThumbnail = this;
+			fetch("datos.php?signo=" + this.name)
+				.then(response => response.text()) // si pongo json y es un text, no funciona
+				.then(data => {
+					console.log(data);
+					anchorThumbnail.parentElement.parentElement.children[1].innerHTML = data;
+				});
+		}
+
+	</script>
+
+
+</head>
+<body>
+		<div class="container">
+			<div class="jumbotron">
+  				<h1>Bienvenido</h1>
+  				<p>Para leer el horoscopo deseado de hoy, por favor, presione el boton "Cargar" correspondiente a cada signo</p>
+			</div>
+			<!-- Thumbnails -->
+			<div class="row">
+	  			<div class="col-sm-6 col-md-4">
+	    			<div class="thumbnail">
+	      			<img src="aries.png" alt="aries">
+	      			<div class="caption">
+	        				<h3>Aries</h3>
+	        				<p></p>
+	        				<p>
+	        					<a href="#" class="btn btn-primary" role="button" name="aries">Cargar</a>
+	        				</p>
+	      			</div>
+	    			</div>
+	  			</div>
+	  			<div class="col-sm-6 col-md-4">
+	    			<div class="thumbnail">
+	      			<img src="tauro.png" alt="tauro">
+	      			<div class="caption">
+	        				<h3>Tauro</h3>
+	        				<p></p>
+	        				<p>
+	        					<a href="#" class="btn btn-primary" role="button" name="tauro">Cargar</a>
+	        				</p>
+	      			</div>
+	    			</div>
+	  			</div>
+	  			<div class="col-sm-6 col-md-4">
+	    			<div class="thumbnail">
+	      			<img src="geminis.png" alt="geminis">
+	      			<div class="caption">
+	        				<h3>Geminis</h3>
+	        				<p></p>
+	        				<p>
+	        					<a href="#" class="btn btn-primary" role="button" name="geminis">Cargar</a>
+	        				</p>
+	      			</div>
+	    			</div>
+	  			</div>
+		</div>	
+	</div>
+</body>
+</html>

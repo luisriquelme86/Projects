@@ -1,0 +1,12 @@
+- Explicaciones sobre la Fetch API
+
+. Esta API se encarga de hacer peticiones asincronicas. Es un reemplazo del viejo XMLHttpRequest de Ajax, que tambien era una api. Es mucho mas sencilla y mas limpia,
+  antes habia que usar otras funciones de "ready" y demas. Ahora con este API es mas sencillo. Todo se resuelve por medio de promesas y responses. Estos dos ultimos
+  son objetos, con ciertas caracteristicas
+
+. El objeto window de javascript tiene un metodo "fetch" para hacer peticiones. Como todos los metodos del objeto "window" no hace faltas invocar poner dicho objeto,
+  al igual que "prompt" y "alert" que tambien son objetos propios del objeto window
+
+. La llamada a fetch devuelve un objeto Promise (no es la respuesta HTTP propiamente dicha, sino una promesa de esa respuesta, hasta que venga del servidor), que
+  a la vez tiene un metodo "then". Este objeto responde un objeto del tipo Response, el cual tiene metodos como "json" para devolver una promesa de esa respuesta,
+  que a la vez hay que invocarle otra vez el metodo "then"

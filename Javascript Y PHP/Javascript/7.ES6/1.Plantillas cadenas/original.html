@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plantillas de cadenas de caracteres</title>
+	<script type="text/javascript">
+		
+		const dia1 = "Lunes";
+		const dia2 = "Martes";
+		const dia3 = "Miercoles";
+		const dia4 = "Jueves";
+		const dia5 = "Viernes";
+		const dia6 = "Sabado";
+		const dia7 = "Domingo";
+
+		window.onload = function() {
+			console.log("La pagina fue cargada");
+			document.getElementsByClassName("diasSemana")[0].innerHTML = listaDiasSemana();
+		}
+
+		function listaDiasSemana() {
+			
+			var lista = `
+				<ol>
+					<li>${dia1}</li>
+					<li>${dia2}</li>
+					<li>${dia3}</li>
+					<li>${dia4}</li>
+					<li>${dia5}</li>
+					<li>${dia6}</li>
+					<li>${dia7}</li>
+				</ol>`;	
+			return lista;	
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<h1>Prueba de plantillas de caracteres</h1>
+	<div class="diasSemana"></div>	
+
+</body>
+</html>

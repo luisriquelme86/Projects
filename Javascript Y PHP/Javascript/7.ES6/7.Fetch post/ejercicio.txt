@@ -1,0 +1,21 @@
+- Ejercicio, hacer post con fetch
+
+. Este ejercicio se basa en hacer updates de articulos nuevos en una base de datos y traer los existentes. Es un ABM un poco incompleto
+. El punto fuerte y diferente es justamente hacerlo con la fetch API, que es un reemplazo de las viejas instrucciones de Ajax y el XMLHttpRequest, mucho
+  menos legible y limpio. Entonces, permite hacer aplicaciones mas rapidas y modernas, donde no se recargan las paginas
+
+. Objetivo: Que se muestren los datos de la tabla al iniciar la pagina. Y que al cargar un nuevo elemento, refresque la tabla. En caso de dudas, leer el 
+  documento de lecciones     
+
+0- Objetivo
+. Hacer updates y mostrar articulos de una base de datos
+. Usar bootstrap que permite hacer paginas responsive y dan estilos basicos predefinidos
+
+1- A investigar
+. Ciertos new de Javascript
+. El form-group de bootstrap (consultar pagina)
+
+2- Partes
+. Un html que contenga un formulario de carga de datos con un boton (nombre de articulo y precio)
+. Una tabla que muestre los articulos actuales
+. Quizas es conveniente un tabla nueva de articulos...  
