@@ -1,0 +1,3 @@
+- Buenas practicas
+
+. Es recomendable crear diferentes archivos php al hacer un ABM en lugar de tener todo junto. Un archivo de alta, baja, modificacion y listado

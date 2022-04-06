@@ -4,6 +4,10 @@
 	<title>Mini ABM con fetch y php</title>
 </head>
 	
+	<!-- Necesito cargar jquery para que funcionen ciertas cosas de bootstrap, como el div de alerta que se puede cerrar -->
+	<!-- https://www.w3schools.com/jquery/jquery_get_started.asp -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -16,16 +20,17 @@
 	<script>
 		
 		window.onload = function() {
+			// document.getElementsByClassName("alert-success")[0].style.display = 'none';
 			listarArticulos();
 			document.getElementById("cargarArticulo").addEventListener("click", cargarArticulo);
 		}
 
 		function listarArticulos() {
-
-			fetch("datos.php")
+			// esto es una monstruosidad, re poco claro, todo a un archivo. basta de esto
+			// var datos = {operation: "listar"};
+			fetch("listar.php")
 				.then(response => response.json())
 				.then(data => {
-					console.log("El resultado de la consulta es" , data);
 
 					var tableData = `<tr><th>Codigo</th><th>Articulo</th><th>Precio</th></tr>`
 					for (articulo of data) {
@@ -37,27 +42,26 @@
 
 		}
 
-		function cargarArticulo(e) {
-			// TIPS: No confundir stopPropagation con preventDefault, en el caso de submit
-			// e.stopPropagation(); 
-			// el event.stopPropagation parece que no tiene sentido porque si bien el boton es submit al hacer click no le indico ninguna url en el form, lo hago por api fetch
-			// si no hacia, la pagina se recarga y se pierde la gracia del fetch. Me di cuenta porque el console log se borraba, indicaba que la pagina se recargaba
-			
-			e.preventDefault();
-			
-			fetch("datos.php", {
+		function cargarArticulo() {
+			// esto es horrible, deberia ver lo de los new form y eso
+			var datos = {nombre: document.forms[0].elements.namedItem("nombre").value, precio: document.forms[0].elements.namedItem("precio").value};
+			fetch("alta.php", {
 				method: 'POST',
 				body: JSON.stringify(datos),
-				headers:{
+				headers: {
     				'Content-Type': 'application/json'
   				}
 			})
 				.then(response => response.json())
 				.then(data => {
-					console.log("La respuesta de la carga del articulo es", data)
-
 					// mejora, que muestre un desplegable diciendo "Carga de articulo exitosa" en color verde. Seguramente debo cargar jquery para hacer el efecto que aparesca y desaparesca el mensaje
 
+					// limpio los campos	
+					document.forms[0].reset();
+					// el fadeout es parte de las animaciones de jquery, se pueden hacer con javascript pero por ahora no. simplemente uso el display
+					document.getElementsByClassName("alert-success")[0].style.display = 'block';
+
+					listarArticulos();
 				});
 
 		}
@@ -72,6 +76,11 @@
   			<h1>ABM de articulos</h1>
 		</div>	
 
+		<div class="alert alert-success alert-dismissible" role="alert">
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  			<strong>Bien!</strong> Articulo agregado exitosamente.
+		</div>
+
 		<form>
 		  	<div class="form-group">
 		    	<label for="nombre">Nombre articulo</label>
@@ -81,7 +90,7 @@
 		    	<label for="precio">Precio articulo</label>
 		    	<input type="number" step="0.01" class="form-control" id="precio" placeholder="Precio articulo">
 		  	</div>
-		  	<button type="submit" class="btn btn-default" id="cargarArticulo">Cargar Articulo</button>
+		  	<button type="button" class="btn btn-default" id="cargarArticulo">Cargar Articulo</button>
 		</form>
 
 

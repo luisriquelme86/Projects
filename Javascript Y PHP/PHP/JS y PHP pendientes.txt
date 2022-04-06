@@ -1,9 +1,10 @@
 - Javascript y PHP pendientes
+
 . Javascript y PHP son diferentes a Java en muchos aspectos, desde como se concibieron hasta sus primeros usos. Por ejemplo, Javascript corre en navegadores
   y PHP en un servidor. Por lo general mucho tiempo trabajaron juntos
 . La idea es comenzar del principio en ambos lenguajes pero trabajandolo en el el ambito web, a diferencia de Java que el trabajo al principio es orientado a consola. Los lenguajes son
   diferentes y pensados y orientados a diferentes cosas y objetivos
-. PHP en un principio no tenia clases y Java si, no lo hacia ni mejor ni peor, estaba planteado para otra cosa
+. PHP en un principio no tenia clases y Java si, no lo hacia ni mejor ni peor, estaba planteado de otra manera
 . El gran problema que tuve siempre con Javascript y PHP es que lo aprendi como Java, orientado a solamente usar las funciones basicas y estructuras basicas, arrays y esas cosas
   pero nunca aprendi la parte web de listeners, ni usando html y css basico ni haciendo peticiones ni nada de eso, jamas conecte un Javascript basico con un PHP basico
 . Por ejemplo, en Java es muy comun hacer una agenda. En Javascript, con solo JS no seria posible porque no guarda estados, es necesario PHP con un server para que los estados se guarden. Ese fue un
@@ -17,7 +18,7 @@
 . Buscar ejercicios basicos de PHP como aplicacion web
 
 - PHP
-. Si bien se pueden hacer app de consola, no usarlo por separado, tratar de usarlo con JS
+. Si bien se pueden hacer app de consola, es mejor aprender a no usarlo por separado, sino de usarlo con JS
 . Buscar ejercicios o usos basicos de PHP usando como aplicacion web
 
 - Consejos de programacion

@@ -4,6 +4,9 @@
   antes habia que usar otras funciones de "ready" y demas. Ahora con este API es mas sencillo. Todo se resuelve por medio de promesas y responses. Estos dos ultimos
   son objetos, con ciertas caracteristicas
 
+. Resumiendo, el fetch API se basa en el uso de promesas para la comunicacion asincronica. Las promesas no son algo exclusivo de FETCH, pero si las utiliza mucho
+  y es una de sus caracteristicas mas conocidas
+
 . El objeto window de javascript tiene un metodo "fetch" para hacer peticiones. Como todos los metodos del objeto "window" no hace faltas invocar poner dicho objeto,
   al igual que "prompt" y "alert" que tambien son objetos propios del objeto window
 

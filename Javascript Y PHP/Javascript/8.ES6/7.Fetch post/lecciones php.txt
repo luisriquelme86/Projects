@@ -19,4 +19,4 @@ b. Tener todo en un solo archivo, pero pasar parametros indicando el tipo de ope
 . Como el mismo pide que despues de una carga se muestren los articulos actualizados, es inevitable hacer dos llamadas, una de carga y otra para mostrar,
   pero la diferencia radica en el codigo que sea mas o menos legible
 . La respuesta del servidor podria y puede no devolver nada, teniendo que simplemente ejecutar otro codigo
-. Queda en manos del programador decidir si devuelve o no los articulso actualizados al realizar la carga   
+. Queda en manos del programador decidir si devuelve o no la lista de articulos actualizados al realizar la carga

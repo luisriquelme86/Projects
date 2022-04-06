@@ -1,0 +1,50 @@
+- Acerca de los formularios en la web y PHP
+
+. Cuando se envian datos de un formulario en html hacia PHP, los datos desde el cliente se pueden enviar de varias maneras y la forma de recibirlo en php
+  depende justamente de la manera enviada del cliente
+
+- Caso 0, mas basico
+. El caso mas sencillo es declarar un formulario y un boton de sumbit en el html. Al presionar el boton, o hacer el sumbit del form
+  se enviara a la url definida en el action y los campos del formulario que tengan la propiedad "name" se enviaran como 'POST'. Del lado
+  de PHP, bastara con un $_POST y los nombres de los campos entre corchetes y con comillas para recuperarlos
+  
+  <form action="alta.php" method="get">
+  $_GET["pais"]
+
+  <form action="alta.php" method="post">
+  $_POST["pais"]
+
+- Caso 1, Ajax
+. Cuando se envian por medio de Ajax, la cosa cambia un poco, se hace un open y luego un send
+  
+  xmlhttp.open("GET", "alta.php?nombre=" + nombre);
+  xmlhttp.send();
+
+  $_GET["pais"]
+
+  var params = 'pais='+encodeURIComponent(str);
+  xmlhttp.open('POST', 'alta.php'); 
+  xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xmlhttp.send(params);
+
+  $_POST["pais"]
+
+- Caso 2, con la API Fetch
+. Y aqui cambia otra vez al usar la api fetch de javascript. Como es parecido al Ajax o es un reemplazo del mismo, tambien hay que enviar una cadena de 
+  caracteres, pero en formato json. La sintaxis basica es algo como esto
+
+   fetch(url, {
+  		method: 'POST',
+  		body: JSON.stringify(data),
+  		headers:{
+    		'Content-Type': 'application/json'
+  		}
+	})  
+
+  y en php se recibe asi
+
+  $params = file_get_contents("php://input");
+  	    
+. Ese json puede ser simplemente un objeto con los nombres de los campos y valores a enviar y luego se le aplica el JSON.stringify. O se pueden usar otras cosas
+  como el FormData
+  
