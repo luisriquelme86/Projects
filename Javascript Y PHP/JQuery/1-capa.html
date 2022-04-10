@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 1 JQuery</title>
+
+
+	<!-- Ejemplo basico con JQuery: 
+		. clicks en botones y cambiar el texto de una capa
+		. pasar y sacar el mouse por una capa para mostrar un mensaje en un parrafo -->
+
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			console.log("Pagina cargada");
+
+			$("#boton1").click(function() {
+				$('#capa1').html('Has hecho clic en el botón <b>A</b>');
+			});
+
+			$("#boton2").click(function() {
+				$('#capa1').html('Recibido un clic en el botón <b>B</b>');
+			});
+
+			$("#capa").mouseenter(function(evento){
+	   		$("#mensaje").css("display", "block");
+			});
+
+			$("#capa").mouseleave(function(evento){
+	   		$("#mensaje").css("display", "none");
+			});
+
+			$("#ocultar").click(function(event){
+    			event.preventDefault();
+    			$("#capaefectos").hide("slow");
+   		});
+
+   		$("#mostrar").click(function(event){
+    			event.preventDefault();
+    			$("#capaefectos").show(3000);
+   		});
+
+		});
+
+
+	</script>
+</head>
+<body>
+
+	<div id="capa1" style="padding: 10px; background-color: #ff8800;">Haz clic en un botón</div>
+
+	<input type="button" value="Botón A" id="boton1">
+	<input type="button" value="Botón B" id="boton2"">
+
+	<div id="capa" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta capa</div>
+	<br>
+	<div id="mensaje" style="display: none;">Has puesto el ratón encima!! <br>(Ahora quítalo de la capa)</div>
+
+	<div id="capaefectos" style="background-color: #cc7700; color:fff; padding:10px;">
+		Esto es una capa que nos servirá para hacer efectos!
+		<br>
+		<br>
+		Pongo este texto simplemente de prueba
+	</div>
+
+	<p>
+		<a href="#" id="ocultar">Ocultar la capa</a> |
+		<a href="#" id="mostrar">Mostrar la capa</a>
+	</p>
+
+</body>
+</html>

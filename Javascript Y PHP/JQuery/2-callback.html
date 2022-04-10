@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 2 JQuery</title>
+
+
+	<!-- Ejemplo basico con JQuery: 
+		. uso del fade out y fade in (apagarse lentamente y encenderse lentamente)
+		. callbacks en jquery-->
+
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			console.log("Pagina cargada");
+			// fadeNoDeseado();
+			fadeDeseado();
+		
+		});
+
+		function fadeNoDeseado() {
+			$("#moverCapa").click(function(e) {
+				e.preventDefault();
+				$("#miCapa").fadeOut(2000);
+				$("#miCapa").css({'top': 300, 'left':200});
+				$("#miCapa").fadeIn(2000);		
+			});
+		}
+
+		function fadeDeseado() {
+			$("#moverCapa").click(function(e) {
+				// el prevent default es obligatorio, aunque el anchor no tenga nada se produce una recarga de la pagina al mismo punto, 
+				// aunque muy rapidamente
+				// consejo: para ver si esta bien escrito la llamada de jquery, es bueno hacer doble click en el id original "miCapa" (pe) y ver si jQuery se aplica sobre el
+				e.preventDefault();
+				$("#miCapa").fadeOut(2000, function() {
+					$("#miCapa").css({'top': 300, 'left':200});
+					$("#miCapa").fadeIn(2000);				
+				});
+			})
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<a id="moverCapa" href="">Click aqui para mover la capa a otra posicion!</a>
+	<div id="miCapa" style="padding: 10px; background-color: #ff8800; width: 100px; height: 100px; position: absolute; margin-top: 10px"></div>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+- Sesion e includes
+
+0- Introduccion
+
+. Los sesion y los includes son de las herramientas mas imprescindibles para poder hacer una web, y no un simple archivo php que corra algunas instrucciones. Sin
+  estas herramientas es casi imposible poder armar una web, maquetarla y demas, porque permite separar los archivos en mas partes, hacer un buen diseño (layout)
+  que sea reutilizable y ordenado, legible, facil de entender por el programador y por otros programadores
+
+. Con el session, se guardan los datos necesarios para pasar de una pagina a otra (como los datos de un usuario en un carrito). Con los includes, se puede
+  armar un archivo php (o en realidad, parte de la pagina de una web) reutilizando otras partes, por ejemplo, la cabezera de la pagina y el pie de pagina, que son
+  en general los mismos para toda la web, y no varian
+
+
+1- Session
+. PHP, al igual que otros lenguajes, permite el manejo de sesiones o sessions.
+. Permite que las variables esten disponibles en multiples o muchas paginas sin necesidad de pasar dichas variables por parametro
+. A diferencia de las cookies, se almacenan en el servidor, y tienen un tiempo limitado de existencia
+. El tiempo es configurable en el entorno de PHP. Cuando pasan 20 minutos sin peticiones por parte del cliente, las variables se borran
+  automaticamente, o al cerrar el navegador
+. La parte buena de las sesiones es que se guardan en el servidor, y no tienen que estarse enviando continuamente como si pasa con las cookies    
